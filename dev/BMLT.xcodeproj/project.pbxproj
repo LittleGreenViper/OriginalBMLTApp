@@ -443,6 +443,125 @@
 		77ACED97168F3C6400FC9192 /* icon-LargeiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 77ACED8A168F3C6400FC9192 /* icon-LargeiPad.png */; };
 		77ACED98168F3C6400FC9192 /* icon-LargeiPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 77ACED8B168F3C6400FC9192 /* icon-LargeiPhone.png */; };
 		77B566C01690BE8A00F3CF3F /* AboutLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B566BF1690BE8A00F3CF3F /* AboutLogo.png */; };
+		77B5EABF1743EEF300F50281 /* BMLTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C32150E88E5005A707A /* BMLTAppDelegate.m */; };
+		77B5EAC01743EEF300F50281 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C33150E88E5005A707A /* main.m */; };
+		77B5EAC11743EEF300F50281 /* BMLTAdvancedSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C3E150E892A005A707A /* BMLTAdvancedSearchViewController.m */; };
+		77B5EAC21743EEF300F50281 /* BMLTMapResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C4F150E893C005A707A /* BMLTMapResultsViewController.m */; };
+		77B5EAC31743EEF300F50281 /* BMLT_Prefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C55150E893C005A707A /* BMLT_Prefs.m */; };
+		77B5EAC41743EEF300F50281 /* BMLT_Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C57150E893C005A707A /* BMLT_Checkbox.m */; };
+		77B5EAC51743EEF300F50281 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C59150E893C005A707A /* Reachability.m */; };
+		77B5EAC61743EEF300F50281 /* A_BMLT_ChildClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C5C150E893C005A707A /* A_BMLT_ChildClass.m */; };
+		77B5EAC71743EEF300F50281 /* A_BMLT_Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C5E150E893C005A707A /* A_BMLT_Search.m */; };
+		77B5EAC81743EEF300F50281 /* A_BMLT_ServiceBodyHierClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C60150E893C005A707A /* A_BMLT_ServiceBodyHierClass.m */; };
+		77B5EAC91743EEF300F50281 /* BMLT_Driver.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C62150E893C005A707A /* BMLT_Driver.m */; };
+		77B5EACA1743EEF300F50281 /* BMLT_Format.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C64150E893C005A707A /* BMLT_Format.m */; };
+		77B5EACB1743EEF300F50281 /* BMLT_Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C66150E893C005A707A /* BMLT_Location.m */; };
+		77B5EACC1743EEF300F50281 /* BMLT_Meeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C68150E893C005A707A /* BMLT_Meeting.m */; };
+		77B5EACD1743EEF300F50281 /* BMLT_Meeting_Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C6A150E893C005A707A /* BMLT_Meeting_Search.m */; };
+		77B5EACE1743EEF300F50281 /* BMLT_Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C6D150E893C005A707A /* BMLT_Parser.m */; };
+		77B5EACF1743EEF300F50281 /* BMLT_Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C6F150E893C005A707A /* BMLT_Server.m */; };
+		77B5EAD01743EEF300F50281 /* BMLT_ServiceBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C71150E893C005A707A /* BMLT_ServiceBody.m */; };
+		77B5EAD11743EEF300F50281 /* BMLTAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C75150E893C005A707A /* BMLTAboutViewController.m */; };
+		77B5EAD21743EEF300F50281 /* BMLTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C77150E893C005A707A /* BMLTSettingsViewController.m */; };
+		77B5EAD31743EEF300F50281 /* BMLTSimpleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7711417115125CD100BCCE00 /* BMLTSimpleSearchViewController.m */; };
+		77B5EAD41743EEF300F50281 /* A_BMLTSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BC71971512BFA1000BEFC0 /* A_BMLTSearchResultsViewController.m */; };
+		77B5EAD51743EEF300F50281 /* A_BMLTSettingsBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CE3F081516252300C93BC6 /* A_BMLTSettingsBackgroundView.m */; };
+		77B5EAD61743EEF300F50281 /* A_BMLTNavBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D732A815178B38004C572D /* A_BMLTNavBarViewController.m */; };
+		77B5EAD71743EEF300F50281 /* A_BMLTMainBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777B520E15192409002EDC83 /* A_BMLTMainBackgroundView.m */; };
+		77B5EAD81743EEF300F50281 /* BMLTDisplayListResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776BAD961519F90A008C608C /* BMLTDisplayListResultsViewController.m */; };
+		77B5EAD91743EEF300F50281 /* BMLTMeetingDisplayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77640D40151A67BE00634143 /* BMLTMeetingDisplayCellView.m */; };
+		77B5EADA1743EEF300F50281 /* BMLTFormatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77803C3D151C011D00A8ADC3 /* BMLTFormatDetailViewController.m */; };
+		77B5EADB1743EEF300F50281 /* BMLTMeetingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7799D299151FA633007FE822 /* BMLTMeetingDetailViewController.m */; };
+		77B5EADC1743EEF300F50281 /* A_BMLT_SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7707F3141525B44C00032CCA /* A_BMLT_SearchViewController.m */; };
+		77B5EADD1743EEF300F50281 /* BMLT_Results_MapPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BCBBDC152933D700CDBCF6 /* BMLT_Results_MapPointAnnotationView.m */; };
+		77B5EADE1743EEF300F50281 /* BMLTAnimationScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F6C3691531D1A90038784D /* BMLTAnimationScreenViewController.m */; };
+		77B5EADF1743EEF300F50281 /* BMLT_ListPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CFE115153CB874005FB181 /* BMLT_ListPrintPageRenderer.m */; };
+		77B5EAE01743EEF300F50281 /* A_BMLT_PrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A5600C153CF0520039CCDD /* A_BMLT_PrintPageRenderer.m */; };
+		77B5EAE11743EEF300F50281 /* BMLT_DetailsPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 776CAD8915404BBF001BD51D /* BMLT_DetailsPrintPageRenderer.m */; };
+		77B5EAE21743EEF300F50281 /* BMLTBundleResourceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 771A40EC15408EA000EF34DF /* BMLTBundleResourceLabel.m */; };
+		77B5EAE31743EEF300F50281 /* BMLTAboutBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DCF09C1545D4FE00979BF6 /* BMLTAboutBackgroundView.m */; };
+		77B5EAE51743EEF300F50281 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7799D2A1151FACD4007FE822 /* MapKit.framework */; };
+		77B5EAE61743EEF300F50281 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771D0C93150E89BC005A707A /* SystemConfiguration.framework */; };
+		77B5EAE71743EEF300F50281 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771D0C91150E899B005A707A /* QuartzCore.framework */; };
+		77B5EAE81743EEF300F50281 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771D0C8F150E8986005A707A /* CoreLocation.framework */; };
+		77B5EAE91743EEF300F50281 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77977D0F150E882B00485C8D /* UIKit.framework */; };
+		77B5EAEA1743EEF300F50281 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77977D11150E882B00485C8D /* Foundation.framework */; };
+		77B5EAEB1743EEF300F50281 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77977D13150E882B00485C8D /* CoreGraphics.framework */; };
+		77B5EAEC1743EEF300F50281 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CBC1548874C00DBE9A1 /* libz.dylib */; };
+		77B5EAED1743EEF300F50281 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CB61548872000DBE9A1 /* libTestFlight.a */; };
+		77B5EAEF1743EEF300F50281 /* FormatCircleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */; };
+		77B5EAF01743EEF300F50281 /* FormatCircleGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DC91541DC8300C4840F /* FormatCircleGreen@2x.png */; };
+		77B5EAF11743EEF300F50281 /* FormatCircleRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DCA1541DC8300C4840F /* FormatCircleRed@2x.png */; };
+		77B5EAF21743EEF300F50281 /* FormatCircleWC@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DCB1541DC8300C4840F /* FormatCircleWC@2x.png */; };
+		77B5EAF31743EEF300F50281 /* FormatCircleYellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DCC1541DC8300C4840F /* FormatCircleYellow@2x.png */; };
+		77B5EAF41743EEF300F50281 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DCF1541DC8300C4840F /* list.png */; };
+		77B5EAF51743EEF300F50281 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD01541DC8300C4840F /* list@2x.png */; };
+		77B5EAF61743EEF300F50281 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD31541DC8300C4840F /* map.png */; };
+		77B5EAF71743EEF300F50281 /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD41541DC8300C4840F /* map@2x.png */; };
+		77B5EAF81743EEF300F50281 /* MapMarkerBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD51541DC8300C4840F /* MapMarkerBlack.png */; };
+		77B5EAF91743EEF300F50281 /* MapMarkerBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD61541DC8300C4840F /* MapMarkerBlue.png */; };
+		77B5EAFA1743EEF300F50281 /* MapMarkerGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD71541DC8300C4840F /* MapMarkerGreen.png */; };
+		77B5EAFB1743EEF300F50281 /* MapMarkerRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD81541DC8300C4840F /* MapMarkerRed.png */; };
+		77B5EAFC1743EEF300F50281 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE01541DC8300C4840F /* search.png */; };
+		77B5EAFD1743EEF300F50281 /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE11541DC8300C4840F /* search@2x.png */; };
+		77B5EAFE1743EEF300F50281 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE21541DC8300C4840F /* settings.png */; };
+		77B5EAFF1743EEF300F50281 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE31541DC8300C4840F /* settings@2x.png */; };
+		77B5EB001743EEF300F50281 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE61541DC8300C4840F /* InfoPlist.strings */; };
+		77B5EB011743EEF300F50281 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE81541DC8300C4840F /* Localizable.strings */; };
+		77B5EB021743EEF300F50281 /* shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D210E3168CAECB000D991A /* shadow.png */; };
+		77B5EB031743EEF300F50281 /* MapMarkerBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335560168E278F001C0B08 /* MapMarkerBlack@2x.png */; };
+		77B5EB041743EEF300F50281 /* MapMarkerBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335561168E278F001C0B08 /* MapMarkerBlue@2x.png */; };
+		77B5EB051743EEF300F50281 /* MapMarkerGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335562168E278F001C0B08 /* MapMarkerGreen@2x.png */; };
+		77B5EB061743EEF300F50281 /* MapMarkerRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335563168E278F001C0B08 /* MapMarkerRed@2x.png */; };
+		77B5EB071743EEF300F50281 /* CheckBoxDisabled-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FD168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png */; };
+		77B5EB081743EEF300F50281 /* CheckBoxDisabled-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FE168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png */; };
+		77B5EB091743EEF300F50281 /* CheckBoxDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FF168E9E4E00CED8D5 /* CheckBoxDisabled.png */; };
+		77B5EB0A1743EEF300F50281 /* CheckBoxDisabled@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4200168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png */; };
+		77B5EB0B1743EEF300F50281 /* CheckBoxHighlight-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4201168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png */; };
+		77B5EB0C1743EEF300F50281 /* CheckBoxHighlight-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4202168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png */; };
+		77B5EB0D1743EEF300F50281 /* CheckBoxHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4203168E9E4E00CED8D5 /* CheckBoxHighlight.png */; };
+		77B5EB0E1743EEF300F50281 /* CheckBoxHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4204168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png */; };
+		77B5EB0F1743EEF300F50281 /* CheckBoxNormal-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4205168E9E4E00CED8D5 /* CheckBoxNormal-Check.png */; };
+		77B5EB101743EEF300F50281 /* CheckBoxNormal-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */; };
+		77B5EB111743EEF300F50281 /* CheckBoxNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */; };
+		77B5EB121743EEF300F50281 /* CheckBoxNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */; };
+		77B5EB131743EEF300F50281 /* MButtonConcave.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4209168E9E4E00CED8D5 /* MButtonConcave.png */; };
+		77B5EB141743EEF300F50281 /* MButtonConcave@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420A168E9E4E00CED8D5 /* MButtonConcave@2X.png */; };
+		77B5EB151743EEF300F50281 /* MButtonConvex.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420B168E9E4E00CED8D5 /* MButtonConvex.png */; };
+		77B5EB161743EEF300F50281 /* MButtonConvex@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420C168E9E4E00CED8D5 /* MButtonConvex@2X.png */; };
+		77B5EB171743EEF300F50281 /* SButtonConcave.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420D168E9E4E00CED8D5 /* SButtonConcave.png */; };
+		77B5EB181743EEF300F50281 /* SButtonConcave@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420E168E9E4E00CED8D5 /* SButtonConcave@2X.png */; };
+		77B5EB191743EEF300F50281 /* SButtonConvex.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420F168E9E4E00CED8D5 /* SButtonConvex.png */; };
+		77B5EB1A1743EEF300F50281 /* SButtonConvex@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4210168E9E4E00CED8D5 /* SButtonConvex@2X.png */; };
+		77B5EB1B1743EEF300F50281 /* LocButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4211168E9E4E00CED8D5 /* LocButton.png */; };
+		77B5EB1C1743EEF300F50281 /* LocButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4212168E9E4E00CED8D5 /* LocButton@2x.png */; };
+		77B5EB1D1743EEF300F50281 /* LocButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4213168E9E4E00CED8D5 /* LocButtonHighlight.png */; };
+		77B5EB1E1743EEF300F50281 /* LocButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4214168E9E4E00CED8D5 /* LocButtonHighlight@2X.png */; };
+		77B5EB1F1743EEF300F50281 /* LocButtonSimpleHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4215168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png */; };
+		77B5EB201743EEF300F50281 /* LocButtonSimpleHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4216168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png */; };
+		77B5EB211743EEF300F50281 /* LocButtonSimpleNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4217168E9E4E00CED8D5 /* LocButtonSimpleNormal.png */; };
+		77B5EB221743EEF300F50281 /* LocButtonSimpleNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4218168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png */; };
+		77B5EB231743EEF300F50281 /* LongButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4219168E9E4E00CED8D5 /* LongButtonHighlight.png */; };
+		77B5EB241743EEF300F50281 /* LongButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421A168E9E4E00CED8D5 /* LongButtonHighlight@2X.png */; };
+		77B5EB251743EEF300F50281 /* LongButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421B168E9E4E00CED8D5 /* LongButtonNormal.png */; };
+		77B5EB261743EEF300F50281 /* LongButtonNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421C168E9E4E00CED8D5 /* LongButtonNormal@2X.png */; };
+		77B5EB341743EEF300F50281 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5116F565CE00664FF9 /* iPad.storyboard */; };
+		77B5EB351743EEF300F50281 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
+		77B5EB4E1743EFBB00F50281 /* BMLT_AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B5EB3D1743EFBB00F50281 /* BMLT_AnimationView.m */; };
+		77B5EB4F1743EFBB00F50281 /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B5EB3E1743EFBB00F50281 /* BMLTVariantDefs.m */; };
+		77B5EB501743EFBB00F50281 /* Anim-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB401743EFBB00F50281 /* Anim-Back.png */; };
+		77B5EB511743EFBB00F50281 /* Anim-Transparency.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB411743EFBB00F50281 /* Anim-Transparency.png */; };
+		77B5EB521743EFBB00F50281 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB421743EFBB00F50281 /* Default-568h@2x.png */; };
+		77B5EB531743EFBB00F50281 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB431743EFBB00F50281 /* Default-Landscape@2x~ipad.png */; };
+		77B5EB541743EFBB00F50281 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB441743EFBB00F50281 /* Default-Landscape~ipad.png */; };
+		77B5EB551743EFBB00F50281 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB451743EFBB00F50281 /* Default-Portrait@2x~ipad.png */; };
+		77B5EB561743EFBB00F50281 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB461743EFBB00F50281 /* Default-Portrait~ipad.png */; };
+		77B5EB571743EFBB00F50281 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB471743EFBB00F50281 /* Default.png */; };
+		77B5EB581743EFBB00F50281 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB481743EFBB00F50281 /* Default@2x.png */; };
+		77B5EB591743EFBB00F50281 /* icon-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB491743EFBB00F50281 /* icon-iPad.png */; };
+		77B5EB5A1743EFBB00F50281 /* icon-iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB4A1743EFBB00F50281 /* icon-iPhone.png */; };
+		77B5EB5B1743EFBB00F50281 /* icon-LargeiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB4B1743EFBB00F50281 /* icon-LargeiPad.png */; };
+		77B5EB5C1743EFBB00F50281 /* icon-LargeiPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB4C1743EFBB00F50281 /* icon-LargeiPhone.png */; };
 		77B8BD18155EEBEF00CECED5 /* Beanie.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B8BD17155EEBEF00CECED5 /* Beanie.png */; };
 		77BC71981512BFA1000BEFC0 /* A_BMLTSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BC71971512BFA1000BEFC0 /* A_BMLTSearchResultsViewController.m */; };
 		77BCBBDD152933D700CDBCF6 /* BMLT_Results_MapPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BCBBDC152933D700CDBCF6 /* BMLT_Results_MapPointAnnotationView.m */; };
@@ -788,6 +907,23 @@
 		77ACED99168F3CAA00FC9192 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		77B566BF1690BE8A00F3CF3F /* AboutLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutLogo.png; sourceTree = "<group>"; };
 		77B5B92416924FA200AAE31D /* BMLT_AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLT_AnimationView.h; sourceTree = "<group>"; };
+		77B5EB3A1743EEF300F50281 /* SoCal NA Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoCal NA Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77B5EB3D1743EFBB00F50281 /* BMLT_AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLT_AnimationView.m; sourceTree = "<group>"; };
+		77B5EB3E1743EFBB00F50281 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
+		77B5EB401743EFBB00F50281 /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Back.png"; sourceTree = "<group>"; };
+		77B5EB411743EFBB00F50281 /* Anim-Transparency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Transparency.png"; sourceTree = "<group>"; };
+		77B5EB421743EFBB00F50281 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		77B5EB431743EFBB00F50281 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		77B5EB441743EFBB00F50281 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		77B5EB451743EFBB00F50281 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		77B5EB461743EFBB00F50281 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		77B5EB471743EFBB00F50281 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		77B5EB481743EFBB00F50281 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		77B5EB491743EFBB00F50281 /* icon-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-iPad.png"; sourceTree = "<group>"; };
+		77B5EB4A1743EFBB00F50281 /* icon-iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-iPhone.png"; sourceTree = "<group>"; };
+		77B5EB4B1743EFBB00F50281 /* icon-LargeiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-LargeiPad.png"; sourceTree = "<group>"; };
+		77B5EB4C1743EFBB00F50281 /* icon-LargeiPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-LargeiPhone.png"; sourceTree = "<group>"; };
+		77B5EB4D1743EFBB00F50281 /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		77B8BD17155EEBEF00CECED5 /* Beanie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Beanie.png; sourceTree = "<group>"; };
 		77BBAEF215417694001F5BCC /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		77BBAEF4154176A4001F5BCC /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
@@ -839,6 +975,7 @@
 		77FAF17E155C2F8200ADE3FC /* icon-LargeiPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-LargeiPhone.png"; sourceTree = "<group>"; };
 		77FAF17F155C2F8200ADE3FC /* Large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Large.png; sourceTree = "<group>"; };
 		77FAF18C155C301E00ADE3FC /* StPaulMn.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = StPaulMn.gpx; path = "../spec/GPX Files/StPaulMn.gpx"; sourceTree = SOURCE_ROOT; };
+		77FF1C691743F461009120F8 /* LosAngelesCA.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = LosAngelesCA.gpx; path = "../../../spec/GPX Files/LosAngelesCA.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -903,6 +1040,22 @@
 				77AC719815409E9F0060CA80 /* CoreGraphics.framework in Frameworks */,
 				77882CBE1548876000DBE9A1 /* libz.dylib in Frameworks */,
 				7783E6821693A1A300F99D1D /* libTestFlight.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77B5EAE41743EEF300F50281 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77B5EAE51743EEF300F50281 /* MapKit.framework in Frameworks */,
+				77B5EAE61743EEF300F50281 /* SystemConfiguration.framework in Frameworks */,
+				77B5EAE71743EEF300F50281 /* QuartzCore.framework in Frameworks */,
+				77B5EAE81743EEF300F50281 /* CoreLocation.framework in Frameworks */,
+				77B5EAE91743EEF300F50281 /* UIKit.framework in Frameworks */,
+				77B5EAEA1743EEF300F50281 /* Foundation.framework in Frameworks */,
+				77B5EAEB1743EEF300F50281 /* CoreGraphics.framework in Frameworks */,
+				77B5EAEC1743EEF300F50281 /* libz.dylib in Frameworks */,
+				77B5EAED1743EEF300F50281 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1234,6 +1387,7 @@
 				777597CE1540F15F00D45ADA /* NA Sverige.app */,
 				777AD6FD1688C61700E064D0 /* AU NA Meetings.app */,
 				77E24A3D16F563C900664FF9 /* FL NA Meetings.app */,
+				77B5EB3A1743EEF300F50281 /* SoCal NA Meetings.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1295,6 +1449,38 @@
 			path = Miscellaneous;
 			sourceTree = "<group>";
 		};
+		77B5EB3C1743EFBB00F50281 /* BMLT-CA */ = {
+			isa = PBXGroup;
+			children = (
+				77B5EB3D1743EFBB00F50281 /* BMLT_AnimationView.m */,
+				77B5EB3E1743EFBB00F50281 /* BMLTVariantDefs.m */,
+				77B5EB3F1743EFBB00F50281 /* images */,
+				77B5EB4D1743EFBB00F50281 /* info.plist */,
+				77FF1C691743F461009120F8 /* LosAngelesCA.gpx */,
+			);
+			path = "BMLT-CA";
+			sourceTree = "<group>";
+		};
+		77B5EB3F1743EFBB00F50281 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				77B5EB401743EFBB00F50281 /* Anim-Back.png */,
+				77B5EB411743EFBB00F50281 /* Anim-Transparency.png */,
+				77B5EB421743EFBB00F50281 /* Default-568h@2x.png */,
+				77B5EB431743EFBB00F50281 /* Default-Landscape@2x~ipad.png */,
+				77B5EB441743EFBB00F50281 /* Default-Landscape~ipad.png */,
+				77B5EB451743EFBB00F50281 /* Default-Portrait@2x~ipad.png */,
+				77B5EB461743EFBB00F50281 /* Default-Portrait~ipad.png */,
+				77B5EB471743EFBB00F50281 /* Default.png */,
+				77B5EB481743EFBB00F50281 /* Default@2x.png */,
+				77B5EB491743EFBB00F50281 /* icon-iPad.png */,
+				77B5EB4A1743EFBB00F50281 /* icon-iPhone.png */,
+				77B5EB4B1743EFBB00F50281 /* icon-LargeiPad.png */,
+				77B5EB4C1743EFBB00F50281 /* icon-LargeiPhone.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		77BBAEF3154176A4001F5BCC /* BMLT-MN */ = {
 			isa = PBXGroup;
 			children = (
@@ -1326,6 +1512,7 @@
 				77D90B961514C6A60059EF41 /* BMLT-NY */,
 				777AD7011688C63000E064D0 /* BMLT-AU */,
 				77E249AB16F563C000664FF9 /* BMLT-FL */,
+				77B5EB3C1743EFBB00F50281 /* BMLT-CA */,
 			);
 			path = Variants;
 			sourceTree = "<group>";
@@ -1483,6 +1670,23 @@
 			productReference = 77AC71E215409E9F0060CA80 /* MNNA.app */;
 			productType = "com.apple.product-type.application";
 		};
+		77B5EABD1743EEF300F50281 /* SoCal NA Meetings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77B5EB361743EEF300F50281 /* Build configuration list for PBXNativeTarget "SoCal NA Meetings" */;
+			buildPhases = (
+				77B5EABE1743EEF300F50281 /* Sources */,
+				77B5EAE41743EEF300F50281 /* Frameworks */,
+				77B5EAEE1743EEF300F50281 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SoCal NA Meetings";
+			productName = BMLT;
+			productReference = 77B5EB3A1743EEF300F50281 /* SoCal NA Meetings.app */;
+			productType = "com.apple.product-type.application";
+		};
 		77E249BD16F563C900664FF9 /* FL NA Meetings */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77E24A3916F563C900664FF9 /* Build configuration list for PBXNativeTarget "FL NA Meetings" */;
@@ -1507,7 +1711,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BMLT;
-				LastUpgradeCheck = 0430;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = MAGSHARE;
 			};
 			buildConfigurationList = 77977D05150E882B00485C8D /* Build configuration list for PBXProject "BMLT" */;
@@ -1529,6 +1733,7 @@
 				77977D0A150E882B00485C8D /* NY NA Meetings */,
 				77AC716915409E9F0060CA80 /* MNNA */,
 				77E249BD16F563C900664FF9 /* FL NA Meetings */,
+				77B5EABD1743EEF300F50281 /* SoCal NA Meetings */,
 			);
 		};
 /* End PBXProject section */
@@ -1839,6 +2044,84 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77B5EAEE1743EEF300F50281 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77B5EAEF1743EEF300F50281 /* FormatCircleBlue@2x.png in Resources */,
+				77B5EAF01743EEF300F50281 /* FormatCircleGreen@2x.png in Resources */,
+				77B5EAF11743EEF300F50281 /* FormatCircleRed@2x.png in Resources */,
+				77B5EAF21743EEF300F50281 /* FormatCircleWC@2x.png in Resources */,
+				77B5EAF31743EEF300F50281 /* FormatCircleYellow@2x.png in Resources */,
+				77B5EAF41743EEF300F50281 /* list.png in Resources */,
+				77B5EAF51743EEF300F50281 /* list@2x.png in Resources */,
+				77B5EAF61743EEF300F50281 /* map.png in Resources */,
+				77B5EAF71743EEF300F50281 /* map@2x.png in Resources */,
+				77B5EAF81743EEF300F50281 /* MapMarkerBlack.png in Resources */,
+				77B5EAF91743EEF300F50281 /* MapMarkerBlue.png in Resources */,
+				77B5EAFA1743EEF300F50281 /* MapMarkerGreen.png in Resources */,
+				77B5EAFB1743EEF300F50281 /* MapMarkerRed.png in Resources */,
+				77B5EAFC1743EEF300F50281 /* search.png in Resources */,
+				77B5EAFD1743EEF300F50281 /* search@2x.png in Resources */,
+				77B5EAFE1743EEF300F50281 /* settings.png in Resources */,
+				77B5EAFF1743EEF300F50281 /* settings@2x.png in Resources */,
+				77B5EB001743EEF300F50281 /* InfoPlist.strings in Resources */,
+				77B5EB011743EEF300F50281 /* Localizable.strings in Resources */,
+				77B5EB021743EEF300F50281 /* shadow.png in Resources */,
+				77B5EB031743EEF300F50281 /* MapMarkerBlack@2x.png in Resources */,
+				77B5EB041743EEF300F50281 /* MapMarkerBlue@2x.png in Resources */,
+				77B5EB051743EEF300F50281 /* MapMarkerGreen@2x.png in Resources */,
+				77B5EB061743EEF300F50281 /* MapMarkerRed@2x.png in Resources */,
+				77B5EB071743EEF300F50281 /* CheckBoxDisabled-Check.png in Resources */,
+				77B5EB081743EEF300F50281 /* CheckBoxDisabled-Check@2X.png in Resources */,
+				77B5EB091743EEF300F50281 /* CheckBoxDisabled.png in Resources */,
+				77B5EB0A1743EEF300F50281 /* CheckBoxDisabled@2X.png in Resources */,
+				77B5EB0B1743EEF300F50281 /* CheckBoxHighlight-Check.png in Resources */,
+				77B5EB0C1743EEF300F50281 /* CheckBoxHighlight-Check@2X.png in Resources */,
+				77B5EB0D1743EEF300F50281 /* CheckBoxHighlight.png in Resources */,
+				77B5EB0E1743EEF300F50281 /* CheckBoxHighlight@2X.png in Resources */,
+				77B5EB0F1743EEF300F50281 /* CheckBoxNormal-Check.png in Resources */,
+				77B5EB101743EEF300F50281 /* CheckBoxNormal-Check@2X.png in Resources */,
+				77B5EB111743EEF300F50281 /* CheckBoxNormal.png in Resources */,
+				77B5EB121743EEF300F50281 /* CheckBoxNormal@2X.png in Resources */,
+				77B5EB131743EEF300F50281 /* MButtonConcave.png in Resources */,
+				77B5EB141743EEF300F50281 /* MButtonConcave@2X.png in Resources */,
+				77B5EB151743EEF300F50281 /* MButtonConvex.png in Resources */,
+				77B5EB161743EEF300F50281 /* MButtonConvex@2X.png in Resources */,
+				77B5EB171743EEF300F50281 /* SButtonConcave.png in Resources */,
+				77B5EB181743EEF300F50281 /* SButtonConcave@2X.png in Resources */,
+				77B5EB191743EEF300F50281 /* SButtonConvex.png in Resources */,
+				77B5EB1A1743EEF300F50281 /* SButtonConvex@2X.png in Resources */,
+				77B5EB1B1743EEF300F50281 /* LocButton.png in Resources */,
+				77B5EB1C1743EEF300F50281 /* LocButton@2x.png in Resources */,
+				77B5EB1D1743EEF300F50281 /* LocButtonHighlight.png in Resources */,
+				77B5EB1E1743EEF300F50281 /* LocButtonHighlight@2X.png in Resources */,
+				77B5EB1F1743EEF300F50281 /* LocButtonSimpleHighlight.png in Resources */,
+				77B5EB201743EEF300F50281 /* LocButtonSimpleHighlight@2X.png in Resources */,
+				77B5EB211743EEF300F50281 /* LocButtonSimpleNormal.png in Resources */,
+				77B5EB221743EEF300F50281 /* LocButtonSimpleNormal@2X.png in Resources */,
+				77B5EB231743EEF300F50281 /* LongButtonHighlight.png in Resources */,
+				77B5EB241743EEF300F50281 /* LongButtonHighlight@2X.png in Resources */,
+				77B5EB251743EEF300F50281 /* LongButtonNormal.png in Resources */,
+				77B5EB261743EEF300F50281 /* LongButtonNormal@2X.png in Resources */,
+				77B5EB341743EEF300F50281 /* iPad.storyboard in Resources */,
+				77B5EB351743EEF300F50281 /* iPhone.storyboard in Resources */,
+				77B5EB501743EFBB00F50281 /* Anim-Back.png in Resources */,
+				77B5EB511743EFBB00F50281 /* Anim-Transparency.png in Resources */,
+				77B5EB521743EFBB00F50281 /* Default-568h@2x.png in Resources */,
+				77B5EB531743EFBB00F50281 /* Default-Landscape@2x~ipad.png in Resources */,
+				77B5EB541743EFBB00F50281 /* Default-Landscape~ipad.png in Resources */,
+				77B5EB551743EFBB00F50281 /* Default-Portrait@2x~ipad.png in Resources */,
+				77B5EB561743EFBB00F50281 /* Default-Portrait~ipad.png in Resources */,
+				77B5EB571743EFBB00F50281 /* Default.png in Resources */,
+				77B5EB581743EFBB00F50281 /* Default@2x.png in Resources */,
+				77B5EB591743EFBB00F50281 /* icon-iPad.png in Resources */,
+				77B5EB5A1743EFBB00F50281 /* icon-iPhone.png in Resources */,
+				77B5EB5B1743EFBB00F50281 /* icon-LargeiPad.png in Resources */,
+				77B5EB5C1743EFBB00F50281 /* icon-LargeiPhone.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77E249F016F563C900664FF9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2102,6 +2385,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		77B5EABE1743EEF300F50281 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77B5EABF1743EEF300F50281 /* BMLTAppDelegate.m in Sources */,
+				77B5EAC01743EEF300F50281 /* main.m in Sources */,
+				77B5EAC11743EEF300F50281 /* BMLTAdvancedSearchViewController.m in Sources */,
+				77B5EAC21743EEF300F50281 /* BMLTMapResultsViewController.m in Sources */,
+				77B5EAC31743EEF300F50281 /* BMLT_Prefs.m in Sources */,
+				77B5EAC41743EEF300F50281 /* BMLT_Checkbox.m in Sources */,
+				77B5EAC51743EEF300F50281 /* Reachability.m in Sources */,
+				77B5EAC61743EEF300F50281 /* A_BMLT_ChildClass.m in Sources */,
+				77B5EAC71743EEF300F50281 /* A_BMLT_Search.m in Sources */,
+				77B5EAC81743EEF300F50281 /* A_BMLT_ServiceBodyHierClass.m in Sources */,
+				77B5EAC91743EEF300F50281 /* BMLT_Driver.m in Sources */,
+				77B5EACA1743EEF300F50281 /* BMLT_Format.m in Sources */,
+				77B5EACB1743EEF300F50281 /* BMLT_Location.m in Sources */,
+				77B5EACC1743EEF300F50281 /* BMLT_Meeting.m in Sources */,
+				77B5EACD1743EEF300F50281 /* BMLT_Meeting_Search.m in Sources */,
+				77B5EACE1743EEF300F50281 /* BMLT_Parser.m in Sources */,
+				77B5EACF1743EEF300F50281 /* BMLT_Server.m in Sources */,
+				77B5EAD01743EEF300F50281 /* BMLT_ServiceBody.m in Sources */,
+				77B5EAD11743EEF300F50281 /* BMLTAboutViewController.m in Sources */,
+				77B5EAD21743EEF300F50281 /* BMLTSettingsViewController.m in Sources */,
+				77B5EAD31743EEF300F50281 /* BMLTSimpleSearchViewController.m in Sources */,
+				77B5EAD41743EEF300F50281 /* A_BMLTSearchResultsViewController.m in Sources */,
+				77B5EAD51743EEF300F50281 /* A_BMLTSettingsBackgroundView.m in Sources */,
+				77B5EAD61743EEF300F50281 /* A_BMLTNavBarViewController.m in Sources */,
+				77B5EAD71743EEF300F50281 /* A_BMLTMainBackgroundView.m in Sources */,
+				77B5EAD81743EEF300F50281 /* BMLTDisplayListResultsViewController.m in Sources */,
+				77B5EAD91743EEF300F50281 /* BMLTMeetingDisplayCellView.m in Sources */,
+				77B5EADA1743EEF300F50281 /* BMLTFormatDetailViewController.m in Sources */,
+				77B5EADB1743EEF300F50281 /* BMLTMeetingDetailViewController.m in Sources */,
+				77B5EADC1743EEF300F50281 /* A_BMLT_SearchViewController.m in Sources */,
+				77B5EADD1743EEF300F50281 /* BMLT_Results_MapPointAnnotationView.m in Sources */,
+				77B5EADE1743EEF300F50281 /* BMLTAnimationScreenViewController.m in Sources */,
+				77B5EADF1743EEF300F50281 /* BMLT_ListPrintPageRenderer.m in Sources */,
+				77B5EAE01743EEF300F50281 /* A_BMLT_PrintPageRenderer.m in Sources */,
+				77B5EAE11743EEF300F50281 /* BMLT_DetailsPrintPageRenderer.m in Sources */,
+				77B5EAE21743EEF300F50281 /* BMLTBundleResourceLabel.m in Sources */,
+				77B5EAE31743EEF300F50281 /* BMLTAboutBackgroundView.m in Sources */,
+				77B5EB4E1743EFBB00F50281 /* BMLT_AnimationView.m in Sources */,
+				77B5EB4F1743EFBB00F50281 /* BMLTVariantDefs.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		77E249BE16F563C900664FF9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2178,9 +2507,12 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -2434,9 +2766,12 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -2469,9 +2804,12 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -2607,6 +2945,93 @@
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
+		};
+		77B5EB371743EEF300F50281 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chris Marshall (TFYG5M63S3)";
+				COMPRESS_PNG_FILES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_CONNECTION_PARSE_TRACE_=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				INFOPLIST_FILE = "Variants/BMLT-CA/Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = traditional;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BMLT\"",
+				);
+				PRODUCT_NAME = "SoCal NA Meetings";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "750959A4-C89E-42CB-8ED4-8DEE1D14B954";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		77B5EB381743EEF300F50281 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chris Marshall (TFYG5M63S3)";
+				COMPRESS_PNG_FILES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				INFOPLIST_FILE = "Variants/BMLT-CA/Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = traditional;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BMLT\"",
+				);
+				PRODUCT_NAME = "SoCal NA Meetings";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "750959A4-C89E-42CB-8ED4-8DEE1D14B954";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		77B5EB391743EEF300F50281 /* TestFlight */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chris Marshall (TFYG5M63S3)";
+				COMPRESS_PNG_FILES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "_TESTFLIGHT_=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				INFOPLIST_FILE = "Variants/BMLT-CA/Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = traditional;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BMLT\"",
+				);
+				PRODUCT_NAME = "SoCal NA Meetings";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "750959A4-C89E-42CB-8ED4-8DEE1D14B954";
+				WRAPPER_EXTENSION = app;
+			};
+			name = TestFlight;
 		};
 		77E24A3A16F563C900664FF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2744,6 +3169,16 @@
 				77AC71E015409E9F0060CA80 /* Debug */,
 				77AC71E115409E9F0060CA80 /* Release */,
 				7723B82D1561840500A2BC84 /* TestFlight */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77B5EB361743EEF300F50281 /* Build configuration list for PBXNativeTarget "SoCal NA Meetings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77B5EB371743EEF300F50281 /* Debug */,
+				77B5EB381743EEF300F50281 /* Release */,
+				77B5EB391743EEF300F50281 /* TestFlight */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

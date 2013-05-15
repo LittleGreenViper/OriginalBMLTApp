@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.0"
+  creator="GPSBabel - http://www.gpsbabel.org"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/0"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd">
+<time>2013-05-15T19:45:28Z</time>
+<bounds minlat="34.052659" minlon="-118.243103" maxlat="34.052659" maxlon="-118.243103"/>
+<wpt lat="34.052659" lon="-118.243103">
+  <ele>0.000000</ele>
+  <name>Los Angeles, CA</name>
+  <cmt>Los Angeles, CA</cmt>
+  <desc>Los Angeles, CA</desc>
+</wpt>
+</gpx>
