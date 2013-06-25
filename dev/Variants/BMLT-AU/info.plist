@@ -9,7 +9,7 @@
 	<key>BMLTLeadText</key>
 	<string>Find NA Meetings In Australia</string>
 	<key>BMLTRootServerURI</key>
-	<string>http://www.na.org.au/meetings</string>
+	<string>http://www.na.org.au/bmlt</string>
 	<key>BMLTServerHomeLat</key>
 	<string>-25.349146</string>
 	<key>BMLTServerHomeLong</key>
@@ -32,12 +32,12 @@
 				<string>App-Icon-114.png</string>
 				<string>App-Icon-72.png</string>
 				<string>App-Icon-144.png</string>
-				<string>iPhone.png</string>
-				<string>iPhone-2x.png</string>
-				<string>iPadPortrait.png</string>
-				<string>iPadPortrait-2X.png</string>
-				<string>iPadLandscape.png</string>
-				<string>iPadLandscape-2X.png</string>
+				<string>Default.png</string>
+				<string>Default@2x.png</string>
+				<string>Default-Portrait~ipad.png</string>
+				<string>Default-Portrait@2x~ipad.png</string>
+				<string>Default-Landscape~ipad.png</string>
+				<string>Default-Landscape@2x~ipad.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<true/>
@@ -52,11 +52,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.5.1a6</string>
+	<string>2.5.1</string>
 	<key>CFBundleSignature</key>
 	<string>LGVP</string>
 	<key>CFBundleVersion</key>
-	<string>2.5.1a6</string>
+	<string>2.5.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
