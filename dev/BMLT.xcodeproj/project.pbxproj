@@ -250,6 +250,9 @@
 		77603EB61541DC8300C4840F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE81541DC8300C4840F /* Localizable.strings */; };
 		77603EB71541DC8300C4840F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE81541DC8300C4840F /* Localizable.strings */; };
 		77603EB81541DC8300C4840F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE81541DC8300C4840F /* Localizable.strings */; };
+		7762DCC0177B979200254E1A /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 77ACED99168F3CAA00FC9192 /* BMLTVariantDefs.m */; };
+		7762DCC2177B9FF400254E1A /* BMLT_AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 774EB4CF168F3B6B006C663F /* BMLT_AnimationView.m */; };
+		7762DCC4177BA04900254E1A /* BMLT_AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 774EB4CF168F3B6B006C663F /* BMLT_AnimationView.m */; };
 		77640D41151A67BE00634143 /* BMLTMeetingDisplayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77640D40151A67BE00634143 /* BMLTMeetingDisplayCellView.m */; };
 		7766022A1688E00400B1310A /* App-Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 7766021F1688E00400B1310A /* App-Icon-57.png */; };
 		7766022B1688E00400B1310A /* App-Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 776602201688E00400B1310A /* App-Icon-72.png */; };
@@ -508,7 +511,6 @@
 		77B5EAFF1743EEF300F50281 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE31541DC8300C4840F /* settings@2x.png */; };
 		77B5EB001743EEF300F50281 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE61541DC8300C4840F /* InfoPlist.strings */; };
 		77B5EB011743EEF300F50281 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE81541DC8300C4840F /* Localizable.strings */; };
-		77B5EB021743EEF300F50281 /* shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D210E3168CAECB000D991A /* shadow.png */; };
 		77B5EB031743EEF300F50281 /* MapMarkerBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335560168E278F001C0B08 /* MapMarkerBlack@2x.png */; };
 		77B5EB041743EEF300F50281 /* MapMarkerBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335561168E278F001C0B08 /* MapMarkerBlue@2x.png */; };
 		77B5EB051743EEF300F50281 /* MapMarkerGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335562168E278F001C0B08 /* MapMarkerGreen@2x.png */; };
@@ -547,7 +549,6 @@
 		77B5EB261743EEF300F50281 /* LongButtonNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421C168E9E4E00CED8D5 /* LongButtonNormal@2X.png */; };
 		77B5EB341743EEF300F50281 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5116F565CE00664FF9 /* iPad.storyboard */; };
 		77B5EB351743EEF300F50281 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
-		77B5EB4E1743EFBB00F50281 /* BMLT_AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B5EB3D1743EFBB00F50281 /* BMLT_AnimationView.m */; };
 		77B5EB4F1743EFBB00F50281 /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B5EB3E1743EFBB00F50281 /* BMLTVariantDefs.m */; };
 		77B5EB501743EFBB00F50281 /* Anim-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB401743EFBB00F50281 /* Anim-Back.png */; };
 		77B5EB511743EFBB00F50281 /* Anim-Transparency.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B5EB411743EFBB00F50281 /* Anim-Transparency.png */; };
@@ -908,7 +909,6 @@
 		77B566BF1690BE8A00F3CF3F /* AboutLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutLogo.png; sourceTree = "<group>"; };
 		77B5B92416924FA200AAE31D /* BMLT_AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLT_AnimationView.h; sourceTree = "<group>"; };
 		77B5EB3A1743EEF300F50281 /* SoCal NA Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoCal NA Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		77B5EB3D1743EFBB00F50281 /* BMLT_AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLT_AnimationView.m; sourceTree = "<group>"; };
 		77B5EB3E1743EFBB00F50281 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		77B5EB401743EFBB00F50281 /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Back.png"; sourceTree = "<group>"; };
 		77B5EB411743EFBB00F50281 /* Anim-Transparency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Transparency.png"; sourceTree = "<group>"; };
@@ -1452,7 +1452,6 @@
 		77B5EB3C1743EFBB00F50281 /* BMLT-CA */ = {
 			isa = PBXGroup;
 			children = (
-				77B5EB3D1743EFBB00F50281 /* BMLT_AnimationView.m */,
 				77B5EB3E1743EFBB00F50281 /* BMLTVariantDefs.m */,
 				77B5EB3F1743EFBB00F50281 /* images */,
 				77B5EB4D1743EFBB00F50281 /* info.plist */,
@@ -2067,7 +2066,6 @@
 				77B5EAFF1743EEF300F50281 /* settings@2x.png in Resources */,
 				77B5EB001743EEF300F50281 /* InfoPlist.strings in Resources */,
 				77B5EB011743EEF300F50281 /* Localizable.strings in Resources */,
-				77B5EB021743EEF300F50281 /* shadow.png in Resources */,
 				77B5EB031743EEF300F50281 /* MapMarkerBlack@2x.png in Resources */,
 				77B5EB041743EEF300F50281 /* MapMarkerBlue@2x.png in Resources */,
 				77B5EB051743EEF300F50281 /* MapMarkerGreen@2x.png in Resources */,
@@ -2336,6 +2334,8 @@
 				776CAD8A15404BBF001BD51D /* BMLT_DetailsPrintPageRenderer.m in Sources */,
 				771A40ED15408EA000EF34DF /* BMLTBundleResourceLabel.m in Sources */,
 				77DCF09D1545D4FE00979BF6 /* BMLTAboutBackgroundView.m in Sources */,
+				7762DCC0177B979200254E1A /* BMLTVariantDefs.m in Sources */,
+				7762DCC2177B9FF400254E1A /* BMLT_AnimationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2426,8 +2426,8 @@
 				77B5EAE11743EEF300F50281 /* BMLT_DetailsPrintPageRenderer.m in Sources */,
 				77B5EAE21743EEF300F50281 /* BMLTBundleResourceLabel.m in Sources */,
 				77B5EAE31743EEF300F50281 /* BMLTAboutBackgroundView.m in Sources */,
-				77B5EB4E1743EFBB00F50281 /* BMLT_AnimationView.m in Sources */,
 				77B5EB4F1743EFBB00F50281 /* BMLTVariantDefs.m in Sources */,
+				7762DCC4177BA04900254E1A /* BMLT_AnimationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2558,7 +2558,7 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "750959A4-C89E-42CB-8ED4-8DEE1D14B954";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17393DA4-0026-4360-9C9B-C81082E6C65D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;
@@ -2857,7 +2857,7 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "750959A4-C89E-42CB-8ED4-8DEE1D14B954";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17393DA4-0026-4360-9C9B-C81082E6C65D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2885,7 +2885,7 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "750959A4-C89E-42CB-8ED4-8DEE1D14B954";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17393DA4-0026-4360-9C9B-C81082E6C65D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
