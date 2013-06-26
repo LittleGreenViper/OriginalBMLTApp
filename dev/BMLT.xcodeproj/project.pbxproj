@@ -2972,7 +2972,7 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "SoCal NA Meetings";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "750959A4-C89E-42CB-8ED4-8DEE1D14B954";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17393DA4-0026-4360-9C9B-C81082E6C65D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3000,7 +3000,7 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "SoCal NA Meetings";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "750959A4-C89E-42CB-8ED4-8DEE1D14B954";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17393DA4-0026-4360-9C9B-C81082E6C65D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3028,7 +3028,7 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "SoCal NA Meetings";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "750959A4-C89E-42CB-8ED4-8DEE1D14B954";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17393DA4-0026-4360-9C9B-C81082E6C65D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;
