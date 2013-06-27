@@ -97,7 +97,7 @@
 /*****************************************************************/
 + (UIColor *)modalBackgroundColor
 {
-    return [UIColor colorWithRed:0.8 green:0.8 blue:0.5 alpha:1.0];
+    return [UIColor colorWithRed:0.1 green:0.45 blue:0.6 alpha:1.0];
 }
 
 /*****************************************************************/
