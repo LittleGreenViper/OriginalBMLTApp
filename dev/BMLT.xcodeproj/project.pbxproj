@@ -1947,6 +1947,8 @@
 				773E4291168E9E4E00CED8D5 /* LongButtonHighlight@2X.png in Resources */,
 				773E4295168E9E4E00CED8D5 /* LongButtonNormal.png in Resources */,
 				773E4299168E9E4E00CED8D5 /* LongButtonNormal@2X.png in Resources */,
+				77E24A5516F565CE00664FF9 /* iPad.storyboard in Resources */,
+				77E24A5A16F565CE00664FF9 /* iPhone.storyboard in Resources */,
 				77ACED8C168F3C6400FC9192 /* Anim-Back.png in Resources */,
 				77ACED8D168F3C6400FC9192 /* Anim-Transparency.png in Resources */,
 				77ACED8E168F3C6400FC9192 /* Default-568h@2x.png in Resources */,
@@ -1960,8 +1962,6 @@
 				77ACED96168F3C6400FC9192 /* icon-iPhone.png in Resources */,
 				77ACED97168F3C6400FC9192 /* icon-LargeiPad.png in Resources */,
 				77ACED98168F3C6400FC9192 /* icon-LargeiPhone.png in Resources */,
-				77E24A5516F565CE00664FF9 /* iPad.storyboard in Resources */,
-				77E24A5A16F565CE00664FF9 /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

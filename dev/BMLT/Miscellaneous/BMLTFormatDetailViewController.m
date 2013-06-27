@@ -38,10 +38,10 @@
     
     if ( self )
         {
-        [self setMyFormat:inFormat];
-        [self setMyModalController:inController];
+        myFormat = inFormat;
         CGRect  myBounds = [[self view] bounds];
-        CGRect  lowestFrame = [formatDescription frame];
+        CGRect  lowestFrame = [[self formatDescription] frame];
+        [self setMyModalController:inController];
         
         myBounds.size.height = lowestFrame.origin.y + lowestFrame.size.height + 8;
         
@@ -71,14 +71,14 @@
             [[self view] setBackgroundColor:myBGColor];
             myBGColor = nil;
             }
-        [(UINavigationItem *)[navBar topItem] setRightBarButtonItem:nil animated:NO];
+        [(UINavigationItem *)[[self navBar] topItem] setRightBarButtonItem:nil animated:NO];
         }
     else
         {
         if ( [BMLTVariantDefs modalBackgroundColor] )
             {
             UIColor *myBGColor = [[UIColor alloc] initWithCGColor:[[BMLTVariantDefs modalBackgroundColor] CGColor]];
-            [[self view] setBackgroundColor:myBGColor];
+            [[self view] setBackgroundColor:[BMLTVariantDefs modalBackgroundColor]];
             myBGColor = nil;
             }
         }
@@ -91,11 +91,10 @@
  *****************************************************************/
 - (void)viewDidUnload
 {
-//    [(A_BMLTSearchResultsViewController *)myModalController closeModal];
-    navBar = nil;
-    formatKeyLabel = nil;
-    formatKeyImage = nil;
-    formatDescription = nil;
+    [self setNavBar:nil];
+    [self setFormatDescription:nil];
+    [self setFormatKeyImage:nil];
+    [self setFormatKeyLabel:nil];
     [super viewDidUnload];
 }
 
@@ -109,9 +108,9 @@
 {
     FormatUIElements    *fmtEl = [BMLT_Format getFormatColor:myFormat];
 
-    [formatKeyImage setImage:[UIImage imageNamed:fmtEl.imageName2x]];
-    [formatKeyLabel setText:fmtEl.title];
-    [formatKeyLabel setTextColor:fmtEl.textColor];
+    [[self formatKeyImage] setImage:[UIImage imageNamed:fmtEl.imageName2x]];
+    [[self formatKeyLabel] setText:fmtEl.title];
+    [[self formatKeyLabel] setTextColor:fmtEl.textColor];
 }
 
 /*****************************************************************/
@@ -120,7 +119,7 @@
  *****************************************************************/
 - (void)setTitle
 {
-    [[navBar topItem] setTitle:[myFormat getBMLTName]];
+    [[[self navBar] topItem] setTitle:[myFormat getBMLTName]];
 }
 
 /*****************************************************************/
@@ -129,7 +128,7 @@
  *****************************************************************/
 - (void)setDescription
 {
-    [formatDescription setText:[myFormat getBMLTDescription]];
+    [[self formatDescription] setText:[myFormat getBMLTDescription]];
 }
 
 /*****************************************************************/

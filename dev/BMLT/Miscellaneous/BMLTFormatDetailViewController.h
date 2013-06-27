@@ -27,11 +27,12 @@
 {
     UIViewController            *myModalController;
     BMLT_Format                 *myFormat;
-    IBOutlet UINavigationBar    *navBar;
-    IBOutlet UILabel            *formatKeyLabel;
-    IBOutlet UIImageView        *formatKeyImage;
-    IBOutlet UITextView         *formatDescription;
 }
+@property (atomic, strong, readwrite) IBOutlet UINavigationBar    *navBar;
+@property (atomic, strong, readwrite) IBOutlet UILabel            *formatKeyLabel;
+@property (atomic, strong, readwrite) IBOutlet UIImageView        *formatKeyImage;
+@property (atomic, strong, readwrite) IBOutlet UITextView         *formatDescription;
+
 - (id)initWithFormat:(BMLT_Format *)inFormat andController:(UIViewController *)inController;
 - (IBAction)donePressed:(id)sender;
 - (void)setMyFormat:(BMLT_Format *)inFormat;

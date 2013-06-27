@@ -55,7 +55,7 @@
 /*****************************************************************/
 + (UIColor *)windowBackgroundColor
 {
-    return [UIColor colorWithRed:1 green:1 blue:1 alpha:1.0];
+    return [UIColor whiteColor];
 }
 
 /*****************************************************************/
@@ -97,7 +97,7 @@
 /*****************************************************************/
 + (UIColor *)modalBackgroundColor
 {
-    return [UIColor colorWithRed:0.1 green:0.2 blue:0.4 alpha:1.0];
+    return [UIColor colorWithRed:0.8 green:0.8 blue:0.5 alpha:1.0];
 }
 
 /*****************************************************************/
