@@ -46,12 +46,12 @@
 /* Error Strings */
 "COMM-ERROR" = "Fel vid sökning";
 "LOC-ERROR" = "Location Error";
-"LOC-ERROR-DENIED" = "Location Services are denied for this app. Do You need to turn them on?";
+"LOC-ERROR-DENIED" = "Positioneringsförfråga nekades för denna app. Är tjänsten aktiverad i din enhet?";
 "PARSER-TIMEOUT-SEARCH" = "Sökningen tog för lång tid. Sökningen avbröts.";
 "SERVER-TIMEOUT-ERROR" = "Anslutningen mot servern tog för lång tid.anslutningen avbröts.";
 "ERROR-CANT-LOAD-DRIVER" = "Mottagning för data saknas. Utan mottagning fungerar inte appen som tänkt.";
 "OK-BUTTON" = "OK";
-"TOGGLE-MAP-LABEL-MAP" = "kartavy";
+"TOGGLE-MAP-LABEL-MAP" = "kartvy";
 "TOGGLE-MAP-LABEL-SATELLITE" = "satellitvy";
 
 /* Used in the Prefs window */
@@ -103,7 +103,7 @@
 "SETTINGS-MAX" = "max";
 
 /* Used for the header of the list, when displaying results from red map icons. */
-"MAP-LIST-HEADER" = "Multiple Meetings";
+"MAP-LIST-HEADER" = "Flera möten";
 
 /* Initial size of the projection (in kilometers). */
 "INITIAL-PROJECTION" = "25";
@@ -123,7 +123,7 @@
 /* Advanced Search Specification Stuff */
 "SEARCH-SPEC-LABEL" = "SÖK";
 "SEARCH-SPEC-MY-LOC" = "Nära mig";
-"SEARCH-SPEC-MARKER-LOC" = "Near The Marker";
+"SEARCH-SPEC-MARKER-LOC" = "Nära markören";
 "SEARCH-SPEC-ADDRESS" = "Nära denna adress:";
 "ADVANCED-GO-BUTTON" = "SÖK";
 
@@ -131,10 +131,10 @@
 "ABOUT-TITLE" = "info";
 
 /* This tells the user why the app needs their location. */
-"LOCATION-PURPOSE" = "The app needs to know your location, in order to tell you where the nearest meetings are.";
+"LOCATION-PURPOSE" = "Appen behöver veta din position för att visa närmaste möte.";
 
 /* Error message for geocode failure */
-"GEOCODE-FAILURE" = "The app cannot determine the location for the given address.";
+"GEOCODE-FAILURE" = "Appen kan inte beräkna positionen för den angivna adressen.";
 
 /* Quick Search Titles */
 "SEARCH-SPEC-NEARBY-TITLE" = "hitta närliggande möten";
