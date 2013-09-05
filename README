@@ -77,31 +77,15 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
-== Version 2.5.6
-* TBD
-* FL NA Meetings Release.
-
-== Version 2.5.5
-* TBD
-* MNNA (Update) Release.
-
-== Version 2.5.4
-* TBD
-* MNNA Release.
-
-== Version 2.5.3
-* TBD
-* NY release with improvements added during the AU and SV releases.
-
-== Version 2.5.2
-* TBD
-* NA Sverige Release
-
 == Version 2.5.1
-* TBD
+* June 25, 2013
 * AU NA Meetings Release
 * Replaced the original Google geocoder with the built-in one (Should have done that ages ago). This affects the Advanced Search window.
 * Fixed an old bug, in which pressing the "GO" button in the Advanced Search screen on an iPad ignored entered text (unless "Return" had been previously hit).
+
+== Version 2.5.4
+* January 10, 2013
+* MNNA Release.
 
 == Version 2.5
 * December 28, 2012
