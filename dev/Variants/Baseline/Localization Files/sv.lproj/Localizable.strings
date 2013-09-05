@@ -51,8 +51,8 @@
 "SERVER-TIMEOUT-ERROR" = "Anslutningen mot servern tog för lång tid.anslutningen avbröts.";
 "ERROR-CANT-LOAD-DRIVER" = "Mottagning för data saknas. Utan mottagning fungerar inte appen som tänkt.";
 "OK-BUTTON" = "OK";
-"TOGGLE-MAP-LABEL-MAP" = "Map View";
-"TOGGLE-MAP-LABEL-SATELLITE" = "Satellite View";
+"TOGGLE-MAP-LABEL-MAP" = "kartavy";
+"TOGGLE-MAP-LABEL-SATELLITE" = "satellitvy";
 
 /* Used in the Prefs window */
 "SETTINGS-URI-BLURB" = "Komplett källkod GPL kan laddas ner här:";
@@ -89,19 +89,18 @@
 "TAB-BAR-3" = "Inställningar";
 
 /* These define the buttons and titles in the search spec navbar. */
-"SEARCH-SPEC-SIMPLE-TITLE" = "Simple";
-"SEARCH-SPEC-ADVANCED-TITLE" = "Advanced";
+"SEARCH-SPEC-SIMPLE-TITLE" = "Enkel";
+"SEARCH-SPEC-ADVANCED-TITLE" = "Avancerad";
 
 /* Text for the various settings items */
 "SETTINGS-INITIAL-LOCATION" = "Hitta min position vid uppstart:";
-"SETTINGS-CONTINOUS-UPDATE-LOCATION" = "Keep Updating My Location:";
-"SETTINGS-RETAIN-STATE" = "Don't Forget My Current State:";
+"SETTINGS-RETAIN-STATE" = "Glöm inte min position:";
 "SETTINGS-PREFER-MAP-RESULTS" = "Starta alltid i kartsökning:";
 "SETTINGS-PREFER-DISTANCE-SORT" = "Föredra avståndssortering:";
-"SETTINGS-PREFERRED-SEARCH-TYPE" = "Preferred Search Type:";
-"SETTINGS-NUM-MEETINGS" = "Number Of Meetings In Search Results:";
-"SETTINGS-MIN" = "Min";
-"SETTINGS-MAX" = "Max";
+"SETTINGS-PREFERRED-SEARCH-TYPE" = "Ordinarie söksätt:";
+"SETTINGS-NUM-MEETINGS" = "Antal svar vid sökning:";
+"SETTINGS-MIN" = "min";
+"SETTINGS-MAX" = "max";
 
 /* Used for the header of the list, when displaying results from red map icons. */
 "MAP-LIST-HEADER" = "Multiple Meetings";
@@ -119,17 +118,17 @@
 "DIRECTIONS-URI-FORMAT-ACCURATE" = "http://maps.google.com/maps?saddr=%f,%f&daddr=%f,%f";
 
 /* The title of the directions button */
-"DIRECTIONS-BUTTON-TITLE" = "Directions";
+"DIRECTIONS-BUTTON-TITLE" = "Vägbeskrivning";
 
 /* Advanced Search Specification Stuff */
-"SEARCH-SPEC-LABEL" = "Search";
-"SEARCH-SPEC-MY-LOC" = "Near Me";
+"SEARCH-SPEC-LABEL" = "SÖK";
+"SEARCH-SPEC-MY-LOC" = "Nära mig";
 "SEARCH-SPEC-MARKER-LOC" = "Near The Marker";
-"SEARCH-SPEC-ADDRESS" = "Near This Address:";
-"ADVANCED-GO-BUTTON" = "GO";
+"SEARCH-SPEC-ADDRESS" = "Nära denna adress:";
+"ADVANCED-GO-BUTTON" = "SÖK";
 
 /* The title for the "About" button and screen */
-"ABOUT-TITLE" = "Info";
+"ABOUT-TITLE" = "info";
 
 /* This tells the user why the app needs their location. */
 "LOCATION-PURPOSE" = "The app needs to know your location, in order to tell you where the nearest meetings are.";
@@ -183,14 +182,7 @@
 "SETTINGS-UPDATE-LOCATION" = "Uppdatera min position nu.";
 
 /* Search Animation Screen Title */
-"SEARCH-ANIMATION-TITLE" = "Searching...";
-
-/* Action Item Dialog Title */
-"ACTION-ITEM-TITLE" = "Actions";
-
-/* Action Item Button Names */
-"ACTION-ITEM-EMAIL-BUTTON" = "Email A PDF of the Search";
-"ACTION-ITEM-PRINT-BUTTON" = "Print This Screen";
+"SEARCH-ANIMATION-TITLE" = "Söker...";
 
 /* Used for the printout. */
 "PRINT-TOWN-DATE-FORMAT-STRING" = " on %@, at %@";

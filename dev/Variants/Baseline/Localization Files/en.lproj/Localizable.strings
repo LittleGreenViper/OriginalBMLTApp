@@ -94,7 +94,6 @@
 
 /* Text for the various settings items */
 "SETTINGS-INITIAL-LOCATION" = "Look Up My Location at Start:";
-"SETTINGS-CONTINOUS-UPDATE-LOCATION" = "Keep Updating My Location:";
 "SETTINGS-RETAIN-STATE" = "Don't Forget My Current State:";
 "SETTINGS-PREFER-MAP-RESULTS" = "Prefer Search Results As Map:";
 "SETTINGS-PREFER-DISTANCE-SORT" = "Sort List Results By Distance:";
@@ -181,13 +180,6 @@
 
 /* Search Animation Screen Title */
 "SEARCH-ANIMATION-TITLE" = "Searching...";
-
-/* Action Item Dialog Title */
-"ACTION-ITEM-TITLE" = "Actions";
-
-/* Action Item Button Names */
-"ACTION-ITEM-EMAIL-BUTTON" = "Email A PDF of the Search";
-"ACTION-ITEM-PRINT-BUTTON" = "Print This Screen";
 
 /* Used for the printout. */
 "PRINT-TOWN-DATE-FORMAT-STRING" = " on %@, at %@";

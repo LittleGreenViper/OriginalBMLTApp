@@ -7,13 +7,13 @@
 	<key>BMLTInitialProjectionSizeInKM</key>
 	<integer>25</integer>
 	<key>BMLTLeadText</key>
-	<string>Find NA Meetings In Sweden</string>
+	<string>Hitta NA möten i Sverige</string>
 	<key>BMLTRootServerURI</key>
 	<string>http://www.nasverige.org/bmlt</string>
 	<key>BMLTServerHomeLat</key>
-	<real>59.319178000000001</real>
+	<real>59.319178</real>
 	<key>BMLTServerHomeLong</key>
-	<real>18.104089999999999</real>
+	<real>18.10409</real>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -21,7 +21,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Provided by MAGSHARE</string>
+	<string>Tillhandahålls av MAGSHARE</string>
 	<key>CFBundleIcons</key>
 	<dict>
 		<key>CFBundlePrimaryIcon</key>
