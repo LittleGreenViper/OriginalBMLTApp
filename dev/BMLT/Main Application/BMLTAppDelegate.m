@@ -917,7 +917,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
 /*****************************************************************/
 /**
- \brief If there is an extrenal search abort, it is sent here.
+ \brief If there is an external search abort, it is sent here.
  *****************************************************************/
 - (void)executeDeferredSearch
 {
@@ -1234,7 +1234,7 @@ shouldSelectViewController:(UIViewController *)inViewController
 #pragma mark - SearchDelegate Functions -
 /*****************************************************************/
 /**
- \brief If there is an extrenal search abort, it is sent here.
+ \brief If there is an external search abort, it is sent here.
  *****************************************************************/
 - (void)abortSearch
 {
