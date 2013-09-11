@@ -253,8 +253,11 @@ static int List_Meeting_Format_Circle_Size_Big = 30;
  *****************************************************************/
 - (void)setMapLocation
 {
+    CLLocationCoordinate2D  center = [[_myMeeting getMeetingLocationCoords] coordinate];
+    CLLocationDistance      distance = [NSLocalizedString(@"INITIAL-PROJECTION", nil) doubleValue] * 10.0;
+
     // If the meeting doesn't yet have its marker, it needs setting up.
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance([[_myMeeting getMeetingLocationCoords] coordinate], [NSLocalizedString(@"INITIAL-PROJECTION", nil) floatValue] * 10, [NSLocalizedString(@"INITIAL-PROJECTION", nil) floatValue] * 10);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance ( center, distance, distance );
 
     [meetingMapView setRegion:region animated:NO];
     if ( ![[meetingMapView annotations] count] )
