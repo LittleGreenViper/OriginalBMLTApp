@@ -147,7 +147,7 @@ forViewPrintFormatter:(UIViewPrintFormatter *)formatter
         if ( textLabel )
             {
             [textLabel setBackgroundColor:[myMeeting partOfMulti] ? [UIColor colorWithRed:0.9 green:0 blue:0 alpha:1] : [UIColor colorWithRed:0 green:0 blue:0.9 alpha:1]];
-            [textLabel setTextAlignment:UITextAlignmentCenter];
+            [textLabel setTextAlignment:NSTextAlignmentCenter];
             [textLabel setAdjustsFontSizeToFitWidth:YES];
             [textLabel setFont:[UIFont boldSystemFontOfSize:List_Meeting_Name_Text_Size]];
             [textLabel setTextColor:[UIColor whiteColor]];
@@ -171,7 +171,7 @@ forViewPrintFormatter:(UIViewPrintFormatter *)formatter
     if ( textLabel )
         {
         [textLabel setBackgroundColor:[UIColor clearColor]];
-        [textLabel setTextAlignment:UITextAlignmentCenter];
+        [textLabel setTextAlignment:NSTextAlignmentCenter];
         [textLabel setAdjustsFontSizeToFitWidth:YES];
         [textLabel setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin| UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleWidth];
         [textLabel setFont:[UIFont boldSystemFontOfSize:List_Meeting_Name_Text_Size]];
@@ -295,7 +295,7 @@ forViewPrintFormatter:(UIViewPrintFormatter *)formatter
                 town = (NSString *)[myMeeting getValueFromField:@"location_municipality"];
                 }
             }
-        [townLabel setTextAlignment:UITextAlignmentRight];
+        [townLabel setTextAlignment:NSTextAlignmentRight];
         [townLabel setFont:[UIFont boldSystemFontOfSize:List_Meeting_Display_Text_Size]];
         [townLabel setBackgroundColor:[UIColor clearColor]];
         [townLabel setText:town];
@@ -329,7 +329,7 @@ forViewPrintFormatter:(UIViewPrintFormatter *)formatter
             }
         
         [meetingText setFont:[UIFont boldSystemFontOfSize:List_Meeting_Display_Text_Size]];
-        [meetingText setTextAlignment:UITextAlignmentCenter];
+        [meetingText setTextAlignment:NSTextAlignmentCenter];
         [meetingText setAdjustsFontSizeToFitWidth:YES];
         [meetingText setBackgroundColor:[UIColor clearColor]];
         [meetingText setText:meetingLocationString];
@@ -359,7 +359,7 @@ forViewPrintFormatter:(UIViewPrintFormatter *)formatter
             {
             [distanceLabel setFont:[UIFont boldSystemFontOfSize:List_Meeting_Display_Text_Size]];
             [distanceLabel setBackgroundColor:[UIColor clearColor]];
-            [distanceLabel setTextAlignment:UITextAlignmentRight];
+            [distanceLabel setTextAlignment:NSTextAlignmentRight];
             NSString    *units = [BMLTVariantDefs distanceUnits];
             double      distance = [(NSString *)[myMeeting getValueFromField:@"distance_in_km"] doubleValue] / ([units isEqualToString:@"KM"] ? 1.0 : 1.609344);
             distance = round(distance * 100) / 100.0;

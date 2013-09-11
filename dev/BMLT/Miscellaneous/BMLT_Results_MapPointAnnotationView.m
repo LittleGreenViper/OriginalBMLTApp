@@ -92,7 +92,7 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
         
         rect.size.width -= (kRegularAnnotationOffsetRight * 2);
         rect.origin.y += kRegularAnnotationOffsetTop;
-        [indexString drawInRect:rect withFont:[UIFont boldSystemFontOfSize:16] lineBreakMode:UILineBreakModeClip alignment:UITextAlignmentCenter];
+        [indexString drawInRect:rect withFont:[UIFont boldSystemFontOfSize:16] lineBreakMode:NSLineBreakByClipping alignment:NSTextAlignmentCenter];
         }
 }
 

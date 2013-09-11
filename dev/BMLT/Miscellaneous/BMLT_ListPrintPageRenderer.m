@@ -159,14 +159,14 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
         annotRect.origin.y += kDisplayAnnotationOffsetTop;
         annotRect.size.height -= kDisplayAnnotationOffsetTop;
         
-        [annotationMatch drawInRect:annotRect withFont:currentFont lineBreakMode:UILineBreakModeClip alignment:UITextAlignmentCenter];
+        [annotationMatch drawInRect:annotRect withFont:currentFont lineBreakMode:NSLineBreakByClipping alignment:NSTextAlignmentCenter];
         CGContextSetRGBFillColor ( UIGraphicsGetCurrentContext(), 0, 0, 0, 1 );
         
         inRect.origin.x += kAnnotationArea + kLeftPadding;
         inRect.size.width -= (kAnnotationArea + kLeftPadding);
         }
     
-    [[inMeeting getBMLTName] drawInRect:inRect withFont:currentFont lineBreakMode:UILineBreakModeCharacterWrap alignment:UITextAlignmentLeft];
+    [[inMeeting getBMLTName] drawInRect:inRect withFont:currentFont lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentLeft];
     
     float   lineHeight = [[inMeeting getBMLTName] sizeWithFont:currentFont].height + kDisplayGap;
     inRect.origin.y += lineHeight;      // Adjust the next line top...
@@ -247,7 +247,7 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
     displayString = [displayString stringByAppendingFormat:NSLocalizedString(@"PRINT-TOWN-DATE-FORMAT-STRING", nil), [inMeeting getWeekday], timeString];
     
     float   lineHeight = [displayString sizeWithFont:currentFont].height;
-    [displayString drawInRect:inRect withFont:currentFont lineBreakMode:UILineBreakModeCharacterWrap alignment:UITextAlignmentLeft];
+    [displayString drawInRect:inRect withFont:currentFont lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentLeft];
     
     return ceil ( lineHeight );
 }
@@ -269,7 +269,7 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
         }
     
     float   lineHeight = [displayString sizeWithFont:currentFont].height;
-    [displayString drawInRect:inRect withFont:currentFont lineBreakMode:UILineBreakModeCharacterWrap alignment:UITextAlignmentLeft];
+    [displayString drawInRect:inRect withFont:currentFont lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentLeft];
 
     return ceil ( lineHeight );
 }
@@ -292,7 +292,7 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
         }
     
     float   lineHeight = [displayString sizeWithFont:currentFont].height;
-    [displayString drawInRect:inRect withFont:currentFont lineBreakMode:UILineBreakModeCharacterWrap alignment:UITextAlignmentLeft];
+    [displayString drawInRect:inRect withFont:currentFont lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentLeft];
     
     return ceil ( lineHeight );
 }
@@ -310,7 +310,7 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
         NSString    *displayString = (NSString *)[inMeeting getValueFromField:@"comments"];
                 
         float   lineHeight = [displayString sizeWithFont:currentFont].height;
-        [displayString drawInRect:inRect withFont:currentFont lineBreakMode:UILineBreakModeCharacterWrap alignment:UITextAlignmentLeft];
+        [displayString drawInRect:inRect withFont:currentFont lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentLeft];
         
         return ceil ( lineHeight );
         }

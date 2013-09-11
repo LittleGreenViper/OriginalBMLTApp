@@ -86,7 +86,7 @@ int List_Meeting_Format_Line_Padding = 2;
             [theTitleView setText:fmtEl.title];
             [theTitleView setTextColor:fmtEl.textColor];
             [theTitleView setBackgroundColor:[UIColor clearColor]];
-            [theTitleView setTextAlignment:UITextAlignmentCenter];
+            [theTitleView setTextAlignment:NSTextAlignmentCenter];
             [self addSubview:theTitleView];
             }
         }

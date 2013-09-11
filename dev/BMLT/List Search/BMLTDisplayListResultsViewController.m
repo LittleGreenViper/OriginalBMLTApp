@@ -199,7 +199,7 @@ static int kSortHeaderHeight = 30;  ///< The height of the "Sort By" header for 
                 UILabel *label = [[UILabel alloc] initWithFrame:bounds];
                 [label setText:NSLocalizedString(@"MAP-LIST-HEADER", nil)];
                 [label setFont:[UIFont boldSystemFontOfSize:kSortHeaderHeight / 2]];
-                [label setTextAlignment:UITextAlignmentCenter];
+                [label setTextAlignment:NSTextAlignmentCenter];
                 UIColor *myBGColor = [[UIColor alloc] initWithCGColor:[[BMLTVariantDefs multiMeetingsBackgroundColor] CGColor]];
                 [label setBackgroundColor:myBGColor];
                 myBGColor = nil;

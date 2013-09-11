@@ -176,7 +176,7 @@ static  BMLT_Driver *g_driver = nil;    ///< This will be a SINGLETON
     
     if ( inServerObjects )
         {
-        serverObjects = [NSArray arrayWithArray:inServerObjects];
+        serverObjects = [NSMutableArray arrayWithArray:inServerObjects];
         }
 }
 
