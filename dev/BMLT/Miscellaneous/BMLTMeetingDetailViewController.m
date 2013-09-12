@@ -61,6 +61,7 @@ static int List_Meeting_Format_Circle_Size_Big = 30;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
         {
         UIBarButtonItem *dirButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"DIRECTIONS-BUTTON-TITLE",nil) style:UIBarButtonItemStylePlain target:self action:@selector(callForDirections:)];
+            
         NSArray *buttons = [NSArray arrayWithObjects:theButton, dirButton, nil];
         [[self navigationItem] setRightBarButtonItems:buttons];
         }
@@ -147,8 +148,14 @@ static int List_Meeting_Format_Circle_Size_Big = 30;
             {
             [[self _toggleButton] setTitle:label];
             }
+            
+        UIBarButtonItem *flexibleSpace1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+        
+        UIBarButtonItem *flexibleSpace2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
+        [buttons addObject:flexibleSpace1];
         [buttons addObject:[self _toggleButton]];
+        [buttons addObject:flexibleSpace2];
     
         [[self navigationItem] setRightBarButtonItems:buttons animated:NO];
         }

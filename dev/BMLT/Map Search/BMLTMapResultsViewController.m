@@ -62,8 +62,10 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
         {
         [self clearLastRegion];
         NSString    *label = NSLocalizedString ( ([[BMLTAppDelegate getBMLTAppDelegate] mapType] == MKMapTypeStandard ? @"TOGGLE-MAP-LABEL-SATELLITE" : @"TOGGLE-MAP-LABEL-MAP" ), nil);
+            
         UIBarButtonItem *theButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionItemClicked:)];
         [self set_toggleButton:[[UIBarButtonItem alloc] initWithTitle:label style:UIBarButtonItemStylePlain target:self action:@selector(toggleMapView:)]];
+            
         NSArray *buttons = [NSArray arrayWithObjects:theButton, [self _toggleButton], nil];
         [[self navigationItem] setRightBarButtonItems:buttons];
         }

@@ -172,8 +172,14 @@ static int kSearchAnnotationOffsetUp      = 24;  /**< This is how many pixels to
         if ( ![self _toggleButton] )
             {
             [self set_toggleButton:[[UIBarButtonItem alloc] initWithTitle:label style:UIBarButtonItemStyleBordered target:self action:@selector(toggleMapView:)]];
+        
+            UIBarButtonItem *flexibleSpace1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
             
+            UIBarButtonItem *flexibleSpace2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+                
+            [buttons addObject:flexibleSpace1];
             [buttons addObject:[self _toggleButton]];
+            [buttons addObject:flexibleSpace2];
             
             [[self navigationItem] setRightBarButtonItems:buttons animated:NO];
             }

@@ -77,6 +77,10 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
+== Version 2.5.8
+* TBD
+* Added some spacing for the "Satellite View/Map View" button, as it jams up against the other nav buttons in iOS 7.
+
 == Version 2.5.3
 * September 11, 2013
 * NY NA Meetings iOS 7 Edition Release
