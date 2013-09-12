@@ -33,10 +33,6 @@
 				<string>icon-114</string>
 				<string>icon-072</string>
 				<string>icon-057</string>
-				<string>icon-iPhone.png</string>
-				<string>icon-LargeiPhone.png</string>
-				<string>icon-iPad.png</string>
-				<string>icon-LargeiPad.png</string>
 				<string>Default.png</string>
 				<string>Default@2x.png</string>
 				<string>Default-Portrait~ipad.png</string>
@@ -59,10 +55,6 @@
 				<string>icon-114</string>
 				<string>icon-072</string>
 				<string>icon-057</string>
-				<string>icon-iPhone.png</string>
-				<string>icon-LargeiPhone.png</string>
-				<string>icon-iPad.png</string>
-				<string>icon-LargeiPad.png</string>
 				<string>Default.png</string>
 				<string>Default@2x.png</string>
 				<string>Default-Portrait~ipad.png</string>
@@ -81,13 +73,36 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.5.3b4</string>
+	<string>2.5.3</string>
 	<key>CFBundleSignature</key>
 	<string>LGVP</string>
 	<key>CFBundleVersion</key>
-	<string>2.5.3b4</string>
+	<string>2.5.3</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UILaunchImages~ipad</key>
+	<array>
+		<dict>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>7.0</string>
+			<key>UILaunchImageName</key>
+			<string>Default-Tall-Portrait</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Portrait</string>
+			<key>UILaunchImageSize</key>
+			<string>{768, 1024}</string>
+		</dict>
+		<dict>
+			<key>UILaunchImageMinimumOSVersion</key>
+			<string>7.0</string>
+			<key>UILaunchImageName</key>
+			<string>Default-Tall-Landscape</string>
+			<key>UILaunchImageOrientation</key>
+			<string>Landscape</string>
+			<key>UILaunchImageSize</key>
+			<string>{768, 1024}</string>
+		</dict>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
@@ -111,9 +126,9 @@
 				<key>Blue</key>
 				<real>1</real>
 				<key>Green</key>
-				<real>0.0</real>
+				<real>0</real>
 				<key>Red</key>
-				<real>0.0</real>
+				<real>0</real>
 			</dict>
 			<key>Translucent</key>
 			<false/>

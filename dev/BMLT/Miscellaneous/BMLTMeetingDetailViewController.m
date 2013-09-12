@@ -258,8 +258,7 @@ static int List_Meeting_Format_Circle_Size_Big = 30;
 
     // If the meeting doesn't yet have its marker, it needs setting up.
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance ( center, distance, distance );
-
-    [meetingMapView setRegion:region animated:NO];
+    
     if ( ![[meetingMapView annotations] count] )
         {
         [[self view] setBackgroundColor:[BMLTVariantDefs meetingDetailBackgroundColor]];    // This is here to make sure it's only called once.
@@ -271,6 +270,8 @@ static int List_Meeting_Format_Circle_Size_Big = 30;
         [[[meetingMapView annotations] objectAtIndex:0] setCoordinate:[[_myMeeting getMeetingLocationCoords] coordinate]];
         [meetingMapView setCenterCoordinate:[[_myMeeting getMeetingLocationCoords] coordinate] animated:NO];
         }
+    
+    [meetingMapView setRegion:region animated:NO];
 }
 
 /*****************************************************************/
