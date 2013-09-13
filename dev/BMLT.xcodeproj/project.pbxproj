@@ -11,6 +11,9 @@
 		7707F3151525B44C00032CCA /* A_BMLT_SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7707F3141525B44C00032CCA /* A_BMLT_SearchViewController.m */; };
 		7711417215125CD100BCCE00 /* BMLTSimpleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7711417115125CD100BCCE00 /* BMLTSimpleSearchViewController.m */; };
 		771A40ED15408EA000EF34DF /* BMLTBundleResourceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 771A40EC15408EA000EF34DF /* BMLTBundleResourceLabel.m */; };
+		771B39FB17E33C3B00CFBCA1 /* App-Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 771B39F817E33C3B00CFBCA1 /* App-Icon-76.png */; };
+		771B39FC17E33C3B00CFBCA1 /* App-Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 771B39F917E33C3B00CFBCA1 /* App-Icon-120.png */; };
+		771B39FD17E33C3B00CFBCA1 /* App-Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 771B39FA17E33C3B00CFBCA1 /* App-Icon-152.png */; };
 		771D0C34150E88E5005A707A /* BMLTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C32150E88E5005A707A /* BMLTAppDelegate.m */; };
 		771D0C35150E88E5005A707A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C33150E88E5005A707A /* main.m */; };
 		771D0C47150E892A005A707A /* BMLTAdvancedSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C3E150E892A005A707A /* BMLTAdvancedSearchViewController.m */; };
@@ -34,6 +37,7 @@
 		771D0C90150E8986005A707A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771D0C8F150E8986005A707A /* CoreLocation.framework */; };
 		771D0C92150E899B005A707A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771D0C91150E899B005A707A /* QuartzCore.framework */; };
 		771D0C94150E89BC005A707A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771D0C93150E89BC005A707A /* SystemConfiguration.framework */; };
+		7721FCA517E33E9A00368F1D /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CB61548872000DBE9A1 /* libTestFlight.a */; };
 		7731A7A1168E1DEC00ED4BE8 /* Anim-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7731A79F168E1DEC00ED4BE8 /* Anim-Back.png */; };
 		7731A7A2168E1DEC00ED4BE8 /* Anim-Transparency.png in Resources */ = {isa = PBXBuildFile; fileRef = 7731A7A0168E1DEC00ED4BE8 /* Anim-Transparency.png */; };
 		77335564168E278F001C0B08 /* MapMarkerBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335560168E278F001C0B08 /* MapMarkerBlack@2x.png */; };
@@ -278,7 +282,6 @@
 		776602511688E20F00B1310A /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7766024A1688E20F00B1310A /* Default-Portrait~ipad.png */; };
 		776602521688E20F00B1310A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7766024B1688E20F00B1310A /* Default.png */; };
 		776602531688E20F00B1310A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7766024C1688E20F00B1310A /* Default@2x.png */; };
-		7768A10516911AE600A0779F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CB61548872000DBE9A1 /* libTestFlight.a */; };
 		776BAD981519F90A008C608C /* BMLTDisplayListResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776BAD961519F90A008C608C /* BMLTDisplayListResultsViewController.m */; };
 		776C1DBA17E26DA500FF6710 /* icon-057.png in Resources */ = {isa = PBXBuildFile; fileRef = 776C1DB317E26DA500FF6710 /* icon-057.png */; };
 		776C1DBB17E26DA500FF6710 /* icon-072.png in Resources */ = {isa = PBXBuildFile; fileRef = 776C1DB417E26DA500FF6710 /* icon-072.png */; };
@@ -582,6 +585,9 @@
 		77B8BD18155EEBEF00CECED5 /* Beanie.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B8BD17155EEBEF00CECED5 /* Beanie.png */; };
 		77BC71981512BFA1000BEFC0 /* A_BMLTSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BC71971512BFA1000BEFC0 /* A_BMLTSearchResultsViewController.m */; };
 		77BCBBDD152933D700CDBCF6 /* BMLT_Results_MapPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BCBBDC152933D700CDBCF6 /* BMLT_Results_MapPointAnnotationView.m */; };
+		77BF9D2917E335E8006E632D /* App-Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 77BF9D2617E335E8006E632D /* App-Icon-76.png */; };
+		77BF9D2A17E335E8006E632D /* App-Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 77BF9D2717E335E8006E632D /* App-Icon-120.png */; };
+		77BF9D2D17E33672006E632D /* App-Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 77BF9D2C17E33672006E632D /* App-Icon-152.png */; };
 		77CE3F091516252300C93BC6 /* A_BMLTSettingsBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CE3F081516252300C93BC6 /* A_BMLTSettingsBackgroundView.m */; };
 		77CFE116153CB874005FB181 /* BMLT_ListPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CFE115153CB874005FB181 /* BMLT_ListPrintPageRenderer.m */; };
 		77D210E4168CAECB000D991A /* shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D210E3168CAECB000D991A /* shadow.png */; };
@@ -743,6 +749,9 @@
 		77167D4F1517D21F006E50E8 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
 		771A40EB15408EA000EF34DF /* BMLTBundleResourceLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTBundleResourceLabel.h; sourceTree = "<group>"; };
 		771A40EC15408EA000EF34DF /* BMLTBundleResourceLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTBundleResourceLabel.m; sourceTree = "<group>"; };
+		771B39F817E33C3B00CFBCA1 /* App-Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-76.png"; sourceTree = "<group>"; };
+		771B39F917E33C3B00CFBCA1 /* App-Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-120.png"; sourceTree = "<group>"; };
+		771B39FA17E33C3B00CFBCA1 /* App-Icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-152.png"; sourceTree = "<group>"; };
 		771D0C31150E88E5005A707A /* BMLTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTAppDelegate.h; sourceTree = "<group>"; };
 		771D0C32150E88E5005A707A /* BMLTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTAppDelegate.m; sourceTree = "<group>"; };
 		771D0C33150E88E5005A707A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -958,6 +967,9 @@
 		77BC71971512BFA1000BEFC0 /* A_BMLTSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = A_BMLTSearchResultsViewController.m; path = Miscellaneous/A_BMLTSearchResultsViewController.m; sourceTree = "<group>"; };
 		77BCBBDB152933D700CDBCF6 /* BMLT_Results_MapPointAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLT_Results_MapPointAnnotationView.h; sourceTree = "<group>"; };
 		77BCBBDC152933D700CDBCF6 /* BMLT_Results_MapPointAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLT_Results_MapPointAnnotationView.m; sourceTree = "<group>"; };
+		77BF9D2617E335E8006E632D /* App-Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-76.png"; sourceTree = "<group>"; };
+		77BF9D2717E335E8006E632D /* App-Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-120.png"; sourceTree = "<group>"; };
+		77BF9D2C17E33672006E632D /* App-Icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-152.png"; sourceTree = "<group>"; };
 		77CE3F071516252300C93BC6 /* A_BMLTSettingsBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = A_BMLTSettingsBackgroundView.h; path = Miscellaneous/A_BMLTSettingsBackgroundView.h; sourceTree = "<group>"; };
 		77CE3F081516252300C93BC6 /* A_BMLTSettingsBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = A_BMLTSettingsBackgroundView.m; path = Miscellaneous/A_BMLTSettingsBackgroundView.m; sourceTree = "<group>"; };
 		77CFE114153CB874005FB181 /* BMLT_ListPrintPageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLT_ListPrintPageRenderer.h; sourceTree = "<group>"; };
@@ -1026,6 +1038,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7721FCA517E33E9A00368F1D /* libTestFlight.a in Frameworks */,
 				777AD6951688C61700E064D0 /* MapKit.framework in Frameworks */,
 				777AD6961688C61700E064D0 /* SystemConfiguration.framework in Frameworks */,
 				777AD6971688C61700E064D0 /* QuartzCore.framework in Frameworks */,
@@ -1034,7 +1047,6 @@
 				777AD69A1688C61700E064D0 /* Foundation.framework in Frameworks */,
 				777AD69B1688C61700E064D0 /* CoreGraphics.framework in Frameworks */,
 				777AD69C1688C61700E064D0 /* libz.dylib in Frameworks */,
-				7768A10516911AE600A0779F /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1225,10 +1237,13 @@
 				7707C49D1690BCC100FA8D9A /* AboutLogo.png */,
 				773E41E0168E9DD700CED8D5 /* Anim-Back.png */,
 				773E41E1168E9DD700CED8D5 /* Anim-Transparency.png */,
-				773E41E2168E9DD700CED8D5 /* App-Icon-114.png */,
-				773E41E3168E9DD700CED8D5 /* App-Icon-144.png */,
 				773E41E4168E9DD700CED8D5 /* App-Icon-57.png */,
 				773E41E5168E9DD700CED8D5 /* App-Icon-72.png */,
+				77BF9D2617E335E8006E632D /* App-Icon-76.png */,
+				773E41E2168E9DD700CED8D5 /* App-Icon-114.png */,
+				77BF9D2717E335E8006E632D /* App-Icon-120.png */,
+				773E41E3168E9DD700CED8D5 /* App-Icon-144.png */,
+				77BF9D2C17E33672006E632D /* App-Icon-152.png */,
 				773E41E6168E9DD700CED8D5 /* Default-568h@2x.png */,
 				773E41E7168E9DD700CED8D5 /* Default-Landscape@2x~ipad.png */,
 				773E41E8168E9DD700CED8D5 /* Default-Landscape~ipad.png */,
@@ -1388,8 +1403,11 @@
 				7731A7A0168E1DEC00ED4BE8 /* Anim-Transparency.png */,
 				7766021F1688E00400B1310A /* App-Icon-57.png */,
 				776602201688E00400B1310A /* App-Icon-72.png */,
+				771B39F817E33C3B00CFBCA1 /* App-Icon-76.png */,
 				776602211688E00400B1310A /* App-Icon-114.png */,
+				771B39F917E33C3B00CFBCA1 /* App-Icon-120.png */,
 				776602361688E19500B1310A /* App-Icon-144.png */,
+				771B39FA17E33C3B00CFBCA1 /* App-Icon-152.png */,
 				776602461688E20F00B1310A /* Default-568h@2x.png */,
 				776602471688E20F00B1310A /* Default-Landscape@2x~ipad.png */,
 				776602481688E20F00B1310A /* Default-Landscape~ipad.png */,
@@ -1751,6 +1769,9 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = MAGSHARE;
 				TargetAttributes = {
+					777597561540F15E00D45ADA = {
+						DevelopmentTeam = 2AH5QE9TS8;
+					};
 					777AD66B1688C61700E064D0 = {
 						DevelopmentTeam = 2AH5QE9TS8;
 					};
@@ -1806,6 +1827,7 @@
 				77335572168E278F001C0B08 /* MapMarkerRed@2x.png in Resources */,
 				77603E731541DC8300C4840F /* list.png in Resources */,
 				77603E761541DC8300C4840F /* list@2x.png in Resources */,
+				77BF9D2D17E33672006E632D /* App-Icon-152.png in Resources */,
 				77603E7F1541DC8300C4840F /* map.png in Resources */,
 				77603E821541DC8300C4840F /* map@2x.png in Resources */,
 				77603EA61541DC8300C4840F /* search.png in Resources */,
@@ -1831,6 +1853,7 @@
 				773E4223168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png in Resources */,
 				773E4227168E9E4E00CED8D5 /* CheckBoxDisabled.png in Resources */,
 				773E422B168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png in Resources */,
+				77BF9D2A17E335E8006E632D /* App-Icon-120.png in Resources */,
 				773E422F168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png in Resources */,
 				773E4233168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png in Resources */,
 				773E4237168E9E4E00CED8D5 /* CheckBoxHighlight.png in Resources */,
@@ -1840,6 +1863,7 @@
 				773E4247168E9E4E00CED8D5 /* CheckBoxNormal.png in Resources */,
 				773E424B168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */,
 				773E426F168E9E4E00CED8D5 /* LocButton.png in Resources */,
+				77BF9D2917E335E8006E632D /* App-Icon-76.png in Resources */,
 				773E4273168E9E4E00CED8D5 /* LocButton@2x.png in Resources */,
 				773E4277168E9E4E00CED8D5 /* LocButtonHighlight.png in Resources */,
 				773E427B168E9E4E00CED8D5 /* LocButtonHighlight@2X.png in Resources */,
@@ -1875,6 +1899,7 @@
 				777AD6D61688C61700E064D0 /* search@2x.png in Resources */,
 				777AD6C71688C61700E064D0 /* list.png in Resources */,
 				777AD6C81688C61700E064D0 /* list@2x.png in Resources */,
+				771B39FC17E33C3B00CFBCA1 /* App-Icon-120.png in Resources */,
 				777AD6C91688C61700E064D0 /* map.png in Resources */,
 				777AD6CA1688C61700E064D0 /* map@2x.png in Resources */,
 				777AD6D71688C61700E064D0 /* settings.png in Resources */,
@@ -1913,6 +1938,7 @@
 				773E424C168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */,
 				773E4250168E9E4E00CED8D5 /* MButtonConcave.png in Resources */,
 				773E4254168E9E4E00CED8D5 /* MButtonConcave@2X.png in Resources */,
+				771B39FB17E33C3B00CFBCA1 /* App-Icon-76.png in Resources */,
 				773E4258168E9E4E00CED8D5 /* MButtonConvex.png in Resources */,
 				773E425C168E9E4E00CED8D5 /* MButtonConvex@2X.png in Resources */,
 				773E4260168E9E4E00CED8D5 /* SButtonConcave.png in Resources */,
@@ -1923,6 +1949,7 @@
 				773E4274168E9E4E00CED8D5 /* LocButton@2x.png in Resources */,
 				773E4278168E9E4E00CED8D5 /* LocButtonHighlight.png in Resources */,
 				773E427C168E9E4E00CED8D5 /* LocButtonHighlight@2X.png in Resources */,
+				771B39FD17E33C3B00CFBCA1 /* App-Icon-152.png in Resources */,
 				773E4280168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png in Resources */,
 				773E4284168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png in Resources */,
 				773E4288168E9E4E00CED8D5 /* LocButtonSimpleNormal.png in Resources */,
@@ -2660,7 +2687,7 @@
 		7723B82E1561840500A2BC84 /* TestFlight */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2688,7 +2715,7 @@
 		777597CC1540F15E00D45ADA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2715,8 +2742,8 @@
 		777597CD1540F15E00D45ADA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chris Marshall (2AH5QE9TS8)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -2743,7 +2770,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chris Marshall (TFYG5M63S3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -2762,10 +2789,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/BMLT\"",
+					"\\\"$(SRCROOT)/BMLT\\\"",
+					/Users/cmarshall/Documents/Development/iOS/BMLT/dev/BMLT,
 				);
 				PRODUCT_NAME = "AU NA Meetings";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17393DA4-0026-4360-9C9B-C81082E6C65D";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6871760C-86DB-4660-8A52-5BFFF1CF6C95";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2790,10 +2819,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/BMLT\"",
+					"\\\"$(SRCROOT)/BMLT\\\"",
+					/Users/cmarshall/Documents/Development/iOS/BMLT/dev/BMLT,
 				);
 				PRODUCT_NAME = "AU NA Meetings";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8E0F6A0F-4C60-4338-A10C-7364633CA79E";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "94B038BD-604C-4439-9C86-665AD0947276";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -2802,7 +2833,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Chris Marshall (TFYG5M63S3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -2818,10 +2849,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/BMLT\"",
+					"\\\"$(SRCROOT)/BMLT\\\"",
+					/Users/cmarshall/Documents/Development/iOS/BMLT/dev/BMLT,
 				);
 				PRODUCT_NAME = "AU NA Meetings";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "17393DA4-0026-4360-9C9B-C81082E6C65D";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6871760C-86DB-4660-8A52-5BFFF1CF6C95";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;

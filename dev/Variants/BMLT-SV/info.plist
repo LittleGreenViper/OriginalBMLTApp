@@ -11,9 +11,9 @@
 	<key>BMLTRootServerURI</key>
 	<string>http://www.nasverige.org/bmlt</string>
 	<key>BMLTServerHomeLat</key>
-	<real>59.319178</real>
+	<real>59.319178000000001</real>
 	<key>BMLTServerHomeLong</key>
-	<real>18.10409</real>
+	<real>18.104089999999999</real>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -28,6 +28,25 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
+				<string>App-Icon-120</string>
+				<string>App-Icon-57.png</string>
+				<string>App-Icon-114.png</string>
+				<string>App-Icon-72.png</string>
+				<string>App-Icon-144.png</string>
+			</array>
+			<key>UIPrerenderedIcon</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>CFBundleIcons~ipad</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>App-Icon-152</string>
+				<string>App-Icon-76</string>
+				<string>App-Icon-120</string>
 				<string>App-Icon-57.png</string>
 				<string>App-Icon-114.png</string>
 				<string>App-Icon-72.png</string>
@@ -46,11 +65,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.5.2</string>
+	<string>2.5.9</string>
 	<key>CFBundleSignature</key>
 	<string>LGVP</string>
 	<key>CFBundleVersion</key>
-	<string>2.5.2</string>
+	<string>2.5.9</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
