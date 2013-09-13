@@ -337,7 +337,7 @@
             <objects>
                 <tabBarController modalTransitionStyle="flipHorizontal" id="4" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="5">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -374,7 +374,7 @@
             <objects>
                 <viewController storyboardIdentifier="simple-search" id="SFh-VH-MDA" customClass="BMLTSimpleSearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5W2-lU-ExM" customClass="A_BMLTMainBackgroundView">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C3s-sr-oSN">
@@ -436,7 +436,7 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="nLJ-nP-ZR5">
-                                <rect key="frame" x="0.0" y="161" width="768" height="799"/>
+                                <rect key="frame" x="0.0" y="161" width="768" height="750"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="shadow.png" id="3q8-b4-B3z">
@@ -510,7 +510,7 @@
             <objects>
                 <viewController storyboardIdentifier="list-view-results" id="BfE-yH-RTK" customClass="BMLTDisplayListResultsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Hf7-TQ-dAm">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
