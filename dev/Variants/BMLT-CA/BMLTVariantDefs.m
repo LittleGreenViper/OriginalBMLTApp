@@ -169,7 +169,7 @@
 }
 
 /*****************************************************************/
-+ (NSInteger)maxNumberOgMeetings
++ (NSInteger)maxNumberOfMeetings
 {
     return 500;
 }

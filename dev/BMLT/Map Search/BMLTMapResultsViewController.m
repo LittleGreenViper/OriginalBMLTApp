@@ -399,6 +399,9 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
         }
     else
         {
+        UIColor *myBGColor = [UIColor clearColor];
+        [[newController view] setBackgroundColor:myBGColor];
+        myBGColor = nil;
         [[self navigationController] pushViewController:newController animated:YES];
         }
 }

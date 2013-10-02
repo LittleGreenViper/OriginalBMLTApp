@@ -176,5 +176,5 @@
             transaction and report a failure.
  \returns   The number of meetings that will trigger a failure.
  *****************************************************************/
-+ (NSInteger)maxNumberOgMeetings;
++ (NSInteger)maxNumberOfMeetings;
 @end

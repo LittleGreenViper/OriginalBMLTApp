@@ -1785,6 +1785,9 @@
 					77977D0A150E882B00485C8D = {
 						DevelopmentTeam = 2AH5QE9TS8;
 					};
+					77AC716915409E9F0060CA80 = {
+						DevelopmentTeam = MZ6A3EW6M5;
+					};
 					77B5EABD1743EEF300F50281 = {
 						DevelopmentTeam = 2AH5QE9TS8;
 					};
@@ -2669,7 +2672,7 @@
 		7723B82D1561840500A2BC84 /* TestFlight */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Monte Jarvis (6P3Y6YW3P3)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3004,7 +3007,7 @@
 		77AC71E015409E9F0060CA80 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Monte Jarvis (6P3Y6YW3P3)";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3032,8 +3035,8 @@
 		77AC71E115409E9F0060CA80 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Monte Jarvis (6P3Y6YW3P3)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Monte Jarvis";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3052,7 +3055,7 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = MNNA;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0D113D09-3ACC-4C76-9546-DDC3865E9AAE";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "231FA984-31E4-4FC8-ACD2-9B49FA676AEB";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

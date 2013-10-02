@@ -60,7 +60,7 @@ didStartElement:(NSString *)elementName         ///< The name of the element
 #ifdef _CONNECTION_PARSE_TRACE_
             NSLog(@"--> Starting a meeting, handing off to the meeting object" );
 #endif
-            if ( [[self getSearchResults] count] >= [BMLTVariantDefs maxNumberOgMeetings] )
+            if ( [[self getSearchResults] count] >= [BMLTVariantDefs maxNumberOfMeetings] )
                 {
 #ifdef _CONNECTION_PARSE_TRACE_
                 NSLog(@"\tToo many meetings. Stopping the search." );
@@ -69,7 +69,7 @@ didStartElement:(NSString *)elementName         ///< The name of the element
                     {
                     searchInProgress = NO;
                     [parser abortParsing];
-                    NSString    *error_Text = [NSString stringWithFormat:NSLocalizedString(@"TOO-MANY-RESULTS-FORMAT", nil), [BMLTVariantDefs maxNumberOgMeetings]];
+                    NSString    *error_Text = [NSString stringWithFormat:NSLocalizedString(@"TOO-MANY-RESULTS-FORMAT", nil), [BMLTVariantDefs maxNumberOfMeetings]];
                     
                     NSError *myError = [NSError errorWithDomain:@"Read Error" code:NSFileReadTooLargeError userInfo:[NSDictionary dictionaryWithObject:error_Text forKey:NSLocalizedDescriptionKey]];
                     [myDelegate searchCompleteWithError:myError];
