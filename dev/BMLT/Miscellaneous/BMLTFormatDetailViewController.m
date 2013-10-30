@@ -85,19 +85,6 @@
     [super viewDidLoad];
 }
 
-/*****************************************************************/
-/**
- \brief Just cleaning up.
- *****************************************************************/
-- (void)viewDidUnload
-{
-    [self setNavBar:nil];
-    [self setFormatDescription:nil];
-    [self setFormatKeyImage:nil];
-    [self setFormatKeyLabel:nil];
-    [super viewDidUnload];
-}
-
 #pragma mark - Custom Functions -
 
 /*****************************************************************/
@@ -129,23 +116,6 @@
 - (void)setDescription
 {
     [[self formatDescription] setText:[myFormat getBMLTDescription]];
-}
-
-/*****************************************************************/
-/**
- \brief We follow the same rules as all the other views.
- \returns YES, if the autorotation is approved.
- *****************************************************************/
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)io
-{
-    BOOL    ret = (io == UIInterfaceOrientationPortrait);   // iPhone is portrait-only.
-    
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)   // iPad is any which way.
-        {
-        ret = YES;
-        }
-    
-    return ret;
 }
 
 /*****************************************************************/

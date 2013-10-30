@@ -74,23 +74,6 @@
 
 /*****************************************************************/
 /**
- \brief  Called to validate the autorotation.
- \returns    a BOOL. YES if the rotation is approved.
- *****************************************************************/
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    BOOL    ret = interfaceOrientation == UIInterfaceOrientationPortrait;   // iPhone is portrait-only.
-    
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)   // iPad is any which way.
-        {
-        ret = YES;
-        }
-    
-    return ret;
-}
-
-/*****************************************************************/
-/**
  \brief  This just makes sure that the print popover goes away.
  *****************************************************************/
 - (void)viewWillDisappear:(BOOL)animated

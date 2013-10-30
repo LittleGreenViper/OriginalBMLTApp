@@ -109,16 +109,6 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
     [self setMyModalController:self];
 }
 
-/*****************************************************************/
-/**
- \brief Called when the view has unloaded
- *****************************************************************/
-- (void)viewDidUnload
-{
-    [self setMyMapView:nil];
-    [super viewDidUnload];
-}
-
 #pragma mark - Custom Functions -
 /*****************************************************************/
 /**

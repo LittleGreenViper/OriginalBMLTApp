@@ -509,11 +509,11 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
         static dispatch_once_t just_this_one_time_then;
         dispatch_once ( &just_this_one_time_then, ^{ g_AppDelegate = self; } );
         locationManager = [[CLLocationManager alloc] init];
-        [locationManager setPurpose:NSLocalizedString(@"LOCATION-PURPOSE", nil)];
         [locationManager setDistanceFilter:kCLDistanceFilterNone];
         [locationManager setDelegate:self];
         searchParams = [[NSMutableDictionary alloc] init];
         mapType = MKMapTypeStandard;
+        previousAccuracy = 0;
         }
     
     return self;
@@ -907,6 +907,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
  *****************************************************************/
 - (void)lookupMyLocationWithAccuracy:(int)accuracy    ///< If YES, then ten-meter accuracy will be specified.
 {
+    previousAccuracy = 0;
     [locationManager stopUpdatingLocation]; // Just in case we are currently looking...
     _iveUpdatedTheMap = NO;
     locationTried = NO;
@@ -964,46 +965,48 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     UIAlertView *myAlert = nil;
     
     switch ( [error code] )
-    {
+        {
         case kCLErrorDenied:    // If denied, we give the user a special error alert, instructing them as to the issue.
-        myAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LOC-ERROR",nil) message:NSLocalizedString(@"LOC-ERROR-DENIED",nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK-BUTTON",nil) otherButtonTitles:nil];
-        [myAlert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:NO];
-        break;
+            myAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LOC-ERROR",nil) message:NSLocalizedString(@"LOC-ERROR-DENIED",nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK-BUTTON",nil) otherButtonTitles:nil];
+            [myAlert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:NO];
+            break;
         
         case kCLErrorLocationUnknown:   // We can ignore this one.
 #ifdef DEBUG
-        NSLog(@"BMLTAppDelegate::locationManager: didFailWithError: (kCLErrorLocationUnknown) %@", [error localizedDescription]);
+                NSLog(@"BMLTAppDelegate::locationManager: didFailWithError: (kCLErrorLocationUnknown) %@", [error localizedDescription]);
 #endif
-        break;
+                break;
         
         case kCLErrorHeadingFailure:    // We don't care about this one. Try again.
 #ifdef DEBUG
-        NSLog(@"BMLTAppDelegate::locationManager: didFailWithError: (kCLErrorHeadingFailure) %@", [error localizedDescription]);
+                NSLog(@"BMLTAppDelegate::locationManager: didFailWithError: (kCLErrorHeadingFailure) %@", [error localizedDescription]);
 #endif
-        [self lookupMyLocationWithAccuracy:kCLLocationAccuracyBest];
-        break;
+                [self lookupMyLocationWithAccuracy:kCLLocationAccuracyBest];
+                break;
         
         case kCLErrorDeferredAccuracyTooLow:
 #ifdef DEBUG
-        NSLog(@"BMLTAppDelegate::locationManager: didFailWithError: (kCLErrorDeferredAccuracyTooLow) %@", [error localizedDescription]);
+                NSLog(@"BMLTAppDelegate::locationManager: didFailWithError: (kCLErrorDeferredAccuracyTooLow) %@", [error localizedDescription]);
 #endif
-        if ( ![self tryLocationStaged] )
-            {
-            [locationManager stopUpdatingLocation]; // We just give up.
-            myAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LOC-ERROR",nil) message:[error localizedDescription] delegate:nil cancelButtonTitle:NSLocalizedString(@"OK-BUTTON",nil) otherButtonTitles:nil];
-            [myAlert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:NO];
-            }
-        break;
+            if ( ![self tryLocationStaged] )
+                {
+                [locationManager stopUpdatingLocation]; // We just give up.
+                myAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LOC-ERROR",nil) message:[error localizedDescription] delegate:nil cancelButtonTitle:NSLocalizedString(@"OK-BUTTON",nil) otherButtonTitles:nil];
+                [myAlert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:NO];
+                }
+            break;
         
         default:
 #ifdef DEBUG
-        NSLog(@"BMLTAppDelegate::locationManager: didFailWithError: %@", [error localizedDescription]);
+                NSLog(@"BMLTAppDelegate::locationManager: didFailWithError: %@", [error localizedDescription]);
 #endif
-        [locationManager stopUpdatingLocation]; // We just give up.
-        myAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LOC-ERROR",nil) message:[error localizedDescription] delegate:nil cancelButtonTitle:NSLocalizedString(@"OK-BUTTON",nil) otherButtonTitles:nil];
-        [myAlert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:NO];
-        break;
-    }
+            [locationManager stopUpdatingLocation]; // We just give up.
+            myAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"LOC-ERROR",nil) message:[error localizedDescription] delegate:nil cancelButtonTitle:NSLocalizedString(@"OK-BUTTON",nil) otherButtonTitles:nil];
+            [myAlert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:NO];
+            break;
+        }
+    
+    previousAccuracy = 0;
 }
 
 /*****************************************************************/
@@ -1011,70 +1014,75 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
  \brief Called when the location manager updates. Makes sure that
         the update is fresh.
  *****************************************************************/
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation
+- (void)locationManager:(CLLocationManager *)manager    ///< The localtion manager that is doing the search
+     didUpdateLocations:(NSArray *)locations            ///< The latest updated locations.
 {
 #ifdef DEBUG
-    NSLog(@"BMLTAppDelegate::didUpdateToLocation %@ fromLocation: %@", newLocation, oldLocation);
+    NSLog(@"BMLTAppDelegate::didUpdateLocations:%@", locations);
 #endif
+    CLLocation  *newLocation = [locations lastObject];
     
-    NSTimeInterval howRecent = [[newLocation timestamp] timeIntervalSinceNow];
+    // NSTimeInterval is a double that contains seconds
+    const NSTimeInterval interval = [[newLocation timestamp] timeIntervalSinceNow];
     
-    if ( abs(howRecent) >= 15 )  // Fifteen seconds old is too old.
+    // this is in meters
+    const CLLocationAccuracy accuracy = [newLocation horizontalAccuracy];
+    
+    // if this is less than a minute old and the accuracy is less than 100 meters, it's OK for us
+    if ( (interval > -60) && ((accuracy < 100) || (previousAccuracy <= accuracy)) ) // Or if the location isn't getting any better
         {
-#ifdef DEBUG
-        NSLog(@"BMLTAppDelegate::didUpdateToLocation ignoring old GPS info");
-#endif
-        return;
-        }    
+        [manager stopUpdatingLocation];
     
 #ifdef DEBUG
-    NSLog(@"BMLTAppDelegate::didUpdateToLocation I'm at (%f, %f), the horizontal accuracy is %f.", newLocation.coordinate.longitude, newLocation.coordinate.latitude, newLocation.horizontalAccuracy);
+        NSLog(@"BMLTAppDelegate::didUpdateToLocation I'm at (%f, %f), the horizontal accuracy is %f.", newLocation.coordinate.longitude, newLocation.coordinate.latitude, newLocation.horizontalAccuracy);
 #endif
-    
-    if ( newLocation.coordinate.longitude != 0 && newLocation.coordinate.latitude != 0 )
-        {
-        // Make sure that we have a setup that encourages a location-based meeting search (no current search, and a geo_width that will constrain the search).
-        if ( _findMeetings && [searchParams objectForKey:@"geo_width"] )
-            {
-            // We give the new search our location.
-            [searchParams setObject:[NSString stringWithFormat:@"%f", newLocation.coordinate.longitude] forKey:@"long_val"];
-            [searchParams setObject:[NSString stringWithFormat:@"%f", newLocation.coordinate.latitude] forKey:@"lat_val"];
-#ifdef DEBUG
-            NSLog(@"BMLTAppDelegate::didUpdateToLocation: Starting a new location-based search.");
-#endif
-            [self performSelectorOnMainThread:@selector(executeSearchWithParams:) withObject:searchParams waitUntilDone:YES];
-            [self performSelectorOnMainThread:@selector(setUpTabBarItems) withObject:nil waitUntilDone:NO];
-            }
         
-        if ( !_iveUpdatedTheMap )   // If we are flagged to set our search location, then we do so now.
+        if ( newLocation.coordinate.longitude != 0 && newLocation.coordinate.latitude != 0 )
             {
-#ifdef DEBUG
-            NSLog(@"BMLTAppDelegate::didUpdateToLocation Setting the marker location to (%f, %f).", newLocation.coordinate.longitude, newLocation.coordinate.latitude);
-#endif
-            if ( locationTried )    // This makes sure we come back twice.
+            // Make sure that we have a setup that encourages a location-based meeting search (no current search, and a geo_width that will constrain the search).
+            if ( _findMeetings && [searchParams objectForKey:@"geo_width"] )
                 {
+                // We give the new search our location.
+                [searchParams setObject:[NSString stringWithFormat:@"%f", newLocation.coordinate.longitude] forKey:@"long_val"];
+                [searchParams setObject:[NSString stringWithFormat:@"%f", newLocation.coordinate.latitude] forKey:@"lat_val"];
 #ifdef DEBUG
-                NSLog(@"BMLTAppDelegate::didUpdateToLocation Second time around. Stopping the update.");
+                    NSLog(@"BMLTAppDelegate::didUpdateToLocation: Starting a new location-based search.");
 #endif
-                [locationManager stopUpdatingLocation]; // Stop updating for now.
-                [self setSearchMapMarkerLoc:[newLocation coordinate]];
-                [activeSearchController performSelectorOnMainThread:@selector(updateMap) withObject:nil waitUntilDone:NO];
-                _iveUpdatedTheMap = YES;
+                [self performSelectorOnMainThread:@selector(executeSearchWithParams:) withObject:searchParams waitUntilDone:YES];
+                [self performSelectorOnMainThread:@selector(setUpTabBarItems) withObject:nil waitUntilDone:NO];
                 }
             
-            locationTried = YES;
-            }
-        
-        [self setLastLocation:newLocation]; // Record for posterity
-        }
+            if ( !_iveUpdatedTheMap )   // If we are flagged to set our search location, then we do so now.
+                {
 #ifdef DEBUG
-    else    // Something's wrong. We cannot be at exactly 0,0. Try again.
-        {
-        NSLog(@"BMLTAppDelegate::didUpdateToLocation Location Error: (%@)", newLocation);
-        }
+                    NSLog(@"BMLTAppDelegate::didUpdateToLocation Setting the marker location to (%f, %f).", newLocation.coordinate.longitude, newLocation.coordinate.latitude);
 #endif
+                if ( locationTried )    // This makes sure we come back twice.
+                    {
+#ifdef DEBUG
+                        NSLog(@"BMLTAppDelegate::didUpdateToLocation Second time around. Stopping the update.");
+#endif
+                    [locationManager stopUpdatingLocation]; // Stop updating for now.
+                    [self setSearchMapMarkerLoc:[newLocation coordinate]];
+                    [activeSearchController performSelectorOnMainThread:@selector(updateMap) withObject:nil waitUntilDone:NO];
+                    _iveUpdatedTheMap = YES;
+                    }
+                
+                locationTried = YES;
+                }
+            
+            [self setLastLocation:newLocation]; // Record for posterity
+            }
+#ifdef DEBUG
+        else    // Something's wrong. We cannot be at exactly 0,0. Try again.
+            {
+            NSLog(@"BMLTAppDelegate::didUpdateToLocation Location Error: (%@)", newLocation);
+            [manager startUpdatingLocation];
+            }
+#endif
+        }
+    
+    previousAccuracy = accuracy;
 }
 
 #pragma mark - UITabBarControllerDelegate code -

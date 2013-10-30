@@ -62,26 +62,4 @@
     [super viewDidDisappear:animated];
     // Release any retained subviews of the main view.
 }
-
-/*****************************************************************/
-/**
- \brief We follow the same rules as all the other views.
- \returns YES, if the autorotation is approved.
- *****************************************************************/
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)io   ///< The desired rotation
-{
-    BOOL    ret = (io == UIInterfaceOrientationPortrait);   // iPhone is portrait-only.
-    
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)   // iPad is any which way.
-        {
-        ret = YES;
-        }
-    
-    return ret;
-}
-
-- (void)viewDidUnload {
-    [self setAnimationView:nil];
-    [super viewDidUnload];
-}
 @end

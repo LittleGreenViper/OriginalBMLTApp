@@ -136,6 +136,9 @@
 /* Error message for geocode failure */
 "GEOCODE-FAILURE" = "The app cannot determine the location for the given address.";
 
+/* Error message for server failure */
+"ROOT-SERVER-FAILURE" = "The app cannot reach the meeting list server. Please ensure that your Internet connection is working.";
+
 /* Quick Search Titles */
 "SEARCH-SPEC-NEARBY-TITLE" = "Find Nearby Meetings";
 "SEARCH-SPEC-LATER-TODAY-TITLE" = "Find Nearby Meetings Later Today";

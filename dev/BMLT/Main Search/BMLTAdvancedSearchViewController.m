@@ -137,29 +137,6 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
 
 /*****************************************************************/
 /**
- \brief Called when the view is unloaded.
- *****************************************************************/
-- (void)viewDidUnload
-{
-    [self setSunLabel:nil];
-    [self setSunButton:nil];
-    [self setMonLabel:nil];
-    [self setMonButton:nil];
-    [self setTueLabel:nil];
-    [self setTueButton:nil];
-    [self setWedLabel:nil];
-    [self setWedButton:nil];
-    [self setThuLabel:nil];
-    [self setThuButton:nil];
-    [self setFriLabel:nil];
-    [self setFriButton:nil];
-    [self setSatLabel:nil];
-    [self setSatButton:nil];
-    [super viewDidUnload];
-}
-
-/*****************************************************************/
-/**
  \brief Called when the weekday selection segmented control is changed.
  *****************************************************************/
 - (IBAction)weekdaySelectionChanged:(id)sender  ///< The segmented control.

@@ -229,7 +229,8 @@ static int meeting_search_timeout_period_in_seconds = 30;
 #endif
         if ( myDelegate )
             {
-            [myDelegate searchCompleteWithError:nil];
+            NSError *myError = [NSError errorWithDomain:@"Network Error" code:0 userInfo:[NSDictionary dictionaryWithObject:NSLocalizedString (@"ROOT-SERVER-FAILURE", nil) forKey:NSLocalizedDescriptionKey]];
+            [myDelegate searchCompleteWithError:myError];
             }
 #ifdef DEBUG
         NSLog(@"A_BMLT_Search doSearch Releasing Parser");

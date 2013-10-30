@@ -71,20 +71,6 @@
     [super viewWillAppear:animated];
 }
 
-/*****************************************************************/
-/**
- \brief  Called after the controller's view object has unloaded.
- *****************************************************************/
-- (void)viewDidUnload
-{
-    [self setFindMeetingsNearMeButton:nil];
-    [self setFindMeetingsLaterTodayButton:nil];
-    [self setMapSearchView:nil];
-    [self setDisabledTextLabel:nil];
-    [self setUpdateLocationButton:nil];
-    [super viewDidUnload];
-}
-
 #pragma mark IB Actions
 /*****************************************************************/
 /**

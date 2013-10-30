@@ -136,6 +136,9 @@
 /* Error message for geocode failure */
 "GEOCODE-FAILURE" = "Appen kan inte beräkna positionen för den angivna adressen.";
 
+/* Error message for server failure */
+"ROOT-SERVER-FAILURE" = "The app cannot reach the meeting list server. Please ensure that your Internet connection is working.";
+
 /* Quick Search Titles */
 "SEARCH-SPEC-NEARBY-TITLE" = "hitta närliggande möten";
 "SEARCH-SPEC-LATER-TODAY-TITLE" = "hitta närliggande möten senare idag";

@@ -96,7 +96,7 @@
             }
         else
             {
-            [self presentModalViewController:myModalView animated:YES];
+            [self presentViewController:myModalView animated:YES completion:nil];
             }
         }
 }
@@ -118,7 +118,7 @@
         }
     else
         {
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
         }
     
     formatPopover = nil;

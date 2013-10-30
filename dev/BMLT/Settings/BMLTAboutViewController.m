@@ -54,14 +54,4 @@
         [[self logoImageView] setImage:logo];
         }
 }
-/*****************************************************************/
-/**
- \brief  Called after the controller's view object has unloaded.
- *****************************************************************/
-- (void)viewDidUnload
-{
-    [self setVersionLabel:nil];
-    [self setLogoImageView:nil];
-    [super viewDidUnload];
-}
 @end

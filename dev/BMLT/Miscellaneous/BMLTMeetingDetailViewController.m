@@ -101,23 +101,6 @@ static int List_Meeting_Format_Circle_Size_Big = 30;
 
 /*****************************************************************/
 /**
- \brief Called when the device is rotated.
- \returns NO, unless portrait (iPhone), or YES for everything (iPad).
- *****************************************************************/
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)io   ///< The desired interface orientation.
-{
-    BOOL    ret = (io == UIInterfaceOrientationPortrait);
-    
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-        {
-        ret = YES;
-        }
-    
-    return ret;
-}
-
-/*****************************************************************/
-/**
  \brief  This just makes sure that the print popover goes away.
  *****************************************************************/
 - (void)viewWillDisappear:(BOOL)animated
@@ -370,7 +353,7 @@ static int List_Meeting_Format_Circle_Size_Big = 30;
         }
     else
         {
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
         }
     
     actionPopover = nil;

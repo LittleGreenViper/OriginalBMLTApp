@@ -164,33 +164,6 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
 
 /*****************************************************************/
 /**
- \brief  Called after the controller's view object has unloaded.
- *****************************************************************/
-- (void)viewDidUnload
-{
-    [self setLookupLocationLabel:nil];
-    [self setLookUpLocationSwitch:nil];
-    [self setKeepUpdatingLabel:nil];
-    [self setKeepUpdatingSwitch:nil];
-    [self setRetainStateLabel:nil];
-    [self setRetainStateSwitch:nil];
-    [self setMapResultsLabel:nil];
-    [self setMapResultsSwitch:nil];
-    [self setDistanceSortLabel:nil];
-    [self setDistanceSortSwitch:nil];
-    [self setPreferredSearchTypeLabel:nil];
-    [self setPreferredSearchTypeControl:nil];
-    [self setNumMeetingsLabel:nil];
-    [self setNumMeetingsSlider:nil];
-    [self setMinLabel:nil];
-    [self setMaxLabel:nil];
-    [self setUpdateLocationButton:nil];
-    [self setAboutView:nil];
-    [super viewDidUnload];
-}
-
-/*****************************************************************/
-/**
  \brief  Called when the user flicks the lookup on startup switch.
  *****************************************************************/
 - (IBAction)lookupLocationChanged:(id)sender    ///< The switch in question

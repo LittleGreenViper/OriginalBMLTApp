@@ -42,8 +42,9 @@ extern int kAddressLookupTimeoutPeriod_in_seconds;
  *****************************************************************/
 @interface BMLTAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate, CLLocationManagerDelegate, SearchDelegate, NSXMLParserDelegate>
 {
-    Reachability    *internetReachable; ///< This handles tests of the network
-    Reachability    *hostReachable;     ///< This handles testing for the root server.
+    Reachability        *internetReachable; ///< This handles tests of the network
+    Reachability        *hostReachable;     ///< This handles testing for the root server.
+    CLLocationAccuracy  previousAccuracy;   ///< This is used to track how well the core location is updating.
 }
 
 @property (strong, atomic) CLLocation               *lastLocation;      ///< This will hold the last location for the user (as opposed to the search center). This is used for directions.
