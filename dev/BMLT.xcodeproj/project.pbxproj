@@ -125,78 +125,6 @@
 		773E424A168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */; };
 		773E424B168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */; };
 		773E424C168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */; };
-		773E424D168E9E4E00CED8D5 /* MButtonConcave.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4209168E9E4E00CED8D5 /* MButtonConcave.png */; };
-		773E424E168E9E4E00CED8D5 /* MButtonConcave.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4209168E9E4E00CED8D5 /* MButtonConcave.png */; };
-		773E4250168E9E4E00CED8D5 /* MButtonConcave.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4209168E9E4E00CED8D5 /* MButtonConcave.png */; };
-		773E4251168E9E4E00CED8D5 /* MButtonConcave@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420A168E9E4E00CED8D5 /* MButtonConcave@2X.png */; };
-		773E4252168E9E4E00CED8D5 /* MButtonConcave@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420A168E9E4E00CED8D5 /* MButtonConcave@2X.png */; };
-		773E4254168E9E4E00CED8D5 /* MButtonConcave@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420A168E9E4E00CED8D5 /* MButtonConcave@2X.png */; };
-		773E4255168E9E4E00CED8D5 /* MButtonConvex.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420B168E9E4E00CED8D5 /* MButtonConvex.png */; };
-		773E4256168E9E4E00CED8D5 /* MButtonConvex.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420B168E9E4E00CED8D5 /* MButtonConvex.png */; };
-		773E4258168E9E4E00CED8D5 /* MButtonConvex.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420B168E9E4E00CED8D5 /* MButtonConvex.png */; };
-		773E4259168E9E4E00CED8D5 /* MButtonConvex@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420C168E9E4E00CED8D5 /* MButtonConvex@2X.png */; };
-		773E425A168E9E4E00CED8D5 /* MButtonConvex@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420C168E9E4E00CED8D5 /* MButtonConvex@2X.png */; };
-		773E425C168E9E4E00CED8D5 /* MButtonConvex@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420C168E9E4E00CED8D5 /* MButtonConvex@2X.png */; };
-		773E425D168E9E4E00CED8D5 /* SButtonConcave.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420D168E9E4E00CED8D5 /* SButtonConcave.png */; };
-		773E425E168E9E4E00CED8D5 /* SButtonConcave.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420D168E9E4E00CED8D5 /* SButtonConcave.png */; };
-		773E4260168E9E4E00CED8D5 /* SButtonConcave.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420D168E9E4E00CED8D5 /* SButtonConcave.png */; };
-		773E4261168E9E4E00CED8D5 /* SButtonConcave@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420E168E9E4E00CED8D5 /* SButtonConcave@2X.png */; };
-		773E4262168E9E4E00CED8D5 /* SButtonConcave@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420E168E9E4E00CED8D5 /* SButtonConcave@2X.png */; };
-		773E4264168E9E4E00CED8D5 /* SButtonConcave@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420E168E9E4E00CED8D5 /* SButtonConcave@2X.png */; };
-		773E4265168E9E4E00CED8D5 /* SButtonConvex.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420F168E9E4E00CED8D5 /* SButtonConvex.png */; };
-		773E4266168E9E4E00CED8D5 /* SButtonConvex.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420F168E9E4E00CED8D5 /* SButtonConvex.png */; };
-		773E4268168E9E4E00CED8D5 /* SButtonConvex.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420F168E9E4E00CED8D5 /* SButtonConvex.png */; };
-		773E4269168E9E4E00CED8D5 /* SButtonConvex@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4210168E9E4E00CED8D5 /* SButtonConvex@2X.png */; };
-		773E426A168E9E4E00CED8D5 /* SButtonConvex@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4210168E9E4E00CED8D5 /* SButtonConvex@2X.png */; };
-		773E426C168E9E4E00CED8D5 /* SButtonConvex@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4210168E9E4E00CED8D5 /* SButtonConvex@2X.png */; };
-		773E426D168E9E4E00CED8D5 /* LocButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4211168E9E4E00CED8D5 /* LocButton.png */; };
-		773E426E168E9E4E00CED8D5 /* LocButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4211168E9E4E00CED8D5 /* LocButton.png */; };
-		773E426F168E9E4E00CED8D5 /* LocButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4211168E9E4E00CED8D5 /* LocButton.png */; };
-		773E4270168E9E4E00CED8D5 /* LocButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4211168E9E4E00CED8D5 /* LocButton.png */; };
-		773E4271168E9E4E00CED8D5 /* LocButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4212168E9E4E00CED8D5 /* LocButton@2x.png */; };
-		773E4272168E9E4E00CED8D5 /* LocButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4212168E9E4E00CED8D5 /* LocButton@2x.png */; };
-		773E4273168E9E4E00CED8D5 /* LocButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4212168E9E4E00CED8D5 /* LocButton@2x.png */; };
-		773E4274168E9E4E00CED8D5 /* LocButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4212168E9E4E00CED8D5 /* LocButton@2x.png */; };
-		773E4275168E9E4E00CED8D5 /* LocButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4213168E9E4E00CED8D5 /* LocButtonHighlight.png */; };
-		773E4276168E9E4E00CED8D5 /* LocButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4213168E9E4E00CED8D5 /* LocButtonHighlight.png */; };
-		773E4277168E9E4E00CED8D5 /* LocButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4213168E9E4E00CED8D5 /* LocButtonHighlight.png */; };
-		773E4278168E9E4E00CED8D5 /* LocButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4213168E9E4E00CED8D5 /* LocButtonHighlight.png */; };
-		773E4279168E9E4E00CED8D5 /* LocButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4214168E9E4E00CED8D5 /* LocButtonHighlight@2X.png */; };
-		773E427A168E9E4E00CED8D5 /* LocButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4214168E9E4E00CED8D5 /* LocButtonHighlight@2X.png */; };
-		773E427B168E9E4E00CED8D5 /* LocButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4214168E9E4E00CED8D5 /* LocButtonHighlight@2X.png */; };
-		773E427C168E9E4E00CED8D5 /* LocButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4214168E9E4E00CED8D5 /* LocButtonHighlight@2X.png */; };
-		773E427D168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4215168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png */; };
-		773E427E168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4215168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png */; };
-		773E427F168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4215168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png */; };
-		773E4280168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4215168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png */; };
-		773E4281168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4216168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png */; };
-		773E4282168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4216168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png */; };
-		773E4283168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4216168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png */; };
-		773E4284168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4216168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png */; };
-		773E4285168E9E4E00CED8D5 /* LocButtonSimpleNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4217168E9E4E00CED8D5 /* LocButtonSimpleNormal.png */; };
-		773E4286168E9E4E00CED8D5 /* LocButtonSimpleNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4217168E9E4E00CED8D5 /* LocButtonSimpleNormal.png */; };
-		773E4287168E9E4E00CED8D5 /* LocButtonSimpleNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4217168E9E4E00CED8D5 /* LocButtonSimpleNormal.png */; };
-		773E4288168E9E4E00CED8D5 /* LocButtonSimpleNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4217168E9E4E00CED8D5 /* LocButtonSimpleNormal.png */; };
-		773E4289168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4218168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png */; };
-		773E428A168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4218168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png */; };
-		773E428B168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4218168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png */; };
-		773E428C168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4218168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png */; };
-		773E428D168E9E4E00CED8D5 /* LongButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4219168E9E4E00CED8D5 /* LongButtonHighlight.png */; };
-		773E428E168E9E4E00CED8D5 /* LongButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4219168E9E4E00CED8D5 /* LongButtonHighlight.png */; };
-		773E428F168E9E4E00CED8D5 /* LongButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4219168E9E4E00CED8D5 /* LongButtonHighlight.png */; };
-		773E4290168E9E4E00CED8D5 /* LongButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4219168E9E4E00CED8D5 /* LongButtonHighlight.png */; };
-		773E4291168E9E4E00CED8D5 /* LongButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421A168E9E4E00CED8D5 /* LongButtonHighlight@2X.png */; };
-		773E4292168E9E4E00CED8D5 /* LongButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421A168E9E4E00CED8D5 /* LongButtonHighlight@2X.png */; };
-		773E4293168E9E4E00CED8D5 /* LongButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421A168E9E4E00CED8D5 /* LongButtonHighlight@2X.png */; };
-		773E4294168E9E4E00CED8D5 /* LongButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421A168E9E4E00CED8D5 /* LongButtonHighlight@2X.png */; };
-		773E4295168E9E4E00CED8D5 /* LongButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421B168E9E4E00CED8D5 /* LongButtonNormal.png */; };
-		773E4296168E9E4E00CED8D5 /* LongButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421B168E9E4E00CED8D5 /* LongButtonNormal.png */; };
-		773E4297168E9E4E00CED8D5 /* LongButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421B168E9E4E00CED8D5 /* LongButtonNormal.png */; };
-		773E4298168E9E4E00CED8D5 /* LongButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421B168E9E4E00CED8D5 /* LongButtonNormal.png */; };
-		773E4299168E9E4E00CED8D5 /* LongButtonNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421C168E9E4E00CED8D5 /* LongButtonNormal@2X.png */; };
-		773E429A168E9E4E00CED8D5 /* LongButtonNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421C168E9E4E00CED8D5 /* LongButtonNormal@2X.png */; };
-		773E429B168E9E4E00CED8D5 /* LongButtonNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421C168E9E4E00CED8D5 /* LongButtonNormal@2X.png */; };
-		773E429C168E9E4E00CED8D5 /* LongButtonNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421C168E9E4E00CED8D5 /* LongButtonNormal@2X.png */; };
 		773E4309155EC7070026FA16 /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E4308155EC7070026FA16 /* BMLTVariantDefs.m */; };
 		774374A0168F956000FC7FF4 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CB61548872000DBE9A1 /* libTestFlight.a */; };
 		7747C40B168BC0E200C9B148 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CB61548872000DBE9A1 /* libTestFlight.a */; };
@@ -557,26 +485,6 @@
 		77B5EB101743EEF300F50281 /* CheckBoxNormal-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */; };
 		77B5EB111743EEF300F50281 /* CheckBoxNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */; };
 		77B5EB121743EEF300F50281 /* CheckBoxNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */; };
-		77B5EB131743EEF300F50281 /* MButtonConcave.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4209168E9E4E00CED8D5 /* MButtonConcave.png */; };
-		77B5EB141743EEF300F50281 /* MButtonConcave@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420A168E9E4E00CED8D5 /* MButtonConcave@2X.png */; };
-		77B5EB151743EEF300F50281 /* MButtonConvex.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420B168E9E4E00CED8D5 /* MButtonConvex.png */; };
-		77B5EB161743EEF300F50281 /* MButtonConvex@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420C168E9E4E00CED8D5 /* MButtonConvex@2X.png */; };
-		77B5EB171743EEF300F50281 /* SButtonConcave.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420D168E9E4E00CED8D5 /* SButtonConcave.png */; };
-		77B5EB181743EEF300F50281 /* SButtonConcave@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420E168E9E4E00CED8D5 /* SButtonConcave@2X.png */; };
-		77B5EB191743EEF300F50281 /* SButtonConvex.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420F168E9E4E00CED8D5 /* SButtonConvex.png */; };
-		77B5EB1A1743EEF300F50281 /* SButtonConvex@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4210168E9E4E00CED8D5 /* SButtonConvex@2X.png */; };
-		77B5EB1B1743EEF300F50281 /* LocButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4211168E9E4E00CED8D5 /* LocButton.png */; };
-		77B5EB1C1743EEF300F50281 /* LocButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4212168E9E4E00CED8D5 /* LocButton@2x.png */; };
-		77B5EB1D1743EEF300F50281 /* LocButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4213168E9E4E00CED8D5 /* LocButtonHighlight.png */; };
-		77B5EB1E1743EEF300F50281 /* LocButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4214168E9E4E00CED8D5 /* LocButtonHighlight@2X.png */; };
-		77B5EB1F1743EEF300F50281 /* LocButtonSimpleHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4215168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png */; };
-		77B5EB201743EEF300F50281 /* LocButtonSimpleHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4216168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png */; };
-		77B5EB211743EEF300F50281 /* LocButtonSimpleNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4217168E9E4E00CED8D5 /* LocButtonSimpleNormal.png */; };
-		77B5EB221743EEF300F50281 /* LocButtonSimpleNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4218168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png */; };
-		77B5EB231743EEF300F50281 /* LongButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4219168E9E4E00CED8D5 /* LongButtonHighlight.png */; };
-		77B5EB241743EEF300F50281 /* LongButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421A168E9E4E00CED8D5 /* LongButtonHighlight@2X.png */; };
-		77B5EB251743EEF300F50281 /* LongButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421B168E9E4E00CED8D5 /* LongButtonNormal.png */; };
-		77B5EB261743EEF300F50281 /* LongButtonNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421C168E9E4E00CED8D5 /* LongButtonNormal@2X.png */; };
 		77B5EB341743EEF300F50281 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5116F565CE00664FF9 /* iPad.storyboard */; };
 		77B5EB351743EEF300F50281 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
 		77B5EB4F1743EFBB00F50281 /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B5EB3E1743EFBB00F50281 /* BMLTVariantDefs.m */; };
@@ -686,26 +594,6 @@
 		77E24A1516F563C900664FF9 /* CheckBoxNormal-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */; };
 		77E24A1616F563C900664FF9 /* CheckBoxNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */; };
 		77E24A1716F563C900664FF9 /* CheckBoxNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */; };
-		77E24A1816F563C900664FF9 /* MButtonConcave.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4209168E9E4E00CED8D5 /* MButtonConcave.png */; };
-		77E24A1916F563C900664FF9 /* MButtonConcave@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420A168E9E4E00CED8D5 /* MButtonConcave@2X.png */; };
-		77E24A1A16F563C900664FF9 /* MButtonConvex.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420B168E9E4E00CED8D5 /* MButtonConvex.png */; };
-		77E24A1B16F563C900664FF9 /* MButtonConvex@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420C168E9E4E00CED8D5 /* MButtonConvex@2X.png */; };
-		77E24A1C16F563C900664FF9 /* SButtonConcave.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420D168E9E4E00CED8D5 /* SButtonConcave.png */; };
-		77E24A1D16F563C900664FF9 /* SButtonConcave@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420E168E9E4E00CED8D5 /* SButtonConcave@2X.png */; };
-		77E24A1E16F563C900664FF9 /* SButtonConvex.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E420F168E9E4E00CED8D5 /* SButtonConvex.png */; };
-		77E24A1F16F563C900664FF9 /* SButtonConvex@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4210168E9E4E00CED8D5 /* SButtonConvex@2X.png */; };
-		77E24A2016F563C900664FF9 /* LocButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4211168E9E4E00CED8D5 /* LocButton.png */; };
-		77E24A2116F563C900664FF9 /* LocButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4212168E9E4E00CED8D5 /* LocButton@2x.png */; };
-		77E24A2216F563C900664FF9 /* LocButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4213168E9E4E00CED8D5 /* LocButtonHighlight.png */; };
-		77E24A2316F563C900664FF9 /* LocButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4214168E9E4E00CED8D5 /* LocButtonHighlight@2X.png */; };
-		77E24A2416F563C900664FF9 /* LocButtonSimpleHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4215168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png */; };
-		77E24A2516F563C900664FF9 /* LocButtonSimpleHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4216168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png */; };
-		77E24A2616F563C900664FF9 /* LocButtonSimpleNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4217168E9E4E00CED8D5 /* LocButtonSimpleNormal.png */; };
-		77E24A2716F563C900664FF9 /* LocButtonSimpleNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4218168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png */; };
-		77E24A2816F563C900664FF9 /* LongButtonHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4219168E9E4E00CED8D5 /* LongButtonHighlight.png */; };
-		77E24A2916F563C900664FF9 /* LongButtonHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421A168E9E4E00CED8D5 /* LongButtonHighlight@2X.png */; };
-		77E24A2A16F563C900664FF9 /* LongButtonNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421B168E9E4E00CED8D5 /* LongButtonNormal.png */; };
-		77E24A2B16F563C900664FF9 /* LongButtonNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E421C168E9E4E00CED8D5 /* LongButtonNormal@2X.png */; };
 		77E24A3F16F5644900664FF9 /* BMLT_AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E249AC16F563C000664FF9 /* BMLT_AnimationView.m */; };
 		77E24A4016F5644900664FF9 /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E249AD16F563C000664FF9 /* BMLTVariantDefs.m */; };
 		77E24A4216F564A700664FF9 /* Anim-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E249AF16F563C000664FF9 /* Anim-Back.png */; };
@@ -838,26 +726,6 @@
 		773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBoxNormal-Check@2X.png"; sourceTree = "<group>"; };
 		773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckBoxNormal.png; sourceTree = "<group>"; };
 		773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBoxNormal@2X.png"; sourceTree = "<group>"; };
-		773E4209168E9E4E00CED8D5 /* MButtonConcave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MButtonConcave.png; sourceTree = "<group>"; };
-		773E420A168E9E4E00CED8D5 /* MButtonConcave@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MButtonConcave@2X.png"; sourceTree = "<group>"; };
-		773E420B168E9E4E00CED8D5 /* MButtonConvex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MButtonConvex.png; sourceTree = "<group>"; };
-		773E420C168E9E4E00CED8D5 /* MButtonConvex@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MButtonConvex@2X.png"; sourceTree = "<group>"; };
-		773E420D168E9E4E00CED8D5 /* SButtonConcave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SButtonConcave.png; sourceTree = "<group>"; };
-		773E420E168E9E4E00CED8D5 /* SButtonConcave@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SButtonConcave@2X.png"; sourceTree = "<group>"; };
-		773E420F168E9E4E00CED8D5 /* SButtonConvex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SButtonConvex.png; sourceTree = "<group>"; };
-		773E4210168E9E4E00CED8D5 /* SButtonConvex@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SButtonConvex@2X.png"; sourceTree = "<group>"; };
-		773E4211168E9E4E00CED8D5 /* LocButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocButton.png; sourceTree = "<group>"; };
-		773E4212168E9E4E00CED8D5 /* LocButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LocButton@2x.png"; sourceTree = "<group>"; };
-		773E4213168E9E4E00CED8D5 /* LocButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocButtonHighlight.png; sourceTree = "<group>"; };
-		773E4214168E9E4E00CED8D5 /* LocButtonHighlight@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LocButtonHighlight@2X.png"; sourceTree = "<group>"; };
-		773E4215168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocButtonSimpleHighlight.png; sourceTree = "<group>"; };
-		773E4216168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LocButtonSimpleHighlight@2X.png"; sourceTree = "<group>"; };
-		773E4217168E9E4E00CED8D5 /* LocButtonSimpleNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LocButtonSimpleNormal.png; sourceTree = "<group>"; };
-		773E4218168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LocButtonSimpleNormal@2X.png"; sourceTree = "<group>"; };
-		773E4219168E9E4E00CED8D5 /* LongButtonHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LongButtonHighlight.png; sourceTree = "<group>"; };
-		773E421A168E9E4E00CED8D5 /* LongButtonHighlight@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LongButtonHighlight@2X.png"; sourceTree = "<group>"; };
-		773E421B168E9E4E00CED8D5 /* LongButtonNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LongButtonNormal.png; sourceTree = "<group>"; };
-		773E421C168E9E4E00CED8D5 /* LongButtonNormal@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LongButtonNormal@2X.png"; sourceTree = "<group>"; };
 		773E42A6168EA10600CED8D5 /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		773E42AA168EA38400CED8D5 /* EskiltunaSweden.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = EskiltunaSweden.gpx; path = "../../../spec/GPX Files/EskiltunaSweden.gpx"; sourceTree = "<group>"; };
 		773E4308155EC7070026FA16 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
@@ -1276,14 +1144,6 @@
 				773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */,
 				773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */,
 				773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */,
-				773E4209168E9E4E00CED8D5 /* MButtonConcave.png */,
-				773E420A168E9E4E00CED8D5 /* MButtonConcave@2X.png */,
-				773E420B168E9E4E00CED8D5 /* MButtonConvex.png */,
-				773E420C168E9E4E00CED8D5 /* MButtonConvex@2X.png */,
-				773E420D168E9E4E00CED8D5 /* SButtonConcave.png */,
-				773E420E168E9E4E00CED8D5 /* SButtonConcave@2X.png */,
-				773E420F168E9E4E00CED8D5 /* SButtonConvex.png */,
-				773E4210168E9E4E00CED8D5 /* SButtonConvex@2X.png */,
 			);
 			path = Checkboxes;
 			sourceTree = "<group>";
@@ -1333,18 +1193,6 @@
 			isa = PBXGroup;
 			children = (
 				773E41FC168E9E4E00CED8D5 /* Checkboxes */,
-				773E4211168E9E4E00CED8D5 /* LocButton.png */,
-				773E4212168E9E4E00CED8D5 /* LocButton@2x.png */,
-				773E4213168E9E4E00CED8D5 /* LocButtonHighlight.png */,
-				773E4214168E9E4E00CED8D5 /* LocButtonHighlight@2X.png */,
-				773E4215168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png */,
-				773E4216168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png */,
-				773E4217168E9E4E00CED8D5 /* LocButtonSimpleNormal.png */,
-				773E4218168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png */,
-				773E4219168E9E4E00CED8D5 /* LongButtonHighlight.png */,
-				773E421A168E9E4E00CED8D5 /* LongButtonHighlight@2X.png */,
-				773E421B168E9E4E00CED8D5 /* LongButtonNormal.png */,
-				773E421C168E9E4E00CED8D5 /* LongButtonNormal@2X.png */,
 				77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */,
 				77603DC91541DC8300C4840F /* FormatCircleGreen@2x.png */,
 				77603DCA1541DC8300C4840F /* FormatCircleRed@2x.png */,
@@ -1874,19 +1722,7 @@
 				773E4243168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png in Resources */,
 				773E4247168E9E4E00CED8D5 /* CheckBoxNormal.png in Resources */,
 				773E424B168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */,
-				773E426F168E9E4E00CED8D5 /* LocButton.png in Resources */,
 				77BF9D2917E335E8006E632D /* App-Icon-76.png in Resources */,
-				773E4273168E9E4E00CED8D5 /* LocButton@2x.png in Resources */,
-				773E4277168E9E4E00CED8D5 /* LocButtonHighlight.png in Resources */,
-				773E427B168E9E4E00CED8D5 /* LocButtonHighlight@2X.png in Resources */,
-				773E427F168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png in Resources */,
-				773E4283168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png in Resources */,
-				773E4287168E9E4E00CED8D5 /* LocButtonSimpleNormal.png in Resources */,
-				773E428B168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png in Resources */,
-				773E428F168E9E4E00CED8D5 /* LongButtonHighlight.png in Resources */,
-				773E4293168E9E4E00CED8D5 /* LongButtonHighlight@2X.png in Resources */,
-				773E4297168E9E4E00CED8D5 /* LongButtonNormal.png in Resources */,
-				773E429B168E9E4E00CED8D5 /* LongButtonNormal@2X.png in Resources */,
 				7707C49E1690BCC100FA8D9A /* AboutLogo.png in Resources */,
 				77E24A5416F565CE00664FF9 /* iPad.storyboard in Resources */,
 				77E24A5916F565CE00664FF9 /* iPhone.storyboard in Resources */,
@@ -1948,28 +1784,8 @@
 				773E4244168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png in Resources */,
 				773E4248168E9E4E00CED8D5 /* CheckBoxNormal.png in Resources */,
 				773E424C168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */,
-				773E4250168E9E4E00CED8D5 /* MButtonConcave.png in Resources */,
-				773E4254168E9E4E00CED8D5 /* MButtonConcave@2X.png in Resources */,
 				771B39FB17E33C3B00CFBCA1 /* App-Icon-76.png in Resources */,
-				773E4258168E9E4E00CED8D5 /* MButtonConvex.png in Resources */,
-				773E425C168E9E4E00CED8D5 /* MButtonConvex@2X.png in Resources */,
-				773E4260168E9E4E00CED8D5 /* SButtonConcave.png in Resources */,
-				773E4264168E9E4E00CED8D5 /* SButtonConcave@2X.png in Resources */,
-				773E4268168E9E4E00CED8D5 /* SButtonConvex.png in Resources */,
-				773E426C168E9E4E00CED8D5 /* SButtonConvex@2X.png in Resources */,
-				773E4270168E9E4E00CED8D5 /* LocButton.png in Resources */,
-				773E4274168E9E4E00CED8D5 /* LocButton@2x.png in Resources */,
-				773E4278168E9E4E00CED8D5 /* LocButtonHighlight.png in Resources */,
-				773E427C168E9E4E00CED8D5 /* LocButtonHighlight@2X.png in Resources */,
 				771B39FD17E33C3B00CFBCA1 /* App-Icon-152.png in Resources */,
-				773E4280168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png in Resources */,
-				773E4284168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png in Resources */,
-				773E4288168E9E4E00CED8D5 /* LocButtonSimpleNormal.png in Resources */,
-				773E428C168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png in Resources */,
-				773E4290168E9E4E00CED8D5 /* LongButtonHighlight.png in Resources */,
-				773E4294168E9E4E00CED8D5 /* LongButtonHighlight@2X.png in Resources */,
-				773E4298168E9E4E00CED8D5 /* LongButtonNormal.png in Resources */,
-				773E429C168E9E4E00CED8D5 /* LongButtonNormal@2X.png in Resources */,
 				77B566C01690BE8A00F3CF3F /* AboutLogo.png in Resources */,
 				77E24A5316F565CE00664FF9 /* iPad.storyboard in Resources */,
 				77E24A5816F565CE00664FF9 /* iPhone.storyboard in Resources */,
@@ -2025,28 +1841,8 @@
 				776C2C3C17E155CC00D86507 /* Default-Tall-Landscape~ipad.png in Resources */,
 				773E4249168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */,
 				7760FE2C17E093D10042065C /* icon-057.png in Resources */,
-				773E424D168E9E4E00CED8D5 /* MButtonConcave.png in Resources */,
 				776C2C3E17E155CC00D86507 /* Default-Tall-Portrait~ipad.png in Resources */,
-				773E4251168E9E4E00CED8D5 /* MButtonConcave@2X.png in Resources */,
-				773E4255168E9E4E00CED8D5 /* MButtonConvex.png in Resources */,
-				773E4259168E9E4E00CED8D5 /* MButtonConvex@2X.png in Resources */,
-				773E425D168E9E4E00CED8D5 /* SButtonConcave.png in Resources */,
-				773E4261168E9E4E00CED8D5 /* SButtonConcave@2X.png in Resources */,
-				773E4265168E9E4E00CED8D5 /* SButtonConvex.png in Resources */,
-				773E4269168E9E4E00CED8D5 /* SButtonConvex@2X.png in Resources */,
-				773E426D168E9E4E00CED8D5 /* LocButton.png in Resources */,
 				7760FE2F17E093D10042065C /* icon-114.png in Resources */,
-				773E4271168E9E4E00CED8D5 /* LocButton@2x.png in Resources */,
-				773E4275168E9E4E00CED8D5 /* LocButtonHighlight.png in Resources */,
-				773E4279168E9E4E00CED8D5 /* LocButtonHighlight@2X.png in Resources */,
-				773E427D168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png in Resources */,
-				773E4281168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png in Resources */,
-				773E4285168E9E4E00CED8D5 /* LocButtonSimpleNormal.png in Resources */,
-				773E4289168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png in Resources */,
-				773E428D168E9E4E00CED8D5 /* LongButtonHighlight.png in Resources */,
-				773E4291168E9E4E00CED8D5 /* LongButtonHighlight@2X.png in Resources */,
-				773E4295168E9E4E00CED8D5 /* LongButtonNormal.png in Resources */,
-				773E4299168E9E4E00CED8D5 /* LongButtonNormal@2X.png in Resources */,
 				77E24A5516F565CE00664FF9 /* iPad.storyboard in Resources */,
 				77E24A5A16F565CE00664FF9 /* iPhone.storyboard in Resources */,
 				77ACED8C168F3C6400FC9192 /* Anim-Back.png in Resources */,
@@ -2116,27 +1912,7 @@
 				773E4246168E9E4E00CED8D5 /* CheckBoxNormal.png in Resources */,
 				773E424A168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */,
 				771F140117E536F80053BC33 /* icon-144.png in Resources */,
-				773E424E168E9E4E00CED8D5 /* MButtonConcave.png in Resources */,
-				773E4252168E9E4E00CED8D5 /* MButtonConcave@2X.png in Resources */,
-				773E4256168E9E4E00CED8D5 /* MButtonConvex.png in Resources */,
-				773E425A168E9E4E00CED8D5 /* MButtonConvex@2X.png in Resources */,
-				773E425E168E9E4E00CED8D5 /* SButtonConcave.png in Resources */,
-				773E4262168E9E4E00CED8D5 /* SButtonConcave@2X.png in Resources */,
-				773E4266168E9E4E00CED8D5 /* SButtonConvex.png in Resources */,
-				773E426A168E9E4E00CED8D5 /* SButtonConvex@2X.png in Resources */,
-				773E426E168E9E4E00CED8D5 /* LocButton.png in Resources */,
-				773E4272168E9E4E00CED8D5 /* LocButton@2x.png in Resources */,
 				771F140217E536F80053BC33 /* icon-152.png in Resources */,
-				773E4276168E9E4E00CED8D5 /* LocButtonHighlight.png in Resources */,
-				773E427A168E9E4E00CED8D5 /* LocButtonHighlight@2X.png in Resources */,
-				773E427E168E9E4E00CED8D5 /* LocButtonSimpleHighlight.png in Resources */,
-				773E4282168E9E4E00CED8D5 /* LocButtonSimpleHighlight@2X.png in Resources */,
-				773E4286168E9E4E00CED8D5 /* LocButtonSimpleNormal.png in Resources */,
-				773E428A168E9E4E00CED8D5 /* LocButtonSimpleNormal@2X.png in Resources */,
-				773E428E168E9E4E00CED8D5 /* LongButtonHighlight.png in Resources */,
-				773E4292168E9E4E00CED8D5 /* LongButtonHighlight@2X.png in Resources */,
-				773E4296168E9E4E00CED8D5 /* LongButtonNormal.png in Resources */,
-				773E429A168E9E4E00CED8D5 /* LongButtonNormal@2X.png in Resources */,
 				778F649E16938774001F0DC6 /* Anim-Back.png in Resources */,
 				778F649F16938774001F0DC6 /* Anim-Transparency.png in Resources */,
 				77E24A5616F565CE00664FF9 /* iPad.storyboard in Resources */,
@@ -2188,28 +1964,8 @@
 				77B5EB101743EEF300F50281 /* CheckBoxNormal-Check@2X.png in Resources */,
 				77B5EB111743EEF300F50281 /* CheckBoxNormal.png in Resources */,
 				77B5EB121743EEF300F50281 /* CheckBoxNormal@2X.png in Resources */,
-				77B5EB131743EEF300F50281 /* MButtonConcave.png in Resources */,
-				77B5EB141743EEF300F50281 /* MButtonConcave@2X.png in Resources */,
-				77B5EB151743EEF300F50281 /* MButtonConvex.png in Resources */,
-				77B5EB161743EEF300F50281 /* MButtonConvex@2X.png in Resources */,
-				77B5EB171743EEF300F50281 /* SButtonConcave.png in Resources */,
-				77B5EB181743EEF300F50281 /* SButtonConcave@2X.png in Resources */,
-				77B5EB191743EEF300F50281 /* SButtonConvex.png in Resources */,
-				77B5EB1A1743EEF300F50281 /* SButtonConvex@2X.png in Resources */,
-				77B5EB1B1743EEF300F50281 /* LocButton.png in Resources */,
-				77B5EB1C1743EEF300F50281 /* LocButton@2x.png in Resources */,
-				77B5EB1D1743EEF300F50281 /* LocButtonHighlight.png in Resources */,
-				77B5EB1E1743EEF300F50281 /* LocButtonHighlight@2X.png in Resources */,
-				77B5EB1F1743EEF300F50281 /* LocButtonSimpleHighlight.png in Resources */,
-				77B5EB201743EEF300F50281 /* LocButtonSimpleHighlight@2X.png in Resources */,
-				77B5EB211743EEF300F50281 /* LocButtonSimpleNormal.png in Resources */,
-				77B5EB221743EEF300F50281 /* LocButtonSimpleNormal@2X.png in Resources */,
-				77B5EB231743EEF300F50281 /* LongButtonHighlight.png in Resources */,
 				776C1DBC17E26DA500FF6710 /* icon-076.png in Resources */,
-				77B5EB241743EEF300F50281 /* LongButtonHighlight@2X.png in Resources */,
 				776C1DBE17E26DA500FF6710 /* icon-120.png in Resources */,
-				77B5EB251743EEF300F50281 /* LongButtonNormal.png in Resources */,
-				77B5EB261743EEF300F50281 /* LongButtonNormal@2X.png in Resources */,
 				77B5EB341743EEF300F50281 /* iPad.storyboard in Resources */,
 				77B5EB351743EEF300F50281 /* iPhone.storyboard in Resources */,
 				77B5EB501743EFBB00F50281 /* Anim-Back.png in Resources */,
@@ -2266,26 +2022,6 @@
 				77E24A1516F563C900664FF9 /* CheckBoxNormal-Check@2X.png in Resources */,
 				77E24A1616F563C900664FF9 /* CheckBoxNormal.png in Resources */,
 				77E24A1716F563C900664FF9 /* CheckBoxNormal@2X.png in Resources */,
-				77E24A1816F563C900664FF9 /* MButtonConcave.png in Resources */,
-				77E24A1916F563C900664FF9 /* MButtonConcave@2X.png in Resources */,
-				77E24A1A16F563C900664FF9 /* MButtonConvex.png in Resources */,
-				77E24A1B16F563C900664FF9 /* MButtonConvex@2X.png in Resources */,
-				77E24A1C16F563C900664FF9 /* SButtonConcave.png in Resources */,
-				77E24A1D16F563C900664FF9 /* SButtonConcave@2X.png in Resources */,
-				77E24A1E16F563C900664FF9 /* SButtonConvex.png in Resources */,
-				77E24A1F16F563C900664FF9 /* SButtonConvex@2X.png in Resources */,
-				77E24A2016F563C900664FF9 /* LocButton.png in Resources */,
-				77E24A2116F563C900664FF9 /* LocButton@2x.png in Resources */,
-				77E24A2216F563C900664FF9 /* LocButtonHighlight.png in Resources */,
-				77E24A2316F563C900664FF9 /* LocButtonHighlight@2X.png in Resources */,
-				77E24A2416F563C900664FF9 /* LocButtonSimpleHighlight.png in Resources */,
-				77E24A2516F563C900664FF9 /* LocButtonSimpleHighlight@2X.png in Resources */,
-				77E24A2616F563C900664FF9 /* LocButtonSimpleNormal.png in Resources */,
-				77E24A2716F563C900664FF9 /* LocButtonSimpleNormal@2X.png in Resources */,
-				77E24A2816F563C900664FF9 /* LongButtonHighlight.png in Resources */,
-				77E24A2916F563C900664FF9 /* LongButtonHighlight@2X.png in Resources */,
-				77E24A2A16F563C900664FF9 /* LongButtonNormal.png in Resources */,
-				77E24A2B16F563C900664FF9 /* LongButtonNormal@2X.png in Resources */,
 				77E24A4216F564A700664FF9 /* Anim-Back.png in Resources */,
 				77E24A4316F564A700664FF9 /* Anim-Transparency.png in Resources */,
 				77E24A4416F564A700664FF9 /* Default-568h@2x.png in Resources */,
