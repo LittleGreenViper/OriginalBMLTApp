@@ -20,6 +20,7 @@
 #import <UIKit/UIKit.h>
 #import "A_BMLT_SearchViewController.h"
 #import "BMLT_Checkbox.h"
+#import "MGS_Simple_Control.h"
 
 /// These are the states for the weekday selection mode segmented control.
 enum
@@ -52,20 +53,15 @@ enum
 @property (atomic, weak, readonly)  IBOutlet UISegmentedControl     *weekdaysSelector;  ///< The mode selector for the weekday selection.
 
 /// These are for the weekday checkboxes.
-@property (weak, nonatomic) IBOutlet UILabel        *sunLabel;
-@property (weak, nonatomic) IBOutlet BMLT_Checkbox  *sunButton;
-@property (weak, nonatomic) IBOutlet UILabel        *monLabel;
-@property (weak, nonatomic) IBOutlet BMLT_Checkbox  *monButton;
-@property (weak, nonatomic) IBOutlet UILabel        *tueLabel;
-@property (weak, nonatomic) IBOutlet BMLT_Checkbox  *tueButton;
-@property (weak, nonatomic) IBOutlet UILabel        *wedLabel;
-@property (weak, nonatomic) IBOutlet BMLT_Checkbox  *wedButton;
-@property (weak, nonatomic) IBOutlet UILabel        *thuLabel;
-@property (weak, nonatomic) IBOutlet BMLT_Checkbox  *thuButton;
-@property (weak, nonatomic) IBOutlet UILabel        *friLabel;
-@property (weak, nonatomic) IBOutlet BMLT_Checkbox  *friButton;
-@property (weak, nonatomic) IBOutlet UILabel        *satLabel;
-@property (weak, nonatomic) IBOutlet BMLT_Checkbox  *satButton;
+@property (weak, nonatomic) IBOutlet UILabel                    *sunLabel;
+@property (weak, nonatomic) IBOutlet UILabel                    *monLabel;
+@property (weak, nonatomic) IBOutlet UILabel                    *tueLabel;
+@property (weak, nonatomic) IBOutlet UILabel                    *wedLabel;
+@property (weak, nonatomic) IBOutlet UILabel                    *thuLabel;
+@property (weak, nonatomic) IBOutlet UILabel                    *friLabel;
+@property (weak, nonatomic) IBOutlet UILabel                    *satLabel;
+@property (weak, nonatomic) IBOutlet MGS_Simple_ControlGroup    *enabledWeekdaysCheckBoxes;
+@property (weak, nonatomic) IBOutlet MGS_Simple_ControlGroup    *disabledWeekdaysCheckBoxes;
 
 @property (atomic, weak, readonly)  IBOutlet UILabel                *searchLocationLabel;           ///< The label for the location specification items.
 @property (atomic, weak, readonly)  IBOutlet UISegmentedControl     *searchSpecSegmentedControl;    ///< The segmented control that specifies the location mode.
@@ -85,6 +81,7 @@ enum
 - (IBAction)addressTextEntered:(id)sender;
 
 - (void)setParamsForWeekdaySelection;
+- (BOOL)isWeekdaySelected:(NSString*)inTag;
 - (void)geocodeLocationFromAddressString:(NSString *)inLocationString;
 
 @end

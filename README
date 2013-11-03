@@ -77,6 +77,14 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
+== Version 2.6
+* TBD
+* Changed the app to use a different type of checkbox. This one works better with iOS7, and reduces the size of the app.
+* Several cosmetic changes to make the app work better with iOS7. No more fancy buttons. Makes the app smaller, too.
+* Got rid of the usably useless location button in the Advanced screen of the iPad version.
+* Added robustness to the location fanding mechanism.
+* Added robustness to the network checking mechanism.
+
 == Version 2.5.7
 * September 12, 2013
 * SoCal NA Release

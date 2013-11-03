@@ -43,7 +43,7 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
  *****************************************************************/
 @implementation BMLTAdvancedSearchViewController
 @synthesize myParams, currentElement;
-@synthesize weekdaysLabel, weekdaysSelector, sunLabel, sunButton = _sunButton, monLabel, monButton = _monButton, tueLabel, tueButton = _tueButton, wedLabel, wedButton = _wedButton, thuLabel, thuButton = _thuButton, friLabel, friButton = _friButton, satLabel, satButton = _satButton;
+@synthesize weekdaysLabel, weekdaysSelector, sunLabel, monLabel, tueLabel, wedLabel, thuLabel, friLabel, satLabel;
 @synthesize searchLocationLabel, searchSpecSegmentedControl, searchSpecAddressTextEntry;
 @synthesize goButton;
 
@@ -96,6 +96,17 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     [self addToggleMapButton];
     
     [super viewWillAppear:animated];
+    
+    [self weekdaySelectionChanged:nil];
+}
+
+/*****************************************************************/
+/**
+ \brief Makes sure that the checkboxes are correct.
+ *****************************************************************/
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self setParamsForWeekdaySelection];
 }
 
 /*****************************************************************/
@@ -131,8 +142,6 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     [goButton setTitle:NSLocalizedString([goButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
     
     [super viewDidLoad];
-    
-    [self setParamsForWeekdaySelection];
 }
 
 /*****************************************************************/
@@ -141,15 +150,16 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
  *****************************************************************/
 - (IBAction)weekdaySelectionChanged:(id)sender  ///< The segmented control.
 {
-    BOOL    isEnabled = [weekdaysSelector selectedSegmentIndex] == kWeekdaySelectWeekdays;
-    
-    [[self sunButton] setEnabled:isEnabled];
-    [[self monButton] setEnabled:isEnabled];
-    [[self tueButton] setEnabled:isEnabled];
-    [[self wedButton] setEnabled:isEnabled];
-    [[self thuButton] setEnabled:isEnabled];
-    [[self friButton] setEnabled:isEnabled];
-    [[self satButton] setEnabled:isEnabled];
+    if ( [weekdaysSelector selectedSegmentIndex] == kWeekdaySelectWeekdays )
+        {
+        [[self enabledWeekdaysCheckBoxes] setHidden:NO];
+        [[self disabledWeekdaysCheckBoxes] setHidden:YES];
+        }
+    else
+        {
+        [[self enabledWeekdaysCheckBoxes] setHidden:YES];
+        [[self disabledWeekdaysCheckBoxes] setHidden:NO];
+        }
     
     [self setParamsForWeekdaySelection];
 }
@@ -261,16 +271,6 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     [myParams removeObjectForKey:@"StartsAfterH"];
     [myParams removeObjectForKey:@"StartsAfterM"];
     
-    NSString    *button_asset = ([weekdaysSelector selectedSegmentIndex] == kWeekdaySelectAllDays) ? @"CheckBoxDisabled-Check.png" : @"CheckBoxDisabled.png";
-    
-    [[self sunButton] setImage:[UIImage imageNamed:button_asset] forState:UIControlStateDisabled];
-    [[self monButton] setImage:[UIImage imageNamed:button_asset] forState:UIControlStateDisabled];
-    [[self tueButton] setImage:[UIImage imageNamed:button_asset] forState:UIControlStateDisabled];
-    [[self wedButton] setImage:[UIImage imageNamed:button_asset] forState:UIControlStateDisabled];
-    [[self thuButton] setImage:[UIImage imageNamed:button_asset] forState:UIControlStateDisabled];
-    [[self friButton] setImage:[UIImage imageNamed:button_asset] forState:UIControlStateDisabled];
-    [[self satButton] setImage:[UIImage imageNamed:button_asset] forState:UIControlStateDisabled];
-    
     int   wd = 0;
     
     // The reason for this weirdness, is because the blasted enum was constantly failing the test, even though it should
@@ -311,56 +311,92 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
             }
         }
     
-    NSString *weekday = @"";
+    NSString        *weekday = @"";
+    NSMutableArray  *pTags = [[NSMutableArray alloc] init];
     
     // If we are on the chosen weekday, or our button is enabled, and our button is on, then add this day to the list.
-    if ( (wd == comparator_Sun) || ([[self sunButton] isEnabled] && [[self sunButton] isChecked]) )
+    if ( (wd == comparator_Sun) || [self isWeekdaySelected:@"SUNDAY"] )
         {
-        [[self sunButton] setImage:[UIImage imageNamed:@"CheckBoxDisabled-Check.png"] forState:UIControlStateDisabled];
         weekday = @"1";
+        [pTags addObject:@"SUNDAY"];
         }
     
-    if ( (wd == comparator_Mon) || ([[self monButton] isEnabled] && [[self monButton] isChecked]) )
+    if ( (wd == comparator_Mon) || [self isWeekdaySelected:@"MONDAY"] )
         {
-        [[self monButton] setImage:[UIImage imageNamed:@"CheckBoxDisabled-Check.png"] forState:UIControlStateDisabled];
         weekday = [weekday stringByAppendingString:[weekday length] > 0 ? @",2" : @"2"];
+        [pTags addObject:@"MONDAY"];
         }
     
-    if ( (wd == comparator_Tue) || ([[self tueButton] isEnabled] && [[self tueButton] isChecked]) )
+    if ( (wd == comparator_Tue) || [self isWeekdaySelected:@"TUESDAY"] )
         {
-        [[self tueButton] setImage:[UIImage imageNamed:@"CheckBoxDisabled-Check.png"] forState:UIControlStateDisabled];
         weekday = [weekday stringByAppendingString:[weekday length] > 0 ? @",3" : @"3"];
+        [pTags addObject:@"TUESDAY"];
         }
     
-    if ( (wd == comparator_Wed) || ([[self wedButton] isEnabled] && [[self wedButton] isChecked]) )
+    if ( (wd == comparator_Wed) || [self isWeekdaySelected:@"WEDNESDAY"] )
         {
-        [[self wedButton] setImage:[UIImage imageNamed:@"CheckBoxDisabled-Check.png"] forState:UIControlStateDisabled];
         weekday = [weekday stringByAppendingString:[weekday length] > 0 ? @",4" : @"4"];
+        [pTags addObject:@"WEDNESDAY"];
         }
     
-    if ( (wd == comparator_Thu) || ([[self thuButton] isEnabled] && [[self thuButton] isChecked]) )
+    if ( (wd == comparator_Thu) || [self isWeekdaySelected:@"THURSDAY"] )
         {
-        [[self thuButton] setImage:[UIImage imageNamed:@"CheckBoxDisabled-Check.png"] forState:UIControlStateDisabled];
         weekday = [weekday stringByAppendingString:[weekday length] > 0 ? @",5" : @"5"];
+        [pTags addObject:@"THURSDAY"];
         }
     
-    if ( (wd == comparator_Fri) || ([[self friButton] isEnabled] && [[self friButton] isChecked]) )
+    if ( (wd == comparator_Fri)  || [self isWeekdaySelected:@"FRIDAY"] )
         {
-        [[self friButton] setImage:[UIImage imageNamed:@"CheckBoxDisabled-Check.png"] forState:UIControlStateDisabled];
         weekday = [weekday stringByAppendingString:[weekday length] > 0 ? @",6" : @"6"];
+        [pTags addObject:@"FRIDAY"];
         }
     
-    if ( (wd == comparator_Sat) || ([[self satButton] isEnabled] && [[self satButton] isChecked]) )
+    if ( (wd == comparator_Sat)  || [self isWeekdaySelected:@"SATURDAY"] )
         {
-        [[self satButton] setImage:[UIImage imageNamed:@"CheckBoxDisabled-Check.png"] forState:UIControlStateDisabled];
         weekday = [weekday stringByAppendingString:[weekday length] > 0 ? @",7" : @"7"];
+        [pTags addObject:@"SATURDAY"];
         }
+    
+    [[self disabledWeekdaysCheckBoxes] setTagArray:pTags];
     
     // We have an array of chosen weekdays (integers). Set them to the parameter.
     if ( [weekday length] )
         {
         [myParams setObject:weekday forKey:@"weekdays"];
         }
+    
+    if ( [weekdaysSelector selectedSegmentIndex] == kWeekdaySelectAllDays )
+    {
+        NSArray *pAllTags = @[@"SUNDAY", @"MONDAY", @"TUESDAY", @"WEDNESDAY", @"THURSDAY", @"FRIDAY", @"SATURDAY"];
+        
+        [[self disabledWeekdaysCheckBoxes] setTagArray:pAllTags];
+    }
+}
+
+/*****************************************************************/
+/**
+ \brief See if a weekday checkbox is selected.
+ 
+ \returns a BOOL. YES, if the checkbox is selected, and visible.
+ *****************************************************************/
+- (BOOL)isWeekdaySelected:(NSString*)inTag
+{
+    BOOL    ret = NO;
+    
+    NSArray *pTags = [[self enabledWeekdaysCheckBoxes] isHidden] ? nil : [[self enabledWeekdaysCheckBoxes] tagArray];
+    
+    if ( pTags )
+    {
+        for ( NSString* pTag in pTags )
+        {
+            if ( [pTag isEqualToString:inTag] )
+            {
+                ret = YES;
+                break;
+            }
+        }
+    }
+    return ret;
 }
 
 /*****************************************************************/

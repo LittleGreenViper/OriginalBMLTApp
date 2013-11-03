@@ -77,54 +77,6 @@
 		773E41F9168E9DD700CED8D5 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41EA168E9DD700CED8D5 /* Default-Portrait~ipad.png */; };
 		773E41FA168E9DD700CED8D5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41EB168E9DD700CED8D5 /* Default.png */; };
 		773E41FB168E9DD700CED8D5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41EC168E9DD700CED8D5 /* Default@2x.png */; };
-		773E421D168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FD168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png */; };
-		773E421E168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FD168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png */; };
-		773E421F168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FD168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png */; };
-		773E4220168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FD168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png */; };
-		773E4221168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FE168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png */; };
-		773E4222168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FE168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png */; };
-		773E4223168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FE168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png */; };
-		773E4224168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FE168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png */; };
-		773E4225168E9E4E00CED8D5 /* CheckBoxDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FF168E9E4E00CED8D5 /* CheckBoxDisabled.png */; };
-		773E4226168E9E4E00CED8D5 /* CheckBoxDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FF168E9E4E00CED8D5 /* CheckBoxDisabled.png */; };
-		773E4227168E9E4E00CED8D5 /* CheckBoxDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FF168E9E4E00CED8D5 /* CheckBoxDisabled.png */; };
-		773E4228168E9E4E00CED8D5 /* CheckBoxDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FF168E9E4E00CED8D5 /* CheckBoxDisabled.png */; };
-		773E4229168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4200168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png */; };
-		773E422A168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4200168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png */; };
-		773E422B168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4200168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png */; };
-		773E422C168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4200168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png */; };
-		773E422D168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4201168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png */; };
-		773E422E168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4201168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png */; };
-		773E422F168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4201168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png */; };
-		773E4230168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4201168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png */; };
-		773E4231168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4202168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png */; };
-		773E4232168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4202168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png */; };
-		773E4233168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4202168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png */; };
-		773E4234168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4202168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png */; };
-		773E4235168E9E4E00CED8D5 /* CheckBoxHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4203168E9E4E00CED8D5 /* CheckBoxHighlight.png */; };
-		773E4236168E9E4E00CED8D5 /* CheckBoxHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4203168E9E4E00CED8D5 /* CheckBoxHighlight.png */; };
-		773E4237168E9E4E00CED8D5 /* CheckBoxHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4203168E9E4E00CED8D5 /* CheckBoxHighlight.png */; };
-		773E4238168E9E4E00CED8D5 /* CheckBoxHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4203168E9E4E00CED8D5 /* CheckBoxHighlight.png */; };
-		773E4239168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4204168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png */; };
-		773E423A168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4204168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png */; };
-		773E423B168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4204168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png */; };
-		773E423C168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4204168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png */; };
-		773E423D168E9E4E00CED8D5 /* CheckBoxNormal-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4205168E9E4E00CED8D5 /* CheckBoxNormal-Check.png */; };
-		773E423E168E9E4E00CED8D5 /* CheckBoxNormal-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4205168E9E4E00CED8D5 /* CheckBoxNormal-Check.png */; };
-		773E423F168E9E4E00CED8D5 /* CheckBoxNormal-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4205168E9E4E00CED8D5 /* CheckBoxNormal-Check.png */; };
-		773E4240168E9E4E00CED8D5 /* CheckBoxNormal-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4205168E9E4E00CED8D5 /* CheckBoxNormal-Check.png */; };
-		773E4241168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */; };
-		773E4242168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */; };
-		773E4243168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */; };
-		773E4244168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */; };
-		773E4245168E9E4E00CED8D5 /* CheckBoxNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */; };
-		773E4246168E9E4E00CED8D5 /* CheckBoxNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */; };
-		773E4247168E9E4E00CED8D5 /* CheckBoxNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */; };
-		773E4248168E9E4E00CED8D5 /* CheckBoxNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */; };
-		773E4249168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */; };
-		773E424A168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */; };
-		773E424B168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */; };
-		773E424C168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */; };
 		773E4309155EC7070026FA16 /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 773E4308155EC7070026FA16 /* BMLTVariantDefs.m */; };
 		774374A0168F956000FC7FF4 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CB61548872000DBE9A1 /* libTestFlight.a */; };
 		7747C40B168BC0E200C9B148 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CB61548872000DBE9A1 /* libTestFlight.a */; };
@@ -473,18 +425,6 @@
 		77B5EB041743EEF300F50281 /* MapMarkerBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335561168E278F001C0B08 /* MapMarkerBlue@2x.png */; };
 		77B5EB051743EEF300F50281 /* MapMarkerGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335562168E278F001C0B08 /* MapMarkerGreen@2x.png */; };
 		77B5EB061743EEF300F50281 /* MapMarkerRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335563168E278F001C0B08 /* MapMarkerRed@2x.png */; };
-		77B5EB071743EEF300F50281 /* CheckBoxDisabled-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FD168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png */; };
-		77B5EB081743EEF300F50281 /* CheckBoxDisabled-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FE168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png */; };
-		77B5EB091743EEF300F50281 /* CheckBoxDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FF168E9E4E00CED8D5 /* CheckBoxDisabled.png */; };
-		77B5EB0A1743EEF300F50281 /* CheckBoxDisabled@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4200168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png */; };
-		77B5EB0B1743EEF300F50281 /* CheckBoxHighlight-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4201168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png */; };
-		77B5EB0C1743EEF300F50281 /* CheckBoxHighlight-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4202168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png */; };
-		77B5EB0D1743EEF300F50281 /* CheckBoxHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4203168E9E4E00CED8D5 /* CheckBoxHighlight.png */; };
-		77B5EB0E1743EEF300F50281 /* CheckBoxHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4204168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png */; };
-		77B5EB0F1743EEF300F50281 /* CheckBoxNormal-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4205168E9E4E00CED8D5 /* CheckBoxNormal-Check.png */; };
-		77B5EB101743EEF300F50281 /* CheckBoxNormal-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */; };
-		77B5EB111743EEF300F50281 /* CheckBoxNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */; };
-		77B5EB121743EEF300F50281 /* CheckBoxNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */; };
 		77B5EB341743EEF300F50281 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5116F565CE00664FF9 /* iPad.storyboard */; };
 		77B5EB351743EEF300F50281 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
 		77B5EB4F1743EFBB00F50281 /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B5EB3E1743EFBB00F50281 /* BMLTVariantDefs.m */; };
@@ -582,18 +522,6 @@
 		77E24A0916F563C900664FF9 /* MapMarkerBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335561168E278F001C0B08 /* MapMarkerBlue@2x.png */; };
 		77E24A0A16F563C900664FF9 /* MapMarkerGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335562168E278F001C0B08 /* MapMarkerGreen@2x.png */; };
 		77E24A0B16F563C900664FF9 /* MapMarkerRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335563168E278F001C0B08 /* MapMarkerRed@2x.png */; };
-		77E24A0C16F563C900664FF9 /* CheckBoxDisabled-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FD168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png */; };
-		77E24A0D16F563C900664FF9 /* CheckBoxDisabled-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FE168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png */; };
-		77E24A0E16F563C900664FF9 /* CheckBoxDisabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E41FF168E9E4E00CED8D5 /* CheckBoxDisabled.png */; };
-		77E24A0F16F563C900664FF9 /* CheckBoxDisabled@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4200168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png */; };
-		77E24A1016F563C900664FF9 /* CheckBoxHighlight-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4201168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png */; };
-		77E24A1116F563C900664FF9 /* CheckBoxHighlight-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4202168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png */; };
-		77E24A1216F563C900664FF9 /* CheckBoxHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4203168E9E4E00CED8D5 /* CheckBoxHighlight.png */; };
-		77E24A1316F563C900664FF9 /* CheckBoxHighlight@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4204168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png */; };
-		77E24A1416F563C900664FF9 /* CheckBoxNormal-Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4205168E9E4E00CED8D5 /* CheckBoxNormal-Check.png */; };
-		77E24A1516F563C900664FF9 /* CheckBoxNormal-Check@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */; };
-		77E24A1616F563C900664FF9 /* CheckBoxNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */; };
-		77E24A1716F563C900664FF9 /* CheckBoxNormal@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */; };
 		77E24A3F16F5644900664FF9 /* BMLT_AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E249AC16F563C000664FF9 /* BMLT_AnimationView.m */; };
 		77E24A4016F5644900664FF9 /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E249AD16F563C000664FF9 /* BMLTVariantDefs.m */; };
 		77E24A4216F564A700664FF9 /* Anim-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E249AF16F563C000664FF9 /* Anim-Back.png */; };
@@ -619,6 +547,12 @@
 		77E24A5A16F565CE00664FF9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
 		77E24A5B16F565CE00664FF9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
 		77E24A5C16F565CE00664FF9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
+		77E627DD1826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */; };
+		77E627DE1826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */; };
+		77E627DF1826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */; };
+		77E627E01826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */; };
+		77E627E11826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */; };
+		77E627E21826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */; };
 		77F6C36A1531D1A90038784D /* BMLTAnimationScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F6C3691531D1A90038784D /* BMLTAnimationScreenViewController.m */; };
 		77FAF180155C2F8200ADE3FC /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 77FAF175155C2F8200ADE3FC /* Default-Landscape@2x~ipad.png */; };
 		77FAF181155C2F8200ADE3FC /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 77FAF176155C2F8200ADE3FC /* Default-Landscape~ipad.png */; };
@@ -714,18 +648,6 @@
 		773E41EA168E9DD700CED8D5 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		773E41EB168E9DD700CED8D5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		773E41EC168E9DD700CED8D5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		773E41FD168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBoxDisabled-Check.png"; sourceTree = "<group>"; };
-		773E41FE168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBoxDisabled-Check@2X.png"; sourceTree = "<group>"; };
-		773E41FF168E9E4E00CED8D5 /* CheckBoxDisabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckBoxDisabled.png; sourceTree = "<group>"; };
-		773E4200168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBoxDisabled@2X.png"; sourceTree = "<group>"; };
-		773E4201168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBoxHighlight-Check.png"; sourceTree = "<group>"; };
-		773E4202168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBoxHighlight-Check@2X.png"; sourceTree = "<group>"; };
-		773E4203168E9E4E00CED8D5 /* CheckBoxHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckBoxHighlight.png; sourceTree = "<group>"; };
-		773E4204168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBoxHighlight@2X.png"; sourceTree = "<group>"; };
-		773E4205168E9E4E00CED8D5 /* CheckBoxNormal-Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBoxNormal-Check.png"; sourceTree = "<group>"; };
-		773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBoxNormal-Check@2X.png"; sourceTree = "<group>"; };
-		773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckBoxNormal.png; sourceTree = "<group>"; };
-		773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CheckBoxNormal@2X.png"; sourceTree = "<group>"; };
 		773E42A6168EA10600CED8D5 /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		773E42AA168EA38400CED8D5 /* EskiltunaSweden.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = EskiltunaSweden.gpx; path = "../../../spec/GPX Files/EskiltunaSweden.gpx"; sourceTree = "<group>"; };
 		773E4308155EC7070026FA16 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
@@ -879,6 +801,8 @@
 		77E24A3D16F563C900664FF9 /* FL NA Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FL NA Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E24A5116F565CE00664FF9 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		77E24A5216F565CE00664FF9 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		77E627DB1826BA5C00FBE093 /* MGS_Simple_Control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGS_Simple_Control.h; sourceTree = "<group>"; };
+		77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGS_Simple_Control.m; sourceTree = "<group>"; };
 		77F6C3681531D1A90038784D /* BMLTAnimationScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTAnimationScreenViewController.h; sourceTree = "<group>"; };
 		77F6C3691531D1A90038784D /* BMLTAnimationScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTAnimationScreenViewController.m; sourceTree = "<group>"; };
 		77FAF175155C2F8200ADE3FC /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
@@ -1042,6 +966,8 @@
 				77F6C3691531D1A90038784D /* BMLTAnimationScreenViewController.m */,
 				771D0C56150E893C005A707A /* BMLT_Checkbox.h */,
 				771D0C57150E893C005A707A /* BMLT_Checkbox.m */,
+				77E627DB1826BA5C00FBE093 /* MGS_Simple_Control.h */,
+				77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */,
 				771A40EB15408EA000EF34DF /* BMLTBundleResourceLabel.h */,
 				771A40EC15408EA000EF34DF /* BMLTBundleResourceLabel.m */,
 			);
@@ -1129,25 +1055,6 @@
 			path = images;
 			sourceTree = "<group>";
 		};
-		773E41FC168E9E4E00CED8D5 /* Checkboxes */ = {
-			isa = PBXGroup;
-			children = (
-				773E41FD168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png */,
-				773E41FE168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png */,
-				773E41FF168E9E4E00CED8D5 /* CheckBoxDisabled.png */,
-				773E4200168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png */,
-				773E4201168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png */,
-				773E4202168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png */,
-				773E4203168E9E4E00CED8D5 /* CheckBoxHighlight.png */,
-				773E4204168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png */,
-				773E4205168E9E4E00CED8D5 /* CheckBoxNormal-Check.png */,
-				773E4206168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png */,
-				773E4207168E9E4E00CED8D5 /* CheckBoxNormal.png */,
-				773E4208168E9E4E00CED8D5 /* CheckBoxNormal@2X.png */,
-			);
-			path = Checkboxes;
-			sourceTree = "<group>";
-		};
 		774EB4B1168F3B20006C663F /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -1192,7 +1099,6 @@
 		77603DA21541DC8300C4840F /* images */ = {
 			isa = PBXGroup;
 			children = (
-				773E41FC168E9E4E00CED8D5 /* Checkboxes */,
 				77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */,
 				77603DC91541DC8300C4840F /* FormatCircleGreen@2x.png */,
 				77603DCA1541DC8300C4840F /* FormatCircleRed@2x.png */,
@@ -1709,19 +1615,7 @@
 				773E41F9168E9DD700CED8D5 /* Default-Portrait~ipad.png in Resources */,
 				773E41FA168E9DD700CED8D5 /* Default.png in Resources */,
 				773E41FB168E9DD700CED8D5 /* Default@2x.png in Resources */,
-				773E421F168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png in Resources */,
-				773E4223168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png in Resources */,
-				773E4227168E9E4E00CED8D5 /* CheckBoxDisabled.png in Resources */,
-				773E422B168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png in Resources */,
 				77BF9D2A17E335E8006E632D /* App-Icon-120.png in Resources */,
-				773E422F168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png in Resources */,
-				773E4233168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png in Resources */,
-				773E4237168E9E4E00CED8D5 /* CheckBoxHighlight.png in Resources */,
-				773E423B168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png in Resources */,
-				773E423F168E9E4E00CED8D5 /* CheckBoxNormal-Check.png in Resources */,
-				773E4243168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png in Resources */,
-				773E4247168E9E4E00CED8D5 /* CheckBoxNormal.png in Resources */,
-				773E424B168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */,
 				77BF9D2917E335E8006E632D /* App-Icon-76.png in Resources */,
 				7707C49E1690BCC100FA8D9A /* AboutLogo.png in Resources */,
 				77E24A5416F565CE00664FF9 /* iPad.storyboard in Resources */,
@@ -1772,18 +1666,6 @@
 				7733556B168E278F001C0B08 /* MapMarkerBlue@2x.png in Resources */,
 				7733556F168E278F001C0B08 /* MapMarkerGreen@2x.png in Resources */,
 				77335573168E278F001C0B08 /* MapMarkerRed@2x.png in Resources */,
-				773E4220168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png in Resources */,
-				773E4224168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png in Resources */,
-				773E4228168E9E4E00CED8D5 /* CheckBoxDisabled.png in Resources */,
-				773E422C168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png in Resources */,
-				773E4230168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png in Resources */,
-				773E4234168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png in Resources */,
-				773E4238168E9E4E00CED8D5 /* CheckBoxHighlight.png in Resources */,
-				773E423C168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png in Resources */,
-				773E4240168E9E4E00CED8D5 /* CheckBoxNormal-Check.png in Resources */,
-				773E4244168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png in Resources */,
-				773E4248168E9E4E00CED8D5 /* CheckBoxNormal.png in Resources */,
-				773E424C168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */,
 				771B39FB17E33C3B00CFBCA1 /* App-Icon-76.png in Resources */,
 				771B39FD17E33C3B00CFBCA1 /* App-Icon-152.png in Resources */,
 				77B566C01690BE8A00F3CF3F /* AboutLogo.png in Resources */,
@@ -1825,21 +1707,9 @@
 				776C2C3D17E155CC00D86507 /* Default-Tall-Portrait@2x~ipad.png in Resources */,
 				7733556C168E278F001C0B08 /* MapMarkerGreen@2x.png in Resources */,
 				77335570168E278F001C0B08 /* MapMarkerRed@2x.png in Resources */,
-				773E421D168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png in Resources */,
-				773E4221168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png in Resources */,
-				773E4225168E9E4E00CED8D5 /* CheckBoxDisabled.png in Resources */,
-				773E4229168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png in Resources */,
-				773E422D168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png in Resources */,
-				773E4231168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png in Resources */,
 				7760FE3117E093D10042065C /* icon-144.png in Resources */,
-				773E4235168E9E4E00CED8D5 /* CheckBoxHighlight.png in Resources */,
-				773E4239168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png in Resources */,
-				773E423D168E9E4E00CED8D5 /* CheckBoxNormal-Check.png in Resources */,
-				773E4241168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png in Resources */,
 				776C2C3B17E155CC00D86507 /* Default-Tall-Landscape@2x~ipad.png in Resources */,
-				773E4245168E9E4E00CED8D5 /* CheckBoxNormal.png in Resources */,
 				776C2C3C17E155CC00D86507 /* Default-Tall-Landscape~ipad.png in Resources */,
-				773E4249168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */,
 				7760FE2C17E093D10042065C /* icon-057.png in Resources */,
 				776C2C3E17E155CC00D86507 /* Default-Tall-Portrait~ipad.png in Resources */,
 				7760FE2F17E093D10042065C /* icon-114.png in Resources */,
@@ -1899,18 +1769,6 @@
 				771F13FC17E536F80053BC33 /* icon-057.png in Resources */,
 				7733556D168E278F001C0B08 /* MapMarkerGreen@2x.png in Resources */,
 				77335571168E278F001C0B08 /* MapMarkerRed@2x.png in Resources */,
-				773E421E168E9E4E00CED8D5 /* CheckBoxDisabled-Check.png in Resources */,
-				773E4222168E9E4E00CED8D5 /* CheckBoxDisabled-Check@2X.png in Resources */,
-				773E4226168E9E4E00CED8D5 /* CheckBoxDisabled.png in Resources */,
-				773E422A168E9E4E00CED8D5 /* CheckBoxDisabled@2X.png in Resources */,
-				773E422E168E9E4E00CED8D5 /* CheckBoxHighlight-Check.png in Resources */,
-				773E4232168E9E4E00CED8D5 /* CheckBoxHighlight-Check@2X.png in Resources */,
-				773E4236168E9E4E00CED8D5 /* CheckBoxHighlight.png in Resources */,
-				773E423A168E9E4E00CED8D5 /* CheckBoxHighlight@2X.png in Resources */,
-				773E423E168E9E4E00CED8D5 /* CheckBoxNormal-Check.png in Resources */,
-				773E4242168E9E4E00CED8D5 /* CheckBoxNormal-Check@2X.png in Resources */,
-				773E4246168E9E4E00CED8D5 /* CheckBoxNormal.png in Resources */,
-				773E424A168E9E4E00CED8D5 /* CheckBoxNormal@2X.png in Resources */,
 				771F140117E536F80053BC33 /* icon-144.png in Resources */,
 				771F140217E536F80053BC33 /* icon-152.png in Resources */,
 				778F649E16938774001F0DC6 /* Anim-Back.png in Resources */,
@@ -1951,19 +1809,7 @@
 				77B5EB041743EEF300F50281 /* MapMarkerBlue@2x.png in Resources */,
 				77B5EB051743EEF300F50281 /* MapMarkerGreen@2x.png in Resources */,
 				77B5EB061743EEF300F50281 /* MapMarkerRed@2x.png in Resources */,
-				77B5EB071743EEF300F50281 /* CheckBoxDisabled-Check.png in Resources */,
 				776C1DBF17E26DA500FF6710 /* icon-144.png in Resources */,
-				77B5EB081743EEF300F50281 /* CheckBoxDisabled-Check@2X.png in Resources */,
-				77B5EB091743EEF300F50281 /* CheckBoxDisabled.png in Resources */,
-				77B5EB0A1743EEF300F50281 /* CheckBoxDisabled@2X.png in Resources */,
-				77B5EB0B1743EEF300F50281 /* CheckBoxHighlight-Check.png in Resources */,
-				77B5EB0C1743EEF300F50281 /* CheckBoxHighlight-Check@2X.png in Resources */,
-				77B5EB0D1743EEF300F50281 /* CheckBoxHighlight.png in Resources */,
-				77B5EB0E1743EEF300F50281 /* CheckBoxHighlight@2X.png in Resources */,
-				77B5EB0F1743EEF300F50281 /* CheckBoxNormal-Check.png in Resources */,
-				77B5EB101743EEF300F50281 /* CheckBoxNormal-Check@2X.png in Resources */,
-				77B5EB111743EEF300F50281 /* CheckBoxNormal.png in Resources */,
-				77B5EB121743EEF300F50281 /* CheckBoxNormal@2X.png in Resources */,
 				776C1DBC17E26DA500FF6710 /* icon-076.png in Resources */,
 				776C1DBE17E26DA500FF6710 /* icon-120.png in Resources */,
 				77B5EB341743EEF300F50281 /* iPad.storyboard in Resources */,
@@ -2010,18 +1856,6 @@
 				77E24A0916F563C900664FF9 /* MapMarkerBlue@2x.png in Resources */,
 				77E24A0A16F563C900664FF9 /* MapMarkerGreen@2x.png in Resources */,
 				77E24A0B16F563C900664FF9 /* MapMarkerRed@2x.png in Resources */,
-				77E24A0C16F563C900664FF9 /* CheckBoxDisabled-Check.png in Resources */,
-				77E24A0D16F563C900664FF9 /* CheckBoxDisabled-Check@2X.png in Resources */,
-				77E24A0E16F563C900664FF9 /* CheckBoxDisabled.png in Resources */,
-				77E24A0F16F563C900664FF9 /* CheckBoxDisabled@2X.png in Resources */,
-				77E24A1016F563C900664FF9 /* CheckBoxHighlight-Check.png in Resources */,
-				77E24A1116F563C900664FF9 /* CheckBoxHighlight-Check@2X.png in Resources */,
-				77E24A1216F563C900664FF9 /* CheckBoxHighlight.png in Resources */,
-				77E24A1316F563C900664FF9 /* CheckBoxHighlight@2X.png in Resources */,
-				77E24A1416F563C900664FF9 /* CheckBoxNormal-Check.png in Resources */,
-				77E24A1516F563C900664FF9 /* CheckBoxNormal-Check@2X.png in Resources */,
-				77E24A1616F563C900664FF9 /* CheckBoxNormal.png in Resources */,
-				77E24A1716F563C900664FF9 /* CheckBoxNormal@2X.png in Resources */,
 				77E24A4216F564A700664FF9 /* Anim-Back.png in Resources */,
 				77E24A4316F564A700664FF9 /* Anim-Transparency.png in Resources */,
 				77E24A4416F564A700664FF9 /* Default-568h@2x.png in Resources */,
@@ -2087,6 +1921,7 @@
 				77DCF09F1545D4FE00979BF6 /* BMLTAboutBackgroundView.m in Sources */,
 				773E41EE168E9DD700CED8D5 /* BMLTVariantDefs.m in Sources */,
 				774EB4D1168F3B6B006C663F /* BMLT_AnimationView.m in Sources */,
+				77E627DE1826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2133,6 +1968,7 @@
 				774B100A168B6C7400E4BBF5 /* BMLTAdvancedSearchViewController.m in Sources */,
 				774B100B168B6C7400E4BBF5 /* BMLT_Checkbox.m in Sources */,
 				774EB4D2168F3B6B006C663F /* BMLT_AnimationView.m in Sources */,
+				77E627DD1826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2179,6 +2015,7 @@
 				77DCF09D1545D4FE00979BF6 /* BMLTAboutBackgroundView.m in Sources */,
 				7762DCC0177B979200254E1A /* BMLTVariantDefs.m in Sources */,
 				7762DCC2177B9FF400254E1A /* BMLT_AnimationView.m in Sources */,
+				77E627DF1826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2225,6 +2062,7 @@
 				77DCF09E1545D4FE00979BF6 /* BMLTAboutBackgroundView.m in Sources */,
 				773E4309155EC7070026FA16 /* BMLTVariantDefs.m in Sources */,
 				778F64A0169387B8001F0DC6 /* BMLT_AnimationView.m in Sources */,
+				77E627E01826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2271,6 +2109,7 @@
 				77B5EAE31743EEF300F50281 /* BMLTAboutBackgroundView.m in Sources */,
 				77B5EB4F1743EFBB00F50281 /* BMLTVariantDefs.m in Sources */,
 				7762DCC4177BA04900254E1A /* BMLT_AnimationView.m in Sources */,
+				77E627E21826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2317,6 +2156,7 @@
 				77E249E316F563C900664FF9 /* BMLTAboutBackgroundView.m in Sources */,
 				77E24A3F16F5644900664FF9 /* BMLT_AnimationView.m in Sources */,
 				77E24A4016F5644900664FF9 /* BMLTVariantDefs.m in Sources */,
+				77E627E11826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

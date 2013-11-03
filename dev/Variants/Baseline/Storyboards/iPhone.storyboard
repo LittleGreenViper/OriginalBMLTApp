@@ -89,7 +89,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" text="SEARCH-SPEC-DISABLED-TEXT" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" id="iqL-3E-3rT">
-                                <rect key="frame" x="13" y="274.00000168633261" width="295" height="186"/>
+                                <rect key="frame" x="13" y="274.0000011001361" width="295" height="186"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -522,21 +522,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gwF-5Z-P6k" userLabel="Sunday Checkbox" customClass="BMLT_Checkbox">
-                                        <rect key="frame" x="12" y="87" width="32" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <state key="normal" backgroundImage="CheckBoxNormal.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="weekdayChanged:" destination="eMe-9F-zBx" eventType="touchUpInside" id="C0k-7i-BgT"/>
-                                        </connections>
-                                    </button>
                                     <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-1" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="bVk-Ce-Lae" userLabel="Monday Label">
                                         <rect key="frame" x="52" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -545,21 +530,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iAX-gQ-hbw" userLabel="Monday Checkbox" customClass="BMLT_Checkbox">
-                                        <rect key="frame" x="57" y="87" width="32" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <state key="normal" backgroundImage="CheckBoxNormal.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="weekdayChanged:" destination="eMe-9F-zBx" eventType="touchUpInside" id="XE3-xe-bPG"/>
-                                        </connections>
-                                    </button>
                                     <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-2" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Zfv-2T-3S2" userLabel="Tuesday Label">
                                         <rect key="frame" x="97" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -568,21 +538,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gHr-E2-eM9" userLabel="Tuesday Checkbox" customClass="BMLT_Checkbox">
-                                        <rect key="frame" x="102" y="87" width="32" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <state key="normal" backgroundImage="CheckBoxNormal.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="weekdayChanged:" destination="eMe-9F-zBx" eventType="touchUpInside" id="bUh-x8-LOL"/>
-                                        </connections>
-                                    </button>
                                     <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-3" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Gbj-OP-cXZ" userLabel="Wednesday Label">
                                         <rect key="frame" x="142" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -591,21 +546,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fLF-iM-xCH" userLabel="Wednesday Checkbox" customClass="BMLT_Checkbox">
-                                        <rect key="frame" x="147" y="87" width="32" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <state key="normal" backgroundImage="CheckBoxNormal.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="weekdayChanged:" destination="eMe-9F-zBx" eventType="touchUpInside" id="Fci-hZ-yw5"/>
-                                        </connections>
-                                    </button>
                                     <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-4" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Eag-Mq-W9i" userLabel="Thursday Label">
                                         <rect key="frame" x="187" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -614,21 +554,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iCP-4u-9Df" userLabel="Thursday Checkbox" customClass="BMLT_Checkbox">
-                                        <rect key="frame" x="192" y="87" width="32" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <state key="normal" backgroundImage="CheckBoxNormal.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="weekdayChanged:" destination="eMe-9F-zBx" eventType="touchUpInside" id="eAJ-lT-Div"/>
-                                        </connections>
-                                    </button>
                                     <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="RHF-kJ-jFp" userLabel="Friday Label">
                                         <rect key="frame" x="232" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -637,21 +562,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lt1-bn-5qO" userLabel="Friday Checkbox" customClass="BMLT_Checkbox">
-                                        <rect key="frame" x="237" y="87" width="32" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <state key="normal" backgroundImage="CheckBoxNormal.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="weekdayChanged:" destination="eMe-9F-zBx" eventType="touchUpInside" id="ODd-R1-bBP"/>
-                                        </connections>
-                                    </button>
                                     <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-6" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="aZR-zK-7dA" userLabel="Saturday Label">
                                         <rect key="frame" x="277" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -660,21 +570,198 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1TB-Mz-Udv" userLabel="Saturday Checkbox" customClass="BMLT_Checkbox">
-                                        <rect key="frame" x="282" y="87" width="32" height="32"/>
+                                    <view hidden="YES" contentMode="scaleToFill" id="NtC-uN-aWz" userLabel="Enabled Weekdays" customClass="MGS_Simple_ControlGroup">
+                                        <rect key="frame" x="0.0" y="81" width="320" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
-                                        <state key="normal" backgroundImage="CheckBoxNormal.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="EBN-pT-mUQ" userLabel="Sunday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="10" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="SUNDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="ZUP-fi-U0a" userLabel="Monday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="54" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="MONDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="fa0-PK-c4v" userLabel="Tuesday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="103" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="TUESDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="fvm-Zm-daK" userLabel="Wednesday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="150" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="WEDNESDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="YN6-kF-X8H" userLabel="Thursday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="193" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="THURSDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="nqy-AM-Aye" userLabel="Friday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="237" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="FRIDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="iCc-0E-R75" userLabel="Saturday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="281" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="SATURDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <action selector="weekdayChanged:" destination="eMe-9F-zBx" eventType="touchUpInside" id="ryo-5t-6eL"/>
+                                            <action selector="weekdayChanged:" destination="eMe-9F-zBx" eventType="valueChanged" id="Kq5-rX-bbI"/>
                                         </connections>
-                                    </button>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="gta-7N-ElL" userLabel="Disabled Weekdays" customClass="MGS_Simple_ControlGroup">
+                                        <rect key="frame" x="0.0" y="81" width="320" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="eW0-5y-sgl" userLabel="Sunday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="10" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="SUNDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="j0Z-eH-Q5g" userLabel="Monday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="54" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="MONDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="2rm-Di-zMW" userLabel="Tuesday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="103" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="TUESDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="SS1-I9-wg6" userLabel="Wednesday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="150" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="WEDNESDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="9b2-J4-Pir" userLabel="Thursday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="193" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="THURSDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="psv-Lc-NI1" userLabel="Friday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="237" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="FRIDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="BYw-K0-fKV" userLabel="Saturday" customClass="MGS_Simple_Control">
+                                                <rect key="frame" x="281" y="6" width="26" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="SATURDAY"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="controlType">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enabled" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -727,22 +814,17 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="friButton" destination="lt1-bn-5qO" id="EfD-l8-ulh"/>
+                        <outlet property="disabledWeekdaysCheckBoxes" destination="gta-7N-ElL" id="AlF-um-0nZ"/>
+                        <outlet property="enabledWeekdaysCheckBoxes" destination="NtC-uN-aWz" id="whP-BY-MW5"/>
                         <outlet property="friLabel" destination="RHF-kJ-jFp" id="C04-5M-aCf"/>
                         <outlet property="goButton" destination="8Uc-nB-87j" id="Tef-sp-LY9"/>
-                        <outlet property="monButton" destination="iAX-gQ-hbw" id="jDP-u4-4Vr"/>
                         <outlet property="monLabel" destination="bVk-Ce-Lae" id="IVH-gg-QpQ"/>
-                        <outlet property="satButton" destination="1TB-Mz-Udv" id="Ap2-JS-U1y"/>
                         <outlet property="satLabel" destination="aZR-zK-7dA" id="lNH-0J-2KO"/>
                         <outlet property="searchSpecAddressTextEntry" destination="WvY-tb-Ifr" id="ZDc-wo-bGZ"/>
                         <outlet property="searchSpecSegmentedControl" destination="lb2-e5-k2n" id="vBm-TQ-sfE"/>
-                        <outlet property="sunButton" destination="gwF-5Z-P6k" id="mge-Jw-emh"/>
                         <outlet property="sunLabel" destination="9jU-a4-9Ze" id="sAr-Ho-tQT"/>
-                        <outlet property="thuButton" destination="iCP-4u-9Df" id="ieM-9t-OXz"/>
                         <outlet property="thuLabel" destination="Eag-Mq-W9i" id="LkT-Tp-1h4"/>
-                        <outlet property="tueButton" destination="gHr-E2-eM9" id="Jcb-UE-PC7"/>
                         <outlet property="tueLabel" destination="Zfv-2T-3S2" id="Dd2-u3-1Y0"/>
-                        <outlet property="wedButton" destination="fLF-iM-xCH" id="BUt-ui-Mn0"/>
                         <outlet property="wedLabel" destination="Gbj-OP-cXZ" id="2EN-Oi-RrY"/>
                         <outlet property="weekdaysLabel" destination="1BM-Lu-EcM" id="CLM-eQ-N0g"/>
                         <outlet property="weekdaysSelector" destination="0r7-fn-XsV" id="40i-Fp-BIC"/>
@@ -926,7 +1008,6 @@
     </scenes>
     <resources>
         <image name="Anim-Back.png" width="512" height="512"/>
-        <image name="CheckBoxNormal.png" width="48" height="48"/>
         <image name="list.png" width="26" height="26"/>
         <image name="map.png" width="26" height="26"/>
         <image name="search.png" width="26" height="26"/>
