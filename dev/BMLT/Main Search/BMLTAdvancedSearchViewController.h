@@ -31,18 +31,6 @@ enum
     kWeekdaySelectTomorrow      ///< Select Tomorrow. Same as above, except "Tomorrow" is selected.
 };
 
-/// These are the indexes for the weekdays. These are used for calculation of the parameters.
-enum
-{
-    kWeekdaySelectValue_Sun = 1,
-    kWeekdaySelectValue_Mon,
-    kWeekdaySelectValue_Tue,
-    kWeekdaySelectValue_Wed,
-    kWeekdaySelectValue_Thu,
-    kWeekdaySelectValue_Fri,
-    kWeekdaySelectValue_Sat
-};
-
 /*****************************************************************/
 /**
  \class  BMLTAdvancedSearchViewController
@@ -62,6 +50,7 @@ enum
 @property (weak, nonatomic) IBOutlet UILabel                    *satLabel;
 @property (weak, nonatomic) IBOutlet MGS_Simple_ControlGroup    *enabledWeekdaysCheckBoxes;
 @property (weak, nonatomic) IBOutlet MGS_Simple_ControlGroup    *disabledWeekdaysCheckBoxes;
+@property (weak, nonatomic) IBOutlet UIView *weekdaySearchContainer;
 
 @property (atomic, weak, readonly)  IBOutlet UILabel                *searchLocationLabel;           ///< The label for the location specification items.
 @property (atomic, weak, readonly)  IBOutlet UISegmentedControl     *searchSpecSegmentedControl;    ///< The segmented control that specifies the location mode.

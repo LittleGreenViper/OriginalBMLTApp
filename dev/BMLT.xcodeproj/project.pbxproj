@@ -290,6 +290,8 @@
 		777AD7051688C63000E064D0 /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 777AD7021688C63000E064D0 /* BMLTVariantDefs.m */; };
 		777B520F15192409002EDC83 /* A_BMLTMainBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777B520E15192409002EDC83 /* A_BMLTMainBackgroundView.m */; };
 		77803C3F151C011D00A8ADC3 /* BMLTFormatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77803C3D151C011D00A8ADC3 /* BMLTFormatDetailViewController.m */; };
+		7780706A1827DA78003BC759 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5116F565CE00664FF9 /* iPad.storyboard */; };
+		7780706B1827DA78003BC759 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
 		7783E6821693A1A300F99D1D /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CB61548872000DBE9A1 /* libTestFlight.a */; };
 		77882CBD1548874C00DBE9A1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CBC1548874C00DBE9A1 /* libz.dylib */; };
 		77882CBE1548876000DBE9A1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CBC1548874C00DBE9A1 /* libz.dylib */; };
@@ -538,12 +540,10 @@
 		77E24A4D16F564A700664FF9 /* icon-LargeiPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E249BA16F563C000664FF9 /* icon-LargeiPad.png */; };
 		77E24A4E16F564A700664FF9 /* icon-LargeiPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E249BB16F563C000664FF9 /* icon-LargeiPhone.png */; };
 		77E24A5316F565CE00664FF9 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5116F565CE00664FF9 /* iPad.storyboard */; };
-		77E24A5416F565CE00664FF9 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5116F565CE00664FF9 /* iPad.storyboard */; };
 		77E24A5516F565CE00664FF9 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5116F565CE00664FF9 /* iPad.storyboard */; };
 		77E24A5616F565CE00664FF9 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5116F565CE00664FF9 /* iPad.storyboard */; };
 		77E24A5716F565CE00664FF9 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5116F565CE00664FF9 /* iPad.storyboard */; };
 		77E24A5816F565CE00664FF9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
-		77E24A5916F565CE00664FF9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
 		77E24A5A16F565CE00664FF9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
 		77E24A5B16F565CE00664FF9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
 		77E24A5C16F565CE00664FF9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
@@ -1594,6 +1594,8 @@
 				77603E731541DC8300C4840F /* list.png in Resources */,
 				77603E761541DC8300C4840F /* list@2x.png in Resources */,
 				77BF9D2D17E33672006E632D /* App-Icon-152.png in Resources */,
+				7780706A1827DA78003BC759 /* iPad.storyboard in Resources */,
+				7780706B1827DA78003BC759 /* iPhone.storyboard in Resources */,
 				77603E7F1541DC8300C4840F /* map.png in Resources */,
 				77603E821541DC8300C4840F /* map@2x.png in Resources */,
 				77603EA61541DC8300C4840F /* search.png in Resources */,
@@ -1618,8 +1620,6 @@
 				77BF9D2A17E335E8006E632D /* App-Icon-120.png in Resources */,
 				77BF9D2917E335E8006E632D /* App-Icon-76.png in Resources */,
 				7707C49E1690BCC100FA8D9A /* AboutLogo.png in Resources */,
-				77E24A5416F565CE00664FF9 /* iPad.storyboard in Resources */,
-				77E24A5916F565CE00664FF9 /* iPhone.storyboard in Resources */,
 				77596761177BD34600F77C06 /* BMLTFormatDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

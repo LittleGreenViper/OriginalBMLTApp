@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BMLTStartWeek</key>
+	<integer>2</integer>
 	<key>BMLTDistanceUnits</key>
 	<string>KM</string>
 	<key>BMLTInitialProjectionSizeInKM</key>
@@ -11,9 +13,9 @@
 	<key>BMLTRootServerURI</key>
 	<string>http://www.nasverige.org/bmlt</string>
 	<key>BMLTServerHomeLat</key>
-	<real>59.319178000000001</real>
+	<real>59.319178</real>
 	<key>BMLTServerHomeLong</key>
-	<real>18.104089999999999</real>
+	<real>18.10409</real>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

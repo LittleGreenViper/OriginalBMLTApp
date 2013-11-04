@@ -177,4 +177,11 @@
  \returns   The number of meetings that will trigger a failure.
  *****************************************************************/
 + (NSInteger)maxNumberOfMeetings;
+
+/*****************************************************************/
+/**
+ \brief     Start day for the week (1 = Sunday, 7 = Saturday)
+ \returns   An integer, specifying the day of the week.
+ */
++ (NSInteger)weekStartDay;
 @end

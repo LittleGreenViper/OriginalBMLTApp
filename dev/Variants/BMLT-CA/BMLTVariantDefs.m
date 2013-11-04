@@ -173,4 +173,14 @@
 {
     return 500;
 }
+
+/*****************************************************************/
++ (NSInteger)weekStartDay
+{
+    NSString        *plistPath = [[NSBundle mainBundle] pathForResource:@"Info" ofType:@"plist"];
+    NSDictionary    *pListDictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    NSNumber        *weekday = ([pListDictionary valueForKey:@"BMLTStartWeek"]) ? [pListDictionary valueForKey:@"BMLTStartWeek"] : @1;
+    
+    return [weekday integerValue];
+}
 @end

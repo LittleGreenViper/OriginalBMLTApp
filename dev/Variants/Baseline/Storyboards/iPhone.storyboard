@@ -89,7 +89,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" text="SEARCH-SPEC-DISABLED-TEXT" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" id="iqL-3E-3rT">
-                                <rect key="frame" x="13" y="274.00000168633261" width="295" height="186"/>
+                                <rect key="frame" x="13" y="274.0000011001361" width="295" height="186"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -514,7 +514,7 @@
                                             <action selector="weekdaySelectionChanged:" destination="eMe-9F-zBx" eventType="valueChanged" id="uyA-Gx-5lX"/>
                                         </connections>
                                     </segmentedControl>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="9jU-a4-9Ze" userLabel="Sunday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-1-label" text="1" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="9jU-a4-9Ze" userLabel="Sunday Label">
                                         <rect key="frame" x="7" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -522,7 +522,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-1" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="bVk-Ce-Lae" userLabel="Monday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-2-label" text="2" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="bVk-Ce-Lae" userLabel="Monday Label">
                                         <rect key="frame" x="52" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -530,7 +530,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-2" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Zfv-2T-3S2" userLabel="Tuesday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-3-label" text="3" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Zfv-2T-3S2" userLabel="Tuesday Label">
                                         <rect key="frame" x="97" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -538,7 +538,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-3" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Gbj-OP-cXZ" userLabel="Wednesday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-4-label" text="4" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Gbj-OP-cXZ" userLabel="Wednesday Label">
                                         <rect key="frame" x="142" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -546,7 +546,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-4" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Eag-Mq-W9i" userLabel="Thursday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-5-label" text="5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="Eag-Mq-W9i" userLabel="Thursday Label">
                                         <rect key="frame" x="187" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -554,7 +554,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="RHF-kJ-jFp" userLabel="Friday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-6-label" text="6" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="RHF-kJ-jFp" userLabel="Friday Label">
                                         <rect key="frame" x="232" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -562,7 +562,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="WEEKDAY-SHORT-NAME-6" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="aZR-zK-7dA" userLabel="Saturday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-7-label" text="7" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="aZR-zK-7dA" userLabel="Saturday Label">
                                         <rect key="frame" x="277" y="64" width="37" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -580,7 +580,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="SUNDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="1"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -592,7 +592,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="MONDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="2"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -604,7 +604,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="TUESDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="3"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -616,7 +616,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="WEDNESDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="4"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -628,7 +628,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="THURSDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="5"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -640,7 +640,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="FRIDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="6"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -652,7 +652,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="SATURDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="7"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -674,7 +674,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="SUNDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="1"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -687,7 +687,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="MONDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="2"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -700,7 +700,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="TUESDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="3"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -713,7 +713,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="WEDNESDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="4"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -726,7 +726,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="THURSDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="5"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -739,7 +739,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="FRIDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="6"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -752,7 +752,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="SATURDAY"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="valueTag" value="7"/>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
@@ -826,6 +826,7 @@
                         <outlet property="thuLabel" destination="Eag-Mq-W9i" id="LkT-Tp-1h4"/>
                         <outlet property="tueLabel" destination="Zfv-2T-3S2" id="Dd2-u3-1Y0"/>
                         <outlet property="wedLabel" destination="Gbj-OP-cXZ" id="2EN-Oi-RrY"/>
+                        <outlet property="weekdaySearchContainer" destination="Dpw-iQ-3B7" id="AT4-4Q-qUU"/>
                         <outlet property="weekdaysLabel" destination="1BM-Lu-EcM" id="CLM-eQ-N0g"/>
                         <outlet property="weekdaysSelector" destination="0r7-fn-XsV" id="40i-Fp-BIC"/>
                     </connections>
