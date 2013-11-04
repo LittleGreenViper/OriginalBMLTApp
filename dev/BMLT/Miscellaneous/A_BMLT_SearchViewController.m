@@ -128,13 +128,15 @@ static int kSearchAnnotationOffsetUp      = 24;  /**< This is how many pixels to
     switch ( newDragState )
     {
         case MKAnnotationViewDragStateStarting:
-        [self setImage:[UIImage imageNamed:@"MapMarkerGreen.png"]];
-        break;
+            newDragState = MKAnnotationViewDragStateDragging;
+            [self setImage:[UIImage imageNamed:@"MapMarkerGreen.png"]];
+            break;
         
         case MKAnnotationViewDragStateEnding:
         default:
-        [self setImage:[UIImage imageNamed:@"MapMarkerBlack.png"]];
-        break;
+            newDragState = MKAnnotationViewDragStateNone;
+            [self setImage:[UIImage imageNamed:@"MapMarkerBlack.png"]];
+            break;
     }
     [super setDragState:newDragState animated:animated];
 }
@@ -235,11 +237,11 @@ static int kSearchAnnotationOffsetUp      = 24;  /**< This is how many pixels to
 
         [[self mapSearchView] setDelegate:self];
         
-        [[self mapSearchView] addAnnotation:myMarker];
-        
         WildcardGestureRecognizer * tapInterceptor = [[WildcardGestureRecognizer alloc] init];
         [tapInterceptor setMyController:self];
         [[self mapSearchView] addGestureRecognizer:tapInterceptor];
+            
+        [[self mapSearchView] addAnnotation:myMarker];
         }
     else if ( [self mapSearchView] )   // If we are coming back, we simply reset the region.
         {
@@ -254,16 +256,17 @@ static int kSearchAnnotationOffsetUp      = 24;  /**< This is how many pixels to
  *****************************************************************/
 - (void)updateMapWithThisLocation:(CLLocationCoordinate2D)inCoordinate  ///< The new coordinate for the marker.
 {
-    if ( [self mapSearchView] && myMarker )
-        {
-        [myMarker setCoordinate:inCoordinate];
-        [[self mapSearchView] setCenterCoordinate:[myMarker coordinate] animated:YES];
-        }
     if ( inCoordinate.longitude != 0 || inCoordinate.latitude != 0 )
         {
 #ifdef DEBUG
         NSLog(@"A_BMLT_SearchViewController updateMapWithThisLocation set location to: %f, %f", inCoordinate.longitude, inCoordinate.latitude );
 #endif
+        if ( [self mapSearchView] && myMarker )
+            {
+            [myMarker setCoordinate:inCoordinate];
+            [[self mapSearchView] setCenterCoordinate:[myMarker coordinate] animated:YES];
+            }
+            
         [[BMLTAppDelegate getBMLTAppDelegate] setSearchMapMarkerLoc:inCoordinate];
         }
 #ifdef DEBUG
@@ -336,12 +339,13 @@ fromOldState:(MKAnnotationViewDragState)oldState        ///< The original state 
 #ifdef DEBUG
     NSLog(@"A_BMLT_SearchViewController::mapView: annotationView: newState: %d oldState: %d Marker location: (%f, %f).", newState, oldState, markerLoc.longitude, markerLoc.latitude);
 #endif
-    if ( (newState == MKAnnotationViewDragStateEnding) && (oldState == MKAnnotationViewDragStateStarting) )
+    if ( newState == MKAnnotationViewDragStateNone )
         {
 #ifdef DEBUG
         NSLog(@"A_BMLT_SearchViewController::mapView: annotationView: Changing Marker Location.");
 #endif
-        return [[BMLTAppDelegate getBMLTAppDelegate] setSearchMapMarkerLoc:markerLoc];
+
+        [self updateMapWithThisLocation:markerLoc];
         }
 }
 

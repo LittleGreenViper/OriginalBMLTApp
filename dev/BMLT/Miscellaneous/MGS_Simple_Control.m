@@ -23,7 +23,7 @@
 
 static const CGFloat    s_BaseFontSize              = 100;  ///< The largest (base) font size.
 static const CGFloat    s_CornerRoundnessInPixels   = 4;    ///< The roundness of the corners (and the inset of the title).
-static const CGFloat    s_LineThicknessInPixels     = 2;    ///< The thickness of the lines in pixels.
+static const CGFloat    s_LineThicknessInPixels     = 3;    ///< The thickness of the lines in pixels.
 static const CGFloat    s_DisabledOpacity           = 0.5;  ///< The opacity of diabled controls.
 
 #define IOS_6_TINT      ([UIColor colorWithRed:0.6549019608 green:0.6509803922 blue:0 alpha:1])              ///< This is a stand-in tint color for iOS6 (which doesn't have tintColor).
@@ -405,19 +405,21 @@ static const CGFloat    s_DisabledOpacity           = 0.5;  ///< The opacity of 
             if ( ([self controlType] == MGS_Simple_ControlEnum_ControlType_Checkbox) && [self isChecked] )
             {
                 CAShapeLayer    *checkFillerLayer = [CAShapeLayer layer];   // We use another layer to fill the radio button.
-                CGRect          checkFillerRect = CGRectInset ( drawingRect, 4, 4 );
+                CGRect          checkFillerRect = CGRectInset ( drawingRect, s_CornerRoundnessInPixels, s_CornerRoundnessInPixels );
                 UIBezierPath    *fillerPath = [UIBezierPath bezierPath];
                 
-                [fillerPath moveToPoint:CGPointMake ( checkFillerRect.origin.x, checkFillerRect.origin.y )];
-                [fillerPath addLineToPoint:CGPointMake ( (checkFillerRect.origin.x + checkFillerRect.size.width), (checkFillerRect.origin.y + checkFillerRect.size.height) )];
+                // We actually draw a checkmark.
+                [fillerPath moveToPoint:CGPointMake ( checkFillerRect.origin.x + (checkFillerRect.size.width / 10), (checkFillerRect.origin.y + checkFillerRect.size.height) - (checkFillerRect.size.height / 3) )];
+                [fillerPath addLineToPoint:CGPointMake ( checkFillerRect.origin.x + (checkFillerRect.size.width / 5), (checkFillerRect.origin.y + checkFillerRect.size.height) - (checkFillerRect.size.height / 3) )];
+                [fillerPath addLineToPoint:CGPointMake ( checkFillerRect.origin.x + (checkFillerRect.size.width / 2) - (checkFillerRect.size.width / 10), (checkFillerRect.origin.y + checkFillerRect.size.height) )];
+                [fillerPath addLineToPoint:CGPointMake ( checkFillerRect.origin.x + checkFillerRect.size.width, checkFillerRect.origin.y )];
                 
-                [fillerPath moveToPoint:CGPointMake ( (checkFillerRect.origin.x + checkFillerRect.size.width), checkFillerRect.origin.y )];
-                [fillerPath addLineToPoint:CGPointMake ( checkFillerRect.origin.x, (checkFillerRect.origin.y + checkFillerRect.size.height) )];
-                
-                [checkFillerLayer setLineWidth:s_LineThicknessInPixels * 2.0];
+                [checkFillerLayer setLineWidth:s_LineThicknessInPixels];
                 [checkFillerLayer setFrame:drawingRect];
-                [checkFillerLayer setStrokeColor:[tint CGColor]];
+                [checkFillerLayer setFillColor:[[UIColor clearColor] CGColor]];
+                [checkFillerLayer setStrokeColor:[self isEnabled] ? [[UIColor greenColor] CGColor] : [tint CGColor]];
                 [checkFillerLayer setPath:[fillerPath CGPath]];
+                [checkFillerLayer setLineJoin:kCALineJoinRound];
                 [checkFillerLayer setLineCap:kCALineCapRound];
                 [outlineLayer addSublayer:checkFillerLayer];
             }

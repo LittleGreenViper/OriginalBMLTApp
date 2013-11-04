@@ -600,11 +600,11 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="C0F-w4-0yM" userLabel="Weekday Search">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xVg-3D-ILP" userLabel="Background Touch Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="768" height="911"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="919"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                         <state key="normal">
@@ -694,11 +694,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" id="iO2-Ce-Qnu" userLabel="Disabled Weekdays" customClass="MGS_Simple_ControlGroup">
-                                        <rect key="frame" x="5" y="71" width="756" height="26"/>
+                                        <rect key="frame" x="5" y="64" width="756" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="JJT-0g-UMO" userLabel="Sunday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="40" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="36" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -711,7 +711,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="p3P-PP-AEX" userLabel="Monday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="150" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="146" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -724,7 +724,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="psC-d1-7Vn" userLabel="Tuesday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="257" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="253" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -737,7 +737,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="koE-iW-Xrx" userLabel="Wednesday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="364" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="360" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -750,7 +750,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="lRP-IA-zEg" userLabel="Thursday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="475" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="471" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -763,7 +763,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="F8d-9r-iYa" userLabel="Friday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="584" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="580" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -776,7 +776,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="qX5-WM-5rZ" userLabel="Saturday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="690" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="686" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -792,11 +792,11 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view hidden="YES" contentMode="scaleToFill" id="114-19-HWS" userLabel="Enabled Weekdays" customClass="MGS_Simple_ControlGroup">
-                                        <rect key="frame" x="5" y="71" width="756" height="26"/>
+                                        <rect key="frame" x="5" y="64" width="756" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="TWU-N6-u4R" userLabel="Sunday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="40" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="36" y="0.0" width="32" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -808,7 +808,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="4gu-qV-uDV" userLabel="Monday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="150" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="146" y="0.0" width="32" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -820,7 +820,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="rIW-lq-FeR" userLabel="Tuesday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="257" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="253" y="0.0" width="32" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -832,7 +832,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="Mzd-JK-yfA" userLabel="Wednesday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="364" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="360" y="0.0" width="32" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -844,7 +844,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="goH-EV-q3V" userLabel="Thursday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="475" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="471" y="0.0" width="32" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -856,7 +856,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="b4x-Mv-7uo" userLabel="Friday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="584" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="580" y="0.0" width="32" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -868,7 +868,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="Lw6-27-YUp" userLabel="Saturday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="690" y="0.0" width="26" height="26"/>
+                                                <rect key="frame" x="686" y="0.0" width="32" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
