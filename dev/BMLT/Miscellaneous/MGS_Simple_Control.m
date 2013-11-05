@@ -417,7 +417,7 @@ static const CGFloat    s_DisabledOpacity           = 0.5;  ///< The opacity of 
                 [checkFillerLayer setLineWidth:s_LineThicknessInPixels];
                 [checkFillerLayer setFrame:drawingRect];
                 [checkFillerLayer setFillColor:[[UIColor clearColor] CGColor]];
-                [checkFillerLayer setStrokeColor:[self isEnabled] ? [[UIColor greenColor] CGColor] : [tint CGColor]];
+                [checkFillerLayer setStrokeColor:[self isEnabled] ? [[UIColor greenColor] CGColor] : [[UIColor whiteColor] CGColor]];
                 [checkFillerLayer setPath:[fillerPath CGPath]];
                 [checkFillerLayer setLineJoin:kCALineJoinRound];
                 [checkFillerLayer setLineCap:kCALineCapRound];
@@ -466,7 +466,7 @@ static const CGFloat    s_DisabledOpacity           = 0.5;  ///< The opacity of 
     
     if ( ![self isEnabled] )
     {
-        [[self layer] setOpacity:s_DisabledOpacity];
+//        [[self layer] setOpacity:s_DisabledOpacity];
     }
     else
     {

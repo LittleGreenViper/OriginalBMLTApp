@@ -708,6 +708,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="p3P-PP-AEX" userLabel="Monday" customClass="MGS_Simple_Control">
@@ -721,6 +722,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="psC-d1-7Vn" userLabel="Tuesday" customClass="MGS_Simple_Control">
@@ -734,6 +736,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="koE-iW-Xrx" userLabel="Wednesday" customClass="MGS_Simple_Control">
@@ -747,6 +750,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="lRP-IA-zEg" userLabel="Thursday" customClass="MGS_Simple_Control">
@@ -760,6 +764,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="F8d-9r-iYa" userLabel="Friday" customClass="MGS_Simple_Control">
@@ -773,6 +778,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="qX5-WM-5rZ" userLabel="Saturday" customClass="MGS_Simple_Control">
@@ -786,6 +792,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -805,6 +812,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="4gu-qV-uDV" userLabel="Monday" customClass="MGS_Simple_Control">
@@ -817,6 +825,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="rIW-lq-FeR" userLabel="Tuesday" customClass="MGS_Simple_Control">
@@ -829,6 +838,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="Mzd-JK-yfA" userLabel="Wednesday" customClass="MGS_Simple_Control">
@@ -841,6 +851,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="goH-EV-q3V" userLabel="Thursday" customClass="MGS_Simple_Control">
@@ -853,6 +864,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="b4x-Mv-7uo" userLabel="Friday" customClass="MGS_Simple_Control">
@@ -865,6 +877,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="Lw6-27-YUp" userLabel="Saturday" customClass="MGS_Simple_Control">
@@ -877,6 +890,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="controlType">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="noBorder" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>

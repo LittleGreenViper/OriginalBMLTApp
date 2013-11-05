@@ -173,17 +173,6 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
  *****************************************************************/
 - (IBAction)weekdaySelectionChanged:(id)sender  ///< The segmented control.
 {
-    if ( [weekdaysSelector selectedSegmentIndex] == kWeekdaySelectWeekdays )
-        {
-        [[self enabledWeekdaysCheckBoxes] setHidden:NO];
-        [[self disabledWeekdaysCheckBoxes] setHidden:YES];
-        }
-    else
-        {
-        [[self enabledWeekdaysCheckBoxes] setHidden:YES];
-        [[self disabledWeekdaysCheckBoxes] setHidden:NO];
-        }
-    
     [self setParamsForWeekdaySelection];
 }
 
@@ -196,19 +185,22 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
 #ifdef DEBUG
     NSLog(@"BMLTAdvancedSearchViewController doSearchButtonPressed");
 #endif
-    [searchSpecAddressTextEntry resignFirstResponder];
-    [[BMLTAppDelegate getBMLTAppDelegate] clearAllSearchResultsNo];
-    
-    // If we have an address, then we need to make sure that we resolve it.
-    if ( [[searchSpecAddressTextEntry text] length] && ([searchSpecSegmentedControl selectedSegmentIndex] == 1) )
-        {
-        searchAfterLookup = YES;
-        [self geocodeLocationFromAddressString:[searchSpecAddressTextEntry text]];
-        }
-    else
-        {
-        [[BMLTAppDelegate getBMLTAppDelegate] searchForMeetingsNearMe:[[BMLTAppDelegate getBMLTAppDelegate] searchMapMarkerLoc] withParams:myParams];
-        }
+    if ( [myParams objectForKey:@"weekdays"] )  // Only if we have weekdays.
+    {
+        [searchSpecAddressTextEntry resignFirstResponder];
+        [[BMLTAppDelegate getBMLTAppDelegate] clearAllSearchResultsNo];
+        
+        // If we have an address, then we need to make sure that we resolve it.
+        if ( [[searchSpecAddressTextEntry text] length] && ([searchSpecSegmentedControl selectedSegmentIndex] == 1) )
+            {
+            searchAfterLookup = YES;
+            [self geocodeLocationFromAddressString:[searchSpecAddressTextEntry text]];
+            }
+        else
+            {
+            [[BMLTAppDelegate getBMLTAppDelegate] searchForMeetingsNearMe:[[BMLTAppDelegate getBMLTAppDelegate] searchMapMarkerLoc] withParams:myParams];
+            }
+    }
 }
 
 /*****************************************************************/
@@ -294,113 +286,102 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     [myParams removeObjectForKey:@"StartsAfterH"];
     [myParams removeObjectForKey:@"StartsAfterM"];
     
-    int   wd = 0;
-    
     int position_1 = [BMLTVariantDefs weekStartDay];
-    int position_2 = ((position_1 + 1) < 8) ? (position_1 + 1) : 1;
-    int position_3 = ((position_2 + 1) < 8) ? (position_2 + 1) : 1;
-    int position_4 = ((position_3 + 1) < 8) ? (position_3 + 1) : 1;
-    int position_5 = ((position_4 + 1) < 8) ? (position_4 + 1) : 1;
-    int position_6 = ((position_5 + 1) < 8) ? (position_5 + 1) : 1;
-    int position_7 = ((position_6 + 1) < 8) ? (position_6 + 1) : 1;
-    
-    // What we're doing here, is seeing if either the "Later Today" or "Tomorrow" checkboxes are selected. If so, we then set the wd variable to the chosen weekday. Otherwise, it is 0.
-    if ( ([weekdaysSelector selectedSegmentIndex] == kWeekdaySelectTomorrow) || ([weekdaysSelector selectedSegmentIndex] == kWeekdaySelectToday) )
-        {
-        NSDate              *date = [BMLTAppDelegate getLocalDateAutoreleaseWithGracePeriod:YES];
-        NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-        NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:date];
-        wd = (int)[weekdayComponents weekday] + position_1;
-            
-        weekdayComponents = [gregorian components:(NSHourCalendarUnit) fromDate:date];
-        NSInteger           hr = [weekdayComponents hour];
-        weekdayComponents = [gregorian components:(NSMinuteCalendarUnit) fromDate:date];
-        NSInteger           mn = [weekdayComponents minute];
-        
-        if ( [weekdaysSelector selectedSegmentIndex] == kWeekdaySelectTomorrow )
-            {
-            wd++;
-            }
-        else
-            {
-            [myParams setObject:[NSString stringWithFormat:@"%d",hr] forKey:@"StartsAfterH"];
-            [myParams setObject:[NSString stringWithFormat:@"%d",mn] forKey:@"StartsAfterM"];
-            }
-            
-        if ( wd > 7 )
-            {
-            wd -= 7;
-            }
-        }
     
     NSString        *weekday = @"";
-    NSMutableArray  *pTags = [[NSMutableArray alloc] init];
-    
-    // If we are on the chosen weekday, or our button is enabled, and our button is on, then add this day to the list.
-    NSString    *wdS = nil;
-    if ( (wd == position_1) || [self isWeekdaySelected:@"1"] )
+
+    switch ( [weekdaysSelector selectedSegmentIndex] )
         {
-        wdS = [NSString stringWithFormat:@"%d", position_1];
-        weekday = wdS;
-        [pTags addObject:wdS];
+        case kWeekdaySelectToday:
+        case kWeekdaySelectTomorrow:
+            {
+            [[self enabledWeekdaysCheckBoxes] setHidden:YES];
+            [[self disabledWeekdaysCheckBoxes] setHidden:NO];
+            NSMutableArray      *pTags = [[NSMutableArray alloc] init];
+            NSDate              *date = [BMLTAppDelegate getLocalDateAutoreleaseWithGracePeriod:YES];
+            NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+            NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:date];
+                
+            int wd = (int)[weekdayComponents weekday];
+            
+            if ( [weekdaysSelector selectedSegmentIndex] == kWeekdaySelectTomorrow )
+                {
+                wd++;
+                    
+                if ( wd > 7 )
+                    {
+                    wd -= 7;
+                    }
+                }
+            else
+                {
+                weekdayComponents = [gregorian components:(NSHourCalendarUnit) fromDate:date];
+                NSInteger           hr = [weekdayComponents hour];
+                weekdayComponents = [gregorian components:(NSMinuteCalendarUnit) fromDate:date];
+                NSInteger           mn = [weekdayComponents minute];
+                    
+                [myParams setObject:[NSString stringWithFormat:@"%d",hr] forKey:@"StartsAfterH"];
+                [myParams setObject:[NSString stringWithFormat:@"%d",mn] forKey:@"StartsAfterM"];
+                }
+                
+            weekday = [NSString stringWithFormat:@"%d", wd];
+            
+            wd -= (position_1 - 1);
+            
+            if ( wd < 1 )
+                {
+                wd += 7;
+                }
+            
+            [pTags addObject:[NSString stringWithFormat:@"%d", wd]];
+            [[self disabledWeekdaysCheckBoxes] setTagArray:pTags];
+            break;
+            }
+            
+        case kWeekdaySelectAllDays:
+            [[self enabledWeekdaysCheckBoxes] setHidden:YES];
+            [[self disabledWeekdaysCheckBoxes] setHidden:NO];
+            weekday = @"1,2,3,4,5,6,7";
+            [[self disabledWeekdaysCheckBoxes] setTagArray:@[@"1", @"2", @"3", @"4", @"5", @"6", @"7"]];
+            break;
+            
+        default:
+            {
+            [[self enabledWeekdaysCheckBoxes] setHidden:NO];
+            [[self disabledWeekdaysCheckBoxes] setHidden:YES];
+            
+            for ( int c = 1; c < 8; c++ )
+                {
+                NSString    *pWd = [NSString stringWithFormat:@"%d", c];
+                    
+                if ( [self isWeekdaySelected:pWd] )
+                    {
+                    int wd2 = c + (position_1 - 1);
+                        
+                    if ( wd2 > 7 )
+                        {
+                        wd2 -= 7;
+                        }
+                        
+                    NSString    *wdS = [NSString stringWithFormat:@"%d", wd2];
+                    weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
+                    }
+                }
+                
+            break;
+            }
         }
-    
-    if ( (wd == position_2) || [self isWeekdaySelected:@"2"] )
-        {
-        wdS = [NSString stringWithFormat:@"%d", position_2];
-        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
-        [pTags addObject:wdS];
-        }
-    
-    if ( (wd == position_3) || [self isWeekdaySelected:@"3"] )
-        {
-        wdS = [NSString stringWithFormat:@"%d", position_3];
-        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
-        [pTags addObject:wdS];
-        }
-    
-    if ( (wd == position_4) || [self isWeekdaySelected:@"4"] )
-        {
-        wdS = [NSString stringWithFormat:@"%d", position_4];
-        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
-        [pTags addObject:wdS];
-        }
-    
-    if ( (wd == position_5) || [self isWeekdaySelected:@"5"] )
-        {
-        wdS = [NSString stringWithFormat:@"%d", position_5];
-        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
-        [pTags addObject:wdS];
-        }
-    
-    if ( (wd == position_6)  || [self isWeekdaySelected:@"6"] )
-        {
-        wdS = [NSString stringWithFormat:@"%d", position_6];
-        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
-        [pTags addObject:wdS];
-        }
-    
-    if ( (wd == position_7)  || [self isWeekdaySelected:@"7"] )
-        {
-        wdS = [NSString stringWithFormat:@"%d", wd];
-        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
-        [pTags addObject:wdS];
-        }
-    
-    [[self disabledWeekdaysCheckBoxes] setTagArray:pTags];
     
     // We have an array of chosen weekdays (integers). Set them to the parameter.
     if ( [weekday length] )
         {
         [myParams setObject:weekday forKey:@"weekdays"];
+        [[self goButton] setEnabled:YES];
         }
-    
-    if ( [weekdaysSelector selectedSegmentIndex] == kWeekdaySelectAllDays )
-    {
-        NSArray *pAllTags = @[@"1", @"2", @"3", @"4", @"5", @"6", @"7"];
-        
-        [[self disabledWeekdaysCheckBoxes] setTagArray:pAllTags];
-    }
+    else
+        {
+        [[self goButton] setEnabled:NO];
+        }
 }
 
 /*****************************************************************/
