@@ -127,25 +127,25 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
         if ( [sub isKindOfClass:[UILabel class]] )
             {
             NSInteger   startDay = [BMLTVariantDefs weekStartDay];
+            NSString    *pText = [(UILabel*)sub text];
+            NSInteger   labelVal = [pText integerValue] + (startDay - 1);
             
-            NSInteger   labelVal = [[(UILabel*)sub text] integerValue];
-            
-            if ( (labelVal + (startDay - 2)) > 6 )
+            if ( labelVal > 7 )
                 {
-                labelVal = 1;
+                labelVal -= 7;
                 }
             
-            if ( labelVal )
+            if ( labelVal-- )
                 {
                 NSString    *pLabel = nil;
                 
                 if ( ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) )
                     {
-                    pLabel = [NSString stringWithFormat:@"WEEKDAY-NAME-%d", (labelVal + (startDay - 2))];
+                    pLabel = [NSString stringWithFormat:@"WEEKDAY-NAME-%d", labelVal];
                     }
                 else
                     {
-                    pLabel = [NSString stringWithFormat:@"WEEKDAY-SHORT-NAME-%d", (labelVal + (startDay - 2))];
+                    pLabel = [NSString stringWithFormat:@"WEEKDAY-SHORT-NAME-%d", labelVal];
                     }
                     
                 [(UILabel*)sub setText:NSLocalizedString ( pLabel, nil )];
@@ -296,13 +296,13 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     
     int   wd = 0;
     
-    int comparator_Sun = [BMLTVariantDefs weekStartDay];
-    int comparator_Mon = ((comparator_Sun + 1) < 8) ? (comparator_Sun + 1) : 1;
-    int comparator_Tue = ((comparator_Mon + 1) < 8) ? (comparator_Mon + 1) : 1;
-    int comparator_Wed = ((comparator_Tue + 1) < 8) ? (comparator_Tue + 1) : 1;
-    int comparator_Thu = ((comparator_Wed + 1) < 8) ? (comparator_Wed + 1) : 1;
-    int comparator_Fri = ((comparator_Thu + 1) < 8) ? (comparator_Thu + 1) : 1;
-    int comparator_Sat = ((comparator_Fri + 1) < 8) ? (comparator_Fri + 1) : 1;
+    int position_1 = [BMLTVariantDefs weekStartDay];
+    int position_2 = ((position_1 + 1) < 8) ? (position_1 + 1) : 1;
+    int position_3 = ((position_2 + 1) < 8) ? (position_2 + 1) : 1;
+    int position_4 = ((position_3 + 1) < 8) ? (position_3 + 1) : 1;
+    int position_5 = ((position_4 + 1) < 8) ? (position_4 + 1) : 1;
+    int position_6 = ((position_5 + 1) < 8) ? (position_5 + 1) : 1;
+    int position_7 = ((position_6 + 1) < 8) ? (position_6 + 1) : 1;
     
     // What we're doing here, is seeing if either the "Later Today" or "Tomorrow" checkboxes are selected. If so, we then set the wd variable to the chosen weekday. Otherwise, it is 0.
     if ( ([weekdaysSelector selectedSegmentIndex] == kWeekdaySelectTomorrow) || ([weekdaysSelector selectedSegmentIndex] == kWeekdaySelectToday) )
@@ -310,11 +310,8 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
         NSDate              *date = [BMLTAppDelegate getLocalDateAutoreleaseWithGracePeriod:YES];
         NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
         NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:date];
-        wd = (int)[weekdayComponents weekday] + (comparator_Sun - 1);
-        if ( wd > 7 )
-            {
-            wd = 1;
-            }
+        wd = (int)[weekdayComponents weekday] + position_1;
+            
         weekdayComponents = [gregorian components:(NSHourCalendarUnit) fromDate:date];
         NSInteger           hr = [weekdayComponents hour];
         weekdayComponents = [gregorian components:(NSMinuteCalendarUnit) fromDate:date];
@@ -323,15 +320,16 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
         if ( [weekdaysSelector selectedSegmentIndex] == kWeekdaySelectTomorrow )
             {
             wd++;
-            if ( wd > 7 )
-                {
-                wd = 1;
-                }
             }
         else
             {
             [myParams setObject:[NSString stringWithFormat:@"%d",hr] forKey:@"StartsAfterH"];
             [myParams setObject:[NSString stringWithFormat:@"%d",mn] forKey:@"StartsAfterM"];
+            }
+            
+        if ( wd > 7 )
+            {
+            wd -= 7;
             }
         }
     
@@ -339,46 +337,54 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     NSMutableArray  *pTags = [[NSMutableArray alloc] init];
     
     // If we are on the chosen weekday, or our button is enabled, and our button is on, then add this day to the list.
-    if ( (wd == comparator_Sun) || [self isWeekdaySelected:@"1"] )
+    NSString    *wdS = nil;
+    if ( (wd == position_1) || [self isWeekdaySelected:@"1"] )
         {
-        weekday = @"1";
-        [pTags addObject:@"1"];
+        wdS = [NSString stringWithFormat:@"%d", position_1];
+        weekday = wdS;
+        [pTags addObject:wdS];
         }
     
-    if ( (wd == comparator_Mon) || [self isWeekdaySelected:@"2"] )
+    if ( (wd == position_2) || [self isWeekdaySelected:@"2"] )
         {
-        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? @",2" : @"2"];
-        [pTags addObject:@"2"];
+        wdS = [NSString stringWithFormat:@"%d", position_2];
+        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
+        [pTags addObject:wdS];
         }
     
-    if ( (wd == comparator_Tue) || [self isWeekdaySelected:@"3"] )
+    if ( (wd == position_3) || [self isWeekdaySelected:@"3"] )
         {
-        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? @",3" : @"3"];
-        [pTags addObject:@"3"];
+        wdS = [NSString stringWithFormat:@"%d", position_3];
+        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
+        [pTags addObject:wdS];
         }
     
-    if ( (wd == comparator_Wed) || [self isWeekdaySelected:@"4"] )
+    if ( (wd == position_4) || [self isWeekdaySelected:@"4"] )
         {
-        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? @",4" : @"4"];
-        [pTags addObject:@"4"];
+        wdS = [NSString stringWithFormat:@"%d", position_4];
+        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
+        [pTags addObject:wdS];
         }
     
-    if ( (wd == comparator_Thu) || [self isWeekdaySelected:@"5"] )
+    if ( (wd == position_5) || [self isWeekdaySelected:@"5"] )
         {
-        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? @",5" : @"5"];
-        [pTags addObject:@"5"];
+        wdS = [NSString stringWithFormat:@"%d", position_5];
+        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
+        [pTags addObject:wdS];
         }
     
-    if ( (wd == comparator_Fri)  || [self isWeekdaySelected:@"6"] )
+    if ( (wd == position_6)  || [self isWeekdaySelected:@"6"] )
         {
-        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? @",6" : @"6"];
-        [pTags addObject:@"6"];
+        wdS = [NSString stringWithFormat:@"%d", position_6];
+        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
+        [pTags addObject:wdS];
         }
     
-    if ( (wd == comparator_Sat)  || [self isWeekdaySelected:@"7"] )
+    if ( (wd == position_7)  || [self isWeekdaySelected:@"7"] )
         {
-        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? @",7" : @"7"];
-        [pTags addObject:@"7"];
+        wdS = [NSString stringWithFormat:@"%d", wd];
+        weekday = [weekday stringByAppendingString:[weekday length] > 0 ? [NSString stringWithFormat:@",%@", wdS] : wdS];
+        [pTags addObject:wdS];
         }
     
     [[self disabledWeekdaysCheckBoxes] setTagArray:pTags];
