@@ -501,7 +501,10 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
 #ifdef DEBUG
     NSLog(@"BMLTAdvancedSearchViewController textFieldShouldReturn: searchAfterLookup = \"%@\".", searchAfterLookup ? @"YES" : @"NO");
 #endif
-    [self geocodeLocationFromAddressString:[textField text]];
+    if ( [[self goButton] isEnabled] )
+        {
+        [self geocodeLocationFromAddressString:[textField text]];
+        }
     return NO;
 }
 
@@ -515,7 +518,10 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     searchAfterLookup = NO;
     if ( [[textField text] length] && ([searchSpecSegmentedControl selectedSegmentIndex] > 0) && !([[self view] isHidden]) )
         {
-        [self geocodeLocationFromAddressString:[textField text]];
+        if ( [[self goButton] isEnabled] )
+            {
+            [self geocodeLocationFromAddressString:[textField text]];
+            }
         }
 }
 @end

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BMLTStartWeek</key>
-	<integer>4</integer>
+	<integer>2</integer>
 	<key>BMLTDistanceUnits</key>
 	<string>KM</string>
 	<key>BMLTInitialProjectionSizeInKM</key>

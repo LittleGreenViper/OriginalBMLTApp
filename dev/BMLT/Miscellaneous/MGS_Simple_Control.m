@@ -321,6 +321,12 @@ static const CGFloat    s_DisabledOpacity           = 0.5;  ///< The opacity of 
 {
     [super layoutSubviews];
     
+    // IOS 6 gets a special border for enabled controls.
+    if ( [self isEnabled] && ![self respondsToSelector:@selector(tintColor)] )
+    {
+        [self setNoBorder:NO];
+    }
+    
     [self pm_areYouMyMommy];
     
     CGRect  drawingRect = [self bounds];
@@ -463,15 +469,6 @@ static const CGFloat    s_DisabledOpacity           = 0.5;  ///< The opacity of 
     }
     
     [self pm_setUpTextItem];
-    
-    if ( ![self isEnabled] )
-    {
-//        [[self layer] setOpacity:s_DisabledOpacity];
-    }
-    else
-    {
-        [[self layer] setOpacity:1.0];
-    }
 }
 
 /***************************************************************************/

@@ -208,12 +208,29 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
         BMLT_Meeting    *meeting_A = (BMLT_Meeting *)obj1;
         BMLT_Meeting    *meeting_B = (BMLT_Meeting *)obj2;
         
+        NSInteger       position_1 = [BMLTVariantDefs weekStartDay];
+        NSInteger       meetingAWeekday = [meeting_A getWeekdayOrdinal];
+        meetingAWeekday -= (position_1 - 1);
+        
+        if ( meetingAWeekday < 1 )
+            {
+            meetingAWeekday += 7;
+            }
+        
+        NSInteger       meetingBWeekday = [meeting_B getWeekdayOrdinal];
+        meetingBWeekday -= (position_1 - 1);
+
+        if ( meetingBWeekday < 1 )
+            {
+            meetingBWeekday += 7;
+            }
+        
 #ifdef DEBUG
-        NSLog(@"\tBMLTAppDelegate::sortMeetingListByWeekdayAndTime: Sort Block. Meeting A: %@ (%d, %d) Meeting B: %@ (%d, %d)", [meeting_A getBMLTName],[meeting_A getStartTimeOrdinal], [meeting_A getWeekdayOrdinal], [meeting_B getBMLTName], [meeting_B getStartTimeOrdinal], [meeting_B getWeekdayOrdinal]);
+        NSLog(@"\tBMLTAppDelegate::sortMeetingListByWeekdayAndTime: Sort Block. Meeting A: %@ (%d, %d) Meeting B: %@ (%d, %d)", [meeting_A getBMLTName],[meeting_A getStartTimeOrdinal], meetingAWeekday, [meeting_B getBMLTName], [meeting_B getStartTimeOrdinal], meetingBWeekday);
 #endif
-        if ( [meeting_A getWeekdayOrdinal] < [meeting_B getWeekdayOrdinal] )
+        if ( meetingAWeekday < meetingBWeekday )
             return NSOrderedAscending;
-        else if ([meeting_A getWeekdayOrdinal] > [meeting_B getWeekdayOrdinal])
+        else if (meetingAWeekday > meetingBWeekday)
             return NSOrderedDescending;
         else if ( [meeting_A getStartTimeOrdinal] < [meeting_B getStartTimeOrdinal] )
             return NSOrderedAscending;

@@ -803,7 +803,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" id="TWU-N6-u4R" userLabel="Sunday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="36" y="0.0" width="32" height="32"/>
+                                                <rect key="frame" x="36" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -816,7 +816,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="4gu-qV-uDV" userLabel="Monday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="146" y="0.0" width="32" height="32"/>
+                                                <rect key="frame" x="146" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -829,7 +829,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="rIW-lq-FeR" userLabel="Tuesday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="253" y="0.0" width="32" height="32"/>
+                                                <rect key="frame" x="253" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -842,7 +842,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="Mzd-JK-yfA" userLabel="Wednesday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="360" y="0.0" width="32" height="32"/>
+                                                <rect key="frame" x="360" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -855,7 +855,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="goH-EV-q3V" userLabel="Thursday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="471" y="0.0" width="32" height="32"/>
+                                                <rect key="frame" x="471" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -868,7 +868,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="b4x-Mv-7uo" userLabel="Friday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="580" y="0.0" width="32" height="32"/>
+                                                <rect key="frame" x="580" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -881,7 +881,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" id="Lw6-27-YUp" userLabel="Saturday" customClass="MGS_Simple_Control">
-                                                <rect key="frame" x="686" y="0.0" width="32" height="32"/>
+                                                <rect key="frame" x="686" y="0.0" width="34" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <color key="tintColor" red="0.65306122450000004" green="0.65231628870000002" blue="0.0013506968430000001" alpha="1" colorSpace="calibratedRGB"/>
