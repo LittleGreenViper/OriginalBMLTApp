@@ -98,7 +98,6 @@ static int kSearchAnnotationOffsetUp      = 24;  /**< This is how many pixels to
 
     if ( self )
         {
-        [self setDraggable:YES];
         [self setCoordinate:inCoordinate];
         [self setCenterOffset:CGPointMake(kSearchAnnotationOffsetRight, -kSearchAnnotationOffsetUp)];    // Hardcoded, but the image has a specific point.
         }
@@ -113,32 +112,6 @@ static int kSearchAnnotationOffsetUp      = 24;  /**< This is how many pixels to
 - (void)selectImage
 {
     [self setImage:[UIImage imageNamed:@"MapMarkerBlack.png"]];
-}
-
-/*****************************************************************/
-/**
- \brief Handles dragging. Changes the image while dragging.
- *****************************************************************/
-- (void)setDragState:(MKAnnotationViewDragState)newDragState    ///< The upcoming drag state
-            animated:(BOOL)animated                             ///< Whether or not to animate the drag.
-{
-#ifdef DEBUG
-    NSLog(@"BMLT_Search_BlackAnnotationView::setDragState: %d animated: called.", newDragState);
-#endif
-    switch ( newDragState )
-    {
-        case MKAnnotationViewDragStateStarting:
-            newDragState = MKAnnotationViewDragStateDragging;
-            [self setImage:[UIImage imageNamed:@"MapMarkerGreen.png"]];
-            break;
-        
-        case MKAnnotationViewDragStateEnding:
-        default:
-            newDragState = MKAnnotationViewDragStateNone;
-            [self setImage:[UIImage imageNamed:@"MapMarkerBlack.png"]];
-            break;
-    }
-    [super setDragState:newDragState animated:animated];
 }
 @end
 
@@ -324,29 +297,6 @@ regionDidChangeAnimated:(BOOL)animated  ///< Whether or not the change was anima
     NSLog(@"A_BMLT_SearchViewController regionDidChangeAnimated" );
 #endif
     [[BMLTAppDelegate getBMLTAppDelegate] setSearchMapRegion:[mapView region]];
-}
-
-/*****************************************************************/
-/**
- \brief Called when the marker is dragged.
- *****************************************************************/
-- (void)mapView:(MKMapView *)mapView                    ///< The map view.
-annotationView:(MKAnnotationView *)annotationView       ///< The annotation view.
-didChangeDragState:(MKAnnotationViewDragState)newState  ///< The new state of the annotation.
-fromOldState:(MKAnnotationViewDragState)oldState        ///< The original state of the annotation.
-{
-    CLLocationCoordinate2D  markerLoc = [myMarker coordinate];
-#ifdef DEBUG
-    NSLog(@"A_BMLT_SearchViewController::mapView: annotationView: newState: %d oldState: %d Marker location: (%f, %f).", newState, oldState, markerLoc.longitude, markerLoc.latitude);
-#endif
-    if ( newState == MKAnnotationViewDragStateNone )
-        {
-#ifdef DEBUG
-        NSLog(@"A_BMLT_SearchViewController::mapView: annotationView: Changing Marker Location.");
-#endif
-
-        [self updateMapWithThisLocation:markerLoc];
-        }
 }
 
 #pragma mark - MkMapAnnotationDelegate Functions -

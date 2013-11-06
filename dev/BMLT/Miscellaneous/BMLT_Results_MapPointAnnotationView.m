@@ -105,6 +105,28 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
         representing the user's location. It will have a popup title.
  *****************************************************************/
 @implementation BMLT_Results_BlackAnnotationView
+/*****************************************************************/
+/**
+ \brief We simply switch on the draggable bit, here.
+ \returns self
+ *****************************************************************/
+- (id)initWithAnnotation:(id<MKAnnotation>)annotation
+         reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
+    
+    if ( self )
+    {
+        if ( ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) )
+            {
+            [self setDraggable:YES];
+            }
+        [self setCenterOffset:CGPointMake(kRegularAnnotationOffsetRight, -kRegularAnnotationOffsetUp)];
+        [self selectImage];
+    }
+    
+    return self;
+}
 
 /*****************************************************************/
 /**
@@ -112,7 +134,37 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
  *****************************************************************/
 - (void)selectImage
 {
-    [self setImage:[UIImage imageNamed:@"MapMarkerBlack.png"]];
+    [self setImage:[UIImage imageNamed:@"MapMarkerBlack"]];
+}
+
+/*****************************************************************/
+/**
+ \brief Handles dragging. Changes the image while dragging.
+ *****************************************************************/
+- (void)setDragState:(MKAnnotationViewDragState)newDragState    ///< The upcoming drag state
+            animated:(BOOL)animated                             ///< Whether or not to animate the drag.
+{
+#ifdef DEBUG
+    NSLog(@"BMLT_Results_BlackAnnotationView::setDragState: %d animated: called.", newDragState);
+#endif
+    switch ( newDragState )
+    {
+        case MKAnnotationViewDragStateStarting:
+            newDragState = MKAnnotationViewDragStateDragging;
+            [self setImage:[UIImage imageNamed:@"DraggingGreen"]];
+            [self setBounds:CGRectInset([self bounds], -([self bounds].size.width), -([self bounds].size.height))];
+            [self setCenterOffset:CGPointZero];
+            break;
+            
+        case MKAnnotationViewDragStateEnding:
+        default:
+            newDragState = MKAnnotationViewDragStateNone;
+            [self setImage:[UIImage imageNamed:@"MapMarkerBlack"]];
+            [self setCenterOffset:CGPointMake(kRegularAnnotationOffsetRight, -kRegularAnnotationOffsetUp)];
+            [self setBounds:CGRectInset([self bounds], ([self bounds].size.width / 2), ([self bounds].size.height / 2))];
+            break;
+    }
+    [super setDragState:newDragState animated:animated];
 }
 
 @end

@@ -99,6 +99,7 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
 @synthesize searchParams;               ///< This will hold the parameters to be used for the next search.
 @synthesize activeSearchController;     ///< This will point to the active search controller. Nil, if none.
 @synthesize searchMapRegion;            ///< Used to track the state of the search spec maps.
+@synthesize lastSearchParams;           ///< This saves the exact pameters used for the last search.
 @synthesize searchMapMarkerLoc = _markerLoc;    /**<    This contains the location used for the search marker.
                                                         This is the central location for all searches and results displays. This is where the black marker sits.
                                                         It may well be a different place from the user's location (for example, if they entered an address, or
@@ -677,6 +678,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 #ifdef DEBUG
     NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams called.");
 #endif
+    
+    [self setLastSearchParams:params];
+    
     // Remember that we have a pref for result count.
     if ( params )
         {

@@ -64,6 +64,7 @@ extern int kAddressLookupTimeoutPeriod_in_seconds;
 @property (strong, atomic) BMLTAnimationScreenViewController         *currentAnimation;          ///< This holds the current active animation controller.
 @property (strong, nonatomic) BMLTSettingsViewController             *settingsViewController;    ///< This will point to our map results main controller.
 @property (nonatomic, readwrite)    int                              mapType;                    ///< This stores the current Map type (satellite or map).
+@property (atomic, strong, readwrite) NSDictionary                   *lastSearchParams;          ///< This saves the exact pameters used for the last search.
 
 /// Class methods
 + (BMLTAppDelegate *)getBMLTAppDelegate;                ///< This class method allows access to the application delegate object (SINGLETON)
