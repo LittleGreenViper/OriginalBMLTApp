@@ -277,9 +277,14 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
     CLLocationCoordinate2D  center = CLLocationCoordinate2DMake((northWestCorner.latitude + southEastCorner.latitude) / 2.0, (southEastCorner.longitude + northWestCorner.longitude) / 2.0);
     MKCoordinateRegion  mapMap = MKCoordinateRegionMake ( center, MKCoordinateSpanMake(latSpan, longSpan) );
     
-    WildcardNewSearchGestureRecognizer * tapInterceptor = [[WildcardNewSearchGestureRecognizer alloc] init];
-    [tapInterceptor setMyController:self];
-    [[self myMapView] addGestureRecognizer:tapInterceptor];
+    // iPad gets a tap for new search capability.
+//    if ( ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) )
+//        {
+//        WildcardNewSearchGestureRecognizer * tapInterceptor = [[WildcardNewSearchGestureRecognizer alloc] init];
+//        [tapInterceptor setMyController:self];
+//        [[self myMapView] addGestureRecognizer:tapInterceptor];
+//        }
+    
     [[self myMapView] setRegion:[[self myMapView] regionThatFits:mapMap] animated:NO];
     [self displayMapAnnotations:inResults];
 }

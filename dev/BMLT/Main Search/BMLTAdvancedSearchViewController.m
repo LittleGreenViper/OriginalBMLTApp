@@ -200,7 +200,7 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     NSLog(@"BMLTAdvancedSearchViewController doSearchButtonPressed");
 #endif
     if ( [myParams objectForKey:@"weekdays"] )  // Only if we have weekdays.
-    {
+        {
         [searchSpecAddressTextEntry resignFirstResponder];
         [[BMLTAppDelegate getBMLTAppDelegate] clearAllSearchResultsNo];
         
@@ -214,7 +214,12 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
             {
             [[BMLTAppDelegate getBMLTAppDelegate] searchForMeetingsNearMe:[[BMLTAppDelegate getBMLTAppDelegate] searchMapMarkerLoc] withParams:myParams];
             }
-    }
+        }
+    else
+        {
+        UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SELECT-A-WEEKDAY",nil) message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"OK-BUTTON",nil) otherButtonTitles:nil];
+        [myAlert show];
+        }
 }
 
 /*****************************************************************/
@@ -515,7 +520,7 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
 #ifdef DEBUG
     NSLog(@"BMLTAdvancedSearchViewController textFieldShouldReturn: searchAfterLookup = \"%@\".", searchAfterLookup ? @"YES" : @"NO");
 #endif
-    if ( [[self goButton] isEnabled] )
+    if ( [[self goButton] isEnabled] || ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) )
         {
         [self geocodeLocationFromAddressString:[textField text]];
         }
@@ -537,7 +542,7 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     searchAfterLookup = NO;
     if ( [[textField text] length] && ([searchSpecSegmentedControl selectedSegmentIndex] > 0) && !([[self view] isHidden]) )
         {
-        if ( [[self goButton] isEnabled] )
+        if ( [[self goButton] isEnabled] || ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) )
             {
             [self geocodeLocationFromAddressString:[textField text]];
             }
