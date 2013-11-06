@@ -63,7 +63,7 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
         {
         BOOL    isMulti = [(BMLT_Results_MapPointAnnotation *)[self annotation] getNumberOfMeetings] > 1;
         BOOL    isSelected = [(BMLT_Results_MapPointAnnotation *)[self annotation] isSelected]; 
-        [self setImage:[UIImage imageNamed:(isSelected ? @"DraggingGreen" : isMulti ? @"MapMarkerRed" : @"MapMarkerBlue")]];
+        [self setImage:[UIImage imageNamed:(isSelected ? @"MapMarkerGreen" : isMulti ? @"MapMarkerRed" : @"MapMarkerBlue")]];
         [self setBackgroundColor:[UIColor clearColor]];
         [self setNeedsDisplay];
         }
