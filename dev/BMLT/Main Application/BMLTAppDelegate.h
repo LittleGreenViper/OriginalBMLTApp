@@ -70,7 +70,7 @@ extern int kAddressLookupTimeoutPeriod_in_seconds;
 + (BOOL)locationServicesAvailable;                      ///< Used to check to see if location services are available.
 + (BOOL)canReachRootServer;                             ///< Returns YES, if the root server can be reached via network.
 + (void)viewMeetingDetails:(BMLT_Meeting *)inMeeting inContext:(UIViewController *)inController;   ///< Push the meeting details view onto the current nav stack.
-+ (NSDate *)getLocalDateAutoreleaseWithGracePeriod:(BOOL)useGracePeriod;    ///< This is used to calculate the time for "later today" meetings.
++ (NSDate *)getLocalDateWithGracePeriod:(BOOL)useGracePeriod;    ///< This is used to calculate the time for "later today" meetings.
 + (NSArray *)sortMeetingListByWeekdayAndTime:(NSArray *)inMeetings;                   ///< Sorts the meeting search results by weekday and time.
 + (NSArray *)sortMeetingListByDistance:(NSArray *)inMeetings;                         ///< Sorts the meeting search results by distance from your location.
 

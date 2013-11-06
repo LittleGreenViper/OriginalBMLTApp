@@ -27,6 +27,59 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
 
 /*****************************************************************/
 /**
+ \class WildcardNewSearchGestureRecognizer
+ \brief This is used to find taps anywhere in the map.
+ It is inspired (and cribbed) from here:
+ http://stackoverflow.com/questions/1049889/how-to-intercept-touches-events-on-a-mkmapview-or-uiwebview-objects/4064538#4064538
+ *****************************************************************/
+@implementation WildcardNewSearchGestureRecognizer
+@synthesize myController;
+
+/*****************************************************************/
+/**
+ \brief Initialize the gesture recognizer.
+ \returns self
+ *****************************************************************/
+-(id) init
+{
+    self = [super init];
+    if ( self )
+    {
+        [self setCancelsTouchesInView:NO];
+    }
+    
+    return self;
+}
+
+/*****************************************************************/
+/**
+ \brief Called when the touch has completed, and the recognizer has decided it was legit.
+ *****************************************************************/
+- (void)touchesEnded:(NSSet *)touches   ///< The touches involved. We ignore this.
+           withEvent:(UIEvent *)event   ///< The event in question. We use this data.
+{
+#ifdef DEBUG
+    NSLog(@"WildcardNewSearchGestureRecognizer::touchesEnded: withEvent:%@", [event description]);
+#endif
+    
+    UITouch *viewTouch = (UITouch *)[[event touchesForGestureRecognizer:self] anyObject];
+    
+    if ( viewTouch )
+    {
+        MKMapView *myView = (MKMapView *)[self view];
+        CGPoint position = [viewTouch locationInView:myView];
+        CLLocationCoordinate2D  longLat = [myView convertPoint:position toCoordinateFromView:myView];
+        
+#ifdef DEBUG
+        NSLog(@"WildcardNewSearchGestureRecognizer::touchesEnded: withEvent: Position of Touch In View: (%f, %f), Long/Lat of Touch In View: (%f, %f)", position.x, position.y, longLat.longitude, longLat.latitude);
+#endif
+        [myController newSearchAtLocation:longLat];
+    }
+}
+@end
+
+/*****************************************************************/
+/**
  \class  BMLTMapResultsViewController -Private Interface
  \brief  This class will control display of mapped results.
  *****************************************************************/
@@ -224,6 +277,9 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
     CLLocationCoordinate2D  center = CLLocationCoordinate2DMake((northWestCorner.latitude + southEastCorner.latitude) / 2.0, (southEastCorner.longitude + northWestCorner.longitude) / 2.0);
     MKCoordinateRegion  mapMap = MKCoordinateRegionMake ( center, MKCoordinateSpanMake(latSpan, longSpan) );
     
+    WildcardNewSearchGestureRecognizer * tapInterceptor = [[WildcardNewSearchGestureRecognizer alloc] init];
+    [tapInterceptor setMyController:self];
+    [[self myMapView] addGestureRecognizer:tapInterceptor];
     [[self myMapView] setRegion:[[self myMapView] regionThatFits:mapMap] animated:NO];
     [self displayMapAnnotations:inResults];
 }
@@ -349,6 +405,16 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
         }
 #endif
     lastRegion = [[self myMapView] region];
+}
+
+/*****************************************************************/
+/**
+ \brief This executes a new location search at the given location.
+ *****************************************************************/
+- (void)newSearchAtLocation:(CLLocationCoordinate2D)inCoordinate
+{
+    [[BMLTAppDelegate getBMLTAppDelegate] setSearchMapMarkerLoc:inCoordinate];
+    [[BMLTAppDelegate getBMLTAppDelegate] searchForMeetingsNearMe:[[BMLTAppDelegate getBMLTAppDelegate] searchMapMarkerLoc] withParams:[[BMLTAppDelegate getBMLTAppDelegate] searchParams]];
 }
 
 /*****************************************************************/

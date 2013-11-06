@@ -22,7 +22,19 @@
 #import "A_BMLTSearchResultsViewController.h"
 #import <MapKit/MapKit.h>
 
+@class BMLTMapResultsViewController;
 @class BMLT_Meeting;
+
+/*****************************************************************/
+/**
+ \class WildcardNewSearchGestureRecognizer
+ \brief This is used to find taps anywhere in the map.
+ It is inspired (and cribbed) from here:
+ http://stackoverflow.com/questions/1049889/how-to-intercept-touches-events-on-a-mkmapview-or-uiwebview-objects/4064538#4064538
+ *****************************************************************/
+@interface WildcardNewSearchGestureRecognizer : UIGestureRecognizer
+@property (atomic, assign) BMLTMapResultsViewController  *myController;  ///< This will hold the view controller that we'll use to update.
+@end
 
 /*****************************************************************/
 /**
@@ -43,5 +55,6 @@
 - (void)determineMapSize:(NSArray *)inResults;
 - (void)displayAllMarkersIfNeeded;
 - (IBAction)toggleMapView:(id)sender;
+- (void)newSearchAtLocation:(CLLocationCoordinate2D)inCoordinate;
 
 @end

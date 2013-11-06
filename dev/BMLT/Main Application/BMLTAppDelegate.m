@@ -148,7 +148,7 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
  \brief returns the date/time of the "too late" meeting start time.
  \returns an NSDate, set to the time (either now, or with the grace period)
  *****************************************************************/
-+ (NSDate *)getLocalDateAutoreleaseWithGracePeriod:(BOOL)useGracePeriod ///< YES, if the grace period is to be included.
++ (NSDate *)getLocalDateWithGracePeriod:(BOOL)useGracePeriod ///< YES, if the grace period is to be included.
 {
     NSTimeInterval  interval = -(useGracePeriod ? [[g_AppDelegate getMyPrefs] gracePeriod] * 60 : 0);
     
@@ -739,7 +739,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 #ifdef DEBUG
     NSLog(@"BMLTAppDelegate::searchForMeetingsNearMeLaterToday called.");
 #endif
-    NSDate              *date = [BMLTAppDelegate getLocalDateAutoreleaseWithGracePeriod:YES];
+    NSDate              *date = [BMLTAppDelegate getLocalDateWithGracePeriod:YES];
     NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:date];
     NSInteger           wd = [weekdayComponents weekday];
@@ -765,7 +765,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     NSLog(@"BMLTAppDelegate::searchForMeetingsNearMeTomorrow called.");
 #endif
     NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:[BMLTAppDelegate getLocalDateAutoreleaseWithGracePeriod:NO]];
+    NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:[BMLTAppDelegate getLocalDateWithGracePeriod:NO]];
     NSInteger           wd = [weekdayComponents weekday] + 1;
     
     if ( wd > 7 )

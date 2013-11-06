@@ -86,6 +86,7 @@ CHANGELIST
 * Added robustness to the network checking mechanism.
 * Fixed a rather nasty dragging bug that no one seems to have noticed (probably because they don't use the map marker drag).
 * Added support for weeks starting on days of the week other than Sunday.
+* Added the ability to do a new map search on iPads by touching new places on the map.
 
 == Version 2.5.7
 * September 12, 2013

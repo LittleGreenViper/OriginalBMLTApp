@@ -122,11 +122,12 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
         [weekdaysSelector setTitle:NSLocalizedString([weekdaysSelector titleForSegmentAtIndex:i], nil) forSegmentAtIndex:i];
         }
     
+    NSInteger   startDay = [BMLTVariantDefs weekStartDay];
+    
     for ( UIView *sub in [[self weekdaySearchContainer] subviews] )
         {
         if ( [sub isKindOfClass:[UILabel class]] )
             {
-            NSInteger   startDay = [BMLTVariantDefs weekStartDay];
             NSString    *pText = [(UILabel*)sub text];
             NSInteger   labelVal = [pText integerValue] + (startDay - 1);
             
@@ -163,6 +164,19 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     [searchSpecAddressTextEntry setPlaceholder:NSLocalizedString([searchSpecAddressTextEntry placeholder], nil)];
     
     [goButton setTitle:NSLocalizedString([goButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
+    
+    NSDate              *date = [BMLTAppDelegate getLocalDateWithGracePeriod:YES];
+    NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:date];
+    
+    int wd = (int)[weekdayComponents weekday] + ([BMLTVariantDefs weekStartDay] - 1);
+    
+    if ( wd > 7 )
+        {
+        wd -= 7;
+        }
+    
+    [[self enabledWeekdaysCheckBoxes] setTagArray:[NSArray arrayWithObject:[NSString stringWithFormat:@"%d", wd]]];
     
     [super viewDidLoad];
 }
@@ -298,7 +312,7 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
             [[self enabledWeekdaysCheckBoxes] setHidden:YES];
             [[self disabledWeekdaysCheckBoxes] setHidden:NO];
             NSMutableArray      *pTags = [[NSMutableArray alloc] init];
-            NSDate              *date = [BMLTAppDelegate getLocalDateAutoreleaseWithGracePeriod:YES];
+            NSDate              *date = [BMLTAppDelegate getLocalDateWithGracePeriod:YES];
             NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
             NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:date];
                 
@@ -505,6 +519,11 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
         {
         [self geocodeLocationFromAddressString:[textField text]];
         }
+    else
+        {
+        UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SELECT-A-WEEKDAY",nil) message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"OK-BUTTON",nil) otherButtonTitles:nil];
+        [myAlert show];
+        }
     return NO;
 }
 
@@ -521,6 +540,11 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
         if ( [[self goButton] isEnabled] )
             {
             [self geocodeLocationFromAddressString:[textField text]];
+            }
+        else
+            {
+            UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"SELECT-A-WEEKDAY",nil) message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"OK-BUTTON",nil) otherButtonTitles:nil];
+            [myAlert show];
             }
         }
 }

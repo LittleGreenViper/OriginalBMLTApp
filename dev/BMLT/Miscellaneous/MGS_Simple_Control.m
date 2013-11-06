@@ -739,6 +739,7 @@ static const CGFloat    s_DisabledOpacity           = 0.5;  ///< The opacity of 
     NSLog ( @"MGS_Simple_ControlGroup::setTagArray:%@", inTagArray );
 #endif
 
+    [self pm_adaptToSubViews];
     _tagArray = nil;
     
     if ( inTagArray )

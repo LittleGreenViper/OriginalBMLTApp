@@ -139,6 +139,9 @@
 /* Error message for server failure */
 "ROOT-SERVER-FAILURE" = "The app cannot reach the meeting list server. Please ensure that your Internet connection is working.";
 
+/* Error message for no weekdays selected */
+"SELECT-A-WEEKDAY" = "You must select at least one day of the week for the search to complete.";
+
 /* Quick Search Titles */
 "SEARCH-SPEC-NEARBY-TITLE" = "Find Nearby Meetings";
 "SEARCH-SPEC-LATER-TODAY-TITLE" = "Find Nearby Meetings Later Today";
