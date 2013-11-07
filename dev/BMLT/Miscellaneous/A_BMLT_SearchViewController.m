@@ -87,7 +87,7 @@ static int kSearchAnnotationOffsetUp      = 24;  /**< This is how many pixels to
 
 /*****************************************************************/
 /**
- \brief We simply switch on the draggable bit, here.
+ \brief We simply switch off the draggable bit, here.
  \returns self
  *****************************************************************/
 - (id)initWithAnnotation:(id<MKAnnotation>)annotation           ///< The annotation for this marker view
@@ -98,6 +98,7 @@ static int kSearchAnnotationOffsetUp      = 24;  /**< This is how many pixels to
 
     if ( self )
         {
+        [self setDraggable:NO];
         [self setCoordinate:inCoordinate];
         [self setCenterOffset:CGPointMake(kSearchAnnotationOffsetRight, -kSearchAnnotationOffsetUp)];    // Hardcoded, but the image has a specific point.
         }
