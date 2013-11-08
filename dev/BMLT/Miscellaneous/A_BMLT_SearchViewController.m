@@ -17,12 +17,10 @@
 //  along with this code.  If not, see <http://www.gnu.org/licenses/>.
 
 #import "A_BMLT_SearchViewController.h"
+#import "BMLT_Results_MapPointAnnotationView.h"
 #import "BMLTAdvancedSearchViewController.h"
 #import "BMLTAppDelegate.h"
 #import "BMLT_Prefs.h"
-
-static int kSearchAnnotationOffsetRight   = 7;  /**< This is how many pixels to shift the annotation view right. */
-static int kSearchAnnotationOffsetUp      = 24;  /**< This is how many pixels to shift the annotation view up. */
 
 /*****************************************************************/
 /**
@@ -74,45 +72,6 @@ static int kSearchAnnotationOffsetUp      = 24;  /**< This is how many pixels to
 #endif
         [myController updateMapWithThisLocation:longLat];
         }
-}
-@end
-
-/*****************************************************************/
-/**
- \class BMLT_Search_BlackAnnotationView
- \brief We modify the black annotation view to allow dragging.
- *****************************************************************/
-@implementation BMLT_Search_BlackAnnotationView
-@synthesize coordinate = _coordinate;                           ///< The annotation/marker coordinate.
-
-/*****************************************************************/
-/**
- \brief We simply switch off the draggable bit, here.
- \returns self
- *****************************************************************/
-- (id)initWithAnnotation:(id<MKAnnotation>)annotation           ///< The annotation for this marker view
-         reuseIdentifier:(NSString *)reuseIdentifier            ///< The Reuse ID
-              coordinate:(CLLocationCoordinate2D)inCoordinate   ///< The corrdinate of the annotation.
-{
-    self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
-
-    if ( self )
-        {
-        [self setDraggable:NO];
-        [self setCoordinate:inCoordinate];
-        [self setCenterOffset:CGPointMake(kSearchAnnotationOffsetRight, -kSearchAnnotationOffsetUp)];    // Hardcoded, but the image has a specific point.
-        }
-
-    return self;
-}
-
-/*****************************************************************/
-/**
-\brief Ensure the proper image is displayed for dragging.
-*****************************************************************/
-- (void)selectImage
-{
-    [self setImage:[UIImage imageNamed:@"MapMarkerBlack.png"]];
 }
 @end
 
@@ -321,10 +280,25 @@ regionDidChangeAnimated:(BOOL)animated  ///< Whether or not the change was anima
 #ifdef DEBUG
         NSLog(@"A_BMLT_SearchViewController mapView: viewForAnnotation:. Creating Black Marker at (%f, %f)", [annotation coordinate].latitude, [annotation coordinate].longitude );
 #endif
-        ret = [[BMLT_Search_BlackAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier coordinate:[annotation coordinate]];
+        ret = [[BMLT_Results_BlackAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
         }
     
     return ret;
+}
+
+/*****************************************************************/
+/**
+ \brief Called when the marker is dragged.
+ *****************************************************************/
+- (void)mapView:(MKMapView *)mapView                    ///< The map view.
+ annotationView:(MKAnnotationView *)annotationView       ///< The annotation view.
+didChangeDragState:(MKAnnotationViewDragState)newState  ///< The new state of the annotation.
+   fromOldState:(MKAnnotationViewDragState)oldState        ///< The original state of the annotation.
+{
+    if ( newState == MKAnnotationViewDragStateNone )
+    {
+        [self updateMapWithThisLocation:[[annotationView annotation] coordinate]];
+    }
 }
 
 /*****************************************************************/

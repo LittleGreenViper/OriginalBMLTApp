@@ -570,9 +570,9 @@ didSelectAnnotationView:(MKAnnotationView *)inView    ///< The selected annotati
  \brief Called when the marker is dragged.
  *****************************************************************/
 - (void)mapView:(MKMapView *)mapView                    ///< The map view.
- annotationView:(MKAnnotationView *)annotationView       ///< The annotation view.
+ annotationView:(MKAnnotationView *)annotationView      ///< The annotation view.
 didChangeDragState:(MKAnnotationViewDragState)newState  ///< The new state of the annotation.
-   fromOldState:(MKAnnotationViewDragState)oldState        ///< The original state of the annotation.
+   fromOldState:(MKAnnotationViewDragState)oldState     ///< The original state of the annotation.
 {
     if ( newState == MKAnnotationViewDragStateNone )
         {

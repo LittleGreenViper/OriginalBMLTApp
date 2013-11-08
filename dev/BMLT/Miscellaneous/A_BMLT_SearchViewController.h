@@ -36,17 +36,6 @@
 
 /*****************************************************************/
 /**
- \class BMLT_Search_BlackAnnotationView
- \brief We modify the black annotation view to allow dragging.
- *****************************************************************/
-@interface BMLT_Search_BlackAnnotationView : BMLT_Results_BlackAnnotationView
-    @property (atomic,readwrite,assign) CLLocationCoordinate2D   coordinate;
-
-    - (id)initWithAnnotation:(id<MKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier coordinate:(CLLocationCoordinate2D)inCoordinate;
-@end
-
-/*****************************************************************/
-/**
  \class A_BMLT_SearchViewController
  \brief This class acts as an abstract base for the two search dialogs.
  its only purpose is to handle the interactive map presented in

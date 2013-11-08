@@ -102,7 +102,8 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
 /**
  \class BMLT_Results_BlackAnnotationView
  \brief This class replaces the red/blue choice with a black marker,
-        representing the user's location. It will have a popup title.
+        representing the user's location.
+        This is also used by the search dialog, and has an animated drag.
  *****************************************************************/
 @interface BMLT_Results_BlackAnnotationView ()
 @property (atomic, strong, readonly)    NSArray     *p_animationFrames;
@@ -176,7 +177,6 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
         case MKAnnotationViewDragStateStarting:
             newDragState = MKAnnotationViewDragStateDragging;
             [self setP_currentFrame:0];
-            [self setNeedsDisplay];
             [self setBounds:CGRectInset([self bounds], -([self bounds].size.width * 2), -([self bounds].size.height * 2))];
             [self setCenterOffset:CGPointZero];
             [self setP_animationTimer:[NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(setNeedsDisplay) userInfo:nil repeats:YES]];
@@ -184,18 +184,22 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
             
         case MKAnnotationViewDragStateEnding:
         default:
-            newDragState = MKAnnotationViewDragStateNone;
-            [self setImage:[UIImage imageNamed:@"MapMarkerBlack"]];
-            [self setCenterOffset:CGPointMake(kRegularAnnotationOffsetRight, -kRegularAnnotationOffsetUp)];
             [[self p_animationTimer] invalidate];
             [self setP_animationTimer:nil];
-            [self setBounds:CGRectInset([self bounds], ([self bounds].size.width / 4), ([self bounds].size.height / 4))];
+            [self setCenterOffset:CGPointMake(kRegularAnnotationOffsetRight, -kRegularAnnotationOffsetUp)];
+            [self setBounds:CGRectMake ( 0, 0, [[self image] size].width, [[self image] size].height)];
+            newDragState = MKAnnotationViewDragStateNone;
             break;
     }
     [super setDragState:newDragState animated:animated];
+    [self setNeedsDisplay];
 }
 
-- (void)drawRect:(CGRect)inRect
+/*****************************************************************/
+/**
+ \brief This draws the marker, dependent upon the state.
+ *****************************************************************/
+- (void)drawRect:(CGRect)inRect ///< The rectangle to be filled (we ignore this).
 {
     if ( [self dragState] == MKAnnotationViewDragStateDragging )
         {
@@ -203,6 +207,8 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
         
         if ( pImage )
             {
+            inRect = [self bounds];
+                
             if ( inRect.size.width < inRect.size.height )
                 {
                 float offset = (inRect.size.height - inRect.size.width) / 2.0;
@@ -229,7 +235,7 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
         }
     else
         {
-        [[self image] drawInRect:inRect];
+        [[self image] drawInRect:[self bounds]];
         }
 }
 @end
