@@ -104,6 +104,12 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
  \brief This class replaces the red/blue choice with a black marker,
         representing the user's location. It will have a popup title.
  *****************************************************************/
+@interface BMLT_Results_BlackAnnotationView ()
+@property (atomic, strong, readonly)    NSArray     *p_animationFrames;
+@property (atomic, strong, readwrite)   NSTimer     *p_animationTimer;
+@property (atomic, assign, readwrite)   NSInteger   p_currentFrame;
+@end
+
 @implementation BMLT_Results_BlackAnnotationView
 /*****************************************************************/
 /**
@@ -119,9 +125,26 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
     {
         if ( ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) )
             {
+            [self setBackgroundColor:[UIColor clearColor]];
             [self setDraggable:YES];
             [self setSelected:YES animated:NO];
+            NSArray     *pFiles = @[@"Frame01.png", @"Frame02.png", @"Frame03.png", @"Frame04.png", @"Frame05.png", @"Frame06.png", @"Frame07.png", @"Frame08.png", @"Frame09.png", @"Frame10.png"];
+            
+            NSMutableArray  *pImages = [[NSMutableArray alloc] init];
+                
+            for ( NSString *fileName in pFiles )
+                {
+                UIImage *pImage = [UIImage imageNamed:fileName];
+                    
+#ifdef DEBUG
+                NSLog(@"   File %@ has image %@.", fileName, pImage);
+#endif
+                [pImages addObject:pImage];
+                }
+            
+            _p_animationFrames = [NSArray arrayWithArray:pImages];
             }
+        
         [self setCenterOffset:CGPointMake(kRegularAnnotationOffsetRight, -kRegularAnnotationOffsetUp)];
         [self selectImage];
     }
@@ -152,9 +175,11 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
     {
         case MKAnnotationViewDragStateStarting:
             newDragState = MKAnnotationViewDragStateDragging;
-            [self setImage:[UIImage imageNamed:@"DraggingGreen"]];
-            [self setBounds:CGRectInset([self bounds], -([self bounds].size.width), -([self bounds].size.height))];
+            [self setP_currentFrame:0];
+            [self setNeedsDisplay];
+            [self setBounds:CGRectInset([self bounds], -([self bounds].size.width * 2), -([self bounds].size.height * 2))];
             [self setCenterOffset:CGPointZero];
+            [self setP_animationTimer:[NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(setNeedsDisplay) userInfo:nil repeats:YES]];
             break;
             
         case MKAnnotationViewDragStateEnding:
@@ -162,12 +187,51 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
             newDragState = MKAnnotationViewDragStateNone;
             [self setImage:[UIImage imageNamed:@"MapMarkerBlack"]];
             [self setCenterOffset:CGPointMake(kRegularAnnotationOffsetRight, -kRegularAnnotationOffsetUp)];
-            [self setBounds:CGRectInset([self bounds], ([self bounds].size.width / 2), ([self bounds].size.height / 2))];
+            [[self p_animationTimer] invalidate];
+            [self setP_animationTimer:nil];
+            [self setBounds:CGRectInset([self bounds], ([self bounds].size.width / 4), ([self bounds].size.height / 4))];
             break;
     }
     [super setDragState:newDragState animated:animated];
 }
 
+- (void)drawRect:(CGRect)inRect
+{
+    if ( [self dragState] == MKAnnotationViewDragStateDragging )
+        {
+        UIImage *pImage = (UIImage*)[[self p_animationFrames] objectAtIndex:[self p_currentFrame]];
+        
+        if ( pImage )
+            {
+            if ( inRect.size.width < inRect.size.height )
+                {
+                float offset = (inRect.size.height - inRect.size.width) / 2.0;
+                inRect.size.height = inRect.size.width;
+                inRect.origin.y += offset;
+                }
+            else
+                {
+                float offset = (inRect.size.width - inRect.size.height) / 2.0;
+                inRect.size.width = inRect.size.height;
+                inRect.origin.x += offset;
+                }
+            [pImage drawInRect:inRect];
+
+            NSInteger   nextFrame = [self p_currentFrame] + 1;
+            
+            if ( nextFrame == [[self p_animationFrames] count] )
+                {
+                nextFrame = 0;
+                }
+            
+            [self setP_currentFrame:nextFrame];
+            }
+        }
+    else
+        {
+        [[self image] drawInRect:inRect];
+        }
+}
 @end
 
 /*****************************************************************/
