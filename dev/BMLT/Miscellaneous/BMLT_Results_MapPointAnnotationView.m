@@ -124,27 +124,24 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
     
     if ( self )
     {
-        if ( ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) )
+        [self setBackgroundColor:[UIColor clearColor]];
+        [self setDraggable:YES];
+        [self setSelected:YES animated:NO];
+        NSArray     *pFiles = @[@"Frame01.png", @"Frame02.png", @"Frame03.png", @"Frame04.png", @"Frame05.png", @"Frame06.png", @"Frame07.png", @"Frame08.png", @"Frame09.png", @"Frame10.png"];
+        
+        NSMutableArray  *pImages = [[NSMutableArray alloc] init];
+            
+        for ( NSString *fileName in pFiles )
             {
-            [self setBackgroundColor:[UIColor clearColor]];
-            [self setDraggable:YES];
-            [self setSelected:YES animated:NO];
-            NSArray     *pFiles = @[@"Frame01.png", @"Frame02.png", @"Frame03.png", @"Frame04.png", @"Frame05.png", @"Frame06.png", @"Frame07.png", @"Frame08.png", @"Frame09.png", @"Frame10.png"];
-            
-            NSMutableArray  *pImages = [[NSMutableArray alloc] init];
+            UIImage *pImage = [UIImage imageNamed:fileName];
                 
-            for ( NSString *fileName in pFiles )
-                {
-                UIImage *pImage = [UIImage imageNamed:fileName];
-                    
 #ifdef DEBUG
-                NSLog(@"   File %@ has image %@.", fileName, pImage);
+            NSLog(@"   File %@ has image %@.", fileName, pImage);
 #endif
-                [pImages addObject:pImage];
-                }
-            
-            _p_animationFrames = [NSArray arrayWithArray:pImages];
+            [pImages addObject:pImage];
             }
+        
+        _p_animationFrames = [NSArray arrayWithArray:pImages];
         
         [self setCenterOffset:CGPointMake(kRegularAnnotationOffsetRight, -kRegularAnnotationOffsetUp)];
         [self selectImage];

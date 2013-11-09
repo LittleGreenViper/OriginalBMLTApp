@@ -67,7 +67,6 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
     BOOL                    _findMeetings;              ///< If this is YES, then a meeting search will be done.
     BOOL                    _amISick;                   ///< If true, it indicates that the alert for connectivity problems should not be shown.
     BOOL                    _visitingRelatives;         ///< If true, then we will retain the app state, despite the flag that says we shouldn't.
-    BOOL                    _iveUpdatedTheMap;          ///< YES, to prevent the map from being continuously updated.
     BMLT_Meeting_Search     *mySearch;                  ///< The current meeting search in progress.
     BOOL                    deferredSearch;             ///< A semaphore that is set, in order to allow the animation to appear before the search starts.
     BOOL                    locationTried;              ///< This is used to ensure that we go 2 cycles with the location manager (Kludgy way to increase accuracy).
@@ -640,7 +639,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 #ifdef DEBUG
         NSLog(@"BMLTAppDelegate::applicationWillEnterForeground: The app state will be reset to initial.");
 #endif
-        _iveUpdatedTheMap = NO;
         [self clearAllSearchResults:YES];
         
         if ( settingsViewController )
@@ -930,7 +928,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     previousAccuracy = 0;
     [locationManager stopUpdatingLocation]; // Just in case we are currently looking...
-    _iveUpdatedTheMap = NO;
     locationTried = NO;
     // If we need to get a bit fuzzier, we will.
     [locationManager setDesiredAccuracy:accuracy];
@@ -1073,24 +1070,13 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
                 [self performSelectorOnMainThread:@selector(setUpTabBarItems) withObject:nil waitUntilDone:NO];
                 }
             
-            if ( !_iveUpdatedTheMap )   // If we are flagged to set our search location, then we do so now.
-                {
 #ifdef DEBUG
-                    NSLog(@"BMLTAppDelegate::didUpdateToLocation Setting the marker location to (%f, %f).", newLocation.coordinate.longitude, newLocation.coordinate.latitude);
+            NSLog(@"BMLTAppDelegate::didUpdateToLocation Setting the marker location to (%f, %f).", newLocation.coordinate.longitude, newLocation.coordinate.latitude);
+            NSLog(@"BMLTAppDelegate::didUpdateToLocation Second time around. Stopping the update.");
 #endif
-                if ( locationTried )    // This makes sure we come back twice.
-                    {
-#ifdef DEBUG
-                        NSLog(@"BMLTAppDelegate::didUpdateToLocation Second time around. Stopping the update.");
-#endif
-                    [locationManager stopUpdatingLocation]; // Stop updating for now.
-                    [self setSearchMapMarkerLoc:[newLocation coordinate]];
-                    [activeSearchController performSelectorOnMainThread:@selector(updateMap) withObject:nil waitUntilDone:NO];
-                    _iveUpdatedTheMap = YES;
-                    }
-                
-                locationTried = YES;
-                }
+            [locationManager stopUpdatingLocation]; // Stop updating for now.
+            [self setSearchMapMarkerLoc:[newLocation coordinate]];
+            [activeSearchController performSelectorOnMainThread:@selector(updateMap) withObject:nil waitUntilDone:NO];
             
             [self setLastLocation:newLocation]; // Record for posterity
             }
