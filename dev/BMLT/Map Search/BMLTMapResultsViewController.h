@@ -20,6 +20,7 @@
 
 #import <UIKit/UIKit.h>
 #import "A_BMLTSearchResultsViewController.h"
+#import "BMLT_Results_MapPointAnnotationView.h"
 #import <MapKit/MapKit.h>
 
 @class BMLTMapResultsViewController;
@@ -30,8 +31,9 @@
  \class  BMLTMapResultsViewController
  \brief  This class will control display of mapped results.
  *****************************************************************/
-@interface BMLTMapResultsViewController : A_BMLTSearchResultsViewController <MKMapViewDelegate>
-@property (weak, nonatomic) IBOutlet MKMapView  *myMapView;
+@interface BMLTMapResultsViewController : A_BMLTSearchResultsViewController <MKMapViewDelegate, BMLT_Results_MapPointAnnotationDelegate>
+@property (weak, nonatomic) IBOutlet    MKMapView                           *myMapView;
+@property (strong, atomic, readwrite)   BMLT_Results_MapPointAnnotation     *myMarker;
 
 - (void)setMapInit:(BOOL)isInit;
 - (BOOL)isMapInitialized;
@@ -45,5 +47,4 @@
 - (void)displayAllMarkersIfNeeded;
 - (IBAction)toggleMapView:(id)sender;
 - (void)newSearchAtLocation:(CLLocationCoordinate2D)inCoordinate;
-
 @end

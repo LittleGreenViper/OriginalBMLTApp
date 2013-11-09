@@ -23,6 +23,18 @@
 #import <MapKit/MapKit.h>
 
 extern int kRegularAnnotationOffsetRight;   /**< This is how many pixels to shift the annotation view right. */
+
+@class BMLT_Results_MapPointAnnotation;
+
+/*****************************************************************/
+/**
+ \class BMLT_Results_MapPointAnnotationDelegate
+ \brief Simply defines the callback that we use for updating the map.
+ *****************************************************************/
+@protocol BMLT_Results_MapPointAnnotationDelegate <NSObject>
+- (void)dragMoved:(BMLT_Results_MapPointAnnotation*)inMarker;
+@end
+
 @class BMLT_Meeting;
 
 /*****************************************************************/
@@ -54,15 +66,17 @@ extern int kRegularAnnotationOffsetRight;   /**< This is how many pixels to shif
     NSString        *subtitle;
     NSInteger       displayIndex;
 }
+@property ( atomic, assign, readwrite )     CGPoint  markerPixelLocation;
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coords andMeetings:(NSArray *)inMeetings andIndex:(NSInteger)inIndex;
 
-@property (nonatomic, readwrite, assign) CLLocationCoordinate2D coordinate;
-@property (nonatomic, readwrite, copy) NSString                 *title;
-@property (nonatomic, readwrite, copy) NSString                 *subtitle;
-@property (nonatomic, readwrite) BOOL                           isSelected;
-@property (nonatomic, readwrite) NSInteger                      displayIndex;
-@property (retain, nonatomic)   NSMutableArray                  *myMeetings;
+@property (nonatomic, readwrite, assign) CLLocationCoordinate2D                         coordinate;
+@property (nonatomic, readwrite, copy) NSString                                         *title;
+@property (nonatomic, readwrite, copy) NSString                                         *subtitle;
+@property (nonatomic, readwrite) BOOL                                                   isSelected;
+@property (nonatomic, readwrite) NSInteger                                              displayIndex;
+@property (retain, nonatomic)   NSMutableArray                                          *myMeetings;
+@property (atomic, weak, readwrite) NSObject<BMLT_Results_MapPointAnnotationDelegate>   *dragDelegate;
 
 - (NSArray *)getMyMeetings;
 - (NSInteger)getNumberOfMeetings;

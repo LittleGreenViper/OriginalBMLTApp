@@ -175,6 +175,8 @@
         [[self mapSearchView] addGestureRecognizer:tapInterceptor];
             
         [[self mapSearchView] addAnnotation:myMarker];
+            
+        [myMarker setDragDelegate:self];
         }
     else if ( [self mapSearchView] )   // If we are coming back, we simply reset the region.
         {
@@ -308,5 +310,16 @@ didChangeDragState:(MKAnnotationViewDragState)newState  ///< The new state of th
 - (IBAction)toggleMapView:(id)sender
 {
     [[BMLTAppDelegate getBMLTAppDelegate] toggleThisMapView:[self mapSearchView] fromThisButton:[self _toggleButton]];
+}
+
+/*****************************************************************/
+/**
+ \brief Called while the marker is being dragged.
+ *****************************************************************/
+- (void)dragMoved:(BMLT_Results_MapPointAnnotation*)inMarker
+{
+#ifdef DEBUG
+    NSLog(@"A_BMLT_SearchViewController::dragMoved: (%f, %f)", [inMarker markerPixelLocation].x, [inMarker markerPixelLocation].y);
+#endif
 }
 @end

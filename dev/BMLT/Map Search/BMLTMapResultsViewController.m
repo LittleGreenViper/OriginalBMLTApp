@@ -47,7 +47,8 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
  \brief  This class will control display of mapped results.
  *****************************************************************/
 @implementation BMLTMapResultsViewController
-@synthesize myMapView = _myMapView;  ///< This is our MkMapView object.
+@synthesize myMapView = _myMapView;     ///< This is our MkMapView object.
+@synthesize myMarker = _myMarker;       ///< This holds the black marker.
 
 #pragma mark - View Lifecycle -
 /*****************************************************************/
@@ -320,6 +321,8 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
     
     if ( annotation )
         {
+        [annotation setDragDelegate:self];
+        [self setMyMarker:annotation];
         [annotation setTitle:NSLocalizedString(@"BLACK-MARKER-TITLE", nil)];
         [ret addObject:annotation];
         }
@@ -577,9 +580,8 @@ didChangeDragState:(MKAnnotationViewDragState)newState  ///< The new state of th
     if ( newState == MKAnnotationViewDragStateNone )
         {
 #ifdef DEBUG
-        NSLog(@"A_BMLT_SearchViewController::mapView: annotationView: Changing Marker Location.");
+        NSLog(@"BMLTMapResultsViewController::mapView: annotationView: Changing Marker Location.");
 #endif
-        
         [self newSearchAtLocation:[[annotationView annotation] coordinate]];
         }
 }
@@ -591,6 +593,17 @@ didChangeDragState:(MKAnnotationViewDragState)newState  ///< The new state of th
 - (IBAction)toggleMapView:(id)sender
 {
     [[BMLTAppDelegate getBMLTAppDelegate] toggleThisMapView:[self myMapView] fromThisButton:[self _toggleButton]];
+}
+
+/*****************************************************************/
+/**
+ \brief Called while the marker is being dragged.
+ *****************************************************************/
+- (void)dragMoved:(BMLT_Results_MapPointAnnotation*)inMarker
+{
+#ifdef DEBUG
+    NSLog(@"BMLTMapResultsViewController::dragMoved: (%f, %f)", [inMarker markerPixelLocation].x, [inMarker markerPixelLocation].y);
+#endif
 }
 
 @end

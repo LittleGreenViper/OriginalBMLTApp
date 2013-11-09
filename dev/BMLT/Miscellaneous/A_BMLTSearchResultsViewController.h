@@ -48,5 +48,4 @@
 - (void)viewMeetingDetails:(BMLT_Meeting *)inMeeting;
 - (IBAction)actionItemClicked:(id)sender;
 - (UIPrintPageRenderer *)getMyPageRenderer; ///< Overload this
-
 @end
