@@ -601,17 +601,47 @@ didChangeDragState:(MKAnnotationViewDragState)newState  ///< The new state of th
  *****************************************************************/
 - (void)dragMoved:(BMLT_Results_BlackAnnotationView*)inMarker
 {
+    MKMapView   *pMapView = [self myMapView];
+    
     CGPoint pixelLocation = CGPointMake ( [inMarker frame].origin.x + ([inMarker frame].size.width / 2.0), [inMarker frame].origin.y + ([inMarker frame].size.height / 2.0) );
 
 #ifdef DEBUG
     NSLog(@"BMLTMapResultsViewController::dragMoved: (%f, %f)", pixelLocation.x, pixelLocation.y);
 #endif
+    CGPoint deltaPixels = CGPointZero;
     
-//    CGRect  topRect = CGRectMake ( 0, 0, [[self myMapView] bounds].size.width, pixelLocation.y );
-//    CGRect  bottomRect = CGRectMake ( 0, [[self myMapView] bounds].size.height - pixelLocation.y, pixelLocation.x, pixelLocation.y);
-//    CGRect  leftRect = CGRectMake ( 0, 0, pixelLocation.x, [[self myMapView] bounds].size.height );
-//    CGRect  rightRect = CGRectMake ( [[self myMapView] bounds].size.width - pixelLocation.x, 0, pixelLocation.x, [[self myMapView] bounds].size.height );
+    CGRect  topRect = CGRectMake ( 0, 0, [pMapView bounds].size.width, [inMarker frame].size.height );
+    CGRect  bottomRect = CGRectMake ( 0, [pMapView bounds].size.height - [inMarker frame].size.height, [inMarker frame].origin.x, [inMarker frame].size.height);
+    CGRect  leftRect = CGRectMake ( 0, 0, [inMarker frame].origin.x, [pMapView bounds].size.height );
+    CGRect  rightRect = CGRectMake ( [pMapView bounds].size.width - [inMarker frame].origin.x, 0, [inMarker frame].origin.x, [pMapView bounds].size.height );
     
+    if ( CGRectContainsPoint(topRect, pixelLocation) )
+        {
+        deltaPixels.y = -(topRect.size.height - pixelLocation.y);
+        }
+    else
+        {
+        if ( CGRectContainsPoint(bottomRect, pixelLocation) )
+            {
+            deltaPixels.y = pixelLocation.y - ([pMapView bounds].size.height - bottomRect.size.height);
+            }
+        }
+
+    if ( CGRectContainsPoint(leftRect, pixelLocation) )
+        {
+        deltaPixels.x = -([inMarker frame].size.width - pixelLocation.x);
+        }
+    else
+        {
+        if ( CGRectContainsPoint(rightRect, pixelLocation) )
+            {
+            deltaPixels.x = pixelLocation.x - ([pMapView bounds].size.width - rightRect.size.width);
+            }
+        }
+    
+#ifdef DEBUG
+    NSLog(@"   Delta Pixels: (%f, %f)", deltaPixels.x, deltaPixels.y);
+#endif
 }
 
 @end
