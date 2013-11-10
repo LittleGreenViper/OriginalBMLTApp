@@ -316,11 +316,20 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
             }
         }
     
+#ifdef DEBUG
+    if ( ([[BMLTAppDelegate getBMLTAppDelegate] searchMapMarkerLoc].latitude == 0) || ([[BMLTAppDelegate getBMLTAppDelegate] searchMapMarkerLoc].longitude == 0) )
+            {
+            NSLog(@"   ERROR: The center location is zero!");
+            }
+#endif
     // This is the black marker.
     BMLT_Results_MapPointAnnotation *annotation = [[BMLT_Results_MapPointAnnotation alloc] initWithCoordinate:[[BMLTAppDelegate getBMLTAppDelegate] searchMapMarkerLoc] andMeetings:nil andIndex:0];
     
     if ( annotation )
         {
+#ifdef DEBUG
+            NSLog(@"BMLTMapResultsViewController mapMeetingAnnotations -Black Center Annotation.");
+#endif
         [annotation setDragDelegate:self];
         [self setMyMarker:annotation];
         [annotation setTitle:NSLocalizedString(@"BLACK-MARKER-TITLE", nil)];

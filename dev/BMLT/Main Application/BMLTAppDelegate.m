@@ -708,6 +708,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         }
     else
         {
+        [self setSearchMapMarkerLoc:inMyLocation];
         _findMeetings = NO;   // Clear the semaphore.
         // We give the new search our location.
         [searchParams setObject:[NSString stringWithFormat:@"%f", inMyLocation.longitude] forKey:@"long_val"];
@@ -1057,6 +1058,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         
         if ( newLocation.coordinate.longitude != 0 && newLocation.coordinate.latitude != 0 )
             {
+            [self setSearchMapMarkerLoc:[newLocation coordinate]];
             // Make sure that we have a setup that encourages a location-based meeting search (no current search, and a geo_width that will constrain the search).
             if ( _findMeetings && [searchParams objectForKey:@"geo_width"] )
                 {
@@ -1075,7 +1077,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
             NSLog(@"BMLTAppDelegate::didUpdateToLocation Second time around. Stopping the update.");
 #endif
             [locationManager stopUpdatingLocation]; // Stop updating for now.
-            [self setSearchMapMarkerLoc:[newLocation coordinate]];
             [activeSearchController performSelectorOnMainThread:@selector(updateMap) withObject:nil waitUntilDone:NO];
             
             [self setLastLocation:newLocation]; // Record for posterity

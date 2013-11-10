@@ -200,9 +200,8 @@
             {
             [myMarker setCoordinate:inCoordinate];
             [[self mapSearchView] setCenterCoordinate:[myMarker coordinate] animated:YES];
+            [[BMLTAppDelegate getBMLTAppDelegate] setSearchMapMarkerLoc:[[self myMarker] coordinate]];
             }
-            
-        [[BMLTAppDelegate getBMLTAppDelegate] setSearchMapMarkerLoc:[[self myMarker] coordinate]];
         }
 #ifdef DEBUG
     else
