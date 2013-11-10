@@ -32,7 +32,6 @@ extern int kRegularAnnotationOffsetRight;   /**< This is how many pixels to shif
  \brief Simply defines the callback that we use for updating the map.
  *****************************************************************/
 @protocol BMLT_Results_MapPointAnnotationDelegate <NSObject>
-- (void)dragMoved:(BMLT_Results_BlackAnnotationView*)inMarker;
 @end
 
 @class BMLT_Meeting;

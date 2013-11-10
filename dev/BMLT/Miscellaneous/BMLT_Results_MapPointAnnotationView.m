@@ -205,7 +205,6 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
         if ( pImage )
             {
             inRect = [self bounds];
-                //            [[(BMLT_Results_MapPointAnnotation*)[self annotation] dragDelegate] dragMoved:self];  // The map can't handle the truth.
             if ( inRect.size.width < inRect.size.height )
                 {
                 float offset = (inRect.size.height - inRect.size.width) / 2.0;
