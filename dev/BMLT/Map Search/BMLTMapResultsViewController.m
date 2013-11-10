@@ -599,11 +599,19 @@ didChangeDragState:(MKAnnotationViewDragState)newState  ///< The new state of th
 /**
  \brief Called while the marker is being dragged.
  *****************************************************************/
-- (void)dragMoved:(BMLT_Results_MapPointAnnotation*)inMarker
+- (void)dragMoved:(BMLT_Results_BlackAnnotationView*)inMarker
 {
+    CGPoint pixelLocation = CGPointMake ( [inMarker frame].origin.x + ([inMarker frame].size.width / 2.0), [inMarker frame].origin.y + ([inMarker frame].size.height / 2.0) );
+
 #ifdef DEBUG
-    NSLog(@"BMLTMapResultsViewController::dragMoved: (%f, %f)", [inMarker markerPixelLocation].x, [inMarker markerPixelLocation].y);
+    NSLog(@"BMLTMapResultsViewController::dragMoved: (%f, %f)", pixelLocation.x, pixelLocation.y);
 #endif
+    
+//    CGRect  topRect = CGRectMake ( 0, 0, [[self myMapView] bounds].size.width, pixelLocation.y );
+//    CGRect  bottomRect = CGRectMake ( 0, [[self myMapView] bounds].size.height - pixelLocation.y, pixelLocation.x, pixelLocation.y);
+//    CGRect  leftRect = CGRectMake ( 0, 0, pixelLocation.x, [[self myMapView] bounds].size.height );
+//    CGRect  rightRect = CGRectMake ( [[self myMapView] bounds].size.width - pixelLocation.x, 0, pixelLocation.x, [[self myMapView] bounds].size.height );
+    
 }
 
 @end

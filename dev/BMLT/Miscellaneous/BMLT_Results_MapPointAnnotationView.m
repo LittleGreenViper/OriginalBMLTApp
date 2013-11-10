@@ -205,9 +205,7 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
         if ( pImage )
             {
             inRect = [self bounds];
-            CGPoint pixelLocation = CGPointMake ( [self frame].origin.x + (inRect.size.width / 2.0), [self frame].origin.y + (inRect.size.height / 2.0) );
-            [(BMLT_Results_MapPointAnnotation*)[self annotation] setMarkerPixelLocation:pixelLocation];
-            [[(BMLT_Results_MapPointAnnotation*)[self annotation] dragDelegate] dragMoved:(BMLT_Results_MapPointAnnotation*)[self annotation]];
+            [[(BMLT_Results_MapPointAnnotation*)[self annotation] dragDelegate] dragMoved:self];
             if ( inRect.size.width < inRect.size.height )
                 {
                 float offset = (inRect.size.height - inRect.size.width) / 2.0;
@@ -235,7 +233,6 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
     else
         {
         [[self image] drawInRect:[self bounds]];
-        [(BMLT_Results_MapPointAnnotation*)[self annotation] setMarkerPixelLocation:CGPointZero];
         }
 }
 @end
@@ -248,7 +245,7 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
  *****************************************************************/
 @implementation BMLT_Results_MapPointAnnotation
 
-@synthesize isSelected = _selected, coordinate = _coordinate, title, subtitle, displayIndex, myMeetings, markerPixelLocation = _markerPixelLocation, dragDelegate = _dragDelegate;
+@synthesize isSelected = _selected, coordinate = _coordinate, title, subtitle, displayIndex, myMeetings, dragDelegate = _dragDelegate;
 
 /*****************************************************************/
 /**
@@ -265,7 +262,6 @@ int kRegularAnnotationOffsetRight       = 7;  /**< This is how many pixels to sh
         {
         _coordinate = coords;
         myMeetings = [[NSMutableArray alloc] initWithArray:inMeetings];
-        _markerPixelLocation = CGPointZero;
         }
     
     return self;
