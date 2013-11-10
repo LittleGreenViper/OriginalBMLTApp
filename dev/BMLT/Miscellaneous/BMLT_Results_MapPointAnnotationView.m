@@ -123,7 +123,7 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
     self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
     
     if ( self )
-    {
+        {
         [self setBackgroundColor:[UIColor clearColor]];
         [self setDraggable:YES];
         [self setSelected:YES animated:NO];
@@ -145,7 +145,7 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
         
         [self setCenterOffset:CGPointMake(kRegularAnnotationOffsetRight, -kRegularAnnotationOffsetUp)];
         [self selectImage];
-    }
+        }
     
     return self;
 }
@@ -170,7 +170,7 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
     NSLog(@"BMLT_Results_BlackAnnotationView::setDragState: %d animated: called.", newDragState);
 #endif
     switch ( newDragState )
-    {
+        {
         case MKAnnotationViewDragStateStarting:
             newDragState = MKAnnotationViewDragStateDragging;
             [self setP_currentFrame:0];
@@ -187,7 +187,8 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
             [self setBounds:CGRectMake ( 0, 0, [[self image] size].width, [[self image] size].height)];
             newDragState = MKAnnotationViewDragStateNone;
             break;
-    }
+        }
+    
     [super setDragState:newDragState animated:animated];
     [self setNeedsDisplay];
 }

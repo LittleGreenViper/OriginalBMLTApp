@@ -318,9 +318,9 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
     
 #ifdef DEBUG
     if ( ([[BMLTAppDelegate getBMLTAppDelegate] searchMapMarkerLoc].latitude == 0) || ([[BMLTAppDelegate getBMLTAppDelegate] searchMapMarkerLoc].longitude == 0) )
-            {
-            NSLog(@"   ERROR: The center location is zero!");
-            }
+        {
+        NSLog(@"   ERROR: The center location is zero!");
+        }
 #endif
     // This is the black marker.
     BMLT_Results_MapPointAnnotation *annotation = [[BMLT_Results_MapPointAnnotation alloc] initWithCoordinate:[[BMLTAppDelegate getBMLTAppDelegate] searchMapMarkerLoc] andMeetings:nil andIndex:0];
@@ -328,11 +328,10 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
     if ( annotation )
         {
 #ifdef DEBUG
-            NSLog(@"BMLTMapResultsViewController mapMeetingAnnotations -Black Center Annotation.");
+        NSLog(@"BMLTMapResultsViewController mapMeetingAnnotations -Black Center Annotation.");
 #endif
         [annotation setDragDelegate:self];
         [self setMyMarker:annotation];
-        [annotation setTitle:NSLocalizedString(@"BLACK-MARKER-TITLE", nil)];
         [ret addObject:annotation];
         }
     
@@ -495,11 +494,10 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
                 NSLog(@"BMLTMapResultsViewController mapView:viewForAnnotation -Black Center Annotation.");
 #endif
                 ret = [[BMLT_Results_BlackAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Search_Location_Annot"];
-                
-                [ret setCanShowCallout:YES];
                 }
             }
         }
+    
     return ret;
 }
 
@@ -524,7 +522,7 @@ regionDidChangeAnimated:(BOOL)animated  ///< Whether or not to animate the chang
  \brief Called when a marker is selected.
  *****************************************************************/
 - (void)mapView:(MKMapView *)mapView                ///< The map view.
-didSelectAnnotationView:(MKAnnotationView *)inView    ///< The selected annotation view.
+didSelectAnnotationView:(MKAnnotationView *)inView  ///< The selected annotation view.
 {
 #ifdef DEBUG
     NSLog(@"BMLTMapResultsViewController mapView:didSelectAnnotationView called.");
@@ -537,7 +535,7 @@ didSelectAnnotationView:(MKAnnotationView *)inView    ///< The selected annotati
             {
             BMLT_Results_MapPointAnnotation *theAnnotation = (BMLT_Results_MapPointAnnotation *)annotation;
             
-            if ([(BMLT_Results_MapPointAnnotation *)annotation getNumberOfMeetings] )
+            if ( [(BMLT_Results_MapPointAnnotation *)annotation getNumberOfMeetings] )
                 {
     #ifdef DEBUG
                 NSLog(@"BMLTMapResultsViewController mapView:didSelectAnnotationView -Annotation Selected. This annotation contains %d meetings.", [theAnnotation getNumberOfMeetings]);
@@ -568,6 +566,16 @@ didSelectAnnotationView:(MKAnnotationView *)inView    ///< The selected annotati
                     }
                 
                 [mapView deselectAnnotation:annotation animated:NO];
+                }
+            else
+                {
+                if ( ![(BMLT_Results_MapPointAnnotation *)annotation getNumberOfMeetings] )
+                    {
+#ifdef DEBUG
+                    NSLog(@"BMLTMapResultsViewController::mapView:didSelectAnnotationView:inView:");
+                    NSLog(@"   Black Marker Selected.");
+#endif
+                    }
                 }
 
             _selectedAnnotation = theAnnotation;
