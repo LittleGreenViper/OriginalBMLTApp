@@ -33,10 +33,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this code.  If not, see <http://www.gnu.org/licenses/>.
 
+NOTE ON THE VERSION 2.6 PROJECT
+-------------------------------
+
+Finished removing the skeuomorphic stuff. Added new checkboxes in the advanced search, and now you can drag the marker in the map results (iPhone, too).
+
 NOTE ON THE VERSION 2.5 PROJECT
 -------------------------------
 
-The biggest change with the 2.5 project, is that all the original "skeuomorphic" UX has been removed ("skeuomorphic" refers
+The biggest change with the 2.5 project, is that most the original "skeuomorphic" UX has been removed ("skeuomorphic" refers
 to the appearance of real-world items and textures, such as leather and metal). The main reason for this (besides presenting
 a more modern appearance) is that the app is now much, MUCH smaller, and will respond a great deal more quickly.
 
@@ -82,7 +87,7 @@ CHANGELIST
 * Changed the app to use a different type of checkbox. This one works better with iOS7, and reduces the size of the app.
 * Several cosmetic changes to make the app work better with iOS7. No more fancy buttons. Makes the app smaller, too.
 * Got rid of the usably useless location button in the Advanced screen of the iPad version.
-* Added robustness to the location fanding mechanism.
+* Added robustness to the location finding mechanism.
 * Added robustness to the network checking mechanism.
 * Fixed a rather nasty dragging bug that no one seems to have noticed (probably because they don't use the map marker drag).
 * Added support for weeks starting on days of the week other than Sunday.

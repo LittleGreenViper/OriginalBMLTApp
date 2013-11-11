@@ -1178,7 +1178,7 @@ shouldSelectViewController:(UIViewController *)inViewController
     NSLog(@"BMLTAppDelegate::networkStatusCallback: called");
 #endif
     
-    switch ([hostReachable currentReachabilityStatus])
+    switch ( [hostReachable currentReachabilityStatus] )
         {
         default:
             {
