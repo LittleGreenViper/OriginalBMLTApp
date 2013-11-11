@@ -19,7 +19,6 @@
 
 #import <UIKit/UIKit.h>
 #import "A_BMLT_SearchViewController.h"
-#import "BMLT_Checkbox.h"
 #import "MGS_Simple_Control.h"
 
 /// These are the states for the weekday selection mode segmented control.

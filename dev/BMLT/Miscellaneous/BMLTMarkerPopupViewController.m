@@ -1,5 +1,5 @@
 //
-//  BMLTMarkerPopupView.h
+//  BMLTMarkerPopupViewController.m
 //  BMLT
 //
 //  Created by MAGSHARE.
@@ -19,14 +19,37 @@
 //  along with this code.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import <UIKit/UIKit.h>
+#import "BMLTMarkerPopupViewController.h"
 
 /***************************************************************************/
 /**
- \class BMLTMarkerPopupView
- \brief This is the view for the annotation popup that comes up over the black annotation
- in the map results view when tapped.
+ \class BMLTMarkerPopupViewController
+ \brief This is the controller for the annotation popup that comes up over the black annotation
+        in the map results view when tapped.
  */
-@interface BMLTMarkerPopupView : UIView
-- (id)initWithPoint:(CGPoint)inPointyEnd;
+@interface BMLTMarkerPopupViewController ()
+
+@end
+
+@implementation BMLTMarkerPopupViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self)
+    {
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
 @end
