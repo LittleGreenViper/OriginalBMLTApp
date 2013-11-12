@@ -28,5 +28,8 @@
         in the map results view when tapped.
  */
 @interface BMLTMarkerPopupViewController : UIViewController
-
+@property (atomic, weak, readwrite) IBOutlet UIView *targetView;        ///< This will be the view that is pointed to
+@property (atomic, weak, readwrite) IBOutlet UIView *contextView;       ///< This will be the container view.
+@property (atomic, weak, readwrite) IBOutlet UIView *contentsSubview;   ///< This will be what goes inside the popup.
+- (id)initWithTargetView:(UIView*)inTargetView andContextView:(UIView*)inContextView andContentView:(UIView*)inContentView;
 @end

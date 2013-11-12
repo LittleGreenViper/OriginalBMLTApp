@@ -50,12 +50,6 @@
 		77238CF3183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* BMLTMarkerPopupViewController.m */; };
 		77238CF4183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* BMLTMarkerPopupViewController.m */; };
 		77238CF5183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* BMLTMarkerPopupViewController.m */; };
-		77238CFD183197D8000CA676 /* BMLTMarkerPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77238CFC183197D8000CA676 /* BMLTMarkerPopupViewController.xib */; };
-		77238CFE183197D8000CA676 /* BMLTMarkerPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77238CFC183197D8000CA676 /* BMLTMarkerPopupViewController.xib */; };
-		77238CFF183197D8000CA676 /* BMLTMarkerPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77238CFC183197D8000CA676 /* BMLTMarkerPopupViewController.xib */; };
-		77238D00183197D8000CA676 /* BMLTMarkerPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77238CFC183197D8000CA676 /* BMLTMarkerPopupViewController.xib */; };
-		77238D01183197D8000CA676 /* BMLTMarkerPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77238CFC183197D8000CA676 /* BMLTMarkerPopupViewController.xib */; };
-		77238D02183197D8000CA676 /* BMLTMarkerPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77238CFC183197D8000CA676 /* BMLTMarkerPopupViewController.xib */; };
 		7731A7A1168E1DEC00ED4BE8 /* Anim-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7731A79F168E1DEC00ED4BE8 /* Anim-Back.png */; };
 		7731A7A2168E1DEC00ED4BE8 /* Anim-Transparency.png in Resources */ = {isa = PBXBuildFile; fileRef = 7731A7A0168E1DEC00ED4BE8 /* Anim-Transparency.png */; };
 		77335564168E278F001C0B08 /* MapMarkerBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335560168E278F001C0B08 /* MapMarkerBlack@2x.png */; };
@@ -700,7 +694,6 @@
 		771F13FB17E536F80053BC33 /* icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-152.png"; sourceTree = "<group>"; };
 		77238CED183197A1000CA676 /* BMLTMarkerPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTMarkerPopupViewController.h; sourceTree = "<group>"; };
 		77238CEE183197A1000CA676 /* BMLTMarkerPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTMarkerPopupViewController.m; sourceTree = "<group>"; };
-		77238CFC183197D8000CA676 /* BMLTMarkerPopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BMLTMarkerPopupViewController.xib; path = Variants/Baseline/Storyboards/BMLTMarkerPopupViewController.xib; sourceTree = SOURCE_ROOT; };
 		7731A79F168E1DEC00ED4BE8 /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Back.png"; sourceTree = "<group>"; };
 		7731A7A0168E1DEC00ED4BE8 /* Anim-Transparency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Transparency.png"; sourceTree = "<group>"; };
 		77335560168E278F001C0B08 /* MapMarkerBlack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MapMarkerBlack@2x.png"; sourceTree = "<group>"; };
@@ -1225,7 +1218,6 @@
 		77603DEC1541DC8300C4840F /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				77238CFC183197D8000CA676 /* BMLTMarkerPopupViewController.xib */,
 				7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */,
 				77E24A5116F565CE00664FF9 /* iPad.storyboard */,
 				77E24A5216F565CE00664FF9 /* iPhone.storyboard */,
@@ -1693,7 +1685,6 @@
 				77603E851541DC8300C4840F /* MapMarkerBlack.png in Resources */,
 				77603E881541DC8300C4840F /* MapMarkerBlue.png in Resources */,
 				77603E8E1541DC8300C4840F /* MapMarkerRed.png in Resources */,
-				77238CFE183197D8000CA676 /* BMLTMarkerPopupViewController.xib in Resources */,
 				77335566168E278F001C0B08 /* MapMarkerBlack@2x.png in Resources */,
 				7733556A168E278F001C0B08 /* MapMarkerBlue@2x.png in Resources */,
 				77335572168E278F001C0B08 /* MapMarkerRed@2x.png in Resources */,
@@ -1754,7 +1745,6 @@
 				777AD6C21688C61700E064D0 /* FormatCircleRed@2x.png in Resources */,
 				777AD6C31688C61700E064D0 /* FormatCircleWC@2x.png in Resources */,
 				777AD6C41688C61700E064D0 /* FormatCircleYellow@2x.png in Resources */,
-				77238CFD183197D8000CA676 /* BMLTMarkerPopupViewController.xib in Resources */,
 				777AD6D51688C61700E064D0 /* search.png in Resources */,
 				777AD6D61688C61700E064D0 /* search@2x.png in Resources */,
 				77731D41182B00A000FFB0A2 /* MapMarkerGreen.png in Resources */,
@@ -1854,7 +1844,6 @@
 				77ACED8D168F3C6400FC9192 /* Anim-Transparency.png in Resources */,
 				77DCE9AE182C6E7700762604 /* Frame05.png in Resources */,
 				77731D43182B00A000FFB0A2 /* MapMarkerGreen.png in Resources */,
-				77238CFF183197D8000CA676 /* BMLTMarkerPopupViewController.xib in Resources */,
 				77ACED8E168F3C6400FC9192 /* Default-568h@2x.png in Resources */,
 				77ACED8F168F3C6400FC9192 /* Default-Landscape@2x~ipad.png in Resources */,
 				77ACED90168F3C6400FC9192 /* Default-Landscape~ipad.png in Resources */,
@@ -1881,7 +1870,6 @@
 				77603E691541DC8300C4840F /* FormatCircleYellow@2x.png in Resources */,
 				771F13FE17E536F80053BC33 /* icon-076.png in Resources */,
 				77603E721541DC8300C4840F /* list.png in Resources */,
-				77238D00183197D8000CA676 /* BMLTMarkerPopupViewController.xib in Resources */,
 				77603E751541DC8300C4840F /* list@2x.png in Resources */,
 				77603E7E1541DC8300C4840F /* map.png in Resources */,
 				77603E811541DC8300C4840F /* map@2x.png in Resources */,
@@ -1953,7 +1941,6 @@
 				77DCE9A5182C6E7700762604 /* Frame03.png in Resources */,
 				77DCE9B7182C6E7700762604 /* Frame06.png in Resources */,
 				77B5EAFB1743EEF300F50281 /* MapMarkerRed.png in Resources */,
-				77238D02183197D8000CA676 /* BMLTMarkerPopupViewController.xib in Resources */,
 				77B5EAFC1743EEF300F50281 /* search.png in Resources */,
 				77B5EAFD1743EEF300F50281 /* search@2x.png in Resources */,
 				77B5EAFE1743EEF300F50281 /* settings.png in Resources */,
@@ -2042,7 +2029,6 @@
 				77DCE9B0182C6E7700762604 /* Frame05.png in Resources */,
 				77DCE998182C6E7700762604 /* Frame01.png in Resources */,
 				77E24A5C16F565CE00664FF9 /* iPhone.storyboard in Resources */,
-				77238D01183197D8000CA676 /* BMLTMarkerPopupViewController.xib in Resources */,
 				77596764177BD34600F77C06 /* BMLTFormatDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

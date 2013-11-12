@@ -35,13 +35,21 @@
 
 /***************************************************************************/
 /**
- \brief Designated initializer
+ \brief Basic initializer
+        This will be the one used most. We establish a context (container)
+        and a target (the view that is pointed to). The controller and the
+        view will figure out the layout from there.
  */
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithTargetView:(UIView*)inTargetView  ///< The view that is pointed to
+          andContextView:(UIView*)inContextView ///< The context in which this popup will appear
+          andContentView:(UIView*)inContentView ///< The view that will go inside this one.
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self)
     {
+        _targetView = inTargetView;
+        _contextView = inContextView;
+        _contentsSubview = inContentView;
     }
     return self;
 }
