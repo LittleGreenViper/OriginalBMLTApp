@@ -21,6 +21,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef struct  /// This will contain the various metrics for the popup view.
+{
+    CGRect  popupViewFrame;     ///< This is the frame (in container coordinates) of the popup view.
+    CGPoint popupArrowPoint;    ///< This is the point (in local popup view coordinates) of the outer tip of the arrow.
+    CGFloat arrowBaseWidth;     ///< The width of the arrow base.
+    CGFloat arrowLength;        ///< The length of the arrow.
+} BMLT_PopupMetrics;
+
 /***************************************************************************/
 /**
  \class BMLTMarkerPopupView

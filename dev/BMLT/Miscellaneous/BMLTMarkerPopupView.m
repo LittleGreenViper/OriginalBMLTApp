@@ -22,8 +22,6 @@
 #import "BMLTMarkerPopupView.h"
 
 static const float  s_CornerRoundnessInPixels   = 8.0;
-static const float  s_BaseArrowWidthInPixels    = 16.0;
-static const float  s_ArrowLengthInPixels       = 16.0;
 
 /***************************************************************************/
 /**

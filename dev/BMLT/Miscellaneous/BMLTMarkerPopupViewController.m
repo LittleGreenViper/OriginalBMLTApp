@@ -20,6 +20,11 @@
 //
 
 #import "BMLTMarkerPopupViewController.h"
+#import "BMLTMarkerPopupView.h"
+
+static const float  s_BaseArrowWidthInPixels    = 16.0; ///< This is how wide (or tall) the base of the arrow will be.
+static const float  s_ArrowLengthInPixels       = 16.0; ///< This is how far out it will stick from the 
+static const float  s_PaddingInPixels           = 4.0;  ///< This is how much "breathing room" the contents will get.
 
 /***************************************************************************/
 /**
@@ -28,7 +33,7 @@
         in the map results view when tapped.
  */
 @interface BMLTMarkerPopupViewController ()
-
+- (BMLT_PopupMetrics)pm_calculatePopupFrame;
 @end
 
 @implementation BMLTMarkerPopupViewController
@@ -41,17 +46,38 @@
         view will figure out the layout from there.
  */
 - (id)initWithTargetView:(UIView*)inTargetView  ///< The view that is pointed to
-          andContextView:(UIView*)inContextView ///< The context in which this popup will appear
           andContentView:(UIView*)inContentView ///< The view that will go inside this one.
 {
     self = [super init];
     if (self)
     {
         _targetView = inTargetView;
-        _contextView = inContextView;
+        _contextView = [inTargetView superview];
         _contentsSubview = inContentView;
     }
     return self;
 }
 
+/***************************************************************************/
+/**
+ \brief Basic initializer
+ This will be the one used most. We establish a context (container)
+ and a target (the view that is pointed to). The controller and the
+ view will figure out the layout from there.
+ */
+- (BMLT_PopupMetrics)pm_calculatePopupFrame;
+{
+    BMLT_PopupMetrics   ret = { CGRectZero, CGPointZero };
+    
+    ret.arrowBaseWidth = s_BaseArrowWidthInPixels;
+    ret.arrowLength = s_ArrowLengthInPixels;
+    // Start with a frame that is in the upper left, and big enough for the contents.
+    ret.popupViewFrame = CGRectInset ( [[self contentsSubview] bounds], -s_PaddingInPixels, -s_PaddingInPixels );
+    
+    // Get the thing that we're pointing at, and the context that we share.
+//    CGRect  targetFrame = [[self targetView] frame];
+//    CGSize  contextSize = [[self contextView] bounds].size;
+    
+    return ret;
+}
 @end
