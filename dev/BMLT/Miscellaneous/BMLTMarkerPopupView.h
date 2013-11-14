@@ -33,8 +33,8 @@ typedef struct  /// This will contain the various metrics for the popup view.
 /**
  \class BMLTMarkerPopupView
  \brief This is the view for the annotation popup that comes up over the black annotation
- in the map results view when tapped.
+        in the map results view when tapped.
  */
 @interface BMLTMarkerPopupView : UIView
-- (id)initWithPoint:(CGPoint)inPointyEnd;
+- (id)initWithMetrics:(BMLT_PopupMetrics)inMetrics;
 @end

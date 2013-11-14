@@ -30,7 +30,7 @@ static const float  s_CornerRoundnessInPixels   = 8.0;
         in the map results view when tapped.
  */
 @interface BMLTMarkerPopupView ()
-@property   (assign, atomic, readwrite) CGPoint     p_pointyEnd;    ///< This will hold the point (in superview coordinates) where the arrow will end up. This will basically control the whole layout.
+@property   (assign, atomic, readwrite) BMLT_PopupMetrics     p_metrics;    ///< This will hold the metrics for this view.
 @end
 
 @implementation BMLTMarkerPopupView
@@ -39,8 +39,15 @@ static const float  s_CornerRoundnessInPixels   = 8.0;
 /**
  \brief Designated initializer
  */
-- (id)initWithPoint:(CGPoint)inPointyEnd    /// Where there is to be an arrow pointing.
+- (id)initWithMetrics:(BMLT_PopupMetrics)inMetrics  ///< The metrics that determine the shape and location of the view.
 {
+    self = [super initWithFrame:inMetrics.popupViewFrame];
+    
+    if ( self )
+        {
+        _p_metrics = inMetrics;
+        }
+    
     return self;
 }
 
