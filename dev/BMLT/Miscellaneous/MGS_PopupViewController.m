@@ -1,5 +1,5 @@
 //
-//  BMLTMarkerPopupViewController.m
+//  MGS_PopupViewController.m
 //  BMLT
 //
 //  Created by MAGSHARE.
@@ -19,8 +19,8 @@
 //  along with this code.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import "BMLTMarkerPopupViewController.h"
-#import "BMLTMarkerPopupView.h"
+#import "MGS_PopupViewController.h"
+#import "MGS_PopupView.h"
 
 static const float  s_BaseArrowWidthInPixels    = 16.0; ///< This is how wide (or tall) the base of the arrow will be.
 static const float  s_ArrowLengthInPixels       = 16.0; ///< This is how far out it will stick from the 
@@ -28,15 +28,15 @@ static const float  s_PaddingInPixels           = 4.0;  ///< This is how much "b
 
 /***************************************************************************/
 /**
- \class BMLTMarkerPopupViewController
+ \class MGS_PopupViewController
  \brief This is the controller for the annotation popup that comes up over the black annotation
         in the map results view when tapped.
  */
-@interface BMLTMarkerPopupViewController ()
+@interface MGS_PopupViewController ()
 - (BMLT_PopupMetrics)pm_calculatePopupFrame;
 @end
 
-@implementation BMLTMarkerPopupViewController
+@implementation MGS_PopupViewController
 
 /***************************************************************************/
 /**
@@ -76,8 +76,8 @@ static const float  s_PaddingInPixels           = 4.0;  ///< This is how much "b
     CGRect  targetFrame = [[self targetView] frame];
     CGSize  contextSize = [[self contextView] bounds].size;
     
-    // We will want to pop up above the target, if at all possible.
-    CGRect  frameAbove = CGRectMake ( 0, 0, contextSize.width, contextSize.height - (targetFrame.origin.y + s_ArrowLengthInPixels) );
+    // We will want to pop up above the target, if at all possible. We allow the popup to cover up to half the target.
+    CGRect  frameAbove = CGRectMake ( 0, 0, contextSize.width, ((targetFrame.origin.y + (targetFrame.size.height / 2.0)) - s_ArrowLengthInPixels) );
     
     CGRect  popupFrameContainer = CGRectZero;
     
@@ -124,6 +124,23 @@ static const float  s_PaddingInPixels           = 4.0;  ///< This is how much "b
         {
         // We know that we will fit. Time to start calculating the "nitty gritty."
         
+        // Our first choice is directly above the target, centered.
+        CGFloat left = (targetFrame.origin.x + (targetFrame.size.width / 2.0)) - (ret.popupViewFrame.size.width / 2.0);
+        CGFloat top = targetFrame.origin.y - (ret.popupViewFrame.size.height + ret.arrowLength);
+        
+        if ( top < 0 )  // If we need to, we can cover up to half the target.
+            {
+            if ( (targetFrame.origin.y + (targetFrame.size.height / 2.0)) - (ret.popupViewFrame.size.height + ret.arrowLength) >= 0 )
+                {
+                top = 0;
+                }
+            }
+        
+        // If we fit entirely within the frame...
+        if ( (left >= 0) && (top >= 0) && ((left + ret.popupViewFrame.size.width) <= popupFrameContainer.size.width) )
+            {
+            
+            }
         }
     
     return ret;

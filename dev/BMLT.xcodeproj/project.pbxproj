@@ -44,12 +44,12 @@
 		771F140117E536F80053BC33 /* icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 771F13FA17E536F80053BC33 /* icon-144.png */; };
 		771F140217E536F80053BC33 /* icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 771F13FB17E536F80053BC33 /* icon-152.png */; };
 		7721FCA517E33E9A00368F1D /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CB61548872000DBE9A1 /* libTestFlight.a */; };
-		77238CF0183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* BMLTMarkerPopupViewController.m */; };
-		77238CF1183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* BMLTMarkerPopupViewController.m */; };
-		77238CF2183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* BMLTMarkerPopupViewController.m */; };
-		77238CF3183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* BMLTMarkerPopupViewController.m */; };
-		77238CF4183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* BMLTMarkerPopupViewController.m */; };
-		77238CF5183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* BMLTMarkerPopupViewController.m */; };
+		77238CF0183197A1000CA676 /* MGS_PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* MGS_PopupViewController.m */; };
+		77238CF1183197A1000CA676 /* MGS_PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* MGS_PopupViewController.m */; };
+		77238CF2183197A1000CA676 /* MGS_PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* MGS_PopupViewController.m */; };
+		77238CF3183197A1000CA676 /* MGS_PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* MGS_PopupViewController.m */; };
+		77238CF4183197A1000CA676 /* MGS_PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* MGS_PopupViewController.m */; };
+		77238CF5183197A1000CA676 /* MGS_PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* MGS_PopupViewController.m */; };
 		7731A7A1168E1DEC00ED4BE8 /* Anim-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7731A79F168E1DEC00ED4BE8 /* Anim-Back.png */; };
 		7731A7A2168E1DEC00ED4BE8 /* Anim-Transparency.png in Resources */ = {isa = PBXBuildFile; fileRef = 7731A7A0168E1DEC00ED4BE8 /* Anim-Transparency.png */; };
 		77335564168E278F001C0B08 /* MapMarkerBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335560168E278F001C0B08 /* MapMarkerBlack@2x.png */; };
@@ -179,12 +179,12 @@
 		776C2C3D17E155CC00D86507 /* Default-Tall-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 776C2C3917E155CC00D86507 /* Default-Tall-Portrait@2x~ipad.png */; };
 		776C2C3E17E155CC00D86507 /* Default-Tall-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 776C2C3A17E155CC00D86507 /* Default-Tall-Portrait~ipad.png */; };
 		776CAD8A15404BBF001BD51D /* BMLT_DetailsPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 776CAD8915404BBF001BD51D /* BMLT_DetailsPrintPageRenderer.m */; };
-		776E9355183151EC0005B9AB /* BMLTMarkerPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* BMLTMarkerPopupView.m */; };
-		776E9356183151EC0005B9AB /* BMLTMarkerPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* BMLTMarkerPopupView.m */; };
-		776E9357183151EC0005B9AB /* BMLTMarkerPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* BMLTMarkerPopupView.m */; };
-		776E9358183151EC0005B9AB /* BMLTMarkerPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* BMLTMarkerPopupView.m */; };
-		776E9359183151EC0005B9AB /* BMLTMarkerPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* BMLTMarkerPopupView.m */; };
-		776E935A183151EC0005B9AB /* BMLTMarkerPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* BMLTMarkerPopupView.m */; };
+		776E9355183151EC0005B9AB /* MGS_PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* MGS_PopupView.m */; };
+		776E9356183151EC0005B9AB /* MGS_PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* MGS_PopupView.m */; };
+		776E9357183151EC0005B9AB /* MGS_PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* MGS_PopupView.m */; };
+		776E9358183151EC0005B9AB /* MGS_PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* MGS_PopupView.m */; };
+		776E9359183151EC0005B9AB /* MGS_PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* MGS_PopupView.m */; };
+		776E935A183151EC0005B9AB /* MGS_PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* MGS_PopupView.m */; };
 		77731D41182B00A000FFB0A2 /* MapMarkerGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 77731D3F182B00A000FFB0A2 /* MapMarkerGreen.png */; };
 		77731D42182B00A000FFB0A2 /* MapMarkerGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 77731D3F182B00A000FFB0A2 /* MapMarkerGreen.png */; };
 		77731D43182B00A000FFB0A2 /* MapMarkerGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 77731D3F182B00A000FFB0A2 /* MapMarkerGreen.png */; };
@@ -692,8 +692,8 @@
 		771F13F917E536F80053BC33 /* icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-120.png"; sourceTree = "<group>"; };
 		771F13FA17E536F80053BC33 /* icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-144.png"; sourceTree = "<group>"; };
 		771F13FB17E536F80053BC33 /* icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-152.png"; sourceTree = "<group>"; };
-		77238CED183197A1000CA676 /* BMLTMarkerPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTMarkerPopupViewController.h; sourceTree = "<group>"; };
-		77238CEE183197A1000CA676 /* BMLTMarkerPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTMarkerPopupViewController.m; sourceTree = "<group>"; };
+		77238CED183197A1000CA676 /* MGS_PopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGS_PopupViewController.h; sourceTree = "<group>"; };
+		77238CEE183197A1000CA676 /* MGS_PopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGS_PopupViewController.m; sourceTree = "<group>"; };
 		7731A79F168E1DEC00ED4BE8 /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Back.png"; sourceTree = "<group>"; };
 		7731A7A0168E1DEC00ED4BE8 /* Anim-Transparency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Transparency.png"; sourceTree = "<group>"; };
 		77335560168E278F001C0B08 /* MapMarkerBlack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MapMarkerBlack@2x.png"; sourceTree = "<group>"; };
@@ -774,8 +774,8 @@
 		776C2C3A17E155CC00D86507 /* Default-Tall-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Tall-Portrait~ipad.png"; path = "Variants/BMLT-NY/images/Default-Tall-Portrait~ipad.png"; sourceTree = SOURCE_ROOT; };
 		776CAD8815404BBF001BD51D /* BMLT_DetailsPrintPageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLT_DetailsPrintPageRenderer.h; sourceTree = "<group>"; };
 		776CAD8915404BBF001BD51D /* BMLT_DetailsPrintPageRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLT_DetailsPrintPageRenderer.m; sourceTree = "<group>"; };
-		776E9353183151EC0005B9AB /* BMLTMarkerPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTMarkerPopupView.h; sourceTree = "<group>"; };
-		776E9354183151EC0005B9AB /* BMLTMarkerPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTMarkerPopupView.m; sourceTree = "<group>"; };
+		776E9353183151EC0005B9AB /* MGS_PopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGS_PopupView.h; sourceTree = "<group>"; };
+		776E9354183151EC0005B9AB /* MGS_PopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGS_PopupView.m; sourceTree = "<group>"; };
 		77731D3F182B00A000FFB0A2 /* MapMarkerGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MapMarkerGreen.png; sourceTree = "<group>"; };
 		77731D40182B00A000FFB0A2 /* MapMarkerGreen@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MapMarkerGreen@2X.png"; sourceTree = "<group>"; };
 		777597CE1540F15F00D45ADA /* NA Sverige.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NA Sverige.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1046,10 +1046,10 @@
 				77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */,
 				771A40EB15408EA000EF34DF /* BMLTBundleResourceLabel.h */,
 				771A40EC15408EA000EF34DF /* BMLTBundleResourceLabel.m */,
-				77238CED183197A1000CA676 /* BMLTMarkerPopupViewController.h */,
-				77238CEE183197A1000CA676 /* BMLTMarkerPopupViewController.m */,
-				776E9353183151EC0005B9AB /* BMLTMarkerPopupView.h */,
-				776E9354183151EC0005B9AB /* BMLTMarkerPopupView.m */,
+				77238CED183197A1000CA676 /* MGS_PopupViewController.h */,
+				77238CEE183197A1000CA676 /* MGS_PopupViewController.m */,
+				776E9353183151EC0005B9AB /* MGS_PopupView.h */,
+				776E9354183151EC0005B9AB /* MGS_PopupView.m */,
 			);
 			name = "Miscellaneous View and Controller Classes";
 			path = Miscellaneous;
@@ -2059,13 +2059,13 @@
 				777597691540F15E00D45ADA /* BMLT_ServiceBody.m in Sources */,
 				7775976A1540F15E00D45ADA /* BMLTAboutViewController.m in Sources */,
 				7775976B1540F15E00D45ADA /* BMLTSettingsViewController.m in Sources */,
-				776E9356183151EC0005B9AB /* BMLTMarkerPopupView.m in Sources */,
+				776E9356183151EC0005B9AB /* MGS_PopupView.m in Sources */,
 				7775976C1540F15E00D45ADA /* BMLTSimpleSearchViewController.m in Sources */,
 				7775976D1540F15E00D45ADA /* A_BMLTSearchResultsViewController.m in Sources */,
 				7775976E1540F15E00D45ADA /* A_BMLTSettingsBackgroundView.m in Sources */,
 				7775976F1540F15E00D45ADA /* A_BMLTNavBarViewController.m in Sources */,
 				777597701540F15E00D45ADA /* A_BMLTMainBackgroundView.m in Sources */,
-				77238CF1183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */,
+				77238CF1183197A1000CA676 /* MGS_PopupViewController.m in Sources */,
 				777597711540F15E00D45ADA /* BMLTDisplayListResultsViewController.m in Sources */,
 				777597721540F15E00D45ADA /* BMLTMeetingDisplayCellView.m in Sources */,
 				777597741540F15E00D45ADA /* BMLTFormatDetailViewController.m in Sources */,
@@ -2108,13 +2108,13 @@
 				777AD6801688C61700E064D0 /* BMLTSettingsViewController.m in Sources */,
 				777AD6811688C61700E064D0 /* BMLTSimpleSearchViewController.m in Sources */,
 				777AD6821688C61700E064D0 /* A_BMLTSearchResultsViewController.m in Sources */,
-				776E9355183151EC0005B9AB /* BMLTMarkerPopupView.m in Sources */,
+				776E9355183151EC0005B9AB /* MGS_PopupView.m in Sources */,
 				777AD6831688C61700E064D0 /* A_BMLTSettingsBackgroundView.m in Sources */,
 				777AD6841688C61700E064D0 /* A_BMLTNavBarViewController.m in Sources */,
 				777AD6851688C61700E064D0 /* A_BMLTMainBackgroundView.m in Sources */,
 				777AD6861688C61700E064D0 /* BMLTDisplayListResultsViewController.m in Sources */,
 				777AD6871688C61700E064D0 /* BMLTMeetingDisplayCellView.m in Sources */,
-				77238CF0183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */,
+				77238CF0183197A1000CA676 /* MGS_PopupViewController.m in Sources */,
 				777AD6881688C61700E064D0 /* BMLTFormatDetailViewController.m in Sources */,
 				777AD6891688C61700E064D0 /* BMLTMeetingDetailViewController.m in Sources */,
 				777AD68A1688C61700E064D0 /* A_BMLT_SearchViewController.m in Sources */,
@@ -2155,13 +2155,13 @@
 				771D0C8A150E893C005A707A /* BMLT_ServiceBody.m in Sources */,
 				771D0C8B150E893C005A707A /* BMLTAboutViewController.m in Sources */,
 				771D0C8C150E893C005A707A /* BMLTSettingsViewController.m in Sources */,
-				776E9357183151EC0005B9AB /* BMLTMarkerPopupView.m in Sources */,
+				776E9357183151EC0005B9AB /* MGS_PopupView.m in Sources */,
 				7711417215125CD100BCCE00 /* BMLTSimpleSearchViewController.m in Sources */,
 				77BC71981512BFA1000BEFC0 /* A_BMLTSearchResultsViewController.m in Sources */,
 				77CE3F091516252300C93BC6 /* A_BMLTSettingsBackgroundView.m in Sources */,
 				77D732A915178B38004C572D /* A_BMLTNavBarViewController.m in Sources */,
 				777B520F15192409002EDC83 /* A_BMLTMainBackgroundView.m in Sources */,
-				77238CF2183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */,
+				77238CF2183197A1000CA676 /* MGS_PopupViewController.m in Sources */,
 				776BAD981519F90A008C608C /* BMLTDisplayListResultsViewController.m in Sources */,
 				77640D41151A67BE00634143 /* BMLTMeetingDisplayCellView.m in Sources */,
 				77803C3F151C011D00A8ADC3 /* BMLTFormatDetailViewController.m in Sources */,
@@ -2203,13 +2203,13 @@
 				77AC717C15409E9F0060CA80 /* BMLT_ServiceBody.m in Sources */,
 				77AC717D15409E9F0060CA80 /* BMLTAboutViewController.m in Sources */,
 				77AC717E15409E9F0060CA80 /* BMLTSettingsViewController.m in Sources */,
-				776E9358183151EC0005B9AB /* BMLTMarkerPopupView.m in Sources */,
+				776E9358183151EC0005B9AB /* MGS_PopupView.m in Sources */,
 				77AC717F15409E9F0060CA80 /* BMLTSimpleSearchViewController.m in Sources */,
 				77AC718015409E9F0060CA80 /* A_BMLTSearchResultsViewController.m in Sources */,
 				77AC718115409E9F0060CA80 /* A_BMLTSettingsBackgroundView.m in Sources */,
 				77AC718215409E9F0060CA80 /* A_BMLTNavBarViewController.m in Sources */,
 				77AC718315409E9F0060CA80 /* A_BMLTMainBackgroundView.m in Sources */,
-				77238CF3183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */,
+				77238CF3183197A1000CA676 /* MGS_PopupViewController.m in Sources */,
 				77AC718415409E9F0060CA80 /* BMLTDisplayListResultsViewController.m in Sources */,
 				77AC718515409E9F0060CA80 /* BMLTMeetingDisplayCellView.m in Sources */,
 				77AC718715409E9F0060CA80 /* BMLTFormatDetailViewController.m in Sources */,
@@ -2251,13 +2251,13 @@
 				77B5EAD01743EEF300F50281 /* BMLT_ServiceBody.m in Sources */,
 				77B5EAD11743EEF300F50281 /* BMLTAboutViewController.m in Sources */,
 				77B5EAD21743EEF300F50281 /* BMLTSettingsViewController.m in Sources */,
-				776E935A183151EC0005B9AB /* BMLTMarkerPopupView.m in Sources */,
+				776E935A183151EC0005B9AB /* MGS_PopupView.m in Sources */,
 				77B5EAD31743EEF300F50281 /* BMLTSimpleSearchViewController.m in Sources */,
 				77B5EAD41743EEF300F50281 /* A_BMLTSearchResultsViewController.m in Sources */,
 				77B5EAD51743EEF300F50281 /* A_BMLTSettingsBackgroundView.m in Sources */,
 				77B5EAD61743EEF300F50281 /* A_BMLTNavBarViewController.m in Sources */,
 				77B5EAD71743EEF300F50281 /* A_BMLTMainBackgroundView.m in Sources */,
-				77238CF5183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */,
+				77238CF5183197A1000CA676 /* MGS_PopupViewController.m in Sources */,
 				77B5EAD81743EEF300F50281 /* BMLTDisplayListResultsViewController.m in Sources */,
 				77B5EAD91743EEF300F50281 /* BMLTMeetingDisplayCellView.m in Sources */,
 				77B5EADA1743EEF300F50281 /* BMLTFormatDetailViewController.m in Sources */,
@@ -2299,13 +2299,13 @@
 				77E249D016F563C900664FF9 /* BMLT_ServiceBody.m in Sources */,
 				77E249D116F563C900664FF9 /* BMLTAboutViewController.m in Sources */,
 				77E249D216F563C900664FF9 /* BMLTSettingsViewController.m in Sources */,
-				776E9359183151EC0005B9AB /* BMLTMarkerPopupView.m in Sources */,
+				776E9359183151EC0005B9AB /* MGS_PopupView.m in Sources */,
 				77E249D316F563C900664FF9 /* BMLTSimpleSearchViewController.m in Sources */,
 				77E249D416F563C900664FF9 /* A_BMLTSearchResultsViewController.m in Sources */,
 				77E249D516F563C900664FF9 /* A_BMLTSettingsBackgroundView.m in Sources */,
 				77E249D616F563C900664FF9 /* A_BMLTNavBarViewController.m in Sources */,
 				77E249D716F563C900664FF9 /* A_BMLTMainBackgroundView.m in Sources */,
-				77238CF4183197A1000CA676 /* BMLTMarkerPopupViewController.m in Sources */,
+				77238CF4183197A1000CA676 /* MGS_PopupViewController.m in Sources */,
 				77E249D816F563C900664FF9 /* BMLTDisplayListResultsViewController.m in Sources */,
 				77E249D916F563C900664FF9 /* BMLTMeetingDisplayCellView.m in Sources */,
 				77E249DA16F563C900664FF9 /* BMLTFormatDetailViewController.m in Sources */,

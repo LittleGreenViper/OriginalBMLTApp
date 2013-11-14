@@ -1,5 +1,5 @@
 //
-//  BMLTMarkerPopupViewController.h
+//  MGS_PopupViewController.h
 //  BMLT
 //
 //  Created by MAGSHARE.
@@ -23,11 +23,11 @@
 
 /***************************************************************************/
 /**
- \class BMLTMarkerPopupViewController
+ \class MGS_PopupViewController
  \brief This is the controller for the annotation popup that comes up over the black annotation
         in the map results view when tapped.
  */
-@interface BMLTMarkerPopupViewController : UIViewController
+@interface MGS_PopupViewController : UIViewController
 @property (atomic, weak, readwrite) IBOutlet UIView *targetView;        ///< This will be the view that is pointed to
 @property (atomic, weak, readwrite) IBOutlet UIView *contextView;       ///< This will be the container view.
 @property (atomic, weak, readwrite) IBOutlet UIView *contentsSubview;   ///< This will be what goes inside the popup.

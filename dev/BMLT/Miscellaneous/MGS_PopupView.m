@@ -1,5 +1,5 @@
 //
-//  BMLTMarkerPopupView.m
+//  MGS_PopupView.m
 //  BMLT
 //
 //  Created by MAGSHARE.
@@ -19,21 +19,21 @@
 //  along with this code.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-#import "BMLTMarkerPopupView.h"
+#import "MGS_PopupView.h"
 
 static const float  s_CornerRoundnessInPixels   = 8.0;
 
 /***************************************************************************/
 /**
- \class BMLTMarkerPopupView
+ \class MGS_PopupView
  \brief This is the view for the annotation popup that comes up over the black annotation
         in the map results view when tapped.
  */
-@interface BMLTMarkerPopupView ()
+@interface MGS_PopupView ()
 @property   (assign, atomic, readwrite) BMLT_PopupMetrics     p_metrics;    ///< This will hold the metrics for this view.
 @end
 
-@implementation BMLTMarkerPopupView
+@implementation MGS_PopupView
 
 /***************************************************************************/
 /**

@@ -1,5 +1,5 @@
 //
-//  BMLTMarkerPopupView.h
+//  MGS_PopupView.h
 //  BMLT
 //
 //  Created by MAGSHARE.
@@ -31,10 +31,10 @@ typedef struct  /// This will contain the various metrics for the popup view.
 
 /***************************************************************************/
 /**
- \class BMLTMarkerPopupView
+ \class MGS_PopupView
  \brief This is the view for the annotation popup that comes up over the black annotation
         in the map results view when tapped.
  */
-@interface BMLTMarkerPopupView : UIView
+@interface MGS_PopupView : UIView
 - (id)initWithMetrics:(BMLT_PopupMetrics)inMetrics;
 @end
