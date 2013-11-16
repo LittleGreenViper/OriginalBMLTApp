@@ -21,13 +21,24 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum
+{
+    MGS_PopupDirectionEnum_Undefined = 0,
+    MGS_PopupDirectionEnum_Top,
+    MGS_PopupDirectionEnum_Right,
+    MGS_PopupDirectionEnum_Left,
+    MGS_PopupDirectionEnum_Bottom
+} MGS_PopupDirectionEnum;
+
 typedef struct  /// This will contain the various metrics for the popup view.
 {
-    CGRect  popupViewFrame;     ///< This is the frame (in container coordinates) of the popup view.
-    CGPoint popupArrowPoint;    ///< This is the point (in local popup view coordinates) of the outer tip of the arrow.
-    CGFloat arrowBaseWidth;     ///< The width of the arrow base.
-    CGFloat arrowLength;        ///< The length of the arrow.
-} BMLT_PopupMetrics;
+    CGRect                  popupViewFrame;     ///< This is the frame (in container coordinates) of the popup view.
+    CGSize                  containerSize;      ///< This is the size (in container coordinates) of the containing view.
+    CGPoint                 popupArrowPoint;    ///< This is the point (in local popup view coordinates) of the outer tip of the arrow.
+    CGFloat                 arrowBaseWidth;     ///< The width of the arrow base.
+    CGFloat                 arrowLength;        ///< The length of the arrow.
+    MGS_PopupDirectionEnum  direction;          ///< The relationship of the popup to the target.
+} MGS_PopupMetrics;
 
 /***************************************************************************/
 /**
@@ -36,5 +47,5 @@ typedef struct  /// This will contain the various metrics for the popup view.
         in the map results view when tapped.
  */
 @interface MGS_PopupView : UIView
-- (id)initWithMetrics:(BMLT_PopupMetrics)inMetrics;
+- (id)initWithMetrics:(MGS_PopupMetrics)inMetrics;
 @end

@@ -32,4 +32,5 @@
 @property (atomic, weak, readwrite) IBOutlet UIView *contextView;       ///< This will be the container view.
 @property (atomic, weak, readwrite) IBOutlet UIView *contentsSubview;   ///< This will be what goes inside the popup.
 - (id)initWithTargetView:(UIView*)inTargetView andContentView:(UIView*)inContentView;
+- (IBAction)closePopup:(id)sender;
 @end

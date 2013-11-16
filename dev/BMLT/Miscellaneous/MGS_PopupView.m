@@ -21,7 +21,7 @@
 
 #import "MGS_PopupView.h"
 
-static const float  s_CornerRoundnessInPixels   = 8.0;
+static const CGFloat    s_CornerRoundnessInPixels   = 4.0;  ///< The size of the corners.
 
 /***************************************************************************/
 /**
@@ -30,7 +30,8 @@ static const float  s_CornerRoundnessInPixels   = 8.0;
         in the map results view when tapped.
  */
 @interface MGS_PopupView ()
-@property   (assign, atomic, readwrite) BMLT_PopupMetrics     p_metrics;    ///< This will hold the metrics for this view.
+@property   (assign, atomic, readwrite)     MGS_PopupMetrics   p_metrics;    ///< This will hold the metrics for this view.
+@property   (atomic, strong, readwrite)     CAShapeLayer        *p_drawingLayer; ///< This is the shape layer we use for the actual drawing.
 @end
 
 @implementation MGS_PopupView
@@ -39,8 +40,11 @@ static const float  s_CornerRoundnessInPixels   = 8.0;
 /**
  \brief Designated initializer
  */
-- (id)initWithMetrics:(BMLT_PopupMetrics)inMetrics  ///< The metrics that determine the shape and location of the view.
+- (id)initWithMetrics:(MGS_PopupMetrics)inMetrics  ///< The metrics that determine the shape and location of the view.
 {
+#ifdef DEBUG
+    NSLog ( @"\r----------------------------------------------\rMGS_PopupView::initWithMetrics:\r----------------------------------------------\r" );
+#endif
     self = [super initWithFrame:inMetrics.popupViewFrame];
     
     if ( self )
@@ -57,34 +61,120 @@ static const float  s_CornerRoundnessInPixels   = 8.0;
  */
 - (void)layoutSubviews
 {
+#ifdef DEBUG
+    NSLog ( @"\r----------------------------------------------\rMGS_PopupView::layoutSubviews\r----------------------------------------------\r" );
+#endif
     [super layoutSubviews];
     
     CGRect  drawingRect = [self bounds];
 
     if ( !CGRectIsEmpty ( drawingRect ) )
-    {
-        CAShapeLayer    *maskLayer = [CAShapeLayer layer];      // Set up a shape layer for our mask.
-        
-        if ( maskLayer )
         {
+#ifdef DEBUG
+    NSLog ( @"Draw Rect Bounds: (%f, %f), (%f, %f)", drawingRect.origin.x, drawingRect.origin.y, drawingRect.size.width, drawingRect.size.height );
+#endif
+        CAShapeLayer    *maskLayer = [CAShapeLayer layer];      // Set up a shape layer for our mask.
+        CAShapeLayer    *outlineLayer = [CAShapeLayer layer];   // Set up a shape layer for our view drawing.
+    
+        if ( maskLayer && outlineLayer )
+            {
+            [outlineLayer setFrame:drawingRect];
             [maskLayer setFrame:drawingRect];
+            
+            if ( [self p_drawingLayer] )
+                {
+                [[self p_drawingLayer] removeFromSuperlayer];
+                [self setP_drawingLayer:nil];
+                }
             
             float roundness = s_CornerRoundnessInPixels;
             
-            UIBezierPath    *framePath = [UIBezierPath bezierPathWithRoundedRect:drawingRect
-                                                               byRoundingCorners:UIRectCornerAllCorners
-                                                                     cornerRadii:CGSizeMake ( roundness, roundness )
-                                          ];
-            
+            UIBezierPath    *framePath = [[UIBezierPath alloc] init];
             
             if ( framePath )
-            {
+                {
+                // Draw the outline.
+                
+                // Start at the top of the left side.
+                [framePath moveToPoint:CGPointMake ( 0, s_CornerRoundnessInPixels )];
+                
+                // Add the top left corner.
+                [framePath addArcWithCenter:CGPointMake ( s_CornerRoundnessInPixels, s_CornerRoundnessInPixels ) radius:s_CornerRoundnessInPixels startAngle:M_PI endAngle:((3 * M_PI) / 2.0) clockwise:YES];
+                
+                // If we are under the target, we break for the arrow.
+                if ( [self p_metrics].direction == MGS_PopupDirectionEnum_Bottom )
+                    {
+                    CGPoint arrowBaseRight = CGPointMake ( [self p_metrics].popupArrowPoint.x + ([self p_metrics].arrowBaseWidth / 2.0), 0);
+                    CGPoint arrowBaseLeft = CGPointMake ( arrowBaseRight.x - [self p_metrics].arrowBaseWidth, 0);
+                    
+                    [framePath addLineToPoint:arrowBaseLeft];
+                    [framePath addLineToPoint:[self p_metrics].popupArrowPoint];
+                    [framePath addLineToPoint:arrowBaseRight];
+                    }
+                
+                [framePath addLineToPoint:CGPointMake ( [self p_metrics].popupViewFrame.size.width - s_CornerRoundnessInPixels, 0 )];
+                
+                // Add the top right corner.
+                [framePath addArcWithCenter:CGPointMake ( [self p_metrics].popupViewFrame.size.width - s_CornerRoundnessInPixels, s_CornerRoundnessInPixels ) radius:s_CornerRoundnessInPixels startAngle:((3 * M_PI) / 2.0) endAngle:0 clockwise:YES];
+                
+                // If we are to the left of the target, we break for the arrow.
+                if ( [self p_metrics].direction == MGS_PopupDirectionEnum_Left )
+                    {
+                    CGPoint arrowBaseBottom = CGPointMake ( [self p_metrics].popupViewFrame.size.width, [self p_metrics].popupArrowPoint.y - ([self p_metrics].arrowBaseWidth / 2.0) );
+                    CGPoint arrowBaseTop = CGPointMake ( [self p_metrics].popupViewFrame.size.width, arrowBaseBottom.y + [self p_metrics].arrowBaseWidth);
+                    
+                    [framePath addLineToPoint:arrowBaseBottom];
+                    [framePath addLineToPoint:[self p_metrics].popupArrowPoint];
+                    [framePath addLineToPoint:arrowBaseTop];
+                    }
+                
+               [framePath addLineToPoint:CGPointMake ( [self p_metrics].popupViewFrame.size.width, [self p_metrics].popupViewFrame.size.height - s_CornerRoundnessInPixels )];
+                
+                // Add the bottom right corner.
+                [framePath addArcWithCenter:CGPointMake ( [self p_metrics].popupViewFrame.size.width - s_CornerRoundnessInPixels, [self p_metrics].popupViewFrame.size.height - s_CornerRoundnessInPixels ) radius:s_CornerRoundnessInPixels startAngle:0 endAngle:M_PI / 2 clockwise:YES];
+                
+                // If we are over the target, we break for the arrow.
+                if ( [self p_metrics].direction == MGS_PopupDirectionEnum_Top )
+                    {
+                    CGPoint arrowBaseRight = CGPointMake ( [self p_metrics].popupArrowPoint.x + ([self p_metrics].arrowBaseWidth / 2.0), [self p_metrics].popupViewFrame.size.height);
+                    CGPoint arrowBaseLeft = CGPointMake ( arrowBaseRight.x - [self p_metrics].arrowBaseWidth, [self p_metrics].popupViewFrame.size.height);
+                    
+                    [framePath addLineToPoint:arrowBaseRight];
+                    [framePath addLineToPoint:[self p_metrics].popupArrowPoint];
+                    [framePath addLineToPoint:arrowBaseLeft];
+                    }
+
+                [framePath addLineToPoint:CGPointMake ( s_CornerRoundnessInPixels, [self p_metrics].popupViewFrame.size.height )];
+                
+                // Add the bottom left corner.
+                [framePath addArcWithCenter:CGPointMake ( s_CornerRoundnessInPixels, [self p_metrics].popupViewFrame.size.height - s_CornerRoundnessInPixels ) radius:s_CornerRoundnessInPixels startAngle:M_PI / 2 endAngle:M_PI clockwise:YES];
+                
+                // If we are to the right of the target, we break for the arrow.
+                if ( [self p_metrics].direction == MGS_PopupDirectionEnum_Right )
+                    {
+                    CGPoint arrowBaseBottom = CGPointMake ( 0, [self p_metrics].popupArrowPoint.y - ([self p_metrics].arrowBaseWidth / 2.0) );
+                    CGPoint arrowBaseTop = CGPointMake ( 0, arrowBaseBottom.y + [self p_metrics].arrowBaseWidth);
+                    
+                    [framePath addLineToPoint:arrowBaseBottom];
+                    [framePath addLineToPoint:[self p_metrics].popupArrowPoint];
+                    [framePath addLineToPoint:arrowBaseTop];
+                    }
+                
+                // Finish us up.
+                [framePath addLineToPoint:CGPointMake ( 0, s_CornerRoundnessInPixels )];
+                
+                [outlineLayer setCornerRadius:roundness];
+                [outlineLayer setPath:[framePath CGPath]];
+                [outlineLayer setFillColor:[[UIColor blackColor] CGColor]];
+                
+                [self setP_drawingLayer:outlineLayer];
+                [[self layer] insertSublayer:outlineLayer below:[[[self layer] sublayers] objectAtIndex:0]];
+                
                 [maskLayer setCornerRadius:roundness];
                 [maskLayer setPath:[framePath CGPath]];
                 [[self layer] setMask:maskLayer];
+                }
             }
         }
-    }
 }
-
 @end
