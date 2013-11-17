@@ -22,6 +22,7 @@
 #import "BMLT_Results_MapPointAnnotationView.h"
 #import "BMLTDisplayListResultsViewController.h"
 #import "BMLT_ListPrintPageRenderer.h"
+#import "MGS_PopupViewController.h"
 
 static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum distance apart for map annotations, before they are combined.
 
@@ -39,6 +40,8 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
     UIPopoverController *listPopover;   ///< This will handle the list view in a popover.
 }
 @property (strong, atomic)  UIBarButtonItem *_toggleButton;
+
+- (void)pm_openMarkerPopup:(UIView*)inView;
 @end
 
 /*****************************************************************/
@@ -49,6 +52,25 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
 @implementation BMLTMapResultsViewController
 @synthesize myMapView = _myMapView;     ///< This is our MkMapView object.
 @synthesize myMarker = _myMarker;       ///< This holds the black marker.
+
+- (void)pm_openMarkerPopup:(UIView*)inView
+{
+#ifdef DEBUG
+    NSLog(@"BMLTMapResultsViewController pm_openMarkerPopup");
+#endif
+    CGRect  popupFrame = CGRectMake(0, 0, 120, 80);
+    UILabel *viewLabel = [[UILabel alloc] initWithFrame:popupFrame];
+    [viewLabel setText:NSLocalizedString ( @"BLACK-MARKER-TITLE", nil )];
+    [viewLabel setFont:[UIFont italicSystemFontOfSize:11]];
+    [viewLabel setBackgroundColor:[UIColor blackColor]];
+    [viewLabel setTextColor:[UIColor whiteColor]];
+    [viewLabel setNumberOfLines:6];
+    [viewLabel setTextAlignment:NSTextAlignmentCenter];
+    [viewLabel setLineBreakMode:NSLineBreakByWordWrapping];
+    [viewLabel setAdjustsFontSizeToFitWidth:YES];
+    [self setMyMarkerPopup:[[MGS_PopupViewController alloc] initWithTargetView:inView andContentView:viewLabel]];
+    [[self myMarkerPopup] setDelegate:self];
+}
 
 #pragma mark - View Lifecycle -
 /*****************************************************************/
@@ -71,6 +93,23 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
         [[self navigationItem] setRightBarButtonItems:buttons];
         }
     return self;
+}
+
+/*****************************************************************/
+/**
+ \brief Closes the black marker popup.
+ *****************************************************************/
+- (void)closeMarkerPopup
+{
+#ifdef DEBUG
+    NSLog(@"BMLTMapResultsViewController closeMarkerPopup");
+#endif
+    if ( [self myMarkerPopup] )
+        {
+        MGS_PopupViewController *closer = [self myMarkerPopup];
+        [self setMyMarkerPopup:nil];
+        [closer closePopup:nil];
+        }
 }
 
 /*****************************************************************/
@@ -136,6 +175,7 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
  *****************************************************************/
 - (void)displayMapAnnotations:(NSArray *)inResults  ///< This is an NSArray of BMLT_Meeting objects. Each one represents a meeting.
 {
+    [self closeMarkerPopup];
     // First, clear out all the old annotations (there shouldn't be any).
     [[self myMapView] removeAnnotations:[[self myMapView] annotations]];
     
@@ -170,6 +210,7 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
  *****************************************************************/
 - (void)clearMapCompletely
 {
+    [self closeMarkerPopup];
     [self clearLastRegion];
     if ( [[[self myMapView] annotations] count] )
         {
@@ -345,8 +386,8 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
  *****************************************************************/
 - (void)displayAllMarkersIfNeeded
 {
-    if ( (ABS(lastRegion.span.latitudeDelta - [[self myMapView] region].span.latitudeDelta) > (ABS(lastRegion.span.latitudeDelta) * 0.01))
-        || (ABS(lastRegion.span.longitudeDelta - [[self myMapView] region].span.longitudeDelta) > (ABS(lastRegion.span.longitudeDelta) * 0.01)) )
+    if ( (ABS(lastRegion.span.latitudeDelta - [[self myMapView] region].span.latitudeDelta) > (ABS(lastRegion.span.latitudeDelta) * 0.001))
+        || (ABS(lastRegion.span.longitudeDelta - [[self myMapView] region].span.longitudeDelta) > (ABS(lastRegion.span.longitudeDelta) * 0.001)) )
         {
 #ifdef DEBUG
         NSLog(@"BMLTMapResultsViewController mapView:displayAllMarkersIfNeeded -Redrawing Markers, Based on a Delta of (%f, %f).", lastRegion.span.latitudeDelta - [[self myMapView] region].span.latitudeDelta, lastRegion.span.longitudeDelta - [[self myMapView] region].span.longitudeDelta);
@@ -368,6 +409,7 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
  *****************************************************************/
 - (void)newSearchAtLocation:(CLLocationCoordinate2D)inCoordinate
 {
+    [self closeMarkerPopup];
     [[BMLTAppDelegate getBMLTAppDelegate] clearAllSearchResults:YES];
     [[BMLTAppDelegate getBMLTAppDelegate] setSearchMapMarkerLoc:[[self myMarker] coordinate]];
     [[BMLTAppDelegate getBMLTAppDelegate] searchForMeetingsNearMe:inCoordinate withParams:[[BMLTAppDelegate getBMLTAppDelegate] lastSearchParams]];
@@ -503,6 +545,15 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
 
 /*****************************************************************/
 /**
+ \brief When the region is about to change, we make sure that our marker popup is closed.
+ *****************************************************************/
+- (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
+{
+    [self closeMarkerPopup];
+}
+
+/*****************************************************************/
+/**
  \brief When the region changes, we check to see if we need to redraw the markers.
  *****************************************************************/
 - (void)mapView:(MKMapView *)mapView    ///< The map view
@@ -575,6 +626,7 @@ didSelectAnnotationView:(MKAnnotationView *)inView  ///< The selected annotation
                     NSLog(@"BMLTMapResultsViewController::mapView:didSelectAnnotationView:inView:");
                     NSLog(@"   Black Marker Selected.");
 #endif
+                    [self pm_openMarkerPopup:inView];
                     }
                 }
 
@@ -594,6 +646,7 @@ didSelectAnnotationView:(MKAnnotationView *)inView  ///< The selected annotation
 didChangeDragState:(MKAnnotationViewDragState)newState  ///< The new state of the annotation.
    fromOldState:(MKAnnotationViewDragState)oldState     ///< The original state of the annotation.
 {
+    [self closeMarkerPopup];
     if ( newState == MKAnnotationViewDragStateNone )
         {
 #ifdef DEBUG

@@ -23,8 +23,8 @@
 #import "BMLT_Results_MapPointAnnotationView.h"
 #import <MapKit/MapKit.h>
 
-@class BMLTMapResultsViewController;
 @class BMLT_Meeting;
+@class MGS_PopupViewController;
 
 /*****************************************************************/
 /**
@@ -34,6 +34,7 @@
 @interface BMLTMapResultsViewController : A_BMLTSearchResultsViewController <MKMapViewDelegate, BMLT_Results_MapPointAnnotationDelegate>
 @property (weak, nonatomic) IBOutlet    MKMapView                           *myMapView;
 @property (strong, atomic, readwrite)   BMLT_Results_MapPointAnnotation     *myMarker;
+@property (strong, atomic, readwrite)   MGS_PopupViewController             *myMarkerPopup;
 
 - (void)setMapInit:(BOOL)isInit;
 - (BOOL)isMapInitialized;
@@ -47,4 +48,5 @@
 - (void)displayAllMarkersIfNeeded;
 - (IBAction)toggleMapView:(id)sender;
 - (void)newSearchAtLocation:(CLLocationCoordinate2D)inCoordinate;
+- (void)closeMarkerPopup;
 @end

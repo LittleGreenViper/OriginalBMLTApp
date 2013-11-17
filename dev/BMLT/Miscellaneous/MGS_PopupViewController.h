@@ -21,6 +21,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class BMLTMapResultsViewController;
+
 /***************************************************************************/
 /**
  \class MGS_PopupViewController
@@ -28,9 +30,11 @@
         in the map results view when tapped.
  */
 @interface MGS_PopupViewController : UIViewController
-@property (atomic, weak, readwrite) IBOutlet UIView *targetView;        ///< This will be the view that is pointed to
-@property (atomic, weak, readwrite) IBOutlet UIView *contextView;       ///< This will be the container view.
-@property (atomic, weak, readwrite) IBOutlet UIView *contentsSubview;   ///< This will be what goes inside the popup.
+@property (atomic, weak, readwrite) IBOutlet UIView *targetView;            ///< This will be the view that is pointed to
+@property (atomic, weak, readwrite) IBOutlet UIView *contextView;           ///< This will be the container view.
+@property (atomic, weak, readwrite) BMLTMapResultsViewController *delegate; ///< This will be the controller that needs to be called to clean up.
+@property (atomic, strong, readwrite) IBOutlet UIView *contentsSubview;     ///< This will be what goes inside the popup.
+
 - (id)initWithTargetView:(UIView*)inTargetView andContentView:(UIView*)inContentView;
 - (IBAction)closePopup:(id)sender;
 @end

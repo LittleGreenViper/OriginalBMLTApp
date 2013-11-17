@@ -82,8 +82,8 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
-== Version 2.6
-* TBD
+== Version 2.6a1
+* November 16, 2013
 * Changed the app to use a different type of checkbox. This one works better with iOS7, and reduces the size of the app.
 * Several cosmetic changes to make the app work better with iOS7. No more fancy buttons. Makes the app smaller, too.
 * Got rid of the usably useless location button in the Advanced screen of the iPad version.
@@ -91,8 +91,7 @@ CHANGELIST
 * Added robustness to the network checking mechanism.
 * Fixed a rather nasty dragging bug that no one seems to have noticed (probably because they don't use the map marker drag).
 * Added support for weeks starting on days of the week other than Sunday.
-* Added the ability to do a new map search on iPads by dragging the black marker to new places on the search results map. You can't have "1-tap," because that interferes with tapping on the result markers.
-* Removed dragging the marker from the main search spec map on the iPad. It wasn't particularly useful, as you have "1-tap" setting, there.
+* Added the ability to do a new map search on iPads (and iPhones) by dragging the black marker to new places on the Map Search Results screen. You can't have "1-tap" in Map Search Results because that interferes with tapping on the result markers.
 * Made the dragging marker more usable.
 
 == Version 2.5.7

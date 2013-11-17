@@ -21,6 +21,7 @@
 
 #import "MGS_PopupViewController.h"
 #import "MGS_PopupView.h"
+#import "BMLTMapResultsViewController.h"
 
 static const float  s_BaseArrowWidthInPixels    = 16.0; ///< This is how wide (or tall) the base of the arrow will be.
 static const float  s_ArrowLengthInPixels       = 16.0; ///< This is how far out it will stick from the 
@@ -33,7 +34,13 @@ static const float  s_PaddingInPixels           = 1.0;  ///< This is how much "b
         in the map results view when tapped.
  */
 @interface MGS_PopupViewController ()
-@property   (atomic, strong, readwrite) UITapGestureRecognizer  *p_tapper; ///< This will be a gesture recognizer that we'll add to the container. We trap taps, and close the popup.
+@property   (atomic, strong, readwrite) UITapGestureRecognizer              *p_tapper;
+@property   (atomic, strong, readwrite) UIPinchGestureRecognizer            *p_pincher;
+@property   (atomic, strong, readwrite) UIRotationGestureRecognizer         *p_rotator;
+@property   (atomic, strong, readwrite) UISwipeGestureRecognizer            *p_swiper;
+@property   (atomic, strong, readwrite) UIPanGestureRecognizer              *p_panner;
+@property   (atomic, strong, readwrite) UIScreenEdgePanGestureRecognizer    *p_edgier;
+@property   (atomic, strong, readwrite) UILongPressGestureRecognizer        *p_longer;
 
 + (MGS_PopupMetrics)pm_calculateArrow:(MGS_PopupMetrics)inMetrics andTarget:(UIView*)inTarget;
 
@@ -221,7 +228,30 @@ static const float  s_PaddingInPixels           = 1.0;  ///< This is how much "b
         _targetView = inTargetView;
         _contextView = [inTargetView superview];
         _contentsSubview = inContentView;
+        // What we do, is hog up all the gestures, so we can be sure of closing the popup.
         _p_tapper = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
+        _p_pincher = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
+        _p_rotator = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
+        _p_swiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
+        _p_panner = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
+        _p_edgier = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
+        _p_longer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
+        [[self contextView] addGestureRecognizer:[self p_tapper]];
+        [[self contextView] addGestureRecognizer:[self p_pincher]];
+        [[self contextView] addGestureRecognizer:[self p_rotator]];
+        [[self contextView] addGestureRecognizer:[self p_swiper]];
+        [[self contextView] addGestureRecognizer:[self p_panner]];
+        [[self contextView] addGestureRecognizer:[self p_edgier]];
+        [[self contextView] addGestureRecognizer:[self p_longer]];
+
+        [[self view] addGestureRecognizer:[self p_tapper]];
+        [[self view] addGestureRecognizer:[self p_pincher]];
+        [[self view] addGestureRecognizer:[self p_rotator]];
+        [[self view] addGestureRecognizer:[self p_swiper]];
+        [[self view] addGestureRecognizer:[self p_panner]];
+        [[self view] addGestureRecognizer:[self p_edgier]];
+        [[self view] addGestureRecognizer:[self p_longer]];
+
         [self pm_setUp];
         }
     return self;
@@ -237,7 +267,28 @@ static const float  s_PaddingInPixels           = 1.0;  ///< This is how much "b
     NSLog ( @"\r----------------------------------------------\rMGS_PopupViewController::viewWillDisappear\r----------------------------------------------\r" );
 #endif
     [[self contextView] removeGestureRecognizer:[self p_tapper]];
+    [[self contextView] removeGestureRecognizer:[self p_pincher]];
+    [[self contextView] removeGestureRecognizer:[self p_rotator]];
+    [[self contextView] removeGestureRecognizer:[self p_swiper]];
+    [[self contextView] removeGestureRecognizer:[self p_panner]];
+    [[self contextView] removeGestureRecognizer:[self p_edgier]];
+    [[self contextView] removeGestureRecognizer:[self p_longer]];
+    
+    [[self view] removeGestureRecognizer:[self p_tapper]];
+    [[self view] removeGestureRecognizer:[self p_pincher]];
+    [[self view] removeGestureRecognizer:[self p_rotator]];
+    [[self view] removeGestureRecognizer:[self p_swiper]];
+    [[self view] removeGestureRecognizer:[self p_panner]];
+    [[self view] removeGestureRecognizer:[self p_edgier]];
+    [[self view] removeGestureRecognizer:[self p_longer]];
+    
     [self setP_tapper:nil];
+    [self setP_pincher:nil];
+    [self setP_rotator:nil];
+    [self setP_swiper:nil];
+    [self setP_panner:nil];
+    [self setP_edgier:nil];
+    [self setP_longer:nil];
 }
 
 /***************************************************************************/
@@ -249,6 +300,7 @@ static const float  s_PaddingInPixels           = 1.0;  ///< This is how much "b
 #ifdef DEBUG
     NSLog ( @"\r----------------------------------------------\rMGS_PopupViewController::closePopup\r----------------------------------------------\r" );
 #endif
+    [[self delegate] closeMarkerPopup];
     [[self view] removeFromSuperview];
 }
 
