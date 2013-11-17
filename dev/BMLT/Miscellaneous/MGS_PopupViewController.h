@@ -25,6 +25,21 @@
 - (void)closeMarkerPopup;
 @end
 
+@class MGS_PopupViewController; ///< Forward declaration for the gesture recognizer.
+
+/*****************************************************************/
+/**
+ \class MGS_PopupViewGestureRecognizer
+ \brief This is used to find taps anywhere in the assigned view.
+        It is inspired (and cribbed) from here:
+        http://stackoverflow.com/questions/1049889/how-to-intercept-touches-events-on-a-mkmapview-or-uiwebview-objects/4064538#4064538
+ *****************************************************************/
+@interface MGS_PopupViewGestureRecognizer : UIGestureRecognizer
+@property (atomic, weak) MGS_PopupViewController  *myController;  ///< This will hold the view controller that we'll use to update.
+
+- (id)initWithController:(MGS_PopupViewController*)inController;
+@end
+
 /***************************************************************************/
 /**
  \class MGS_PopupViewController

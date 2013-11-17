@@ -24,7 +24,51 @@
 
 static const float  s_BaseArrowWidthInPixels    = 16.0; ///< This is how wide (or tall) the base of the arrow will be.
 static const float  s_ArrowLengthInPixels       = 16.0; ///< This is how far out it will stick from the 
-static const float  s_PaddingInPixels           = 1.0;  ///< This is how much "breathing room" the contents will get.
+
+/*****************************************************************/
+/**
+ \class MGS_PopupViewGestureRecognizer
+ \brief This is used to find taps anywhere in the assigned view.
+        It is inspired (and cribbed) from here:
+        http://stackoverflow.com/questions/1049889/how-to-intercept-touches-events-on-a-mkmapview-or-uiwebview-objects/4064538#4064538
+ *****************************************************************/
+@implementation MGS_PopupViewGestureRecognizer
+
+/*****************************************************************/
+/**
+ \brief Initialize the gesture recognizer.
+ \returns self
+ *****************************************************************/
+- (id)initWithController:(MGS_PopupViewController*)inController;    ///< The controller to be affected.
+{
+    self = [super init];
+    
+    if ( self )
+        {
+        _myController = inController;
+        [self setCancelsTouchesInView:NO];
+        }
+    
+    return self;
+}
+
+/*****************************************************************/
+/**
+ \brief Called when the touch has completed, and the recognizer has decided it was legit.
+ *****************************************************************/
+- (void)touchesEnded:(NSSet *)touches   ///< The touches involved. We ignore this.
+           withEvent:(UIEvent *)event   ///< The event in question. We use this data.
+{
+#ifdef DEBUG
+    NSLog(@"MGS_PopupViewGestureRecognizer::touchesEnded:%@ withEvent:%@", touches, [event description]);
+#endif
+    
+    if ( (UITouch *)[[event touchesForGestureRecognizer:self] anyObject] )
+        {
+        [[self myController] closePopup:nil];
+        }
+}
+@end
 
 /***************************************************************************/
 /**
@@ -33,13 +77,7 @@ static const float  s_PaddingInPixels           = 1.0;  ///< This is how much "b
         in the map results view when tapped.
  */
 @interface MGS_PopupViewController ()
-@property   (atomic, strong, readwrite) UITapGestureRecognizer              *p_tapper;
-@property   (atomic, strong, readwrite) UIPinchGestureRecognizer            *p_pincher;
-@property   (atomic, strong, readwrite) UIRotationGestureRecognizer         *p_rotator;
-@property   (atomic, strong, readwrite) UISwipeGestureRecognizer            *p_swiper;
-@property   (atomic, strong, readwrite) UIPanGestureRecognizer              *p_panner;
-@property   (atomic, strong, readwrite) UIScreenEdgePanGestureRecognizer    *p_edgier;
-@property   (atomic, strong, readwrite) UILongPressGestureRecognizer        *p_longer;
+@property   (atomic, strong, readwrite) MGS_PopupViewGestureRecognizer      *p_tapper;
 
 + (MGS_PopupMetrics)pm_calculateArrow:(MGS_PopupMetrics)inMetrics andTarget:(UIView*)inTarget;
 
@@ -228,29 +266,10 @@ static const float  s_PaddingInPixels           = 1.0;  ///< This is how much "b
         _contextView = [inTargetView superview];
         _contentsSubview = inContentView;
         // What we do, is hog up all the gestures, so we can be sure of closing the popup.
-        _p_tapper = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
-        _p_pincher = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
-        _p_rotator = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
-        _p_swiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
-        _p_panner = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
-        _p_edgier = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
-        _p_longer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(closePopup:)];
-        [[self contextView] addGestureRecognizer:[self p_tapper]];
-        [[self contextView] addGestureRecognizer:[self p_pincher]];
-        [[self contextView] addGestureRecognizer:[self p_rotator]];
-        [[self contextView] addGestureRecognizer:[self p_swiper]];
-        [[self contextView] addGestureRecognizer:[self p_panner]];
-        [[self contextView] addGestureRecognizer:[self p_edgier]];
-        [[self contextView] addGestureRecognizer:[self p_longer]];
-
+        _p_tapper = [[MGS_PopupViewGestureRecognizer alloc] initWithController:self];
+        [[self contextView] addGestureRecognizer:[self p_tapper]];  // You get a bullet. You get a bullet. You get a bullet. EVERYBODY gets a bullet!
+        [[self targetView] addGestureRecognizer:[self p_tapper]];
         [[self view] addGestureRecognizer:[self p_tapper]];
-        [[self view] addGestureRecognizer:[self p_pincher]];
-        [[self view] addGestureRecognizer:[self p_rotator]];
-        [[self view] addGestureRecognizer:[self p_swiper]];
-        [[self view] addGestureRecognizer:[self p_panner]];
-        [[self view] addGestureRecognizer:[self p_edgier]];
-        [[self view] addGestureRecognizer:[self p_longer]];
-
         [self pm_setUp];
         }
     return self;
@@ -266,28 +285,9 @@ static const float  s_PaddingInPixels           = 1.0;  ///< This is how much "b
     NSLog ( @"\r----------------------------------------------\rMGS_PopupViewController::viewWillDisappear\r----------------------------------------------\r" );
 #endif
     [[self contextView] removeGestureRecognizer:[self p_tapper]];
-    [[self contextView] removeGestureRecognizer:[self p_pincher]];
-    [[self contextView] removeGestureRecognizer:[self p_rotator]];
-    [[self contextView] removeGestureRecognizer:[self p_swiper]];
-    [[self contextView] removeGestureRecognizer:[self p_panner]];
-    [[self contextView] removeGestureRecognizer:[self p_edgier]];
-    [[self contextView] removeGestureRecognizer:[self p_longer]];
-    
+    [[self targetView] removeGestureRecognizer:[self p_tapper]];
     [[self view] removeGestureRecognizer:[self p_tapper]];
-    [[self view] removeGestureRecognizer:[self p_pincher]];
-    [[self view] removeGestureRecognizer:[self p_rotator]];
-    [[self view] removeGestureRecognizer:[self p_swiper]];
-    [[self view] removeGestureRecognizer:[self p_panner]];
-    [[self view] removeGestureRecognizer:[self p_edgier]];
-    [[self view] removeGestureRecognizer:[self p_longer]];
-    
     [self setP_tapper:nil];
-    [self setP_pincher:nil];
-    [self setP_rotator:nil];
-    [self setP_swiper:nil];
-    [self setP_panner:nil];
-    [self setP_edgier:nil];
-    [self setP_longer:nil];
 }
 
 /***************************************************************************/
@@ -299,7 +299,11 @@ static const float  s_PaddingInPixels           = 1.0;  ///< This is how much "b
 #ifdef DEBUG
     NSLog ( @"\r----------------------------------------------\rMGS_PopupViewController::closePopup\r----------------------------------------------\r" );
 #endif
-    [[self delegate] closeMarkerPopup];
+    if ( [self delegate] && [[self delegate] respondsToSelector:@selector(closeMarkerPopup)] )
+        {
+        [[self delegate] closeMarkerPopup];
+        }
+    
     [[self view] removeFromSuperview];
 }
 
@@ -325,7 +329,7 @@ static const float  s_PaddingInPixels           = 1.0;  ///< This is how much "b
     
     [self setView:[[MGS_PopupView alloc] initWithMetrics:metrics]];
     [[self view] setFrame:metrics.popupViewFrame];
-    [[self contentsSubview] setFrame:CGRectMake ( s_PaddingInPixels, s_PaddingInPixels, [[self contentsSubview] frame].size.width, [[self contentsSubview] frame].size.height )];
+    [[self contentsSubview] setFrame:[[self contentsSubview] bounds]];
     [[self view] addSubview:[self contentsSubview]];
     [[self contextView] addSubview:[self view]];
     [[self contextView] addGestureRecognizer:[self p_tapper]];
@@ -353,7 +357,7 @@ static const float  s_PaddingInPixels           = 1.0;  ///< This is how much "b
     ret.arrowBaseWidth = s_BaseArrowWidthInPixels;
     ret.arrowLength = s_ArrowLengthInPixels;
     // Start with a frame that is in the upper left, and big enough for the contents.
-    ret.popupViewFrame = CGRectInset ( [[self contentsSubview] bounds], -s_PaddingInPixels, -s_PaddingInPixels );
+    ret.popupViewFrame = [[self contentsSubview] bounds];
     ret.popupViewFrame.origin = CGPointZero;
     
 #ifdef DEBUG
