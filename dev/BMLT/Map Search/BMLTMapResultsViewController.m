@@ -24,7 +24,11 @@
 #import "BMLT_ListPrintPageRenderer.h"
 #import "MGS_PopupViewController.h"
 
-static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum distance apart for map annotations, before they are combined.
+static int  BMLT_Meeting_Distance_Threshold_In_Pixels   = 16;   ///< The minimum distance apart for map annotations, before they are combined.
+static int  BMLTPopupViewPaddingInPixels                = 4;    ///< The number of pixels of "breathing room" in the black marker popup.
+static int  BMLTPopupViewWidthInPixels                  = 120;  ///< The width of the black marker popup.
+static int  BMLTPopupViewHeightInPixels                 = 80;   ///< The height of the black marker popup.
+static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum number of text lines in the black marker popup.
 
 /*****************************************************************/
 /**
@@ -58,17 +62,20 @@ static int  BMLT_Meeting_Distance_Threshold_In_Pixels = 16; ///< The minimum dis
 #ifdef DEBUG
     NSLog(@"BMLTMapResultsViewController pm_openMarkerPopup");
 #endif
-    CGRect  popupFrame = CGRectMake(0, 0, 120, 80);
+    CGRect  popupFrame = CGRectMake(BMLTPopupViewPaddingInPixels, BMLTPopupViewPaddingInPixels, BMLTPopupViewWidthInPixels, BMLTPopupViewHeightInPixels);
+    UIView  *labelContainer = [[UIView alloc] initWithFrame:CGRectInset ( popupFrame, -BMLTPopupViewPaddingInPixels, -BMLTPopupViewPaddingInPixels )];
     UILabel *viewLabel = [[UILabel alloc] initWithFrame:popupFrame];
     [viewLabel setText:NSLocalizedString ( @"BLACK-MARKER-TITLE", nil )];
     [viewLabel setFont:[UIFont italicSystemFontOfSize:11]];
+    [labelContainer setBackgroundColor:[UIColor blackColor]];
     [viewLabel setBackgroundColor:[UIColor blackColor]];
     [viewLabel setTextColor:[UIColor whiteColor]];
-    [viewLabel setNumberOfLines:6];
+    [viewLabel setNumberOfLines:BMLTPopupViewNumberOfTextLines];
     [viewLabel setTextAlignment:NSTextAlignmentCenter];
     [viewLabel setLineBreakMode:NSLineBreakByWordWrapping];
     [viewLabel setAdjustsFontSizeToFitWidth:YES];
-    [self setMyMarkerPopup:[[MGS_PopupViewController alloc] initWithTargetView:inView andContentView:viewLabel]];
+    [labelContainer addSubview:viewLabel];
+    [self setMyMarkerPopup:[[MGS_PopupViewController alloc] initWithTargetView:inView andContentView:labelContainer]];
     [[self myMarkerPopup] setDelegate:self];
 }
 
