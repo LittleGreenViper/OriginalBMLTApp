@@ -23,7 +23,7 @@
 #import "MGS_PopupView.h"
 
 static const float  s_BaseArrowWidthInPixels    = 16.0; ///< This is how wide (or tall) the base of the arrow will be.
-static const float  s_ArrowLengthInPixels       = 16.0; ///< This is how far out it will stick from the 
+static const float  s_ArrowLengthInPixels       = 16.0; ///< This is how far out it will stick from the target.
 
 /*****************************************************************/
 /**
