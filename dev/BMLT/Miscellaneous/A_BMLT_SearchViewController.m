@@ -76,7 +76,7 @@
 @end
 
 @interface A_BMLT_SearchViewController ()
-    @property (strong, atomic)  UIBarButtonItem *_toggleButton;
+    @property (strong, atomic)              UIBarButtonItem *_toggleButton;
 @end
 
 /*****************************************************************/
@@ -247,6 +247,7 @@
 }
 
 #pragma mark - MKMapViewDelegate Functions -
+
 /*****************************************************************/
 /**
  \brief Called when the map is moved, scrolled, panned, etc.
@@ -262,6 +263,7 @@ regionDidChangeAnimated:(BOOL)animated  ///< Whether or not the change was anima
 }
 
 #pragma mark - MkMapAnnotationDelegate Functions -
+
 /*****************************************************************/
 /**
  \brief Returns the view for the marker in the center of the map.

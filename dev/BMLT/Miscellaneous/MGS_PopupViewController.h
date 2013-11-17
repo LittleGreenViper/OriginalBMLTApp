@@ -21,7 +21,9 @@
 
 #import <UIKit/UIKit.h>
 
-@class BMLTMapResultsViewController;
+@protocol MGS_PopupViewControllerDelegate <NSObject>
+- (void)closeMarkerPopup;
+@end
 
 /***************************************************************************/
 /**
@@ -32,7 +34,7 @@
 @interface MGS_PopupViewController : UIViewController
 @property (atomic, weak, readwrite) IBOutlet UIView *targetView;            ///< This will be the view that is pointed to
 @property (atomic, weak, readwrite) IBOutlet UIView *contextView;           ///< This will be the container view.
-@property (atomic, weak, readwrite) BMLTMapResultsViewController *delegate; ///< This will be the controller that needs to be called to clean up.
+@property (atomic, weak, readwrite) NSObject <MGS_PopupViewControllerDelegate> *delegate; ///< This will be the controller that needs to be called to clean up.
 @property (atomic, strong, readwrite) IBOutlet UIView *contentsSubview;     ///< This will be what goes inside the popup.
 
 - (id)initWithTargetView:(UIView*)inTargetView andContentView:(UIView*)inContentView;

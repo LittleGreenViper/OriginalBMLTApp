@@ -22,7 +22,6 @@
 #import "BMLT_Results_MapPointAnnotationView.h"
 #import "BMLTDisplayListResultsViewController.h"
 #import "BMLT_ListPrintPageRenderer.h"
-#import "MGS_PopupViewController.h"
 
 static int  BMLT_Meeting_Distance_Threshold_In_Pixels   = 16;   ///< The minimum distance apart for map annotations, before they are combined.
 static int  BMLTPopupViewPaddingInPixels                = 4;    ///< The number of pixels of "breathing room" in the black marker popup.
@@ -57,6 +56,10 @@ static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum
 @synthesize myMapView = _myMapView;     ///< This is our MkMapView object.
 @synthesize myMarker = _myMarker;       ///< This holds the black marker.
 
+/*****************************************************************/
+/**
+ \brief  This creates the marker popup.
+ *****************************************************************/
 - (void)pm_openMarkerPopup:(UIView*)inView
 {
 #ifdef DEBUG
