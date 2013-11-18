@@ -182,7 +182,7 @@
 "O" = "Öppet Möte är ett NA-möte där vem som helst som är intresserad av hur vi har funnit tillfrisknande från Beroendesjukdomen kan närvara.";
 
 /* The default title for the black marker */
-"BLACK-MARKER-TITLE" = "Your Location. Drag this marker to search in another location.";
+"BLACK-MARKER-TITLE" = "Din nuvarande position, dra denna markören för att söka i ett annat område.";
 
 /* The user wants us to update their current location now. */
 "SETTINGS-UPDATE-LOCATION" = "Uppdatera min position nu.";
