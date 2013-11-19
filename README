@@ -82,9 +82,11 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
-== Version 2.6a2
+== Version 2.6a3
 * TBD
 * Added some "breathing room" around the new popup window for the black marker in the map results screen.
+* Changed the color theme to a dark top and bottom bar, and darker backgrounds, because of the visibility issues introduced by iOS 7 buttons.
+* Added a new Swedish translation.
 
 == Version 2.6a1
 * November 16, 2013

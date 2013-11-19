@@ -55,7 +55,7 @@
 /*****************************************************************/
 + (UIColor *)windowBackgroundColor
 {
-    return [UIColor whiteColor];
+    return [UIColor colorWithRed:0.5 green:0.15 blue:0.05 alpha:1.0];
 }
 
 /*****************************************************************/

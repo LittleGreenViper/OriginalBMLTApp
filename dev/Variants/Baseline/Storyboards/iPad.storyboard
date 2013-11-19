@@ -66,11 +66,13 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </scrollView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -247,7 +249,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="TAB-BAR-3" image="settings.png" id="apI-fa-iOp"/>
                     <navigationItem key="navigationItem" title="SETTINGS-TITLE" id="HQQ-TY-8NO">
-                        <barButtonItem key="rightBarButtonItem" title="ABOUT-TITLE" id="Cx7-gc-axl"/>
+                        <barButtonItem key="rightBarButtonItem" title="ABOUT-TITLE" id="Cx7-gc-axl">
+                            <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="aboutView" destination="l5K-eQ-zKW" id="edE-9L-HWu"/>
@@ -277,10 +281,11 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="9F6-UP-Ey5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" enabled="NO" title="TAB-BAR-2" image="map.png" id="BnC-y3-coN"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" translucent="NO" id="xY4-8X-sQN">
                         <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="3" kind="relationship" relationship="rootViewController" id="kf2-48-ooV"/>
@@ -295,11 +300,11 @@
             <objects>
                 <viewController id="3" customClass="BMLTMapResultsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EHt-89-M9Z">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="44" width="768" height="931"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="kdU-hf-XEn">
-                                <rect key="frame" x="-1" y="0.0" width="769" height="911"/>
+                                <rect key="frame" x="-1" y="0.0" width="769" height="931"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="3" id="QY4-Wm-Sgt"/>
@@ -308,9 +313,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="TAB-BAR-2" id="MGE-X7-pmn">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="Je4-wu-Twv">
+                            <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="actionItemClicked:" destination="3" id="0C4-ge-qKk"/>
                             </connections>
@@ -329,6 +336,8 @@
         <scene sceneID="15">
             <objects>
                 <tabBarController modalTransitionStyle="flipHorizontal" id="4" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="5">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -356,6 +365,8 @@
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Qou-c6-GMp">
                         <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="SFh-VH-MDA" kind="relationship" relationship="rootViewController" id="qWZ-Qh-gAM"/>
@@ -370,7 +381,7 @@
             <objects>
                 <viewController storyboardIdentifier="simple-search" id="SFh-VH-MDA" customClass="BMLTSimpleSearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5W2-lU-ExM" customClass="A_BMLTMainBackgroundView">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="44" width="768" height="931"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="C3s-sr-oSN">
@@ -428,7 +439,7 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="nLJ-nP-ZR5">
-                                <rect key="frame" x="0.0" y="161" width="768" height="750"/>
+                                <rect key="frame" x="0.0" y="161" width="768" height="770"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="e6g-Gx-G5K">
@@ -453,6 +464,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="SEARCH-SPEC-SIMPLE-TITLE" id="cTL-sJ-nIb">
                         <barButtonItem key="rightBarButtonItem" title="SEARCH-SPEC-ADVANCED-TITLE" id="8PK-ZF-Wq2">
                             <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
@@ -478,11 +490,13 @@
         <scene sceneID="8hX-Nl-Aop">
             <objects>
                 <navigationController definesPresentationContext="YES" id="LnK-TI-v0U" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" enabled="NO" title="TAB-BAR-1" image="list.png" id="uWc-Wt-4Jd"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="black" translucent="NO" id="mu1-4r-zvZ">
                         <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BfE-yH-RTK" kind="relationship" relationship="rootViewController" id="lNa-4q-j51"/>
@@ -497,7 +511,7 @@
             <objects>
                 <viewController storyboardIdentifier="list-view-results" id="BfE-yH-RTK" customClass="BMLTDisplayListResultsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Hf7-TQ-dAm">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="44" width="768" height="931"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <connections>
@@ -505,6 +519,7 @@
                             <outlet property="delegate" destination="BfE-yH-RTK" id="QN4-GO-dx8"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="TAB-BAR-1" id="CdA-a3-G7W">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="PeY-CX-Kpp">
                             <connections>
@@ -522,11 +537,11 @@
             <objects>
                 <viewController storyboardIdentifier="meeting-details-sheet" id="KvL-qN-ldU" customClass="BMLTMeetingDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="TopLeft" id="QfH-DS-Oon">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="7ib-x6-Tf2">
-                                <rect key="frame" x="0.0" y="130" width="768" height="771"/>
+                                <rect key="frame" x="0.0" y="130" width="768" height="727"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -551,7 +566,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="wordWrap" id="pkf-LG-VOL" userLabel="Address">
-                                <rect key="frame" x="8" y="909" width="752" height="51"/>
+                                <rect key="frame" x="8" y="865" width="752" height="51"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -584,11 +599,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <connections>
                         <outlet property="addressButton" destination="pkf-LG-VOL" id="8yd-iL-Svm"/>
                         <outlet property="commentsTextView" destination="IQN-RF-boC" id="V0B-Cn-Zaj"/>
@@ -607,7 +623,7 @@
             <objects>
                 <viewController storyboardIdentifier="advanced-search" wantsFullScreenLayout="YES" id="crR-vv-v9x" customClass="BMLTAdvancedSearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QJv-Je-6DP" customClass="A_BMLTMainBackgroundView">
-                        <rect key="frame" x="0.0" y="64" width="768" height="911"/>
+                        <rect key="frame" x="0.0" y="44" width="768" height="931"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <view clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="C0F-w4-0yM" userLabel="Weekday Search">
@@ -914,7 +930,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="f8b-Wv-mvF">
-                                <rect key="frame" x="0.0" y="161" width="768" height="750"/>
+                                <rect key="frame" x="0.0" y="161" width="768" height="770"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
                             </mapView>
@@ -966,11 +982,11 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="SEARCH-SPEC-ADVANCED-TITLE" id="O1O-8R-puI"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <connections>
                         <outlet property="disabledWeekdaysCheckBoxes" destination="iO2-Ce-Qnu" id="MfY-58-ZKh"/>
                         <outlet property="enabledWeekdaysCheckBoxes" destination="114-19-HWS" id="76f-oB-7UY"/>
@@ -1001,16 +1017,16 @@
             <objects>
                 <viewController storyboardIdentifier="animation-screen" wantsFullScreenLayout="YES" id="dpF-Rt-xdP" customClass="BMLTAnimationScreenViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bqE-c8-wMe">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="64" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="bx7-fg-Nj4" customClass="BMLT_AnimationView">
-                                <rect key="frame" x="234" y="362" width="300" height="300"/>
+                                <rect key="frame" x="234" y="308" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" id="JcJ-Bv-NjU">
-                                <rect key="frame" x="20" y="172" width="728" height="64"/>
+                                <rect key="frame" x="20" y="153" width="728" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1020,9 +1036,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="WEc-Wm-7Qe"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <connections>
                         <outlet property="animationView" destination="bx7-fg-Nj4" id="oCI-7B-wgE"/>
                         <outlet property="messageLabel" destination="JcJ-Bv-NjU" id="GKY-1h-J99"/>
