@@ -421,7 +421,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" id="NNa-Bu-ist">
-                                <rect key="frame" x="429.99999931773289" y="59" width="318" height="42"/>
+                                <rect key="frame" x="429.999999317733" y="59" width="318" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
@@ -664,7 +664,7 @@
                                             <action selector="weekdaySelectionChanged:" destination="crR-vv-v9x" eventType="valueChanged" id="v8j-0e-1Z2"/>
                                         </connections>
                                     </segmentedControl>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-1-label" text="1" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="6Zq-yw-jRb" userLabel="Sunday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="1" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="6Zq-yw-jRb" userLabel="Sunday Label">
                                         <rect key="frame" x="5" y="39" width="108" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -672,7 +672,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-2-label" text="2" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="1Wr-Xs-oCr" userLabel="Monday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="2" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="1Wr-Xs-oCr" userLabel="Monday Label">
                                         <rect key="frame" x="113" y="39" width="108" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -680,7 +680,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-3-label" text="3" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="j32-hj-ALe" userLabel="Tuesday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="3" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="j32-hj-ALe" userLabel="Tuesday Label">
                                         <rect key="frame" x="221" y="39" width="108" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -688,7 +688,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-4-label" text="4" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="fbB-tf-bHd" userLabel="Wednesday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="4" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="fbB-tf-bHd" userLabel="Wednesday Label">
                                         <rect key="frame" x="329" y="39" width="108" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -696,7 +696,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-5-label" text="5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="EUs-7E-Zxx" userLabel="Thursday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="5" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="EUs-7E-Zxx" userLabel="Thursday Label">
                                         <rect key="frame" x="437" y="39" width="108" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -704,7 +704,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-6-label" text="6" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="qpt-TE-8uR" userLabel="Friday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="6" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="qpt-TE-8uR" userLabel="Friday Label">
                                         <rect key="frame" x="545" y="39" width="108" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -712,7 +712,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="day-7-label" text="7" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="p7A-cp-aKW" userLabel="Saturday Label">
+                                    <label autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" text="7" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="p7A-cp-aKW" userLabel="Saturday Label">
                                         <rect key="frame" x="653" y="39" width="108" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
