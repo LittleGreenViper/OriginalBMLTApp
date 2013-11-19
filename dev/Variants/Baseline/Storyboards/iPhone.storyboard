@@ -96,7 +96,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" text="SEARCH-SPEC-DISABLED-TEXT" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" id="iqL-3E-3rT">
-                                <rect key="frame" x="13" y="219.00000121207759" width="295" height="148"/>
+                                <rect key="frame" x="13" y="219" width="295" height="148"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -883,7 +883,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="5">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="selectedImageTintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>

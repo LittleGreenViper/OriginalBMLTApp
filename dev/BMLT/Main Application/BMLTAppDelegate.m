@@ -572,13 +572,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     
     [tabController setSelectedIndex:kSearchTabIndex];
     [tabController setDelegate:self];
-    // We're going to have a blue "leather" background for most screens.
-    if ( [BMLTVariantDefs windowBackgroundColor] )
-        {
-        UIColor *myBGColor = [[UIColor alloc] initWithCGColor:[[BMLTVariantDefs windowBackgroundColor] CGColor]];
-        [_window setBackgroundColor:myBGColor];
-        myBGColor = nil;
-        }
     
     for ( NSInteger i = kSearchTabIndex; i < [[tabController viewControllers] count]; i++ )
         {
@@ -590,6 +583,15 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     searchNavController = (UINavigationController *)[(UINavigationController *)[[tabController viewControllers] objectAtIndex:kSearchTabIndex] topViewController];
     listResultsViewController = (BMLTDisplayListResultsViewController *)[(UINavigationController *)[[tabController viewControllers] objectAtIndex:kListResultsTabIndex] topViewController];
     mapResultsViewController = (BMLTMapResultsViewController *)[(UINavigationController *)[[tabController viewControllers] objectAtIndex:kMapResultsTabIndex] topViewController];
+    
+    if ( [BMLTVariantDefs windowBackgroundColor] )
+        {
+        [[tabController tabBar] setBackgroundColor:[UIColor clearColor]];
+        UIColor *myBGColor = [[UIColor alloc] initWithCGColor:[[BMLTVariantDefs windowBackgroundColor] CGColor]];
+        [_window setBackgroundColor:myBGColor];
+        [[tabController tabBar] setBarTintColor:myBGColor];
+        }
+
     if ( [[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPad )
         {
         settingsViewController = (BMLTSettingsViewController *)[(UINavigationController *)[[tabController viewControllers] objectAtIndex:kSettingsTabIndex] topViewController];
