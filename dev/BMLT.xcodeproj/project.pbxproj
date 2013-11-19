@@ -816,7 +816,7 @@
 		77ACED99168F3CAA00FC9192 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		77B566BF1690BE8A00F3CF3F /* AboutLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutLogo.png; sourceTree = "<group>"; };
 		77B5B92416924FA200AAE31D /* BMLT_AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLT_AnimationView.h; sourceTree = "<group>"; };
-		77B5EB3A1743EEF300F50281 /* SoCal NA Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoCal NA Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77B5EB3A1743EEF300F50281 /* SoCal Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoCal Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B5EB3E1743EFBB00F50281 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		77B5EB401743EFBB00F50281 /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Back.png"; sourceTree = "<group>"; };
 		77B5EB411743EFBB00F50281 /* Anim-Transparency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Transparency.png"; sourceTree = "<group>"; };
@@ -1281,7 +1281,7 @@
 				777597CE1540F15F00D45ADA /* NA Sverige.app */,
 				777AD6FD1688C61700E064D0 /* AU NA Meetings.app */,
 				77E24A3D16F563C900664FF9 /* FL NA Meetings.app */,
-				77B5EB3A1743EEF300F50281 /* SoCal NA Meetings.app */,
+				77B5EB3A1743EEF300F50281 /* SoCal Meetings.app */,
 				77DD00BE18180EF0003008FF /* SoCalDemo.app */,
 			);
 			name = Products;
@@ -1600,7 +1600,7 @@
 			);
 			name = "Southern California NA Meetings";
 			productName = BMLT;
-			productReference = 77B5EB3A1743EEF300F50281 /* SoCal NA Meetings.app */;
+			productReference = 77B5EB3A1743EEF300F50281 /* SoCal Meetings.app */;
 			productType = "com.apple.product-type.application";
 		};
 		77E249BD16F563C900664FF9 /* FL NA Meetings */ = {
@@ -2554,8 +2554,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/BMLT\\\"",
-					/Users/cmarshall/Documents/Development/iOS/BMLT/dev/BMLT,
+					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "AU NA Meetings";
 				PROVISIONING_PROFILE = "";
@@ -2584,8 +2583,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/BMLT\\\"",
-					/Users/cmarshall/Documents/Development/iOS/BMLT/dev/BMLT,
+					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "AU NA Meetings";
 				PROVISIONING_PROFILE = "";
@@ -2614,8 +2612,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/BMLT\\\"",
-					/Users/cmarshall/Documents/Development/iOS/BMLT/dev/BMLT,
+					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "AU NA Meetings";
 				PROVISIONING_PROFILE = "";
@@ -2846,7 +2843,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/BMLT\"",
 				);
-				PRODUCT_NAME = "SoCal NA Meetings";
+				PRODUCT_NAME = "SoCal Meetings";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -2875,7 +2872,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/BMLT\"",
 				);
-				PRODUCT_NAME = "SoCal NA Meetings";
+				PRODUCT_NAME = "SoCal Meetings";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -2904,7 +2901,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/BMLT\"",
 				);
-				PRODUCT_NAME = "SoCal NA Meetings";
+				PRODUCT_NAME = "SoCal Meetings";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
