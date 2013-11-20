@@ -99,6 +99,20 @@
     NSArray *leftBarButtonItems = [myItem leftBarButtonItems];
     NSArray *rightBarButtonItems = [myItem rightBarButtonItems];
     
+    if ( [BMLTVariantDefs windowBackgroundColor] )
+        {
+        UIColor *myBGColor = [[UIColor alloc] initWithCGColor:[[BMLTVariantDefs windowBackgroundColor] CGColor]];
+        
+        if ( [[[self navigationController] navigationBar] respondsToSelector:@selector(setBarTintColor:)] )
+            {
+            [[[self navigationController] navigationBar] setBarTintColor:myBGColor];
+            }
+        else
+            {
+            [[[self navigationController] navigationBar] setTintColor:myBGColor];
+            }
+        }
+    
     if ( [leftBarButtonItems count] )
         {
         for ( NSInteger i = 0; i < [leftBarButtonItems count]; i++ )

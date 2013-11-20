@@ -589,8 +589,16 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         [[tabController tabBar] setBackgroundColor:[UIColor clearColor]];
         UIColor *myBGColor = [[UIColor alloc] initWithCGColor:[[BMLTVariantDefs windowBackgroundColor] CGColor]];
         [_window setBackgroundColor:myBGColor];
-        [[tabController tabBar] setBarTintColor:myBGColor];
-        }
+
+        if ( [[tabController tabBar] respondsToSelector:@selector(setBarTintColor:)] )
+            {
+            [[tabController tabBar] setBarTintColor:myBGColor];
+            }
+        else
+            {
+            [[tabController tabBar] setTintColor:myBGColor];
+            }
+}
 
     if ( [[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPad )
         {
