@@ -101,27 +101,3 @@
 
 @implementation BMLT_TemplateWindow
 @end
-
-@implementation BMLT_TemplateSearchView
-@end
-
-@implementation BMLT_TemplateBusyView
-@end
-
-@implementation BMLT_TemplateInfoView
-@end
-
-@implementation BMLT_TemplateMeetingDetailsView
-@end
-
-@implementation BMLT_TemplateFormatDetailsView
-@end
-
-@implementation BMLT_TemplateSettingsView
-@end
-
-@implementation BMLT_TemplateList0View
-@end
-
-@implementation BMLT_TemplateList1View
-@end

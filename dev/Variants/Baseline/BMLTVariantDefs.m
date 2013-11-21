@@ -79,7 +79,7 @@ static BMLT_Template    *template = nil;
 /*****************************************************************/
 + (UIColor *)windowBackgroundColor
 {
-    return [[[self template] getWindowTemplate] backgroundColor];
+    return [[[[self template] templateViewController] windowView] backgroundColor];
 }
 
 /*****************************************************************/

@@ -19,47 +19,34 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BMLT_Template : NSObject
-@property (atomic, strong, readwrite) IBOutlet  UIViewController    *templateViewController;
-
-- (UIView*)getWindowTemplate;
-- (UIView*)getSearchViewTemplate;
-- (UIView*)getBusyViewTemplate;
-- (UIView*)getInfoViewTemplate;
-- (UIView*)getMeetingsDetailsViewTemplate;
-- (UIView*)getFormatDetailsViewTemplate;
-- (UIView*)getSettingsViewTemplate;
-- (UIView*)getList0ViewTemplate;
-- (UIView*)getList1ViewTemplate;
-@end
-
-@interface BMLT_TemplateWindowViewController : UIViewController
-+ (id)loadInstanceFromNib;
-@end
-
 @interface BMLT_TemplateWindow : UIView
 @end
 
-@interface BMLT_TemplateSearchView : UIView
+@interface BMLT_TemplateWindowViewController : UIViewController
+@property (weak, nonatomic) IBOutlet BMLT_TemplateWindow    *windowView;
+@property (weak, nonatomic) IBOutlet UINavigationBar        *navigationBar;
+@property (weak, nonatomic) IBOutlet UIToolbar              *toolbar;
+@property (weak, nonatomic) IBOutlet UILabel                *linkColorLabel;
+@property (weak, nonatomic) IBOutlet UILabel                *textColorLabel;
+@property (weak, nonatomic) IBOutlet UIView                 *settingsView;
+@property (weak, nonatomic) IBOutlet UILabel                *settingsTextColorLabel;
+@property (weak, nonatomic) IBOutlet UIView                 *infoView;
+@property (weak, nonatomic) IBOutlet UILabel                *infoTextLabel;
+@property (weak, nonatomic) IBOutlet UIView                 *meetingDetailsView;
+@property (weak, nonatomic) IBOutlet UILabel                *meetingDetailsTextLabel;
+@property (weak, nonatomic) IBOutlet UIView                 *simpleSearchView;
+@property (weak, nonatomic) IBOutlet UILabel                *simpleSearchTextLabel;
+@property (weak, nonatomic) IBOutlet UIView                 *advancedSearchView;
+@property (weak, nonatomic) IBOutlet UILabel                *advancedSearchTextLabel;
+@property (weak, nonatomic) IBOutlet UIView                 *popoverView;
+@property (weak, nonatomic) IBOutlet UILabel                *popoverTextLabel;
+@property (weak, nonatomic) IBOutlet UIView                 *listEvenView;
+@property (weak, nonatomic) IBOutlet UILabel                *listEvenTextLabel;
+@property (weak, nonatomic) IBOutlet UIView                 *listOddView;
+@property (weak, nonatomic) IBOutlet UILabel                *listOddTextLabel;
++ (id)loadInstanceFromNib;
 @end
 
-@interface BMLT_TemplateBusyView : UIView
-@end
-
-@interface BMLT_TemplateInfoView : UIView
-@end
-
-@interface BMLT_TemplateMeetingDetailsView : UIView
-@end
-
-@interface BMLT_TemplateFormatDetailsView : UIView
-@end
-
-@interface BMLT_TemplateSettingsView : UIView
-@end
-
-@interface BMLT_TemplateList0View : UIView
-@end
-
-@interface BMLT_TemplateList1View : UIView
+@interface BMLT_Template : NSObject
+@property (atomic, strong, readwrite) IBOutlet  BMLT_TemplateWindowViewController   *templateViewController;
 @end
