@@ -19,12 +19,36 @@
 
 #import "BMLTVariantDefs.h"
 #import "BMLTAppDelegate.h"
+#import "BMLT_Template.h"
+
+@interface BMLTVariantDefs ()
++ (BMLT_Template*)template;
+@end
 
 /*****************************************************************/
 /**
  \brief  See the "BMLTVariantDefs.h" file for details.
  *****************************************************************/
 @implementation BMLTVariantDefs
+static BMLT_Template    *template = nil;
+/*****************************************************************/
+/**
+ \brief This implements a SINGLETON for the template.
+        We load a template from the .xib file, and then parse it for appearance queues.
+ 
+ \returns a static instance of BMLT_Template.
+ */
++ (BMLT_Template*)template
+{
+    @synchronized ( self )  // Make sure we're thread-friendly...
+        {
+        if ( !template )    // First time through, we load it.
+            {
+            template = [[BMLT_Template alloc] init];
+            }
+        return template;
+        }
+}
 
 /*****************************************************************/
 + (NSString *)distanceUnits
@@ -55,7 +79,7 @@
 /*****************************************************************/
 + (UIColor *)windowBackgroundColor
 {
-    return [UIColor colorWithRed:0.1098039216 green:0.1019607843 blue:0.7490196078 alpha:1.0];
+    return [[[self template] getWindowTemplate] backgroundColor];
 }
 
 /*****************************************************************/
