@@ -90,8 +90,6 @@
 		77596763177BD34600F77C06 /* BMLTFormatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */; };
 		77596764177BD34600F77C06 /* BMLTFormatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */; };
 		77596765177BD34600F77C06 /* BMLTFormatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */; };
-		775E6B2E183DA87700105921 /* BMLT_TemplateWindowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775E6B2D183DA87700105921 /* BMLT_TemplateWindowViewController.xib */; };
-		775E6B30183DA8F700105921 /* BMLT_TemplateWindowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 775E6B2F183DA8F700105921 /* BMLT_TemplateWindowViewController.xib */; };
 		77603E5C1541DC8300C4840F /* FormatCircleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */; };
 		77603E5D1541DC8300C4840F /* FormatCircleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */; };
 		77603E5E1541DC8300C4840F /* FormatCircleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */; };
@@ -153,7 +151,7 @@
 		7760FE3017E093D10042065C /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 7760FE2917E093D10042065C /* icon-120.png */; };
 		7760FE3117E093D10042065C /* icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 7760FE2A17E093D10042065C /* icon-144.png */; };
 		7760FE3217E093D10042065C /* icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 7760FE2B17E093D10042065C /* icon-152.png */; };
-		77614A2B183DA1CF00B3CD89 /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 77614A2A183DA1CF00B3CD89 /* BMLTVariantDefs.m */; };
+		7762DCC0177B979200254E1A /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 77ACED99168F3CAA00FC9192 /* BMLTVariantDefs.m */; };
 		7762DCC2177B9FF400254E1A /* BMLT_AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 774EB4CF168F3B6B006C663F /* BMLT_AnimationView.m */; };
 		7762DCC4177BA04900254E1A /* BMLT_AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 774EB4CF168F3B6B006C663F /* BMLT_AnimationView.m */; };
 		77640D41151A67BE00634143 /* BMLTMeetingDisplayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77640D40151A67BE00634143 /* BMLTMeetingDisplayCellView.m */; };
@@ -615,12 +613,6 @@
 		77E24A5A16F565CE00664FF9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
 		77E24A5B16F565CE00664FF9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
 		77E24A5C16F565CE00664FF9 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
-		77E5F039183D79B300B48CE9 /* BMLT_Template.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5F038183D79B300B48CE9 /* BMLT_Template.m */; };
-		77E5F03A183D79B300B48CE9 /* BMLT_Template.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5F038183D79B300B48CE9 /* BMLT_Template.m */; };
-		77E5F03B183D79B300B48CE9 /* BMLT_Template.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5F038183D79B300B48CE9 /* BMLT_Template.m */; };
-		77E5F03C183D79B300B48CE9 /* BMLT_Template.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5F038183D79B300B48CE9 /* BMLT_Template.m */; };
-		77E5F03D183D79B300B48CE9 /* BMLT_Template.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5F038183D79B300B48CE9 /* BMLT_Template.m */; };
-		77E5F03E183D79B300B48CE9 /* BMLT_Template.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E5F038183D79B300B48CE9 /* BMLT_Template.m */; };
 		77E627DD1826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */; };
 		77E627DE1826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */; };
 		77E627DF1826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */; };
@@ -726,8 +718,6 @@
 		773E4308155EC7070026FA16 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		774EB4CF168F3B6B006C663F /* BMLT_AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLT_AnimationView.m; sourceTree = "<group>"; };
 		7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMLTFormatDetailViewController.xib; sourceTree = "<group>"; };
-		775E6B2D183DA87700105921 /* BMLT_TemplateWindowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BMLT_TemplateWindowViewController.xib; path = Variants/Baseline/Storyboards/BMLT_TemplateWindowViewController.xib; sourceTree = "<group>"; };
-		775E6B2F183DA8F700105921 /* BMLT_TemplateWindowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMLT_TemplateWindowViewController.xib; sourceTree = "<group>"; };
 		77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FormatCircleBlue@2x.png"; sourceTree = "<group>"; };
 		77603DC91541DC8300C4840F /* FormatCircleGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FormatCircleGreen@2x.png"; sourceTree = "<group>"; };
 		77603DCA1541DC8300C4840F /* FormatCircleRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FormatCircleRed@2x.png"; sourceTree = "<group>"; };
@@ -755,7 +745,6 @@
 		7760FE2917E093D10042065C /* icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-120.png"; path = "Variants/BMLT-NY/images/icon-120.png"; sourceTree = SOURCE_ROOT; };
 		7760FE2A17E093D10042065C /* icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-144.png"; path = "Variants/BMLT-NY/images/icon-144.png"; sourceTree = SOURCE_ROOT; };
 		7760FE2B17E093D10042065C /* icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-152.png"; path = "Variants/BMLT-NY/images/icon-152.png"; sourceTree = SOURCE_ROOT; };
-		77614A2A183DA1CF00B3CD89 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		77640D3F151A67BE00634143 /* BMLTMeetingDisplayCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTMeetingDisplayCellView.h; sourceTree = "<group>"; };
 		77640D40151A67BE00634143 /* BMLTMeetingDisplayCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTMeetingDisplayCellView.m; sourceTree = "<group>"; };
 		7766021F1688E00400B1310A /* App-Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-57.png"; sourceTree = "<group>"; };
@@ -824,6 +813,7 @@
 		77ACED85168F3C6400FC9192 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "Variants/BMLT-NY/images/Default-Portrait~ipad.png"; sourceTree = SOURCE_ROOT; };
 		77ACED86168F3C6400FC9192 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "Variants/BMLT-NY/images/Default.png"; sourceTree = SOURCE_ROOT; };
 		77ACED87168F3C6400FC9192 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Variants/BMLT-NY/images/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		77ACED99168F3CAA00FC9192 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		77B566BF1690BE8A00F3CF3F /* AboutLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutLogo.png; sourceTree = "<group>"; };
 		77B5B92416924FA200AAE31D /* BMLT_AnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLT_AnimationView.h; sourceTree = "<group>"; };
 		77B5EB3A1743EEF300F50281 /* SoCal Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoCal Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -889,8 +879,6 @@
 		77E24A3D16F563C900664FF9 /* FL NA Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FL NA Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E24A5116F565CE00664FF9 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		77E24A5216F565CE00664FF9 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
-		77E5F037183D799000B48CE9 /* BMLT_Template.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLT_Template.h; sourceTree = "<group>"; };
-		77E5F038183D79B300B48CE9 /* BMLT_Template.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLT_Template.m; sourceTree = "<group>"; };
 		77E627DB1826BA5C00FBE093 /* MGS_Simple_Control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGS_Simple_Control.h; sourceTree = "<group>"; };
 		77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGS_Simple_Control.m; sourceTree = "<group>"; };
 		77F6C3681531D1A90038784D /* BMLTAnimationScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTAnimationScreenViewController.h; sourceTree = "<group>"; };
@@ -1179,9 +1167,6 @@
 			isa = PBXGroup;
 			children = (
 				7795A22A16925085004409D2 /* BMLTVariantDefs.h */,
-				77614A2A183DA1CF00B3CD89 /* BMLTVariantDefs.m */,
-				77E5F037183D799000B48CE9 /* BMLT_Template.h */,
-				77E5F038183D79B300B48CE9 /* BMLT_Template.m */,
 				77B5B92416924FA200AAE31D /* BMLT_AnimationView.h */,
 				774EB4CF168F3B6B006C663F /* BMLT_AnimationView.m */,
 				77603DA21541DC8300C4840F /* images */,
@@ -1234,7 +1219,6 @@
 			isa = PBXGroup;
 			children = (
 				7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */,
-				775E6B2F183DA8F700105921 /* BMLT_TemplateWindowViewController.xib */,
 				77E24A5116F565CE00664FF9 /* iPad.storyboard */,
 				77E24A5216F565CE00664FF9 /* iPhone.storyboard */,
 			);
@@ -1279,7 +1263,6 @@
 		77977D00150E882B00485C8D = {
 			isa = PBXGroup;
 			children = (
-				775E6B2D183DA87700105921 /* BMLT_TemplateWindowViewController.xib */,
 				77167D4E1517D205006E50E8 /* README */,
 				77977D15150E882B00485C8D /* BMLT */,
 				77D90B951514C6A60059EF41 /* Variants */,
@@ -1434,6 +1417,7 @@
 		77D90B961514C6A60059EF41 /* BMLT-NY */ = {
 			isa = PBXGroup;
 			children = (
+				77ACED99168F3CAA00FC9192 /* BMLTVariantDefs.m */,
 				77666931168F3DCC00269112 /* IslipNY.gpx */,
 				774EB4B1168F3B20006C663F /* images */,
 				77BBAEF215417694001F5BCC /* info.plist */,
@@ -1824,8 +1808,6 @@
 				77603E651541DC8300C4840F /* FormatCircleWC@2x.png in Resources */,
 				77603E681541DC8300C4840F /* FormatCircleYellow@2x.png in Resources */,
 				7760FE3217E093D10042065C /* icon-152.png in Resources */,
-				775E6B30183DA8F700105921 /* BMLT_TemplateWindowViewController.xib in Resources */,
-				775E6B2E183DA87700105921 /* BMLT_TemplateWindowViewController.xib in Resources */,
 				77603E711541DC8300C4840F /* list.png in Resources */,
 				77603E741541DC8300C4840F /* list@2x.png in Resources */,
 				77DCE9A2182C6E7700762604 /* Frame03.png in Resources */,
@@ -2101,7 +2083,6 @@
 				77DCF09F1545D4FE00979BF6 /* BMLTAboutBackgroundView.m in Sources */,
 				773E41EE168E9DD700CED8D5 /* BMLTVariantDefs.m in Sources */,
 				774EB4D1168F3B6B006C663F /* BMLT_AnimationView.m in Sources */,
-				77E5F03A183D79B300B48CE9 /* BMLT_Template.m in Sources */,
 				77E627DE1826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2150,7 +2131,6 @@
 				777AD7051688C63000E064D0 /* BMLTVariantDefs.m in Sources */,
 				774B100A168B6C7400E4BBF5 /* BMLTAdvancedSearchViewController.m in Sources */,
 				774EB4D2168F3B6B006C663F /* BMLT_AnimationView.m in Sources */,
-				77E5F039183D79B300B48CE9 /* BMLT_Template.m in Sources */,
 				77E627DD1826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2179,7 +2159,6 @@
 				771D0C8B150E893C005A707A /* BMLTAboutViewController.m in Sources */,
 				771D0C8C150E893C005A707A /* BMLTSettingsViewController.m in Sources */,
 				776E9357183151EC0005B9AB /* MGS_PopupView.m in Sources */,
-				77614A2B183DA1CF00B3CD89 /* BMLTVariantDefs.m in Sources */,
 				7711417215125CD100BCCE00 /* BMLTSimpleSearchViewController.m in Sources */,
 				77BC71981512BFA1000BEFC0 /* A_BMLTSearchResultsViewController.m in Sources */,
 				77CE3F091516252300C93BC6 /* A_BMLTSettingsBackgroundView.m in Sources */,
@@ -2198,8 +2177,8 @@
 				776CAD8A15404BBF001BD51D /* BMLT_DetailsPrintPageRenderer.m in Sources */,
 				771A40ED15408EA000EF34DF /* BMLTBundleResourceLabel.m in Sources */,
 				77DCF09D1545D4FE00979BF6 /* BMLTAboutBackgroundView.m in Sources */,
+				7762DCC0177B979200254E1A /* BMLTVariantDefs.m in Sources */,
 				7762DCC2177B9FF400254E1A /* BMLT_AnimationView.m in Sources */,
-				77E5F03B183D79B300B48CE9 /* BMLT_Template.m in Sources */,
 				77E627DF1826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2248,7 +2227,6 @@
 				77DCF09E1545D4FE00979BF6 /* BMLTAboutBackgroundView.m in Sources */,
 				773E4309155EC7070026FA16 /* BMLTVariantDefs.m in Sources */,
 				778F64A0169387B8001F0DC6 /* BMLT_AnimationView.m in Sources */,
-				77E5F03C183D79B300B48CE9 /* BMLT_Template.m in Sources */,
 				77E627E01826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2297,7 +2275,6 @@
 				77B5EAE31743EEF300F50281 /* BMLTAboutBackgroundView.m in Sources */,
 				77B5EB4F1743EFBB00F50281 /* BMLTVariantDefs.m in Sources */,
 				7762DCC4177BA04900254E1A /* BMLT_AnimationView.m in Sources */,
-				77E5F03E183D79B300B48CE9 /* BMLT_Template.m in Sources */,
 				77E627E21826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2346,7 +2323,6 @@
 				77E249E316F563C900664FF9 /* BMLTAboutBackgroundView.m in Sources */,
 				77E24A3F16F5644900664FF9 /* BMLT_AnimationView.m in Sources */,
 				77E24A4016F5644900664FF9 /* BMLTVariantDefs.m in Sources */,
-				77E5F03D183D79B300B48CE9 /* BMLT_Template.m in Sources */,
 				77E627E11826BA5C00FBE093 /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
