@@ -54,8 +54,8 @@ int List_Meeting_Display_Line_Height                   = 25;
         wrapperView = [[UIView alloc] initWithFrame:frame];
         [wrapperView setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin| UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin| UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
         
-        UIColor *myBGColor1 = [[UIColor alloc] initWithCGColor:[[BMLTVariantDefs getSortOddColor] CGColor]];
-        UIColor *myBGColor2 = [[UIColor alloc] initWithCGColor:[[BMLTVariantDefs getSortEvenColor] CGColor]];
+        UIColor *myBGColor1 = [[UIColor alloc] initWithCGColor:[([BMLTVariantDefs getSortOddColor] ? [BMLTVariantDefs getSortOddColor] : [UIColor clearColor]) CGColor]];
+        UIColor *myBGColor2 = [[UIColor alloc] initWithCGColor:[([BMLTVariantDefs getSortEvenColor] ? [BMLTVariantDefs getSortEvenColor] : [UIColor clearColor]) CGColor]];
 
         if ( index - (floor(index / 2) * 2) )
             {

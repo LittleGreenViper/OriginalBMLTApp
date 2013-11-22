@@ -43,7 +43,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[self view] setBackgroundColor:[BMLTVariantDefs infoBackgroundColor]];
+    if ( [BMLTVariantDefs infoBackgroundColor] )
+        {
+        [[self view] setBackgroundColor:[BMLTVariantDefs infoBackgroundColor]];
+        }
+    
     [[self versionLabel] setText:NSLocalizedString([[self versionLabel] text], nil)];
     
     // We may add a logo image. If so, we will use that, instead of the standard animation backing.

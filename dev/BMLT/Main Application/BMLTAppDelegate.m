@@ -598,7 +598,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
             {
             [[tabController tabBar] setTintColor:myBGColor];
             }
-}
+        }
 
     if ( [[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPad )
         {

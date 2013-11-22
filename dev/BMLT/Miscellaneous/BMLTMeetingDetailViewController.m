@@ -251,7 +251,10 @@ static int List_Meeting_Format_Circle_Size_Big = 30;
     
     if ( ![[meetingMapView annotations] count] )
         {
-        [[self view] setBackgroundColor:[BMLTVariantDefs meetingDetailBackgroundColor]];    // This is here to make sure it's only called once.
+        if ( [BMLTVariantDefs meetingDetailBackgroundColor] )
+            {
+            [[self view] setBackgroundColor:[BMLTVariantDefs meetingDetailBackgroundColor]];    // This is here to make sure it's only called once.
+            }
         [meetingMapView addAnnotation:[[BMLT_Results_MapPointAnnotation alloc] initWithCoordinate:[[_myMeeting getMeetingLocationCoords] coordinate] andMeetings:nil andIndex:0]];
         [meetingMapView setDelegate:self];
         }

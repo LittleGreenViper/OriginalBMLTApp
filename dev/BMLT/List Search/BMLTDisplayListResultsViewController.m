@@ -200,10 +200,10 @@ static int kSortHeaderHeight = 30;  ///< The height of the "Sort By" header for 
                 [label setText:NSLocalizedString(@"MAP-LIST-HEADER", nil)];
                 [label setFont:[UIFont boldSystemFontOfSize:kSortHeaderHeight / 2]];
                 [label setTextAlignment:NSTextAlignmentCenter];
-                UIColor *myBGColor = [[UIColor alloc] initWithCGColor:[[BMLTVariantDefs multiMeetingsBackgroundColor] CGColor]];
+                UIColor *myBGColor = [[UIColor alloc] initWithCGColor:[([BMLTVariantDefs multiMeetingsBackgroundColor] ? [BMLTVariantDefs multiMeetingsBackgroundColor] : [UIColor clearColor]) CGColor]];
                 [label setBackgroundColor:myBGColor];
                 myBGColor = nil;
-                myBGColor = [[UIColor alloc] initWithCGColor:[[BMLTVariantDefs multiMeetingsTextColor] CGColor]];
+                myBGColor = [[UIColor alloc] initWithCGColor:[([BMLTVariantDefs multiMeetingsTextColor] ? [BMLTVariantDefs multiMeetingsTextColor] : [UIColor clearColor]) CGColor]];
                 [label setTextColor:myBGColor];
                 myBGColor = nil;
                 [ret_cast addSubview:label];

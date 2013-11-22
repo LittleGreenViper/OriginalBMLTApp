@@ -35,7 +35,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[self view] setBackgroundColor:[BMLTVariantDefs windowBackgroundColor]];
+    
+    if ( [BMLTVariantDefs windowBackgroundColor] )
+        {
+        [[self view] setBackgroundColor:[BMLTVariantDefs windowBackgroundColor]];
+        }
 }
 
 /*****************************************************************/
