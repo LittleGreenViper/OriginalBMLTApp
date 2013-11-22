@@ -430,31 +430,17 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
 #ifdef DEBUG
     NSLog(@"BMLTAppDelegate::selectInitialSearchAndForce called.");
 #endif
-    UITabBarController  *tabController = (UITabBarController *)self.window.rootViewController;
-        
     if ( force )
         {
-        UIStoryboard    *st = [tabController storyboard];
-        
 #ifdef DEBUG
         NSLog(@"BMLTAppDelegate::selectInitialSearchAndForce popping search to root view controller.");
 #endif
+        
         [[searchNavController navigationController] popToRootViewControllerAnimated:NO];
         
-        UIViewController    *newSearch = nil;
-        
-        switch ( [myPrefs searchTypePref] )
+        if ( [myPrefs searchTypePref] == _PREFER_ADVANCED_SEARCH )
             {
-            case _PREFER_ADVANCED_SEARCH:
-            newSearch = [st instantiateViewControllerWithIdentifier:@"advanced-search"];
-            [[searchNavController navigationController] pushViewController:newSearch animated:NO];
-            UIViewController    *simpleViewController = [[[searchNavController navigationController] viewControllers] objectAtIndex:0];
-            
-            simpleViewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString([[simpleViewController navigationItem] title], nil)
-                                                                                                     style:UIBarButtonItemStyleBordered
-                                                                                                    target:nil
-                                                                                                    action:nil];
-            break;
+            [[searchNavController navigationController] pushViewController:[[self.window.rootViewController storyboard] instantiateViewControllerWithIdentifier:@"advanced-search"] animated:NO];
             }
         
         A_BMLT_SearchViewController *topController = (A_BMLT_SearchViewController *)[[searchNavController navigationController] topViewController];
