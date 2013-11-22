@@ -69,6 +69,11 @@
     
     [self addToggleMapButton];
     [super viewWillAppear:animated];
+    
+    if ( [[BMLT_Prefs getBMLT_Prefs] searchTypePref] == _PREFER_ADVANCED_SEARCH )
+        {
+        [[BMLTAppDelegate getBMLTAppDelegate] selectInitialSearchAndForce:YES];
+        }
 }
 
 #pragma mark IB Actions

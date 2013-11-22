@@ -77,7 +77,6 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
 - (void)sorryCharlie;                                   ///< Display an alert for no meetings found.
 - (void)displaySearchResults;                           ///< Display the results of a search, according to the user preferences.
 - (void)stopAnimations;                                 ///< Stops the animations in the two results screens.
-- (void)selectInitialSearchAndForce:(BOOL)force;        ///< Selects the initial search screen, depending on the user's choice.
 - (void)simpleClearSearch;                              ///< Just clears the search results with no frou-frou.
 @end
 
@@ -423,42 +422,6 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
 
 /*****************************************************************/
 /**
- \brief Selects the initial search screen, depending on the user's choice.
- *****************************************************************/
-- (void)selectInitialSearchAndForce:(BOOL)force         ///< If YES, then the screen will be set to the default, even if we were already set to one.
-{
-#ifdef DEBUG
-    NSLog(@"BMLTAppDelegate::selectInitialSearchAndForce called.");
-#endif
-    if ( force )
-        {
-#ifdef DEBUG
-        NSLog(@"BMLTAppDelegate::selectInitialSearchAndForce popping search to root view controller.");
-#endif
-        
-        [[searchNavController navigationController] popToRootViewControllerAnimated:NO];
-        
-        if ( [myPrefs searchTypePref] == _PREFER_ADVANCED_SEARCH )
-            {
-            [[searchNavController navigationController] pushViewController:[[[[self window] rootViewController] storyboard] instantiateViewControllerWithIdentifier:@"advanced-search"] animated:NO];
-            }
-        
-        A_BMLT_SearchViewController *topController = (A_BMLT_SearchViewController *)[[searchNavController navigationController] topViewController];
-        if ( [searchResults count] )
-            {
-            [topController addClearSearchButton];
-            }
-        else
-            {
-            [[topController navigationItem] setLeftBarButtonItem:nil];
-            }
-        
-        [topController addToggleMapButton];
-        }
-}
-
-/*****************************************************************/
-/**
  \brief This clears the search without resetting the view.
  *****************************************************************/
 - (void)simpleClearSearch
@@ -662,6 +625,43 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 }
 
 #pragma mark - Custom Instance Methods -
+
+/*****************************************************************/
+/**
+ \brief Selects the initial search screen, depending on the user's choice.
+ *****************************************************************/
+- (void)selectInitialSearchAndForce:(BOOL)force         ///< If YES, then the screen will be set to the default, even if we were already set to one.
+{
+#ifdef DEBUG
+    NSLog(@"BMLTAppDelegate::selectInitialSearchAndForce called.");
+#endif
+    if ( force )
+        {
+#ifdef DEBUG
+        NSLog(@"BMLTAppDelegate::selectInitialSearchAndForce popping search to root view controller.");
+#endif
+        
+        [[searchNavController navigationController] popToRootViewControllerAnimated:NO];
+        
+        if ( [myPrefs searchTypePref] == _PREFER_ADVANCED_SEARCH )
+            {
+            [[searchNavController navigationController] pushViewController:[[[[self window] rootViewController] storyboard] instantiateViewControllerWithIdentifier:@"advanced-search"] animated:NO];
+            }
+        
+        A_BMLT_SearchViewController *topController = (A_BMLT_SearchViewController *)[[searchNavController navigationController] topViewController];
+        if ( [searchResults count] )
+            {
+            [topController addClearSearchButton];
+            }
+        else
+            {
+            [[topController navigationItem] setLeftBarButtonItem:nil];
+            }
+        
+        [topController addToggleMapButton];
+        }
+}
+
 /*****************************************************************/
 /**
  \brief This is the base search. Params are passed in.

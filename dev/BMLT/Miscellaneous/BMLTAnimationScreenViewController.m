@@ -44,7 +44,19 @@
 
 /*****************************************************************/
 /**
- \brief Called just before the screen appears. We use it to set a
+ \brief Called just before the screen appears. We use it to make sure
+        the navbar is shown (It is hidden for "advanced-only" prefs).
+ *****************************************************************/
+- (void)viewWillAppear:(BOOL)animated
+{
+    [[self navigationController] setNavigationBarHidden:NO];
+
+    [super viewWillAppear:animated];
+}
+
+/*****************************************************************/
+/**
+ \brief Called just after the screen appears. We use it to set a
         "tracker" variable in the app delegate, and to set the title.
  *****************************************************************/
 - (void)viewDidAppear:(BOOL)animated   ///< YES, if the appearance is animated.

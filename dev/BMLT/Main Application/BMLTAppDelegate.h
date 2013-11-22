@@ -76,6 +76,7 @@ extern int kAddressLookupTimeoutPeriod_in_seconds;
 + (NSArray *)sortMeetingListByDistance:(NSArray *)inMeetings;                         ///< Sorts the meeting search results by distance from your location.
 
 /// Instance methods
+- (void)selectInitialSearchAndForce:(BOOL)force;        ///< Selects the initial search screen, depending on the user's choice.
 - (BMLT_Prefs *)getMyPrefs;                             ///< Return the prefs object for this app.
 - (void)searchForMeetingsNearMe:(CLLocationCoordinate2D)inMyLocation withParams:(NSDictionary *)params; ///< A lookup search with parameters.
 - (void)searchForMeetingsNearMe:(CLLocationCoordinate2D)inMyLocation;                        ///< Begins a lookup search, in which a location is found first, then all meetings near there are returned.
