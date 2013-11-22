@@ -85,8 +85,9 @@ CHANGELIST
 == Version 2.6a3
 * TBD
 * Added some "breathing room" around the new popup window for the black marker in the map results screen.
-* Changed the color theme to a dark top and bottom bar, and darker backgrounds, because of the visibility issues introduced by iOS 7 buttons.
+* Changed the color theme to a colored top and bottom bar (in iOS7), and darker backgrounds, because of the visibility issues introduced by iOS 7 buttons.
 * Added a new Swedish translation.
+* Made the settings selection between simple and advanced preferred search type a bit more useful. Selecting advanced now gives nothing but the advanced, and simple gives simple, but with the ability to navigate to advanced.
 
 == Version 2.6a1
 * November 16, 2013

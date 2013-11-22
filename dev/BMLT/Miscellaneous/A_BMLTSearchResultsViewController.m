@@ -34,6 +34,20 @@
 
 /*****************************************************************/
 /**
+ \brief This is called before the view appears.
+ *****************************************************************/
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if ( ![[[self navigationController] navigationBar] respondsToSelector:@selector(setBarTintColor:)] )
+        {
+        [[[self navigationItem] rightBarButtonItem] setTintColor:nil];
+        }
+}
+
+/*****************************************************************/
+/**
  \brief Specialize the implicit call, because we trigger a redraw, and
  we want to be able to use a regular array, not a mutable one.
  *****************************************************************/

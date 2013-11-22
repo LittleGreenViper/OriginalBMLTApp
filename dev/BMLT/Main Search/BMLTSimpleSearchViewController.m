@@ -40,6 +40,14 @@
  *****************************************************************/
 - (void)viewWillAppear:(BOOL)animated
 {
+    [[self navigationController] setNavigationBarHidden:NO];
+    [super viewWillAppear:animated];
+    
+    if ( ![[[self navigationController] navigationBar] respondsToSelector:@selector(setBarTintColor:)] )
+        {
+        [[[self navigationItem] rightBarButtonItem] setTintColor:nil];
+        }
+
     [findMeetingsNearMeButton setTitle:NSLocalizedString([findMeetingsNearMeButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
     [findMeetingsLaterTodayButton setTitle:NSLocalizedString([findMeetingsLaterTodayButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
     [findMeetingsTomorrowButton setTitle:NSLocalizedString([findMeetingsTomorrowButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];

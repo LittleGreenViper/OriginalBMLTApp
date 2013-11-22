@@ -129,6 +129,12 @@ static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum
 - (void)viewWillAppear:(BOOL)animated   ///< YES, if the appearance will be animated.
 {
     [super viewWillAppear:animated];
+    
+    if ( ![[[self navigationController] navigationBar] respondsToSelector:@selector(setBarTintColor:)] )
+        {
+        [[[self navigationItem] rightBarButtonItem] setTintColor:nil];
+        }
+    
     if ( ![self isMapInitialized] )
         {
         [self determineMapSize:[self dataArray]];

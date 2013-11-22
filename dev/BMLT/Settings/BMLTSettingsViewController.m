@@ -83,6 +83,20 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
 
 /*****************************************************************/
 /**
+ \brief This is called before the view appears.
+ *****************************************************************/
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if ( ![[[self navigationController] navigationBar] respondsToSelector:@selector(setBarTintColor:)] )
+        {
+        [[[self navigationItem] rightBarButtonItem] setTintColor:nil];
+        }
+}
+
+/*****************************************************************/
+/**
  \brief  Called after the controller's view object has loaded.
  *****************************************************************/
 - (void)viewDidLoad
@@ -226,6 +240,12 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
     UISegmentedControl  *myControl = (UISegmentedControl *)sender;  // Get the sender as a segmented control
     [[BMLT_Prefs getBMLT_Prefs] setSearchTypePref:[myControl selectedSegmentIndex]];
     [BMLT_Prefs saveChanges];
+    
+    if ( [[BMLT_Prefs getBMLT_Prefs] searchTypePref] != _PREFER_ADVANCED_SEARCH )
+        {
+        [[BMLTAppDelegate getBMLTAppDelegate] selectInitialSearchAndForce:YES];
+        }
+
 }
 
 /*****************************************************************/

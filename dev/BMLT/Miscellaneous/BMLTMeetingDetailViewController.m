@@ -52,6 +52,12 @@ static int List_Meeting_Format_Circle_Size_Big = 30;
 {
     [super viewWillAppear:animated];
     
+    if ( ![[[self navigationController] navigationBar] respondsToSelector:@selector(setBarTintColor:)] )
+        {
+        [[[self navigationController] navigationBar] setTintColor:[[[self view] window] backgroundColor]];
+        [[[self navigationItem] rightBarButtonItem] setTintColor:nil];
+        }
+    
     [[self navigationItem] setTitle:NSLocalizedString(@"MEETING-DETAILS", nil)];
     [[[self navigationItem] titleView] sizeToFit];
     

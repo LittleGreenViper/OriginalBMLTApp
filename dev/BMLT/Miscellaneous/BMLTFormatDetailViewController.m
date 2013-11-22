@@ -55,6 +55,21 @@
 
 /*****************************************************************/
 /**
+ \brief Called before the view appears.
+ *****************************************************************/
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    if ( ![[[self navigationController] navigationBar] respondsToSelector:@selector(setBarTintColor:)] )
+        {
+        [[[self navigationItem] rightBarButtonItem] setTintColor:nil];
+        }
+
+}
+
+/*****************************************************************/
+/**
  \brief Set up all the various dialog items
  *****************************************************************/
 - (void)viewDidLoad
