@@ -236,6 +236,11 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     geocodeInProgress = NO;
     dontLookup = YES;
     [searchSpecAddressTextEntry resignFirstResponder];
+    if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
+        {
+        [searchSpecSegmentedControl setSelectedSegmentIndex:0];
+        [self searchSpecChanged:searchSpecSegmentedControl];
+        }
 }
 
 /*****************************************************************/
