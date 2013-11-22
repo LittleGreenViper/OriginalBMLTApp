@@ -440,7 +440,7 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
         
         if ( [myPrefs searchTypePref] == _PREFER_ADVANCED_SEARCH )
             {
-            [[searchNavController navigationController] pushViewController:[[self.window.rootViewController storyboard] instantiateViewControllerWithIdentifier:@"advanced-search"] animated:NO];
+            [[searchNavController navigationController] pushViewController:[[[[self window] rootViewController] storyboard] instantiateViewControllerWithIdentifier:@"advanced-search"] animated:NO];
             }
         
         A_BMLT_SearchViewController *topController = (A_BMLT_SearchViewController *)[[searchNavController navigationController] topViewController];

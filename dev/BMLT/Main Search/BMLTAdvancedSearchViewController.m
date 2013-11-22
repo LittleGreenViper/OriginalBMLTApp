@@ -80,6 +80,11 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
  *****************************************************************/
 - (void)viewWillAppear:(BOOL)animated
 {
+    if ( [[BMLT_Prefs getBMLT_Prefs] searchTypePref] == _PREFER_ADVANCED_SEARCH )
+        {
+        [[self navigationController] setNavigationBarHidden:YES];
+        }
+    
     dontLookup = NO;
     
     if ( ![BMLTAppDelegate locationServicesAvailable] && ![self mapSearchView] )
