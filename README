@@ -83,10 +83,10 @@ The new app will read the prefs from the original, but this is really meant to b
 CHANGELIST
 ----------
 == Version 2.6a3
-* TBD
+* November 23, 2013
 * Added some "breathing room" around the new popup window for the black marker in the map results screen.
 * Changed the color theme to a colored top and bottom bar (in iOS7), and darker backgrounds, because of the visibility issues introduced by iOS 7 buttons.
-* Added a new Swedish translation.
+* Added a new Swedish translation for the black marker popup.
 * Made the settings selection between simple and advanced preferred search type a bit more useful. Selecting advanced now gives nothing but the advanced, and simple gives simple, but with the ability to navigate to advanced.
 
 == Version 2.6a1

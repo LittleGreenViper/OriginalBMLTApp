@@ -65,6 +65,7 @@ static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum
 #ifdef DEBUG
     NSLog(@"BMLTMapResultsViewController pm_openMarkerPopup");
 #endif
+    [self closeMarkerPopup];
     CGRect  popupFrame = CGRectMake(BMLTPopupViewPaddingInPixels, BMLTPopupViewPaddingInPixels, BMLTPopupViewWidthInPixels, BMLTPopupViewHeightInPixels);
     UIView  *labelContainer = [[UIView alloc] initWithFrame:CGRectInset ( popupFrame, -BMLTPopupViewPaddingInPixels, -BMLTPopupViewPaddingInPixels )];
     UILabel *viewLabel = [[UILabel alloc] initWithFrame:popupFrame];
@@ -129,6 +130,7 @@ static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum
 - (void)viewWillAppear:(BOOL)animated   ///< YES, if the appearance will be animated.
 {
     [super viewWillAppear:animated];
+    [self closeMarkerPopup];
     
     if ( ![[[self navigationController] navigationBar] respondsToSelector:@selector(setBarTintColor:)] )
         {
@@ -214,6 +216,7 @@ static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum
  *****************************************************************/
 - (void)clearLastRegion
 {
+    [self closeMarkerPopup];
     lastRegion.center.longitude = lastRegion.center.latitude = 0.0;
     lastRegion.span.latitudeDelta = 0.0;
     lastRegion.span.longitudeDelta = 0.0;
@@ -440,6 +443,7 @@ static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum
                  atRect:(CGRect)selectRect  ///< The rect for the marker.
                  inView:(UIView *)inContext ///< The context for the display.
 {
+    [self closeMarkerPopup];
     UIStoryboard    *st = [self storyboard];
     
     UIViewController    *newController = [st instantiateViewControllerWithIdentifier:@"list-view-results"];
@@ -482,6 +486,7 @@ static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum
  *****************************************************************/
 - (void)dismissListPopover
 {
+    [self closeMarkerPopup];
     if (listPopover)
         {
         [listPopover dismissPopoverAnimated:YES];
@@ -500,6 +505,7 @@ static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum
  *****************************************************************/
 - (UIPrintPageRenderer *)getMyPageRenderer
 {
+    [self closeMarkerPopup];
     return [[BMLT_ListPrintPageRenderer alloc] initWithMeetings:[self dataArray] andMapFormatter:[[self view] viewPrintFormatter]];
 }
 
@@ -511,6 +517,7 @@ static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum
  *****************************************************************/
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
 {
+    [self closeMarkerPopup];
     [_selectedAnnotation setIsSelected:NO];
     [(BMLT_Results_MapPointAnnotationView *)[[self myMapView] viewForAnnotation:_selectedAnnotation] selectImage];
     _selectedAnnotation = nil;
@@ -526,6 +533,7 @@ static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum
 - (MKAnnotationView *)mapView:(MKMapView *)mapView          ///< The map view
             viewForAnnotation:(id<MKAnnotation>)annotation  ///< The annotation controller that we'll return the view for.
 {
+    [self closeMarkerPopup];
     MKAnnotationView* ret = nil;
     
     if ( mapView && ([mapView alpha] == 1) )    // We have to have a map, and it needs to be visible, or no annotations.
@@ -591,6 +599,7 @@ regionDidChangeAnimated:(BOOL)animated  ///< Whether or not to animate the chang
 - (void)mapView:(MKMapView *)mapView                ///< The map view.
 didSelectAnnotationView:(MKAnnotationView *)inView  ///< The selected annotation view.
 {
+    [self closeMarkerPopup];
 #ifdef DEBUG
     NSLog(@"BMLTMapResultsViewController mapView:didSelectAnnotationView called.");
 #endif
@@ -678,6 +687,7 @@ didChangeDragState:(MKAnnotationViewDragState)newState  ///< The new state of th
  *****************************************************************/
 - (IBAction)toggleMapView:(id)sender
 {
+    [self closeMarkerPopup];
     [[BMLTAppDelegate getBMLTAppDelegate] toggleThisMapView:[self myMapView] fromThisButton:[self _toggleButton]];
 }
 @end

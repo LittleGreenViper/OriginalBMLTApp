@@ -413,6 +413,7 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
 #ifdef DEBUG
         NSLog(@"\tBMLTAppDelegate::displaySearchResults No search results to display.");
 #endif
+        [self clearAllSearchResultsNo];
         [self sorryCharlie];
         }
 #ifdef DEBUG
