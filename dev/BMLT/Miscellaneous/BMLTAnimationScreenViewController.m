@@ -78,4 +78,14 @@
     [super viewDidDisappear:animated];
     // Release any retained subviews of the main view.
 }
+    
+/*****************************************************************/
+/**
+ \brief This is called when someone presses the "CANCEL" button.
+ *****************************************************************/
+- (IBAction)cancelButtonHit:(UIBarButtonItem *)sender   ///< The bar button item.
+{
+    [[BMLTAppDelegate getBMLTAppDelegate] stopAnimations];
+    [[BMLTAppDelegate getBMLTAppDelegate] clearAllSearchResultsNo];
+}
 @end

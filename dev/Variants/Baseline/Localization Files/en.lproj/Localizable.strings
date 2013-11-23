@@ -53,6 +53,7 @@
 "OK-BUTTON" = "OK";
 "TOGGLE-MAP-LABEL-MAP" = "Map View";
 "TOGGLE-MAP-LABEL-SATELLITE" = "Satellite View";
+"CANCEL-TITLE" = "Cancel";
 
 /* Used in the Prefs window */
 "SETTINGS-URI-BLURB" = "Complete GPL Source Is Available Here:";

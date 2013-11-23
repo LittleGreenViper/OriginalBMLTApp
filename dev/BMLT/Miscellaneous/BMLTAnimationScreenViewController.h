@@ -32,4 +32,5 @@
 @interface BMLTAnimationScreenViewController : UIViewController
     @property (weak, nonatomic)             IBOutlet BMLT_AnimationView *animationView;
     @property (weak, nonatomic, readonly)   IBOutlet UILabel            *messageLabel;   ///< This will contain the failure message.
+    - (IBAction)cancelButtonHit:(UIBarButtonItem *)sender;
 @end

@@ -883,6 +883,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 #endif
         currentAnimation = [[self.window.rootViewController storyboard] instantiateViewControllerWithIdentifier:@"animation-screen"];
         [[currentAnimation navigationItem] setTitle:NSLocalizedString(@"SEARCH-ANIMATION-TITLE", nil)];
+        [[currentAnimation navigationItem] setHidesBackButton:YES];
+        [[[currentAnimation navigationItem] leftBarButtonItem] setTitle:NSLocalizedString(@"CANCEL-TITLE", nil)];
         [[searchNavController navigationController] pushViewController:currentAnimation animated:YES];
         }
 }

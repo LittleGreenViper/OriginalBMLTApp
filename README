@@ -82,6 +82,11 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
+== Version 2.6b0
+* TBD
+* Fixed an issue with the cancel button during the animation screen. It is now a regular button, labeled "CANCEL."
+* Made the font in the black marker popup a bit bigger.
+
 == Version 2.6a3
 * November 23, 2013
 * Added some "breathing room" around the new popup window for the black marker in the map results screen.

@@ -53,6 +53,7 @@
 "OK-BUTTON" = "OK";
 "TOGGLE-MAP-LABEL-MAP" = "kartvy";
 "TOGGLE-MAP-LABEL-SATELLITE" = "satellitvy";
+"CANCEL-TITLE" = "Annullera";
 
 /* Used in the Prefs window */
 "SETTINGS-URI-BLURB" = "Komplett källkod GPL kan laddas ner här:";

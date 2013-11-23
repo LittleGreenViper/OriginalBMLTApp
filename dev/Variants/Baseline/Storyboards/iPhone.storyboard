@@ -96,7 +96,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" text="SEARCH-SPEC-DISABLED-TEXT" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" id="iqL-3E-3rT">
-                                <rect key="frame" x="13" y="219" width="295" height="148.00000064437452"/>
+                                <rect key="frame" x="13" y="219.00000123678711" width="295" height="148"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -1034,7 +1034,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="ZnD-3E-c3s"/>
+                    <navigationItem key="navigationItem" id="ZnD-3E-c3s">
+                        <barButtonItem key="backBarButtonItem" title="annullera" id="PhF-Gl-sxT"/>
+                        <barButtonItem key="leftBarButtonItem" title="CANCEL-TITLE" id="HPC-bp-gcX">
+                            <connections>
+                                <action selector="cancelButtonHit:" destination="bJU-BV-QkD" id="wYZ-EX-xB5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <connections>

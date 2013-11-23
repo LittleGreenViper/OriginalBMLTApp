@@ -28,6 +28,7 @@ static int  BMLTPopupViewPaddingInPixels                = 4;    ///< The number 
 static int  BMLTPopupViewWidthInPixels                  = 120;  ///< The width of the black marker popup.
 static int  BMLTPopupViewHeightInPixels                 = 80;   ///< The height of the black marker popup.
 static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum number of text lines in the black marker popup.
+static int  BMLTPopupViewFontSize                       = 13;   ///< The popup font size.
 
 /*****************************************************************/
 /**
@@ -70,7 +71,7 @@ static int  BMLTPopupViewNumberOfTextLines              = 6;    ///< The maximum
     UIView  *labelContainer = [[UIView alloc] initWithFrame:CGRectInset ( popupFrame, -BMLTPopupViewPaddingInPixels, -BMLTPopupViewPaddingInPixels )];
     UILabel *viewLabel = [[UILabel alloc] initWithFrame:popupFrame];
     [viewLabel setText:NSLocalizedString ( @"BLACK-MARKER-TITLE", nil )];
-    [viewLabel setFont:[UIFont italicSystemFontOfSize:11]];
+    [viewLabel setFont:[UIFont italicSystemFontOfSize:BMLTPopupViewFontSize]];
     [labelContainer setBackgroundColor:[UIColor blackColor]];
     [viewLabel setBackgroundColor:[UIColor blackColor]];
     [viewLabel setTextColor:[UIColor whiteColor]];
