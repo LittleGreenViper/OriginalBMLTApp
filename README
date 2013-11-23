@@ -36,7 +36,9 @@ along with this code.  If not, see <http://www.gnu.org/licenses/>.
 NOTE ON THE VERSION 2.6 PROJECT
 -------------------------------
 
-Finished removing the skeuomorphic stuff. Added new checkboxes in the advanced search, and now you can drag the marker in the map results (iPhone, too).
+This has been worked over to provide a better iOS 7 experience, with all the "skeuomorphism" now gone.
+The minimum OS level is now 6.0, with the target being 7.0 and greater.
+The biggest new feature is that the black markers will be draggable in all maps. This includes the map results in the iPhone version.
 
 NOTE ON THE VERSION 2.5 PROJECT
 -------------------------------
@@ -83,7 +85,7 @@ The new app will read the prefs from the original, but this is really meant to b
 CHANGELIST
 ----------
 == Version 2.6b0
-* TBD
+* November 23, 2013
 * Fixed an issue with the cancel button during the animation screen. It is now a regular button, labeled "CANCEL."
 * Made the font in the black marker popup a bit bigger.
 
