@@ -84,6 +84,10 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
+== Version 2.6b1
+* TBD
+* Fixed a cosmetic issue, where the advanced text field was cut off by the keyboard in 3.5 inch screens.
+
 == Version 2.6b0
 * November 23, 2013
 * Fixed an issue with the cancel button during the animation screen. It is now a regular button, labeled "CANCEL."
