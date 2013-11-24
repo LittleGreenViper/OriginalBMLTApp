@@ -167,17 +167,21 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     
     [goButton setTitle:NSLocalizedString([goButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
     
+    NSMutableArray      *pTags = [[NSMutableArray alloc] init];
     NSDate              *date = [BMLTAppDelegate getLocalDateWithGracePeriod:YES];
     NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:date];
-    
-    int wd = (int)[weekdayComponents weekday] + ([BMLTVariantDefs weekStartDay] - 1);
-    
-    if ( wd > 7 )
+    int                 wd = (int)[weekdayComponents weekday];
+    int                 position_1 = [BMLTVariantDefs weekStartDay];
+
+    wd -= (position_1 - 1);
+
+    if ( wd < 1 )
         {
-        wd -= 7;
+        wd += 7;
         }
-    
+
+    [pTags addObject:[NSString stringWithFormat:@"%d", wd]];
     [[self enabledWeekdaysCheckBoxes] setTagArray:[NSArray arrayWithObject:[NSString stringWithFormat:@"%d", wd]]];
     
     [super viewDidLoad];

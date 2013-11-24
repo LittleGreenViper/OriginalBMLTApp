@@ -53,7 +53,6 @@
 "OK-BUTTON" = "OK";
 "TOGGLE-MAP-LABEL-MAP" = "kartvy";
 "TOGGLE-MAP-LABEL-SATELLITE" = "satellitvy";
-"CANCEL-TITLE" = "Annullera";
 
 /* Used in the Prefs window */
 "SETTINGS-URI-BLURB" = "Komplett källkod GPL kan laddas ner här:";
@@ -177,7 +176,7 @@
 "WEEKDAY-SHORT-NAME-6" = "Lör";
 
 /* The Name of the Meeting Details Screen */
-"MEETING-DETAILS" = "Details";
+"MEETING-DETAILS" = "Detaljer";
 "C" = "Slutet Möte är till för de individer som identifierar sig som beroende eller för de som är osäkra och tror att de kanske har drogproblem.";
 
 "O" = "Öppet Möte är ett NA-möte där vem som helst som är intresserad av hur vi har funnit tillfrisknande från Beroendesjukdomen kan närvara.";

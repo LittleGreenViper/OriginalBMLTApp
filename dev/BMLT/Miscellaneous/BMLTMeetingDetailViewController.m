@@ -41,6 +41,7 @@
 @synthesize _toggleButton;
 
 static int List_Meeting_Format_Circle_Size_Big = 30;
+static int Detail_Meeting_AddressFontSize = 13;
 
 #pragma mark - View lifecycle
 
@@ -241,6 +242,7 @@ static int List_Meeting_Format_Circle_Size_Big = 30;
     
     NSString    *theAddress = [NSString stringWithFormat:@"%@, %@", meetingLocationString, townAndState];
     [addressButton setTitle:theAddress forState:UIControlStateNormal];
+    [[addressButton titleLabel] setFont:[UIFont systemFontOfSize:Detail_Meeting_AddressFontSize]];
 }
 
 /*****************************************************************/

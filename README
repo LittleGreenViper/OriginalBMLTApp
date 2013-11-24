@@ -85,8 +85,11 @@ The new app will read the prefs from the original, but this is really meant to b
 CHANGELIST
 ----------
 == Version 2.6b1
-* TBD
+* November 24, 2013
 * Fixed a cosmetic issue, where the advanced text field was cut off by the keyboard in 3.5 inch screens.
+* Couple of minor cosmetic tweaks in the Advanced Search screen.
+* Minor tweak to the "busy animation" screen.
+* The initially-selected weekday for going into the "weekdays" mode of the advanced screen was not selecting the proper day for weeks starting on non-Sunday days. This is fixed.
 
 == Version 2.6b0
 * November 23, 2013
