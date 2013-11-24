@@ -84,6 +84,10 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
+== Version 2.6
+* November 24, 2013
+* No changes from the last beta. This is the official release.
+
 == Version 2.6b1
 * November 24, 2013
 * Fixed a cosmetic issue, where the advanced text field was cut off by the keyboard in 3.5 inch screens.
