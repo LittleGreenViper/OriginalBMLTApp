@@ -263,7 +263,10 @@ static int Detail_Meeting_AddressFontSize = 13;
             {
             [[self view] setBackgroundColor:[BMLTVariantDefs meetingDetailBackgroundColor]];    // This is here to make sure it's only called once.
             }
-        [meetingMapView addAnnotation:[[BMLT_Results_MapPointAnnotation alloc] initWithCoordinate:[[_myMeeting getMeetingLocationCoords] coordinate] andMeetings:nil andIndex:0]];
+        
+        BMLT_Results_MapPointAnnotation *marker = [[BMLT_Results_MapPointAnnotation alloc] initWithCoordinate:[[_myMeeting getMeetingLocationCoords] coordinate] andMeetings:nil andIndex:0];
+        
+        [meetingMapView addAnnotation:marker];
         [meetingMapView setDelegate:self];
         }
     else
@@ -396,6 +399,7 @@ static int Detail_Meeting_AddressFontSize = 13;
     if ( !ret )
         {
         ret = [[BMLT_Results_BlackAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"single_meeting_annotation"];
+        [ret setDraggable:NO];
         }
     
     return ret;

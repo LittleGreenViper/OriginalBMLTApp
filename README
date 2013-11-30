@@ -84,6 +84,10 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
+== Version 2.6.1
+* TBD
+* The black marker in meeting details screens was draggable. This is no longer the case.
+
 == Version 2.6
 * November 24, 2013
 * No changes from the last beta. This is the official release.
