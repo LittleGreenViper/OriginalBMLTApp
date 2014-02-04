@@ -764,8 +764,7 @@
 		771B39F817E33C3B00CFBCA1 /* App-Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-76.png"; sourceTree = "<group>"; };
 		771B39F917E33C3B00CFBCA1 /* App-Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-120.png"; sourceTree = "<group>"; };
 		771B39FA17E33C3B00CFBCA1 /* App-Icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-152.png"; sourceTree = "<group>"; };
-		771C13AD189F21E000132BEB /* SanDiegoCA.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = SanDiegoCA.gpx; path = "../spec/GPX Files/SanDiegoCA.gpx"; sourceTree = "<group>"; };
-		771C13AE189F21F100132BEB /* SanDiegoCA.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = SanDiegoCA.gpx; path = "../../../spec/GPX Files/SanDiegoCA.gpx"; sourceTree = "<group>"; };
+		771C13AD189F21E000132BEB /* SanDiegoCA.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = SanDiegoCA.gpx; path = "../../../spec/GPX Files/SanDiegoCA.gpx"; sourceTree = "<group>"; };
 		771D0C31150E88E5005A707A /* BMLTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTAppDelegate.h; sourceTree = "<group>"; };
 		771D0C32150E88E5005A707A /* BMLTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTAppDelegate.m; sourceTree = "<group>"; };
 		771D0C33150E88E5005A707A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1138,7 +1137,7 @@
 				770BC445189F1D3900991DBD /* BMLTVariantDefs.m */,
 				770BC446189F1D3900991DBD /* images */,
 				770BC443189F1CF700991DBD /* Info.plist */,
-				771C13AE189F21F100132BEB /* SanDiegoCA.gpx */,
+				771C13AD189F21E000132BEB /* SanDiegoCA.gpx */,
 			);
 			path = "BMLT-SD";
 			sourceTree = "<group>";
@@ -1436,7 +1435,6 @@
 		77977D00150E882B00485C8D = {
 			isa = PBXGroup;
 			children = (
-				771C13AD189F21E000132BEB /* SanDiegoCA.gpx */,
 				77167D4E1517D205006E50E8 /* README */,
 				77977D15150E882B00485C8D /* BMLT */,
 				77D90B951514C6A60059EF41 /* Variants */,
