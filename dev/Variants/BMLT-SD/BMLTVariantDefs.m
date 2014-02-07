@@ -55,7 +55,7 @@
 /*****************************************************************/
 + (UIColor *)windowBackgroundColor
 {
-    return [UIColor colorWithRed:0 green:0.3725490196 blue:0.1294117647 alpha:1.0];
+    return [UIColor colorWithRed:0.2078431373 green:0.3725490196 blue:0.1647058824 alpha:1.0];
 }
 
 /*****************************************************************/
@@ -91,7 +91,7 @@
 /*****************************************************************/
 + (UIColor *)meetingDetailBackgroundColor
 {
-    return [UIColor colorWithRed:0 green:0.3 blue:0.11 alpha:1.0];
+    return [UIColor colorWithRed:0 green:0.3 blue:0.05 alpha:1.0];
 }
 
 /*****************************************************************/
@@ -127,7 +127,7 @@
 /*****************************************************************/
 + (UIColor *)getSortEvenColor
 {
-    return [UIColor colorWithRed:0.8 green:0.9 blue:1.0 alpha:1.0];
+    return [UIColor colorWithRed:0.9764705882 green:0.9764705882 blue:0.9764705882 alpha:1.0];
 }
 
 /*****************************************************************/
