@@ -914,6 +914,8 @@
 		77882CBC1548874C00DBE9A1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		778F649C16938774001F0DC6 /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Back.png"; sourceTree = "<group>"; };
 		778F649D16938774001F0DC6 /* Anim-Transparency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Transparency.png"; sourceTree = "<group>"; };
+		7790CEF618D9C540007EFBB4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7790CEF718D9C540007EFBB4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7795A22A16925085004409D2 /* BMLTVariantDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTVariantDefs.h; sourceTree = "<group>"; };
 		77977D0B150E882B00485C8D /* NY NA Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NY NA Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77977D0F150E882B00485C8D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1852,6 +1854,7 @@
 				en,
 				"sv-SE",
 				sv,
+				fr,
 			);
 			mainGroup = 77977D00150E882B00485C8D;
 			productRefGroup = 77977D0C150E882B00485C8D /* Products */;
@@ -2637,6 +2640,7 @@
 			children = (
 				77603DE71541DC8300C4840F /* en */,
 				77603DEA1541DC8300C4840F /* sv */,
+				7790CEF618D9C540007EFBB4 /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -2646,6 +2650,7 @@
 			children = (
 				77603DE91541DC8300C4840F /* en */,
 				77603DEB1541DC8300C4840F /* sv */,
+				7790CEF718D9C540007EFBB4 /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
