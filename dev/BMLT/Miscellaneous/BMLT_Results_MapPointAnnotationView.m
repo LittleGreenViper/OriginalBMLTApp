@@ -82,7 +82,7 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
     
     if ( firstMeeting )
         {
-        NSString    *indexString = [NSString stringWithFormat:@"%d", [firstMeeting meetingIndex]];
+        NSString    *indexString = [NSString stringWithFormat:@"%ld", (long)[firstMeeting meetingIndex]];
         
         // Blue and red get a white number. Green gets black (default).
         if ( ![(BMLT_Results_MapPointAnnotation *)[self annotation] isSelected] )
@@ -167,7 +167,7 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
             animated:(BOOL)animated                             ///< Whether or not to animate the drag.
 {
 #ifdef DEBUG
-    NSLog(@"BMLT_Results_BlackAnnotationView::setDragState: %d animated: called.", newDragState);
+    NSLog(@"BMLT_Results_BlackAnnotationView::setDragState: %lu animated: called.", newDragState);
 #endif
     switch ( newDragState )
         {

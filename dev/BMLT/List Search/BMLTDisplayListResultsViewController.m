@@ -165,7 +165,7 @@ static int kSortHeaderHeight = 30;  ///< The height of the "Sort By" header for 
          cellForRowAtIndexPath:(NSIndexPath *)indexPath ///< The index path for the cell.
 {
 #ifdef DEBUG
-    NSLog(@"BMLTDisplayListResultsViewController::tableView: cellForRowAtIndexPath:(%d, %d)", [indexPath section], [indexPath row] );
+    NSLog(@"BMLTDisplayListResultsViewController::tableView: cellForRowAtIndexPath:(%ld, %ld)", (long)[indexPath section], (long)[indexPath row] );
 #endif
 
     UITableViewCell *ret = nil;
@@ -228,13 +228,13 @@ static int kSortHeaderHeight = 30;  ///< The height of the "Sort By" header for 
         if ( theMeeting )
             {
             // We deliberately don't reuse, because we need to update the "striping" of meeting cells when we re-sort.
-            NSString    *reuseID = [NSString stringWithFormat: @"BMLT_Search_Results_Row_%d", [theMeeting getMeetingID]];
+            NSString    *reuseID = [NSString stringWithFormat: @"BMLT_Search_Results_Row_%ld", (long)[theMeeting getMeetingID]];
             if ( !ret )
                 {
 #ifdef DEBUG
-                NSLog(@"Creating A Row For Meeting ID %d, named \"%@\"", [theMeeting getMeetingID], [theMeeting getBMLTName]);
+                NSLog(@"Creating A Row For Meeting ID %ld, named \"%@\"", (long)[theMeeting getMeetingID], [theMeeting getBMLTName]);
 #endif
-                BMLTMeetingDisplayCellView *ret_cast = [[BMLTMeetingDisplayCellView alloc] initWithMeeting:theMeeting andFrame:[tableView bounds] andReuseID:reuseID andIndex:[indexPath row]];
+                BMLTMeetingDisplayCellView *ret_cast = [[BMLTMeetingDisplayCellView alloc] initWithMeeting:theMeeting andFrame:[tableView bounds] andReuseID:reuseID andIndex:(int)[indexPath row]];
                 [ret_cast setMyModalController:self];
                 
                 ret = ret_cast;
@@ -242,14 +242,14 @@ static int kSortHeaderHeight = 30;  ///< The height of the "Sort By" header for 
 #ifdef DEBUG
             else
                 {
-                NSLog(@"Reusing A Row For Meeting ID %d, named \"%@\"", [theMeeting getMeetingID], [theMeeting getBMLTName]);
+                NSLog(@"Reusing A Row For Meeting ID %ld, named \"%@\"", (long)[theMeeting getMeetingID], [theMeeting getBMLTName]);
                 }
 #endif
             }
 #ifdef DEBUG
         else
             {
-            NSLog(@"ERROR: Cannot get a reliable meeting object for index %d!", [indexPath row]);
+            NSLog(@"ERROR: Cannot get a reliable meeting object for index %ld!", (long)[indexPath row]);
             }
 #endif
         }
@@ -268,7 +268,7 @@ static int kSortHeaderHeight = 30;  ///< The height of the "Sort By" header for 
     NSInteger   ret = ((section == 0) && ([[self dataArray] count] > 1)) ? 1 : [[self dataArray] count];
     
 #ifdef DEBUG
-    NSLog(@"BMLTDisplayListResultsViewController::tableView: numberOfRowsInSection:%d, returns %d", section, ret);
+    NSLog(@"BMLTDisplayListResultsViewController::tableView: numberOfRowsInSection:%ld, returns %ld", (long)section, (long)ret);
 #endif
 
     return ret;
@@ -285,7 +285,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath    ///< The index.
     CGFloat ret = (([self numberOfSectionsInTableView:tableView] > 1) && ([indexPath section] == 0)) ? kSortHeaderHeight : ([[self dataArray] count] > [indexPath row]) ? List_Meeting_Display_CellHeight : 0;
     
 #ifdef DEBUG
-    NSLog(@"BMLTDisplayListResultsViewController::tableView: heightForRowAtIndexPath:(%d, %d)", [indexPath section], [indexPath row] );
+    NSLog(@"BMLTDisplayListResultsViewController::tableView: heightForRowAtIndexPath:(%ld, %ld)", (long)[indexPath section], (long)[indexPath row] );
 #endif
 
     return ret;
@@ -304,7 +304,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath    ///< The index.
         }
     
 #ifdef DEBUG
-    NSLog(@"BMLTDisplayListResultsViewController::tableView: willSelectRowAtIndexPath:(%d, %d)", [indexPath section], [indexPath row] );
+    NSLog(@"BMLTDisplayListResultsViewController::tableView: willSelectRowAtIndexPath:(%ld, %ld)", (long)[indexPath section], (long)[indexPath row] );
 #endif
     
     return nil;

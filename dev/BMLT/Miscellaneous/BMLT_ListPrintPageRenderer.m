@@ -74,7 +74,7 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
 {
     NSInteger   pages = (NSInteger)ceil ( (float)[[self myMeetings] count] / (float)kNumberOfMeetingsPerPage ) + (([self myMapFormatter] == nil) ? 0 : 1);
 #ifdef DEBUG
-    NSLog(@"BMLT_ListPrintPageRenderer::numberOfPages: (%d meetings, %d meetings per page, %d pages)", [[self myMeetings] count], kNumberOfMeetingsPerPage, pages);
+    NSLog(@"BMLT_ListPrintPageRenderer::numberOfPages: (%lu meetings, %d meetings per page, %ld pages)", (unsigned long)[[self myMeetings] count], kNumberOfMeetingsPerPage, (long)pages);
 #endif
     return pages;
 }
@@ -86,7 +86,7 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
 - (void)prepareForDrawingPages:(NSRange)range
 {
 #ifdef DEBUG
-    NSLog(@"BMLT_ListPrintPageRenderer::prepareForDrawingPages: %d to %d", range.location, range.length);
+    NSLog(@"BMLT_ListPrintPageRenderer::prepareForDrawingPages: %lu to %lu", (unsigned long)range.location, (unsigned long)range.length);
 #endif
     if ( range.location == 0 && ([self myMapFormatter] != nil) )
         {
@@ -103,11 +103,11 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
 {
     if ( index > 0 || ([self myMapFormatter] == nil) )
         {
-        int   firstMeetingIndex = kNumberOfMeetingsPerPage * (index - (([self myMapFormatter] == nil) ? 0 : 1));
-        int   lastMeetingIndex = MIN( firstMeetingIndex + kNumberOfMeetingsPerPage, [[self myMeetings] count]) - 1;
+        int   firstMeetingIndex = (int)(kNumberOfMeetingsPerPage * (index - (([self myMapFormatter] == nil) ? 0 : 1)));
+        int   lastMeetingIndex = (int)MIN( firstMeetingIndex + kNumberOfMeetingsPerPage, [[self myMeetings] count]) - 1;
     
 #ifdef DEBUG
-        NSLog(@"BMLT_ListPrintPageRenderer::drawContentForPageAtIndex: %d inRect: (%f, %f), (%f, %f). %d meetings. First Meeting Index is %d. Last Meeting Index is %d", index, inRect.origin.x, inRect.origin.y, inRect.size.width, inRect.size.height, [[self myMeetings] count], firstMeetingIndex, lastMeetingIndex);
+        NSLog(@"BMLT_ListPrintPageRenderer::drawContentForPageAtIndex: %ld inRect: (%f, %f), (%f, %f). %lu meetings. First Meeting Index is %d. Last Meeting Index is %d", (long)index, inRect.origin.x, inRect.origin.y, inRect.size.width, inRect.size.height, (unsigned long)[[self myMeetings] count], firstMeetingIndex, lastMeetingIndex);
 #endif
     
         float   meetingCellHeight = (inRect.size.height / (float)kNumberOfMeetingsPerPage);
@@ -142,7 +142,7 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
     
     if ( [inMeeting meetingIndex] && ([self myMapFormatter] != nil) )
         {
-        NSString    *annotationMatch = [NSString stringWithFormat:@"%d", [inMeeting meetingIndex]];
+        NSString    *annotationMatch = [NSString stringWithFormat:@"%ld", (long)[inMeeting meetingIndex]];
         
         CGRect  annotRect = CGRectMake(inRect.origin.x, inRect.origin.y, kAnnotationArea, kAnnotationArea);
         

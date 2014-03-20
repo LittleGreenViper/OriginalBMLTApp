@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/0"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd">
+<time>2012-04-22T17:32:54Z</time>
+<bounds minlat="46.8580073" minlon="-71.3460728" maxlat="46.8580073" maxlon="-71.3460728"/>
+<wpt lat="46.8580073" lon="-71.3460728">
+  <ele>0.000000</ele>
+  <name>Quebec, Canada</name>
+  <cmt>Quebec, Canada</cmt>
+  <desc>Quebec, Canada</desc>
+</wpt>
+</gpx>

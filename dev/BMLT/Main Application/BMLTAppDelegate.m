@@ -225,7 +225,7 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
             }
         
 #ifdef DEBUG
-        NSLog(@"\tBMLTAppDelegate::sortMeetingListByWeekdayAndTime: Sort Block. Meeting A: %@ (%d, %d) Meeting B: %@ (%d, %d)", [meeting_A getBMLTName],[meeting_A getStartTimeOrdinal], meetingAWeekday, [meeting_B getBMLTName], [meeting_B getStartTimeOrdinal], meetingBWeekday);
+        NSLog(@"\tBMLTAppDelegate::sortMeetingListByWeekdayAndTime: Sort Block. Meeting A: %@ (%d, %ld) Meeting B: %@ (%d, %ld)", [meeting_A getBMLTName],[meeting_A getStartTimeOrdinal], (long)meetingAWeekday, [meeting_B getBMLTName], [meeting_B getStartTimeOrdinal], (long)meetingBWeekday);
 #endif
         if ( meetingAWeekday < meetingBWeekday )
             return NSOrderedAscending;
@@ -748,9 +748,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     weekdayComponents = [gregorian components:(NSMinuteCalendarUnit) fromDate:date];
     NSInteger           mn = [weekdayComponents minute];
     
-    [searchParams setObject:[NSString stringWithFormat:@"%d",wd] forKey:@"weekdays"];
-    [searchParams setObject:[NSString stringWithFormat:@"%d",hr] forKey:@"StartsAfterH"];
-    [searchParams setObject:[NSString stringWithFormat:@"%d",mn] forKey:@"StartsAfterM"];
+    [searchParams setObject:[NSString stringWithFormat:@"%ld",(long)wd] forKey:@"weekdays"];
+    [searchParams setObject:[NSString stringWithFormat:@"%ld",(long)hr] forKey:@"StartsAfterH"];
+    [searchParams setObject:[NSString stringWithFormat:@"%ld",(long)mn] forKey:@"StartsAfterM"];
     
     [self searchForMeetingsNearMe:inMyLocation];
 }
@@ -773,7 +773,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         wd = 1;
         }
     
-    [searchParams setObject:[NSString stringWithFormat:@"%d",wd] forKey:@"weekdays"];
+    [searchParams setObject:[NSString stringWithFormat:@"%ld",(long)wd] forKey:@"weekdays"];
     
     [self searchForMeetingsNearMe:inMyLocation];
 }
@@ -1102,8 +1102,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (BOOL)tabBarController:(UITabBarController *)inTabBarController
 shouldSelectViewController:(UIViewController *)inViewController
 {
-    int newIndex = [[inTabBarController viewControllers] indexOfObject:inViewController];
-    int oldIndex = [inTabBarController selectedIndex];
+    int newIndex = (int)[[inTabBarController viewControllers] indexOfObject:inViewController];
+    int oldIndex = (int)[inTabBarController selectedIndex];
     
     // This is how we tell the transition routine what effect to use when switching between views.
     // An ascending index means that we are going left to right, and vice-versa.

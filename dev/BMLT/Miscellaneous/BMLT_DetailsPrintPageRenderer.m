@@ -68,7 +68,7 @@ static float    kHeaderHeight   = 100.0;
                           inRect:(CGRect)inRect    ///< The header rect
 {
 #ifdef DEBUG
-    NSLog(@"BMLT_DetailsPrintPageRenderer::drawHeaderForPageAtIndex: %d inRect: (%f, %f), (%f, %f)", index, inRect.origin.x, inRect.origin.y, inRect.size.width, inRect.size.height );
+    NSLog(@"BMLT_DetailsPrintPageRenderer::drawHeaderForPageAtIndex: %ld inRect: (%f, %f), (%f, %f)", (long)index, inRect.origin.x, inRect.origin.y, inRect.size.width, inRect.size.height );
 #endif
     BMLT_Meeting    *myMeeting = (BMLT_Meeting *)[[self myMeetings] objectAtIndex:0];
     

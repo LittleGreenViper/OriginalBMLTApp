@@ -238,7 +238,7 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
 - (IBAction)preferredSearchChanged:(id)sender   ///< The search type segmented control
 {
     UISegmentedControl  *myControl = (UISegmentedControl *)sender;  // Get the sender as a segmented control
-    [[BMLT_Prefs getBMLT_Prefs] setSearchTypePref:[myControl selectedSegmentIndex]];
+    [[BMLT_Prefs getBMLT_Prefs] setSearchTypePref:(int)[myControl selectedSegmentIndex]];
     [BMLT_Prefs saveChanges];
     
     if ( [[BMLT_Prefs getBMLT_Prefs] searchTypePref] != _PREFER_ADVANCED_SEARCH )

@@ -139,7 +139,7 @@ forViewPrintFormatter:(UIViewPrintFormatter *)formatter
 {
     if ( [myMeeting meetingIndex] )
         {
-        NSString    *myNum = [NSString stringWithFormat:@"%d", [myMeeting meetingIndex]];
+        NSString    *myNum = [NSString stringWithFormat:@"%ld", (long)[myMeeting meetingIndex]];
 #ifdef DEBUG
         NSLog(@"BMLTMeetingDisplayCellView::setAnnotation %@", myNum);
 #endif

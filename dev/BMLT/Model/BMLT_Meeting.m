@@ -243,7 +243,7 @@
     
     if ( [inKey isEqual:@"id_bigint"] )
         {
-        ret = [NSString stringWithFormat:@"%d", [self getMeetingID]];
+        ret = [NSString stringWithFormat:@"%ld", (long)[self getMeetingID]];
         }
     else
         {
@@ -500,7 +500,7 @@ foundCharacters:(NSString *)string      ///< The characters
                                 [comps setMinute:minutes];
                                 [comps setHour:hours];
                                 
-                                ordinalStartTime = (hours * 100) + minutes;
+                                ordinalStartTime = ((int)hours * 100) + (int)minutes;
                                 
                                 NSCalendar  *curCal = [NSCalendar currentCalendar];
                                 NSDate      *startT = [curCal dateFromComponents:comps];

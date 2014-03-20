@@ -192,6 +192,109 @@
 		77596763177BD34600F77C06 /* BMLTFormatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */; };
 		77596764177BD34600F77C06 /* BMLTFormatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */; };
 		77596765177BD34600F77C06 /* BMLTFormatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */; };
+		775FDDF818DB129C00B321AC /* BMLTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C32150E88E5005A707A /* BMLTAppDelegate.m */; };
+		775FDDF918DB129C00B321AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C33150E88E5005A707A /* main.m */; };
+		775FDDFA18DB129C00B321AC /* BMLTAdvancedSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C3E150E892A005A707A /* BMLTAdvancedSearchViewController.m */; };
+		775FDDFB18DB129C00B321AC /* BMLTMapResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C4F150E893C005A707A /* BMLTMapResultsViewController.m */; };
+		775FDDFC18DB129C00B321AC /* BMLT_Prefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C55150E893C005A707A /* BMLT_Prefs.m */; };
+		775FDDFD18DB129C00B321AC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C59150E893C005A707A /* Reachability.m */; };
+		775FDDFE18DB129C00B321AC /* A_BMLT_ChildClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C5C150E893C005A707A /* A_BMLT_ChildClass.m */; };
+		775FDDFF18DB129C00B321AC /* A_BMLT_Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C5E150E893C005A707A /* A_BMLT_Search.m */; };
+		775FDE0018DB129C00B321AC /* A_BMLT_ServiceBodyHierClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C60150E893C005A707A /* A_BMLT_ServiceBodyHierClass.m */; };
+		775FDE0118DB129C00B321AC /* BMLT_Driver.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C62150E893C005A707A /* BMLT_Driver.m */; };
+		775FDE0218DB129C00B321AC /* BMLT_Format.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C64150E893C005A707A /* BMLT_Format.m */; };
+		775FDE0318DB129C00B321AC /* BMLT_Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C66150E893C005A707A /* BMLT_Location.m */; };
+		775FDE0418DB129C00B321AC /* BMLT_Meeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C68150E893C005A707A /* BMLT_Meeting.m */; };
+		775FDE0518DB129C00B321AC /* BMLT_Meeting_Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C6A150E893C005A707A /* BMLT_Meeting_Search.m */; };
+		775FDE0618DB129C00B321AC /* BMLT_Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C6D150E893C005A707A /* BMLT_Parser.m */; };
+		775FDE0718DB129C00B321AC /* BMLT_Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C6F150E893C005A707A /* BMLT_Server.m */; };
+		775FDE0818DB129C00B321AC /* BMLT_ServiceBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C71150E893C005A707A /* BMLT_ServiceBody.m */; };
+		775FDE0918DB129C00B321AC /* BMLTAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C75150E893C005A707A /* BMLTAboutViewController.m */; };
+		775FDE0A18DB129C00B321AC /* BMLTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C77150E893C005A707A /* BMLTSettingsViewController.m */; };
+		775FDE0B18DB129C00B321AC /* MGS_PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* MGS_PopupView.m */; };
+		775FDE0C18DB129C00B321AC /* BMLTSimpleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7711417115125CD100BCCE00 /* BMLTSimpleSearchViewController.m */; };
+		775FDE0D18DB129C00B321AC /* A_BMLTSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BC71971512BFA1000BEFC0 /* A_BMLTSearchResultsViewController.m */; };
+		775FDE0E18DB129C00B321AC /* A_BMLTSettingsBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CE3F081516252300C93BC6 /* A_BMLTSettingsBackgroundView.m */; };
+		775FDE0F18DB129C00B321AC /* A_BMLTNavBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D732A815178B38004C572D /* A_BMLTNavBarViewController.m */; };
+		775FDE1018DB129C00B321AC /* A_BMLTMainBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777B520E15192409002EDC83 /* A_BMLTMainBackgroundView.m */; };
+		775FDE1118DB129C00B321AC /* MGS_PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* MGS_PopupViewController.m */; };
+		775FDE1218DB129C00B321AC /* BMLTDisplayListResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776BAD961519F90A008C608C /* BMLTDisplayListResultsViewController.m */; };
+		775FDE1318DB129C00B321AC /* BMLTMeetingDisplayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77640D40151A67BE00634143 /* BMLTMeetingDisplayCellView.m */; };
+		775FDE1418DB129C00B321AC /* BMLTFormatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77803C3D151C011D00A8ADC3 /* BMLTFormatDetailViewController.m */; };
+		775FDE1518DB129C00B321AC /* BMLTMeetingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7799D299151FA633007FE822 /* BMLTMeetingDetailViewController.m */; };
+		775FDE1618DB129C00B321AC /* A_BMLT_SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7707F3141525B44C00032CCA /* A_BMLT_SearchViewController.m */; };
+		775FDE1718DB129C00B321AC /* BMLT_Results_MapPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BCBBDC152933D700CDBCF6 /* BMLT_Results_MapPointAnnotationView.m */; };
+		775FDE1818DB129C00B321AC /* BMLTAnimationScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F6C3691531D1A90038784D /* BMLTAnimationScreenViewController.m */; };
+		775FDE1918DB129C00B321AC /* BMLT_ListPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CFE115153CB874005FB181 /* BMLT_ListPrintPageRenderer.m */; };
+		775FDE1A18DB129C00B321AC /* A_BMLT_PrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A5600C153CF0520039CCDD /* A_BMLT_PrintPageRenderer.m */; };
+		775FDE1B18DB129C00B321AC /* BMLT_DetailsPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 776CAD8915404BBF001BD51D /* BMLT_DetailsPrintPageRenderer.m */; };
+		775FDE1C18DB129C00B321AC /* BMLTBundleResourceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 771A40EC15408EA000EF34DF /* BMLTBundleResourceLabel.m */; };
+		775FDE1D18DB129C00B321AC /* BMLTAboutBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DCF09C1545D4FE00979BF6 /* BMLTAboutBackgroundView.m */; };
+		775FDE1F18DB129C00B321AC /* BMLT_AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 774EB4CF168F3B6B006C663F /* BMLT_AnimationView.m */; };
+		775FDE2018DB129C00B321AC /* MGS_Simple_Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */; };
+		775FDE2218DB129C00B321AC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7799D2A1151FACD4007FE822 /* MapKit.framework */; };
+		775FDE2318DB129C00B321AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771D0C93150E89BC005A707A /* SystemConfiguration.framework */; };
+		775FDE2418DB129C00B321AC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771D0C91150E899B005A707A /* QuartzCore.framework */; };
+		775FDE2518DB129C00B321AC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771D0C8F150E8986005A707A /* CoreLocation.framework */; };
+		775FDE2618DB129C00B321AC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77977D0F150E882B00485C8D /* UIKit.framework */; };
+		775FDE2718DB129C00B321AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77977D11150E882B00485C8D /* Foundation.framework */; };
+		775FDE2818DB129C00B321AC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77977D13150E882B00485C8D /* CoreGraphics.framework */; };
+		775FDE2918DB129C00B321AC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CBC1548874C00DBE9A1 /* libz.dylib */; };
+		775FDE2A18DB129C00B321AC /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CB61548872000DBE9A1 /* libTestFlight.a */; };
+		775FDE2C18DB129C00B321AC /* Frame07.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE990182C6E7700762604 /* Frame07.png */; };
+		775FDE2D18DB129C00B321AC /* FormatCircleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */; };
+		775FDE2E18DB129C00B321AC /* FormatCircleGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DC91541DC8300C4840F /* FormatCircleGreen@2x.png */; };
+		775FDE2F18DB129C00B321AC /* FormatCircleRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DCA1541DC8300C4840F /* FormatCircleRed@2x.png */; };
+		775FDE3018DB129C00B321AC /* FormatCircleWC@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DCB1541DC8300C4840F /* FormatCircleWC@2x.png */; };
+		775FDE3118DB129C00B321AC /* FormatCircleYellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DCC1541DC8300C4840F /* FormatCircleYellow@2x.png */; };
+		775FDE3218DB129C00B321AC /* MapMarkerBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD51541DC8300C4840F /* MapMarkerBlack.png */; };
+		775FDE3318DB129C00B321AC /* MapMarkerBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD61541DC8300C4840F /* MapMarkerBlue.png */; };
+		775FDE3418DB129C00B321AC /* MapMarkerRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD81541DC8300C4840F /* MapMarkerRed.png */; };
+		775FDE3518DB129C00B321AC /* MapMarkerBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335560168E278F001C0B08 /* MapMarkerBlack@2x.png */; };
+		775FDE3618DB129C00B321AC /* MapMarkerBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335561168E278F001C0B08 /* MapMarkerBlue@2x.png */; };
+		775FDE3718DB129C00B321AC /* MapMarkerRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335563168E278F001C0B08 /* MapMarkerRed@2x.png */; };
+		775FDE3818DB129C00B321AC /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DCF1541DC8300C4840F /* list.png */; };
+		775FDE3918DB129C00B321AC /* Frame03.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE98C182C6E7700762604 /* Frame03.png */; };
+		775FDE3A18DB129C00B321AC /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD01541DC8300C4840F /* list@2x.png */; };
+		775FDE3C18DB129C00B321AC /* MapMarkerGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 77731D3F182B00A000FFB0A2 /* MapMarkerGreen.png */; };
+		775FDE3D18DB129C00B321AC /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5116F565CE00664FF9 /* iPad.storyboard */; };
+		775FDE3E18DB129C00B321AC /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
+		775FDE3F18DB129C00B321AC /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD31541DC8300C4840F /* map.png */; };
+		775FDE4018DB129C00B321AC /* Frame05.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE98E182C6E7700762604 /* Frame05.png */; };
+		775FDE4118DB129C00B321AC /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD41541DC8300C4840F /* map@2x.png */; };
+		775FDE4218DB129C00B321AC /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE01541DC8300C4840F /* search.png */; };
+		775FDE4318DB129C00B321AC /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE11541DC8300C4840F /* search@2x.png */; };
+		775FDE4418DB129C00B321AC /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE21541DC8300C4840F /* settings.png */; };
+		775FDE4518DB129C00B321AC /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE31541DC8300C4840F /* settings@2x.png */; };
+		775FDE4618DB129C00B321AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE61541DC8300C4840F /* InfoPlist.strings */; };
+		775FDE4718DB129C00B321AC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE81541DC8300C4840F /* Localizable.strings */; };
+		775FDE4A18DB129C00B321AC /* Frame02.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE98B182C6E7700762604 /* Frame02.png */; };
+		775FDE4B18DB129C00B321AC /* Frame01.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE98A182C6E7700762604 /* Frame01.png */; };
+		775FDE4D18DB129C00B321AC /* Frame06.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE98F182C6E7700762604 /* Frame06.png */; };
+		775FDE5118DB129C00B321AC /* Frame10.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE993182C6E7700762604 /* Frame10.png */; };
+		775FDE5418DB129C00B321AC /* Frame04.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE98D182C6E7700762604 /* Frame04.png */; };
+		775FDE5618DB129C00B321AC /* Frame08.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE991182C6E7700762604 /* Frame08.png */; };
+		775FDE5B18DB129C00B321AC /* Frame09.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE992182C6E7700762604 /* Frame09.png */; };
+		775FDE5C18DB129C00B321AC /* MapMarkerGreen@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 77731D40182B00A000FFB0A2 /* MapMarkerGreen@2X.png */; };
+		775FDE6018DB129C00B321AC /* BMLTFormatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */; };
+		775FDE6718DB14A800B321AC /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 775FDDE118DB128700B321AC /* BMLTVariantDefs.m */; };
+		775FDE7918DB14C200B321AC /* AboutLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDE318DB128700B321AC /* AboutLogo.png */; };
+		775FDE7A18DB14C200B321AC /* Anim-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDE418DB128700B321AC /* Anim-Back.png */; };
+		775FDE7B18DB14C200B321AC /* Anim-Transparency.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDE518DB128700B321AC /* Anim-Transparency.png */; };
+		775FDE7C18DB14C200B321AC /* App-Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDE618DB128700B321AC /* App-Icon-114.png */; };
+		775FDE7D18DB14C200B321AC /* App-Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDE718DB128700B321AC /* App-Icon-120.png */; };
+		775FDE7E18DB14C200B321AC /* App-Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDE818DB128700B321AC /* App-Icon-144.png */; };
+		775FDE7F18DB14C200B321AC /* App-Icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDE918DB128700B321AC /* App-Icon-152.png */; };
+		775FDE8018DB14C200B321AC /* App-Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDEA18DB128700B321AC /* App-Icon-57.png */; };
+		775FDE8118DB14C200B321AC /* App-Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDEB18DB128700B321AC /* App-Icon-72.png */; };
+		775FDE8218DB14C200B321AC /* App-Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDEC18DB128700B321AC /* App-Icon-76.png */; };
+		775FDE8318DB14C200B321AC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDED18DB128700B321AC /* Default-568h@2x.png */; };
+		775FDE8418DB14C200B321AC /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDEE18DB128700B321AC /* Default-Landscape@2x~ipad.png */; };
+		775FDE8518DB14C200B321AC /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDEF18DB128700B321AC /* Default-Landscape~ipad.png */; };
+		775FDE8618DB14C200B321AC /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDF018DB128700B321AC /* Default-Portrait@2x~ipad.png */; };
+		775FDE8718DB14C200B321AC /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDF118DB128700B321AC /* Default-Portrait~ipad.png */; };
+		775FDE8818DB14C200B321AC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDF218DB128700B321AC /* Default.png */; };
+		775FDE8918DB14C200B321AC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 775FDDF318DB128700B321AC /* Default@2x.png */; };
 		77603E5C1541DC8300C4840F /* FormatCircleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */; };
 		77603E5D1541DC8300C4840F /* FormatCircleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */; };
 		77603E5E1541DC8300C4840F /* FormatCircleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */; };
@@ -840,6 +943,28 @@
 		773E4308155EC7070026FA16 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		774EB4CF168F3B6B006C663F /* BMLT_AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLT_AnimationView.m; sourceTree = "<group>"; };
 		7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMLTFormatDetailViewController.xib; sourceTree = "<group>"; };
+		775FDDE118DB128700B321AC /* BMLTVariantDefs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
+		775FDDE318DB128700B321AC /* AboutLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutLogo.png; sourceTree = "<group>"; };
+		775FDDE418DB128700B321AC /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Back.png"; sourceTree = "<group>"; };
+		775FDDE518DB128700B321AC /* Anim-Transparency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Transparency.png"; sourceTree = "<group>"; };
+		775FDDE618DB128700B321AC /* App-Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-114.png"; sourceTree = "<group>"; };
+		775FDDE718DB128700B321AC /* App-Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-120.png"; sourceTree = "<group>"; };
+		775FDDE818DB128700B321AC /* App-Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-144.png"; sourceTree = "<group>"; };
+		775FDDE918DB128700B321AC /* App-Icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-152.png"; sourceTree = "<group>"; };
+		775FDDEA18DB128700B321AC /* App-Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-57.png"; sourceTree = "<group>"; };
+		775FDDEB18DB128700B321AC /* App-Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-72.png"; sourceTree = "<group>"; };
+		775FDDEC18DB128700B321AC /* App-Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-76.png"; sourceTree = "<group>"; };
+		775FDDED18DB128700B321AC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		775FDDEE18DB128700B321AC /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		775FDDEF18DB128700B321AC /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		775FDDF018DB128700B321AC /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		775FDDF118DB128700B321AC /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		775FDDF218DB128700B321AC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		775FDDF318DB128700B321AC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		775FDDF418DB128700B321AC /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		775FDE6518DB129C00B321AC /* NA Quebec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NA Quebec.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		775FDE6618DB129C00B321AC /* NA Sverige copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NA Sverige copy-Info.plist"; path = "/Users/cmarshall/Documents/Development/iOS/BMLT/dev/NA Sverige copy-Info.plist"; sourceTree = "<absolute>"; };
+		775FDE8B18DB15C000B321AC /* Quebec.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Quebec.gpx; path = "../../../spec/GPX Files/Quebec.gpx"; sourceTree = "<group>"; };
 		77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FormatCircleBlue@2x.png"; sourceTree = "<group>"; };
 		77603DC91541DC8300C4840F /* FormatCircleGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FormatCircleGreen@2x.png"; sourceTree = "<group>"; };
 		77603DCA1541DC8300C4840F /* FormatCircleRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FormatCircleRed@2x.png"; sourceTree = "<group>"; };
@@ -1031,6 +1156,22 @@
 				770BC404189F1CA100991DBD /* CoreGraphics.framework in Frameworks */,
 				770BC405189F1CA100991DBD /* libz.dylib in Frameworks */,
 				770BC406189F1CA100991DBD /* libTestFlight.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		775FDE2118DB129C00B321AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				775FDE2218DB129C00B321AC /* MapKit.framework in Frameworks */,
+				775FDE2318DB129C00B321AC /* SystemConfiguration.framework in Frameworks */,
+				775FDE2418DB129C00B321AC /* QuartzCore.framework in Frameworks */,
+				775FDE2518DB129C00B321AC /* CoreLocation.framework in Frameworks */,
+				775FDE2618DB129C00B321AC /* UIKit.framework in Frameworks */,
+				775FDE2718DB129C00B321AC /* Foundation.framework in Frameworks */,
+				775FDE2818DB129C00B321AC /* CoreGraphics.framework in Frameworks */,
+				775FDE2918DB129C00B321AC /* libz.dylib in Frameworks */,
+				775FDE2A18DB129C00B321AC /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1337,6 +1478,41 @@
 			path = "Variants/BMLT-SV/images";
 			sourceTree = SOURCE_ROOT;
 		};
+		775FDDE018DB128700B321AC /* BMLT-QB */ = {
+			isa = PBXGroup;
+			children = (
+				775FDE8B18DB15C000B321AC /* Quebec.gpx */,
+				775FDDE118DB128700B321AC /* BMLTVariantDefs.m */,
+				775FDDE218DB128700B321AC /* images */,
+				775FDDF418DB128700B321AC /* info.plist */,
+			);
+			path = "BMLT-QB";
+			sourceTree = "<group>";
+		};
+		775FDDE218DB128700B321AC /* images */ = {
+			isa = PBXGroup;
+			children = (
+				775FDDE318DB128700B321AC /* AboutLogo.png */,
+				775FDDE418DB128700B321AC /* Anim-Back.png */,
+				775FDDE518DB128700B321AC /* Anim-Transparency.png */,
+				775FDDE618DB128700B321AC /* App-Icon-114.png */,
+				775FDDE718DB128700B321AC /* App-Icon-120.png */,
+				775FDDE818DB128700B321AC /* App-Icon-144.png */,
+				775FDDE918DB128700B321AC /* App-Icon-152.png */,
+				775FDDEA18DB128700B321AC /* App-Icon-57.png */,
+				775FDDEB18DB128700B321AC /* App-Icon-72.png */,
+				775FDDEC18DB128700B321AC /* App-Icon-76.png */,
+				775FDDED18DB128700B321AC /* Default-568h@2x.png */,
+				775FDDEE18DB128700B321AC /* Default-Landscape@2x~ipad.png */,
+				775FDDEF18DB128700B321AC /* Default-Landscape~ipad.png */,
+				775FDDF018DB128700B321AC /* Default-Portrait@2x~ipad.png */,
+				775FDDF118DB128700B321AC /* Default-Portrait~ipad.png */,
+				775FDDF218DB128700B321AC /* Default.png */,
+				775FDDF318DB128700B321AC /* Default@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		77603DA01541DC8300C4840F /* Baseline */ = {
 			isa = PBXGroup;
 			children = (
@@ -1444,6 +1620,7 @@
 				77977D0C150E882B00485C8D /* Products */,
 				7700DE3C1541FDEF009A1DBB /* MainDocumentPage.h */,
 				77167D4F1517D21F006E50E8 /* LICENSE.txt */,
+				775FDE6618DB129C00B321AC /* NA Sverige copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1458,6 +1635,7 @@
 				77B5EB3A1743EEF300F50281 /* SoCal Meetings.app */,
 				77DD00BE18180EF0003008FF /* SoCalDemo.app */,
 				770BC440189F1CA100991DBD /* San Diego NA Meetings.app */,
+				775FDE6518DB129C00B321AC /* NA Quebec.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1586,6 +1764,7 @@
 				77E249AB16F563C000664FF9 /* BMLT-FL */,
 				77B5EB3C1743EFBB00F50281 /* BMLT-CA */,
 				770BC442189F1CF700991DBD /* BMLT-SD */,
+				775FDDE018DB128700B321AC /* BMLT-QB */,
 			);
 			path = Variants;
 			sourceTree = "<group>";
@@ -1709,6 +1888,23 @@
 			name = "San Diego NA Meetings";
 			productName = BMLT;
 			productReference = 770BC440189F1CA100991DBD /* San Diego NA Meetings.app */;
+			productType = "com.apple.product-type.application";
+		};
+		775FDDF618DB129C00B321AC /* NA Quebec */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 775FDE6118DB129C00B321AC /* Build configuration list for PBXNativeTarget "NA Quebec" */;
+			buildPhases = (
+				775FDDF718DB129C00B321AC /* Sources */,
+				775FDE2118DB129C00B321AC /* Frameworks */,
+				775FDE2B18DB129C00B321AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NA Quebec";
+			productName = BMLT;
+			productReference = 775FDE6518DB129C00B321AC /* NA Quebec.app */;
 			productType = "com.apple.product-type.application";
 		};
 		777597561540F15E00D45ADA /* NA Sverige */ = {
@@ -1868,6 +2064,7 @@
 				77E249BD16F563C900664FF9 /* FL NA Meetings */,
 				77B5EABD1743EEF300F50281 /* Southern California NA Meetings */,
 				770BC3D2189F1CA100991DBD /* San Diego NA Meetings */,
+				775FDDF618DB129C00B321AC /* NA Quebec */,
 			);
 		};
 /* End PBXProject section */
@@ -1929,6 +2126,66 @@
 				770BC436189F1CA100991DBD /* MapMarkerGreen@2X.png in Resources */,
 				770BC439189F1CA100991DBD /* Frame04.png in Resources */,
 				770BC43B189F1CA100991DBD /* BMLTFormatDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		775FDE2B18DB129C00B321AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				775FDE2C18DB129C00B321AC /* Frame07.png in Resources */,
+				775FDE2D18DB129C00B321AC /* FormatCircleBlue@2x.png in Resources */,
+				775FDE2E18DB129C00B321AC /* FormatCircleGreen@2x.png in Resources */,
+				775FDE2F18DB129C00B321AC /* FormatCircleRed@2x.png in Resources */,
+				775FDE3018DB129C00B321AC /* FormatCircleWC@2x.png in Resources */,
+				775FDE3118DB129C00B321AC /* FormatCircleYellow@2x.png in Resources */,
+				775FDE3218DB129C00B321AC /* MapMarkerBlack.png in Resources */,
+				775FDE3318DB129C00B321AC /* MapMarkerBlue.png in Resources */,
+				775FDE3418DB129C00B321AC /* MapMarkerRed.png in Resources */,
+				775FDE7A18DB14C200B321AC /* Anim-Back.png in Resources */,
+				775FDE8418DB14C200B321AC /* Default-Landscape@2x~ipad.png in Resources */,
+				775FDE7E18DB14C200B321AC /* App-Icon-144.png in Resources */,
+				775FDE8918DB14C200B321AC /* Default@2x.png in Resources */,
+				775FDE8518DB14C200B321AC /* Default-Landscape~ipad.png in Resources */,
+				775FDE8818DB14C200B321AC /* Default.png in Resources */,
+				775FDE3518DB129C00B321AC /* MapMarkerBlack@2x.png in Resources */,
+				775FDE3618DB129C00B321AC /* MapMarkerBlue@2x.png in Resources */,
+				775FDE8018DB14C200B321AC /* App-Icon-57.png in Resources */,
+				775FDE3718DB129C00B321AC /* MapMarkerRed@2x.png in Resources */,
+				775FDE3818DB129C00B321AC /* list.png in Resources */,
+				775FDE3918DB129C00B321AC /* Frame03.png in Resources */,
+				775FDE3A18DB129C00B321AC /* list@2x.png in Resources */,
+				775FDE3C18DB129C00B321AC /* MapMarkerGreen.png in Resources */,
+				775FDE3D18DB129C00B321AC /* iPad.storyboard in Resources */,
+				775FDE3E18DB129C00B321AC /* iPhone.storyboard in Resources */,
+				775FDE3F18DB129C00B321AC /* map.png in Resources */,
+				775FDE4018DB129C00B321AC /* Frame05.png in Resources */,
+				775FDE4118DB129C00B321AC /* map@2x.png in Resources */,
+				775FDE4218DB129C00B321AC /* search.png in Resources */,
+				775FDE4318DB129C00B321AC /* search@2x.png in Resources */,
+				775FDE8118DB14C200B321AC /* App-Icon-72.png in Resources */,
+				775FDE7C18DB14C200B321AC /* App-Icon-114.png in Resources */,
+				775FDE4418DB129C00B321AC /* settings.png in Resources */,
+				775FDE4518DB129C00B321AC /* settings@2x.png in Resources */,
+				775FDE4618DB129C00B321AC /* InfoPlist.strings in Resources */,
+				775FDE4718DB129C00B321AC /* Localizable.strings in Resources */,
+				775FDE4A18DB129C00B321AC /* Frame02.png in Resources */,
+				775FDE4B18DB129C00B321AC /* Frame01.png in Resources */,
+				775FDE8718DB14C200B321AC /* Default-Portrait~ipad.png in Resources */,
+				775FDE4D18DB129C00B321AC /* Frame06.png in Resources */,
+				775FDE7918DB14C200B321AC /* AboutLogo.png in Resources */,
+				775FDE8218DB14C200B321AC /* App-Icon-76.png in Resources */,
+				775FDE5118DB129C00B321AC /* Frame10.png in Resources */,
+				775FDE8318DB14C200B321AC /* Default-568h@2x.png in Resources */,
+				775FDE7F18DB14C200B321AC /* App-Icon-152.png in Resources */,
+				775FDE5418DB129C00B321AC /* Frame04.png in Resources */,
+				775FDE7B18DB14C200B321AC /* Anim-Transparency.png in Resources */,
+				775FDE5618DB129C00B321AC /* Frame08.png in Resources */,
+				775FDE7D18DB14C200B321AC /* App-Icon-120.png in Resources */,
+				775FDE8618DB14C200B321AC /* Default-Portrait@2x~ipad.png in Resources */,
+				775FDE5B18DB129C00B321AC /* Frame09.png in Resources */,
+				775FDE5C18DB129C00B321AC /* MapMarkerGreen@2X.png in Resources */,
+				775FDE6018DB129C00B321AC /* BMLTFormatDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2341,6 +2598,54 @@
 				770BC3F9189F1CA100991DBD /* BMLTAboutBackgroundView.m in Sources */,
 				770BC3FB189F1CA100991DBD /* BMLT_AnimationView.m in Sources */,
 				770BC3FC189F1CA100991DBD /* MGS_Simple_Control.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		775FDDF718DB129C00B321AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				775FDDF818DB129C00B321AC /* BMLTAppDelegate.m in Sources */,
+				775FDDF918DB129C00B321AC /* main.m in Sources */,
+				775FDDFA18DB129C00B321AC /* BMLTAdvancedSearchViewController.m in Sources */,
+				775FDDFB18DB129C00B321AC /* BMLTMapResultsViewController.m in Sources */,
+				775FDDFC18DB129C00B321AC /* BMLT_Prefs.m in Sources */,
+				775FDDFD18DB129C00B321AC /* Reachability.m in Sources */,
+				775FDDFE18DB129C00B321AC /* A_BMLT_ChildClass.m in Sources */,
+				775FDDFF18DB129C00B321AC /* A_BMLT_Search.m in Sources */,
+				775FDE0018DB129C00B321AC /* A_BMLT_ServiceBodyHierClass.m in Sources */,
+				775FDE0118DB129C00B321AC /* BMLT_Driver.m in Sources */,
+				775FDE0218DB129C00B321AC /* BMLT_Format.m in Sources */,
+				775FDE0318DB129C00B321AC /* BMLT_Location.m in Sources */,
+				775FDE0418DB129C00B321AC /* BMLT_Meeting.m in Sources */,
+				775FDE0518DB129C00B321AC /* BMLT_Meeting_Search.m in Sources */,
+				775FDE0618DB129C00B321AC /* BMLT_Parser.m in Sources */,
+				775FDE0718DB129C00B321AC /* BMLT_Server.m in Sources */,
+				775FDE0818DB129C00B321AC /* BMLT_ServiceBody.m in Sources */,
+				775FDE0918DB129C00B321AC /* BMLTAboutViewController.m in Sources */,
+				775FDE0A18DB129C00B321AC /* BMLTSettingsViewController.m in Sources */,
+				775FDE0B18DB129C00B321AC /* MGS_PopupView.m in Sources */,
+				775FDE6718DB14A800B321AC /* BMLTVariantDefs.m in Sources */,
+				775FDE0C18DB129C00B321AC /* BMLTSimpleSearchViewController.m in Sources */,
+				775FDE0D18DB129C00B321AC /* A_BMLTSearchResultsViewController.m in Sources */,
+				775FDE0E18DB129C00B321AC /* A_BMLTSettingsBackgroundView.m in Sources */,
+				775FDE0F18DB129C00B321AC /* A_BMLTNavBarViewController.m in Sources */,
+				775FDE1018DB129C00B321AC /* A_BMLTMainBackgroundView.m in Sources */,
+				775FDE1118DB129C00B321AC /* MGS_PopupViewController.m in Sources */,
+				775FDE1218DB129C00B321AC /* BMLTDisplayListResultsViewController.m in Sources */,
+				775FDE1318DB129C00B321AC /* BMLTMeetingDisplayCellView.m in Sources */,
+				775FDE1418DB129C00B321AC /* BMLTFormatDetailViewController.m in Sources */,
+				775FDE1518DB129C00B321AC /* BMLTMeetingDetailViewController.m in Sources */,
+				775FDE1618DB129C00B321AC /* A_BMLT_SearchViewController.m in Sources */,
+				775FDE1718DB129C00B321AC /* BMLT_Results_MapPointAnnotationView.m in Sources */,
+				775FDE1818DB129C00B321AC /* BMLTAnimationScreenViewController.m in Sources */,
+				775FDE1918DB129C00B321AC /* BMLT_ListPrintPageRenderer.m in Sources */,
+				775FDE1A18DB129C00B321AC /* A_BMLT_PrintPageRenderer.m in Sources */,
+				775FDE1B18DB129C00B321AC /* BMLT_DetailsPrintPageRenderer.m in Sources */,
+				775FDE1C18DB129C00B321AC /* BMLTBundleResourceLabel.m in Sources */,
+				775FDE1D18DB129C00B321AC /* BMLTAboutBackgroundView.m in Sources */,
+				775FDE1F18DB129C00B321AC /* BMLT_AnimationView.m in Sources */,
+				775FDE2018DB129C00B321AC /* MGS_Simple_Control.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2867,6 +3172,91 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "NA Sverige";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = TestFlight;
+		};
+		775FDE6218DB129C00B321AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Marshall (2D279UYGKU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				INFOPLIST_FILE = "Variants/BMLT-QB/Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = traditional;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BMLT\"",
+				);
+				PRODUCT_NAME = "NA Quebec";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		775FDE6318DB129C00B321AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Little Green Viper Software Development LLC (P53V4JS928)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				INFOPLIST_FILE = "Variants/BMLT-QB/Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = traditional;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BMLT\"",
+				);
+				PRODUCT_NAME = "NA Quebec";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		775FDE6418DB129C00B321AC /* TestFlight */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Marshall (2D279UYGKU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "_TESTFLIGHT_=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				INFOPLIST_FILE = "Variants/BMLT-QB/Info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = traditional;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BMLT\"",
+				);
+				PRODUCT_NAME = "NA Quebec";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -3404,6 +3794,16 @@
 				770BC43D189F1CA100991DBD /* Debug */,
 				770BC43E189F1CA100991DBD /* Release */,
 				770BC43F189F1CA100991DBD /* TestFlight */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		775FDE6118DB129C00B321AC /* Build configuration list for PBXNativeTarget "NA Quebec" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				775FDE6218DB129C00B321AC /* Debug */,
+				775FDE6318DB129C00B321AC /* Release */,
+				775FDE6418DB129C00B321AC /* TestFlight */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

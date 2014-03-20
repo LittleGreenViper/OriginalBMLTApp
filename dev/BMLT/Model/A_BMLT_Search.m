@@ -163,7 +163,7 @@ static int meeting_search_timeout_period_in_seconds = 30;
                 
                 if ( keyArray )
                     {
-                    int count = [keyArray count];
+                    int count = (int)[keyArray count];
                     
                     if ( count )
                         {
@@ -315,7 +315,7 @@ static int meeting_search_timeout_period_in_seconds = 30;
 
     [searchResults addObject:inResult];
 #ifdef DEBUG
-    NSLog(@"\tThere Are Now %d Results in the Search", [searchResults count]);
+    NSLog(@"\tThere Are Now %lu Results in the Search", (unsigned long)[searchResults count]);
 #endif
 }
 

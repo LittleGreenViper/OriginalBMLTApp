@@ -144,11 +144,11 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
                 
                 if ( ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) )
                     {
-                    pLabel = [NSString stringWithFormat:@"WEEKDAY-NAME-%d", labelVal];
+                    pLabel = [NSString stringWithFormat:@"WEEKDAY-NAME-%ld", (long)labelVal];
                     }
                 else
                     {
-                    pLabel = [NSString stringWithFormat:@"WEEKDAY-SHORT-NAME-%d", labelVal];
+                    pLabel = [NSString stringWithFormat:@"WEEKDAY-SHORT-NAME-%ld", (long)labelVal];
                     }
                     
                 [(UILabel*)sub setText:NSLocalizedString ( pLabel, nil )];
@@ -172,7 +172,7 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:date];
     int                 wd = (int)[weekdayComponents weekday];
-    int                 position_1 = [BMLTVariantDefs weekStartDay];
+    int                 position_1 = (int)[BMLTVariantDefs weekStartDay];
 
     wd -= (position_1 - 1);
 
@@ -263,7 +263,7 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
 - (IBAction)searchSpecChanged:(id)sender    ///< The segmented control
 {
 #ifdef DEBUG
-    NSLog(@"BMLTAdvancedSearchViewController searchSpecChanged: %d.", [(UISegmentedControl *)sender selectedSegmentIndex] );
+    NSLog(@"BMLTAdvancedSearchViewController searchSpecChanged: %ld.", (long)[(UISegmentedControl *)sender selectedSegmentIndex] );
 #endif
     geocodeInProgress = NO;
     dontLookup = YES;
@@ -316,7 +316,7 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     [myParams removeObjectForKey:@"StartsAfterH"];
     [myParams removeObjectForKey:@"StartsAfterM"];
     
-    int position_1 = [BMLTVariantDefs weekStartDay];
+    int position_1 = (int)[BMLTVariantDefs weekStartDay];
     
     NSString        *weekday = @"";
 
@@ -350,8 +350,8 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
                 weekdayComponents = [gregorian components:(NSMinuteCalendarUnit) fromDate:date];
                 NSInteger           mn = [weekdayComponents minute];
                     
-                [myParams setObject:[NSString stringWithFormat:@"%d",hr] forKey:@"StartsAfterH"];
-                [myParams setObject:[NSString stringWithFormat:@"%d",mn] forKey:@"StartsAfterM"];
+                [myParams setObject:[NSString stringWithFormat:@"%ld",(long)hr] forKey:@"StartsAfterH"];
+                [myParams setObject:[NSString stringWithFormat:@"%ld",(long)mn] forKey:@"StartsAfterM"];
                 }
                 
             weekday = [NSString stringWithFormat:@"%d", wd];

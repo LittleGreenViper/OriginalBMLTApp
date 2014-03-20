@@ -37,7 +37,7 @@
 - (id)initWithMeetings:(NSArray *)inMeetings    ///< The list of BMLT_Meeting objects to be displayed.
 {
 #ifdef DEBUG
-    NSLog(@"A_BMLT_PrintPageRenderer initWithMeetings: (%d meetings)", [inMeetings count]);
+    NSLog(@"A_BMLT_PrintPageRenderer initWithMeetings: (%lu meetings)", (unsigned long)[inMeetings count]);
 #endif
     self = [super init];
     
@@ -69,7 +69,7 @@
 - (void)prepareForDrawingPages:(NSRange)range   ///< The range of pages to be drawn.
 {
 #ifdef DEBUG
-    NSLog(@"A_BMLT_PrintPageRenderer prepareForDrawingPages: From page %d, to page %d", range.location, range.length);
+    NSLog(@"A_BMLT_PrintPageRenderer prepareForDrawingPages: From page %lu, to page %lu", (unsigned long)range.location, (unsigned long)range.length);
 #endif
 }
 
@@ -81,7 +81,7 @@
                           inRect:(CGRect)inRect    ///< The content rect
 {
 #ifdef DEBUG
-    NSLog(@"A_BMLT_PrintPageRenderer drawHeaderForPageAtIndex: %d inRect: (%f, %f), (%f, %f)", index, inRect.origin.x, inRect.origin.y, inRect.size.width, inRect.size.height );
+    NSLog(@"A_BMLT_PrintPageRenderer drawHeaderForPageAtIndex: %ld inRect: (%f, %f), (%f, %f)", (long)index, inRect.origin.x, inRect.origin.y, inRect.size.width, inRect.size.height );
 #endif
 }
 
@@ -93,7 +93,7 @@
                            inRect:(CGRect)inRect    ///< The content rect
 {
 #ifdef DEBUG
-    NSLog(@"A_BMLT_PrintPageRenderer drawContentForPageAtIndex: %d inRect: (%f, %f), (%f, %f)", index, inRect.origin.x, inRect.origin.y, inRect.size.width, inRect.size.height );
+    NSLog(@"A_BMLT_PrintPageRenderer drawContentForPageAtIndex: %ld inRect: (%f, %f), (%f, %f)", (long)index, inRect.origin.x, inRect.origin.y, inRect.size.width, inRect.size.height );
 #endif
 }
 
@@ -105,7 +105,7 @@
                           inRect:(CGRect)inRect    ///< The content rect
 {
 #ifdef DEBUG
-    NSLog(@"A_BMLT_PrintPageRenderer drawFooterForPageAtIndex: %d inRect: (%f, %f), (%f, %f)", index, inRect.origin.x, inRect.origin.y, inRect.size.width, inRect.size.height );
+    NSLog(@"A_BMLT_PrintPageRenderer drawFooterForPageAtIndex: %ld inRect: (%f, %f), (%f, %f)", (long)index, inRect.origin.x, inRect.origin.y, inRect.size.width, inRect.size.height );
 #endif
 }
 @end

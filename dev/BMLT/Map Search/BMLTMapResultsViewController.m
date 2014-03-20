@@ -204,7 +204,7 @@ static int  BMLTPopupViewFontSize                       = 13;   ///< The popup f
     if ( annotations )  // If we have annotations, we draw them.
         {
 #ifdef DEBUG
-        NSLog(@"BMLTMapResultsViewController displayMapAnnotations -Adding %d annotations", [inResults count]);
+        NSLog(@"BMLTMapResultsViewController displayMapAnnotations -Adding %lu annotations", (unsigned long)[inResults count]);
 #endif
         [[self myMapView] addAnnotations:annotations];
         }
@@ -299,7 +299,7 @@ static int  BMLTPopupViewFontSize                       = 13;   ///< The popup f
 - (NSArray *)mapMeetingAnnotations:(NSArray *)inResults ///< This is an NSArray of BMLT_Meeting objects. Each one represents a meeting.
 {
 #ifdef DEBUG
-    NSLog(@"BMLTMapResultsViewController mapMeetingAnnotations - Checking %d Meetings.", [inResults count]);
+    NSLog(@"BMLTMapResultsViewController mapMeetingAnnotations - Checking %lu Meetings.", (unsigned long)[inResults count]);
 #endif
     NSMutableArray  *ret = nil;
     
@@ -544,7 +544,7 @@ static int  BMLTPopupViewFontSize                       = 13;   ///< The popup f
             if ( [(BMLT_Results_MapPointAnnotation *)annotation getNumberOfMeetings] )
                 {
 #ifdef DEBUG
-                NSLog(@"BMLTMapResultsViewController mapView:viewForAnnotation -Annotation Selected. This annotation contains %d meetings.", [(BMLT_Results_MapPointAnnotation *)annotation getNumberOfMeetings]);
+                NSLog(@"BMLTMapResultsViewController mapView:viewForAnnotation -Annotation Selected. This annotation contains %ld meetings.", (long)[(BMLT_Results_MapPointAnnotation *)annotation getNumberOfMeetings]);
 #endif
                 // What we do here, is associate an index number for each meeting in the list, so it matches to the displayed meeting annotation. This is used in printing.
                 for ( BMLT_Meeting *theMeeting in [(BMLT_Results_MapPointAnnotation *)annotation getMyMeetings] )
@@ -615,7 +615,7 @@ didSelectAnnotationView:(MKAnnotationView *)inView  ///< The selected annotation
             if ( [(BMLT_Results_MapPointAnnotation *)annotation getNumberOfMeetings] )
                 {
     #ifdef DEBUG
-                NSLog(@"BMLTMapResultsViewController mapView:didSelectAnnotationView -Annotation Selected. This annotation contains %d meetings.", [theAnnotation getNumberOfMeetings]);
+                NSLog(@"BMLTMapResultsViewController mapView:didSelectAnnotationView -Annotation Selected. This annotation contains %ld meetings.", (long)[theAnnotation getNumberOfMeetings]);
                 if ( [theAnnotation getNumberOfMeetings] == 1 )
                     {
                     BMLT_Meeting    *firstMeeting = [theAnnotation getMeetingAtIndex:0];
@@ -623,7 +623,7 @@ didSelectAnnotationView:(MKAnnotationView *)inView  ///< The selected annotation
                     }
                 else
                     {
-                    NSLog(@"BMLTMapResultsViewController mapView:didSelectAnnotationView -Displaying a list of %d meetings.", [theAnnotation getNumberOfMeetings]);
+                    NSLog(@"BMLTMapResultsViewController mapView:didSelectAnnotationView -Displaying a list of %ld meetings.", (long)[theAnnotation getNumberOfMeetings]);
                     }
     #endif
                 [self dismissListPopover];

@@ -24,7 +24,6 @@
 static const CGFloat    s_BaseFontSize              = 100;  ///< The largest (base) font size.
 static const CGFloat    s_CornerRoundnessInPixels   = 4;    ///< The roundness of the corners (and the inset of the title).
 static const CGFloat    s_LineThicknessInPixels     = 3;    ///< The thickness of the lines in pixels.
-static const CGFloat    s_DisabledOpacity           = 0.5;  ///< The opacity of diabled controls.
 
 #define IOS_6_TINT      ([UIColor colorWithRed:0.6549019608 green:0.6509803922 blue:0 alpha:1])              ///< This is a stand-in tint color for iOS6 (which doesn't have tintColor).
 
