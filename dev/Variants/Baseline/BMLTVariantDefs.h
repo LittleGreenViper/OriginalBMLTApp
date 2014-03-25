@@ -20,6 +20,8 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+#define kDefaultBarTintColor    [UIColor greenColor]
+
 /*****************************************************************/
 /**
  \class  BMLTVariantDefs
@@ -48,6 +50,13 @@
  \returns   The coordinate of the map center.
  *****************************************************************/
 + (CLLocationCoordinate2D)mapDefaultCenter;
+
+/*****************************************************************/
+/**
+ \brief     This is the tint color for selected items in the Tab bar.
+ \returns   The color to be used.
+ *****************************************************************/
++ (UIColor *)barItemTintColor;
 
 /*****************************************************************/
 /**

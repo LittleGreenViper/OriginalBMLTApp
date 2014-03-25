@@ -543,6 +543,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         if ( [[tabController tabBar] respondsToSelector:@selector(setBarTintColor:)] )
             {
             [[tabController tabBar] setBarTintColor:myBGColor];
+            [[tabController tabBar] setSelectedImageTintColor:[BMLTVariantDefs barItemTintColor]];
             }
         else
             {

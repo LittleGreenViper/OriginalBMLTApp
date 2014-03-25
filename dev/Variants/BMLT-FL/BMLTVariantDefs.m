@@ -22,6 +22,25 @@
 
 /*****************************************************************/
 /**
+ \brief  Overloaded, so we can use Hex colors.
+ *****************************************************************/
+@interface UIColor (addedhex)
++ (UIColor*)colorWithHexRed:(NSInteger)inRed green:(NSInteger)inGreen blue:(NSInteger)inBlue;
+@end
+
+@implementation UIColor (addedhex)
+/*****************************************************************/
+/**
+ \brief  Allows definition of an opaque color via hex values (like Web values).
+ *****************************************************************/
++ (UIColor*)colorWithHexRed:(NSInteger)inRed green:(NSInteger)inGreen blue:(NSInteger)inBlue
+{
+    return [UIColor colorWithRed:(float)inRed / 255.0 green:(float)inGreen / 255.0 blue:(float)inBlue / 255.0 alpha:1.0];
+}
+@end
+
+/*****************************************************************/
+/**
  \brief  See the "BMLTVariantDefs.h" file for details.
  *****************************************************************/
 @implementation BMLTVariantDefs
@@ -50,6 +69,16 @@
     float       latitude = [[[NSDictionary dictionaryWithContentsOfFile:plistPath] valueForKey:@"BMLTServerHomeLat"] floatValue];
     
     return CLLocationCoordinate2DMake(latitude, longitude);
+}
+
+/*****************************************************************/
+/**
+ \brief     This is the tint color for selected items in the Tab bar.
+ \returns   The color to be used.
+ *****************************************************************/
++ (UIColor *)barItemTintColor
+{
+    return kDefaultBarTintColor;
 }
 
 /*****************************************************************/

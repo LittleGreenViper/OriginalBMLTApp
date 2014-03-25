@@ -29,6 +29,10 @@
 @end
 
 @implementation UIColor (addedhex)
+/*****************************************************************/
+/**
+ \brief  Allows definition of an opaque color via hex values (like Web values).
+ *****************************************************************/
 + (UIColor*)colorWithHexRed:(NSInteger)inRed green:(NSInteger)inGreen blue:(NSInteger)inBlue
 {
     return [UIColor colorWithRed:(float)inRed / 255.0 green:(float)inGreen / 255.0 blue:(float)inBlue / 255.0 alpha:1.0];
@@ -68,9 +72,20 @@
 }
 
 /*****************************************************************/
+/**
+ \brief     This is the tint color for selected items in the Tab bar.
+ \returns   The color to be used.
+ *****************************************************************/
++ (UIColor *)barItemTintColor
+{
+    return kDefaultBarTintColor;
+}
+
+/*****************************************************************/
 + (UIColor *)windowBackgroundColor
 {
     return [UIColor colorWithRed:0.2078431373 green:0.3725490196 blue:0.1647058824 alpha:1.0];
+//    return [UIColor colorWithHexRed:0xCE green:0xBE blue:0x7C];
 }
 
 /*****************************************************************/
