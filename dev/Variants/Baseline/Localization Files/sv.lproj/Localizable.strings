@@ -147,6 +147,7 @@
 "SEARCH-SPEC-LATER-TODAY-TITLE" = "hitta närliggande möten senare idag";
 "SEARCH-SPEC-TOMORROW-TITLE" = "hitta närliggande möten imorgon";
 "SEARCH-SPEC-DISABLED-TEXT" = "Dessa sökningar är inaktiverade, För översättningen är ej tillgänglig (Antingen har du stängt av dem, eller så är dom spcifikt avstängda för denna app.).";
+"SEARCH-SPEC-OVERALL-LABEL-TEXT" = "";
 
 /* Selected Weekdays */
 "SEARCH-SPEC-SELECTED-WEEKDAYS" = "Sök på veckodag";

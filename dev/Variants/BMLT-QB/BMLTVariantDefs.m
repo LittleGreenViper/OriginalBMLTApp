@@ -22,6 +22,21 @@
 
 /*****************************************************************/
 /**
+ \brief  Overloaded, so we can use Hex colors.
+ *****************************************************************/
+@interface UIColor (addedhex)
++ (UIColor*)colorWithHexRed:(NSInteger)inRed green:(NSInteger)inGreen blue:(NSInteger)inBlue;
+@end
+
+@implementation UIColor (addedhex)
++ (UIColor*)colorWithHexRed:(NSInteger)inRed green:(NSInteger)inGreen blue:(NSInteger)inBlue
+{
+    return [UIColor colorWithRed:(float)inRed / 255.0 green:(float)inGreen / 255.0 blue:(float)inBlue / 255.0 alpha:1.0];
+}
+@end
+
+/*****************************************************************/
+/**
  \brief  See the "BMLTVariantDefs.h" file for details.
  *****************************************************************/
 @implementation BMLTVariantDefs

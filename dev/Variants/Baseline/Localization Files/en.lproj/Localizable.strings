@@ -147,6 +147,7 @@
 "SEARCH-SPEC-LATER-TODAY-TITLE" = "Find Nearby Meetings Later Today";
 "SEARCH-SPEC-TOMORROW-TITLE" = "Find Nearby Meetings Tomorrow";
 "SEARCH-SPEC-DISABLED-TEXT" = "These searches are disabled, because the Location Services are not available (You have either turned them off, or they are selectively disabled for this app).";
+"SEARCH-SPEC-OVERALL-LABEL-TEXT" = "";
 
 /* Selected Weekdays */
 "SEARCH-SPEC-SELECTED-WEEKDAYS" = "Search By Weekday";

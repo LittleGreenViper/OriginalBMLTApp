@@ -87,6 +87,8 @@ CHANGELIST
 == Version 2.6.1
 * TBD
 * The black marker in meeting details screens was draggable. This is no longer the case.
+* Added French localization.
+* Added the ability to display a label over the simple search choices. This helps in some localization.
 
 == Version 2.6
 * November 24, 2013

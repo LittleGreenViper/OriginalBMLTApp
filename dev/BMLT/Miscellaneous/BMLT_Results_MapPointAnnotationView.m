@@ -167,7 +167,7 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
             animated:(BOOL)animated                             ///< Whether or not to animate the drag.
 {
 #ifdef DEBUG
-    NSLog(@"BMLT_Results_BlackAnnotationView::setDragState: %lu animated: called.", newDragState);
+    NSLog(@"BMLT_Results_BlackAnnotationView::setDragState: %u animated: called.", (unsigned int)newDragState);
 #endif
     switch ( newDragState )
         {

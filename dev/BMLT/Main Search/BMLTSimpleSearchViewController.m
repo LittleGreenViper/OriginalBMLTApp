@@ -29,6 +29,7 @@
 @implementation BMLTSimpleSearchViewController
 @synthesize updateLocationButton;
 @synthesize disabledTextLabel;
+@synthesize overallDescriptionLabel;
 
 @synthesize findMeetingsNearMeButton;
 @synthesize findMeetingsLaterTodayButton;
@@ -47,7 +48,8 @@
         {
         [[[self navigationItem] rightBarButtonItem] setTintColor:nil];
         }
-
+    
+    [overallDescriptionLabel setText:NSLocalizedString(@"SEARCH-SPEC-OVERALL-LABEL-TEXT", nil)];
     [findMeetingsNearMeButton setTitle:NSLocalizedString([findMeetingsNearMeButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
     [findMeetingsLaterTodayButton setTitle:NSLocalizedString([findMeetingsLaterTodayButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
     [findMeetingsTomorrowButton setTitle:NSLocalizedString([findMeetingsTomorrowButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
