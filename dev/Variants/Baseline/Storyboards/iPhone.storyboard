@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" text="SEARCH-SPEC-DISABLED-TEXT" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" id="iqL-3E-3rT">
-                                <rect key="frame" x="13" y="219.00000064437452" width="295" height="148"/>
+                                <rect key="frame" x="13" y="219.00000132386478" width="295" height="148"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -946,7 +946,7 @@
             <objects>
                 <viewController storyboardIdentifier="meeting-details-sheet" hidesBottomBarWhenPushed="YES" id="njF-E5-VED" customClass="BMLTMeetingDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XUM-oi-Gj3">
-                        <rect key="frame" x="0.0" y="64" width="320" height="372"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="z8D-a3-WKj" userLabel="Formats">
@@ -979,13 +979,13 @@
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" lineBreakMode="wordWrap" id="zaY-Io-PJK" userLabel="Address">
-                                <rect key="frame" x="0.0" y="325" width="320" height="47"/>
+                                <rect key="frame" x="0.0" y="369" width="320" height="47"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal">
-                                    <color key="titleColor" red="0.2196078431372549" green="0.80000000000000004" blue="0.85490196078431369" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <state key="selected">
@@ -1001,7 +1001,7 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="sOw-Tn-lF8">
-                                <rect key="frame" x="0.0" y="144" width="320" height="181"/>
+                                <rect key="frame" x="0.0" y="144" width="320" height="225"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="njF-E5-VED" id="Q2Y-2O-hg3"/>
@@ -1012,7 +1012,6 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <connections>
                         <outlet property="addressButton" destination="zaY-Io-PJK" id="COb-j8-2tI"/>
                         <outlet property="commentsTextView" destination="Q4D-Dh-Uq5" id="XDy-ZY-sbc"/>
