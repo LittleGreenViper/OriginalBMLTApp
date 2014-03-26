@@ -95,6 +95,8 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
         [goButton setEnabled:NO];
         }
     
+    [[goButton titleLabel] setAdjustsFontSizeToFitWidth:YES];
+    
     [self addToggleMapButton];
     
     [super viewWillAppear:animated];
