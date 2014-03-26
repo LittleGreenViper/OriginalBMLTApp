@@ -11,9 +11,9 @@
 	<key>BMLTRootServerURI</key>
 	<string>http://www.naquebec.org/Localisateur_de_reunions/main_server</string>
 	<key>BMLTServerHomeLat</key>
-	<real>-71.3460728</real>
+	<real>-71.346072800000002</real>
 	<key>BMLTServerHomeLong</key>
-	<real>46.8580073</real>
+	<real>46.858007299999997</real>
 	<key>BMLTStartWeek</key>
 	<integer>2</integer>
 	<key>CFBundleDevelopmentRegion</key>
@@ -67,11 +67,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.6.1d2</string>
+	<string>2.6.1d3</string>
 	<key>CFBundleSignature</key>
 	<string>LGVP</string>
 	<key>CFBundleVersion</key>
-	<string>2.6.1d2</string>
+	<string>2.6.1d3</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
