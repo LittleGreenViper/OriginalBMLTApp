@@ -287,13 +287,13 @@ foundCharacters:(NSString *)string      ///< The characters
         {
         if ( [[self currentElement] isEqual:@"name_string"] )
             {
-            [self setBMLTName:string];
+            [self setBMLTName:(bmlt_name != nil) ? [bmlt_name stringByAppendingString:string] : string];
             }
         else
             {
             if ( [[self currentElement] isEqual:@"description_string"] )
                 {
-                [self setBMLTDescription:string];
+                [self setBMLTDescription:(bmlt_description != nil) ? [bmlt_description stringByAppendingString:string] : string];
                 }
             else
                 {
