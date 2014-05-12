@@ -100,6 +100,11 @@ static int Detail_Meeting_AddressFontSize = 13;
     map_frame.size.height = address_frame.origin.y - map_frame.origin.y;
     [[self meetingMapView] setFrame:map_frame];
     
+    if ( [self directionsButton] )  // However, some variants may have an additional button on the bottom.
+        {
+        [[self directionsButton] setTitle:NSLocalizedString(@"DIRECTIONS-BUTTON-TITLE",nil) forState:UIControlStateNormal];
+        }
+    
     [self setMeetingLocationText];
     [self setFormats];
     [self addToggleMapButton];
