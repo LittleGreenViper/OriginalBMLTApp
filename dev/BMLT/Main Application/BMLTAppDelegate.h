@@ -51,6 +51,7 @@ extern int kAddressLookupTimeoutPeriod_in_seconds;
 @property (strong, nonatomic) UIWindow              *window;            ///< This is the main window object (SINGLETON)
 @property (strong, nonatomic) CLLocationManager     *locationManager;   ///< This will hold our location manager.
 @property (atomic) BOOL                             hostActive;         ///< Set to YES, if the network test says that the root server is available.
+@property (atomic) BOOL                             hostHasEmailContactCapability;  ///< Set to YES, if the root server can support email contacts.
 @property (weak, atomic) BMLT_Prefs                 *myPrefs;           ///< This will have a reference to the global prefs object.
 @property (strong, nonatomic) NSArray               *searchResults;     ///< This will hold the latest search results.
 @property (strong, nonatomic) NSMutableDictionary   *searchParams;      ///< This will hold the parameters to be used for the next search.
@@ -82,6 +83,7 @@ extern int kAddressLookupTimeoutPeriod_in_seconds;
 - (void)searchForMeetingsNearMe:(CLLocationCoordinate2D)inMyLocation;                        ///< Begins a lookup search, in which a location is found first, then all meetings near there are returned.
 - (void)searchForMeetingsNearMeLaterToday:(CLLocationCoordinate2D)inMyLocation;              ///< Same as above, but only meetings later today.
 - (void)searchForMeetingsNearMeTomorrow:(CLLocationCoordinate2D)inMyLocation;                ///< Same as above, but only meetings tomorrow.
+- (void)testForEmailAvailability;                       ///< Start a test for email availability.
 - (void)stopNetworkMonitor;                             ///< Stop observing the network connectivity status.
 - (void)startNetworkMonitor;                            ///< Start a network test.
 - (void)networkStatusCallback:(NSNotification *)notice; ///< Gets the results of the network test.

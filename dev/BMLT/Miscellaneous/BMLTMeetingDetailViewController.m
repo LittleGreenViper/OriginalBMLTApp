@@ -43,6 +43,9 @@
 static int List_Meeting_Format_Circle_Size_Big = 30;
 static int Detail_Meeting_AddressFontSize = 13;
 
+static const    NSInteger   sActionButtonIndex_SendEmail    = 0;    ///< This is the action button index for the "Send Comment" button.
+static const    NSInteger   sActionButtonIndex_PrintScreen  = 1;    ///< This is the action button index for the "Print Screen" button
+
 #pragma mark - View lifecycle
 
 /*****************************************************************/
@@ -285,6 +288,15 @@ static int Detail_Meeting_AddressFontSize = 13;
 
 /*****************************************************************/
 /**
+ \brief Displays the email comment screen.
+ *****************************************************************/
+- (void)displayCommentScreen
+{
+    
+}
+
+/*****************************************************************/
+/**
  \brief Prints the view displayed on the screen.
  *****************************************************************/
 - (void)printView
@@ -348,7 +360,21 @@ static int Detail_Meeting_AddressFontSize = 13;
 #ifdef DEBUG
     NSLog(@"A_BMLTSearchResultsViewController::actionItemClicked:");
 #endif
-    [self printView];
+    // If the server is able to send emails to the Meeting List Administrator, we give choices.
+    if ( [[BMLTAppDelegate getBMLTAppDelegate] hostHasEmailContactCapability] )
+        {
+        UIActionSheet *actionChoice = [[UIActionSheet alloc] initWithTitle:NSLocalizedString ( @"DETAIL-ACTION-BUTTON-POPUP-TITLE", nil )
+                                                                  delegate:self
+                                                         cancelButtonTitle:NSLocalizedString ( @"DETAIL-ACTION-BUTTON-POPUP-CANCEL", nil )
+                                                    destructiveButtonTitle:nil
+                                                         otherButtonTitles: NSLocalizedString ( @"DETAIL-ACTION-BUTTON-POPUP-CHOICE-1", nil ), NSLocalizedString ( @"DETAIL-ACTION-BUTTON-POPUP-CHOICE-2", nil ), nil
+                                ];
+        [actionChoice showInView:[[UIApplication sharedApplication] keyWindow]];
+        }
+    else    // Otherwise, it's just the printer.
+        {
+        [self printView];
+        }
 }
 
 /*****************************************************************/
@@ -423,5 +449,29 @@ static int Detail_Meeting_AddressFontSize = 13;
     NSURL                   *helpfulGasStationAttendant = [BMLTVariantDefs directionsURITo:meetingLocation];
     
     [[UIApplication sharedApplication] openURL:helpfulGasStationAttendant];
+}
+
+#pragma mark - UIActionSheetDelegate Functions -
+
+/*****************************************************************/
+/**
+ \brief This handles dispatching the action selection popup.
+ *****************************************************************/
+- (void)actionSheet:(UIActionSheet *)inPopup     ///< The UIActionSheet popup.
+clickedButtonAtIndex:(NSInteger)inButtonIndex   ///< The index of the selected button.
+{
+    switch ( inButtonIndex )
+    {
+        case sActionButtonIndex_SendEmail:
+            [self displayCommentScreen];
+            break;
+        
+        case sActionButtonIndex_PrintScreen:
+            [self printView];
+            break;
+        
+        default:
+            break;
+    }
 }
 @end

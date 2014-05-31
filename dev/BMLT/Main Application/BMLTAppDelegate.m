@@ -32,8 +32,8 @@
     #import "TestFlight.h"
 #endif
 
-static BMLTAppDelegate *g_AppDelegate = nil;    ///< This holds the SINGLETON instance of the application delegate.
-
+static          BMLTAppDelegate *g_AppDelegate = nil;               ///< This holds the SINGLETON instance of the application delegate.
+static const    float           sTestEmailURLRequestTimeout = 1.0;  ///< The timeout (in seconds), of the contact test.
 #ifdef _TESTFLIGHT_
 static NSString *kTestFlightTeamToken = @"89521cfd695fa615cc412b7048699107_ODQ2NTYyMDEyLTA0LTI2IDEwOjQ0OjM5LjU2NjA4OQ"; ///< Used for the TesFlightApp.com utility.
 #endif
@@ -70,6 +70,7 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
     BMLT_Meeting_Search     *mySearch;                  ///< The current meeting search in progress.
     BOOL                    deferredSearch;             ///< A semaphore that is set, in order to allow the animation to appear before the search starts.
     BOOL                    locationTried;              ///< This is used to ensure that we go 2 cycles with the location manager (Kludgy way to increase accuracy).
+    NSURLRequest            *testEmailURLRequest;       ///< This is used to find out if the server supports email.
 }
 
 - (void)transitionBetweenThisView:(UIView *)srcView andThisView:(UIView *)dstView direction:(int)dir;   ///< Do a nice transition between tab views.
@@ -1195,6 +1196,7 @@ shouldSelectViewController:(UIViewController *)inViewController
             NSLog(@"BMLTAppDelegate::networkStatusCallback: A gateway to the root server is working via WIFI.");
 #endif
             hostActive = YES;
+            [self testForEmailAvailability];
             
             break;
             }
@@ -1243,6 +1245,35 @@ shouldSelectViewController:(UIViewController *)inViewController
 #ifdef DEBUG
         NSLog(@"BMLTAppDelegate::networkStatusCallback: The network connection is fine, and we already have valid servers.");
 #endif
+        }
+}
+
+/*****************************************************************/
+/**
+ \brief This starts a quick connection to a particular file on the
+        root server. If the file is there, we will receive either
+        "1" or "0". It may also receive a 404 or other error.
+ *****************************************************************/
+- (void)testForEmailAvailability
+{
+    NSString    *serverURI = [NSString stringWithFormat:@"%@/client_interface/contact.php", [[BMLTVariantDefs rootServerURI] absoluteString]];
+    
+    testEmailURLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:serverURI] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:sTestEmailURLRequestTimeout];
+    
+    if ( testEmailURLRequest )
+        {
+        NSURLResponse   *pResponse;
+        NSError         *pError;
+        NSData          *pResponseData = [NSURLConnection sendSynchronousRequest:testEmailURLRequest returningResponse:&pResponse error:&pError];
+        
+        // Immediate failure if the server crapped out.
+        if ( pResponseData && !pError )
+            {
+            // See if we can send email.
+            const unsigned char *pdata = [pResponseData bytes];
+            unsigned char       value = *pdata;
+            _hostHasEmailContactCapability = (1 == [pResponseData length]) && ((unsigned char)'1' == value); // We specifically look for a '1' character. Nothing else.
+            }
         }
 }
 

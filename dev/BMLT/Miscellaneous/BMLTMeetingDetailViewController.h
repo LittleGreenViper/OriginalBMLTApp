@@ -26,7 +26,7 @@
 @class BMLT_Meeting;
 @class BMLT_Results_MapPointAnnotation;
 
-@interface BMLTMeetingDetailViewController : UIViewController <MKMapViewDelegate, UIPopoverControllerDelegate, BMLTCloseModalProtocol>
+@interface BMLTMeetingDetailViewController : UIViewController <MKMapViewDelegate, UIPopoverControllerDelegate, BMLTCloseModalProtocol, UIActionSheetDelegate>
 {
     UIPrintInteractionController    *printModal;
     UIPopoverController             *actionPopover;
@@ -47,6 +47,7 @@
 - (void)setMeetingCommentsText;
 - (void)setMeetingLocationText;
 - (void)setMapLocation;
+- (void)displayCommentScreen;
 - (void)printView;
 - (void)closeModal;
 - (UIPrintPageRenderer *)getMyPageRenderer;

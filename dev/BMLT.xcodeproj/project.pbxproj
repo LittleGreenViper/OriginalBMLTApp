@@ -442,6 +442,22 @@
 		777597831540F15E00D45ADA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77977D0F150E882B00485C8D /* UIKit.framework */; };
 		777597841540F15E00D45ADA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77977D11150E882B00485C8D /* Foundation.framework */; };
 		777597851540F15E00D45ADA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77977D13150E882B00485C8D /* CoreGraphics.framework */; };
+		777795F1193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777795EF193A874A00A361CC /* BMLTSendEmailViewController.m */; };
+		777795F2193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777795EF193A874A00A361CC /* BMLTSendEmailViewController.m */; };
+		777795F3193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777795EF193A874A00A361CC /* BMLTSendEmailViewController.m */; };
+		777795F4193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777795EF193A874A00A361CC /* BMLTSendEmailViewController.m */; };
+		777795F5193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777795EF193A874A00A361CC /* BMLTSendEmailViewController.m */; };
+		777795F6193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777795EF193A874A00A361CC /* BMLTSendEmailViewController.m */; };
+		777795F7193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777795EF193A874A00A361CC /* BMLTSendEmailViewController.m */; };
+		777795F8193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777795EF193A874A00A361CC /* BMLTSendEmailViewController.m */; };
+		777795F9193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777795F0193A874A00A361CC /* BMLTSendEmailViewController.xib */; };
+		777795FA193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777795F0193A874A00A361CC /* BMLTSendEmailViewController.xib */; };
+		777795FB193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777795F0193A874A00A361CC /* BMLTSendEmailViewController.xib */; };
+		777795FC193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777795F0193A874A00A361CC /* BMLTSendEmailViewController.xib */; };
+		777795FD193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777795F0193A874A00A361CC /* BMLTSendEmailViewController.xib */; };
+		777795FE193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777795F0193A874A00A361CC /* BMLTSendEmailViewController.xib */; };
+		777795FF193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777795F0193A874A00A361CC /* BMLTSendEmailViewController.xib */; };
+		77779600193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777795F0193A874A00A361CC /* BMLTSendEmailViewController.xib */; };
 		777AD66D1688C61700E064D0 /* BMLTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C32150E88E5005A707A /* BMLTAppDelegate.m */; };
 		777AD66E1688C61700E064D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C33150E88E5005A707A /* main.m */; };
 		777AD6701688C61700E064D0 /* BMLTMapResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C4F150E893C005A707A /* BMLTMapResultsViewController.m */; };
@@ -1026,6 +1042,9 @@
 		77731D3F182B00A000FFB0A2 /* MapMarkerGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MapMarkerGreen.png; sourceTree = "<group>"; };
 		77731D40182B00A000FFB0A2 /* MapMarkerGreen@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MapMarkerGreen@2X.png"; sourceTree = "<group>"; };
 		777597CE1540F15F00D45ADA /* NA Sverige.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NA Sverige.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		777795EE193A874A00A361CC /* BMLTSendEmailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTSendEmailViewController.h; sourceTree = "<group>"; };
+		777795EF193A874A00A361CC /* BMLTSendEmailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTSendEmailViewController.m; sourceTree = "<group>"; };
+		777795F0193A874A00A361CC /* BMLTSendEmailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BMLTSendEmailViewController.xib; path = ../../../BMLT/Miscellaneous/BMLTSendEmailViewController.xib; sourceTree = "<group>"; };
 		777AD6FD1688C61700E064D0 /* AU NA Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AU NA Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		777AD7021688C63000E064D0 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		777AD7041688C63000E064D0 /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
@@ -1366,6 +1385,8 @@
 				77238CEE183197A1000CA676 /* MGS_PopupViewController.m */,
 				776E9353183151EC0005B9AB /* MGS_PopupView.h */,
 				776E9354183151EC0005B9AB /* MGS_PopupView.m */,
+				777795EE193A874A00A361CC /* BMLTSendEmailViewController.h */,
+				777795EF193A874A00A361CC /* BMLTSendEmailViewController.m */,
 			);
 			name = "Miscellaneous View and Controller Classes";
 			path = Miscellaneous;
@@ -1571,6 +1592,7 @@
 			isa = PBXGroup;
 			children = (
 				77E24A5216F565CE00664FF9 /* iPhone.storyboard */,
+				777795F0193A874A00A361CC /* BMLTSendEmailViewController.xib */,
 				7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */,
 				77E24A5116F565CE00664FF9 /* iPad.storyboard */,
 			);
@@ -2089,6 +2111,7 @@
 				770BC45C189F1D3900991DBD /* Default-Landscape~ipad.png in Resources */,
 				770BC40C189F1CA100991DBD /* FormatCircleGreen@2x.png in Resources */,
 				770BC45A189F1D3900991DBD /* Default-568h@2x.png in Resources */,
+				777795FF193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */,
 				770BC40D189F1CA100991DBD /* Frame05.png in Resources */,
 				770BC467189F1D3900991DBD /* icon-152.png in Resources */,
 				770BC40E189F1CA100991DBD /* FormatCircleRed@2x.png in Resources */,
@@ -2159,6 +2182,7 @@
 				775FDE8518DB14C200B321AC /* Default-Landscape~ipad.png in Resources */,
 				775FDE8818DB14C200B321AC /* Default.png in Resources */,
 				775FDE3518DB129C00B321AC /* MapMarkerBlack@2x.png in Resources */,
+				77779600193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */,
 				775FDE3618DB129C00B321AC /* MapMarkerBlue@2x.png in Resources */,
 				775FDE8018DB14C200B321AC /* App-Icon-57.png in Resources */,
 				775FDE3718DB129C00B321AC /* MapMarkerRed@2x.png in Resources */,
@@ -2219,6 +2243,7 @@
 				77DCE9A1182C6E7700762604 /* Frame03.png in Resources */,
 				77603E761541DC8300C4840F /* list@2x.png in Resources */,
 				77BF9D2D17E33672006E632D /* App-Icon-152.png in Resources */,
+				777795FA193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */,
 				77731D42182B00A000FFB0A2 /* MapMarkerGreen.png in Resources */,
 				7780706A1827DA78003BC759 /* iPad.storyboard in Resources */,
 				77603E7F1541DC8300C4840F /* map.png in Resources */,
@@ -2304,6 +2329,7 @@
 				777AD6DA1688C61700E064D0 /* InfoPlist.strings in Resources */,
 				777AD6DB1688C61700E064D0 /* Localizable.strings in Resources */,
 				77D210E5168CAECB000D991A /* shadow.png in Resources */,
+				777795F9193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */,
 				7731A7A1168E1DEC00ED4BE8 /* Anim-Back.png in Resources */,
 				7731A7A2168E1DEC00ED4BE8 /* Anim-Transparency.png in Resources */,
 				77335567168E278F001C0B08 /* MapMarkerBlack@2x.png in Resources */,
@@ -2374,6 +2400,7 @@
 				77ACED8E168F3C6400FC9192 /* Default-568h@2x.png in Resources */,
 				77ACED8F168F3C6400FC9192 /* Default-Landscape@2x~ipad.png in Resources */,
 				77ACED90168F3C6400FC9192 /* Default-Landscape~ipad.png in Resources */,
+				777795FB193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */,
 				77ACED91168F3C6400FC9192 /* Default-Portrait@2x~ipad.png in Resources */,
 				77731D49182B00A000FFB0A2 /* MapMarkerGreen@2X.png in Resources */,
 				77ACED92168F3C6400FC9192 /* Default-Portrait~ipad.png in Resources */,
@@ -2404,6 +2431,7 @@
 				77DCE9A3182C6E7700762604 /* Frame03.png in Resources */,
 				771F13FF17E536F80053BC33 /* icon-114.png in Resources */,
 				77603E871541DC8300C4840F /* MapMarkerBlue.png in Resources */,
+				777795FC193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */,
 				77731D44182B00A000FFB0A2 /* MapMarkerGreen.png in Resources */,
 				77603E8D1541DC8300C4840F /* MapMarkerRed.png in Resources */,
 				77603EA51541DC8300C4840F /* search.png in Resources */,
@@ -2453,6 +2481,7 @@
 				776C1DC017E26DA500FF6710 /* icon-152.png in Resources */,
 				776C1DBA17E26DA500FF6710 /* icon-057.png in Resources */,
 				77B5EAF01743EEF300F50281 /* FormatCircleGreen@2x.png in Resources */,
+				777795FE193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */,
 				77DCE9B1182C6E7700762604 /* Frame05.png in Resources */,
 				77B5EAF11743EEF300F50281 /* FormatCircleRed@2x.png in Resources */,
 				77B5EAF21743EEF300F50281 /* FormatCircleWC@2x.png in Resources */,
@@ -2544,6 +2573,7 @@
 				77E24A4616F564A700664FF9 /* Default-Landscape~ipad.png in Resources */,
 				77E24A4716F564A700664FF9 /* Default-Portrait@2x~ipad.png in Resources */,
 				77E24A4816F564A700664FF9 /* Default-Portrait~ipad.png in Resources */,
+				777795FD193A874A00A361CC /* BMLTSendEmailViewController.xib in Resources */,
 				77DCE99E182C6E7700762604 /* Frame02.png in Resources */,
 				77E24A4916F564A700664FF9 /* Default.png in Resources */,
 				77E24A4A16F564A700664FF9 /* Default@2x.png in Resources */,
@@ -2569,6 +2599,7 @@
 			files = (
 				770BC3D4189F1CA100991DBD /* BMLTAppDelegate.m in Sources */,
 				770BC3D5189F1CA100991DBD /* main.m in Sources */,
+				777795F7193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */,
 				770BC3D6189F1CA100991DBD /* BMLTAdvancedSearchViewController.m in Sources */,
 				770BC3D7189F1CA100991DBD /* BMLTMapResultsViewController.m in Sources */,
 				770BC3D8189F1CA100991DBD /* BMLT_Prefs.m in Sources */,
@@ -2617,6 +2648,7 @@
 			files = (
 				775FDDF818DB129C00B321AC /* BMLTAppDelegate.m in Sources */,
 				775FDDF918DB129C00B321AC /* main.m in Sources */,
+				777795F8193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */,
 				775FDDFA18DB129C00B321AC /* BMLTAdvancedSearchViewController.m in Sources */,
 				775FDDFB18DB129C00B321AC /* BMLTMapResultsViewController.m in Sources */,
 				775FDDFC18DB129C00B321AC /* BMLT_Prefs.m in Sources */,
@@ -2665,6 +2697,7 @@
 			files = (
 				777597581540F15E00D45ADA /* BMLTAppDelegate.m in Sources */,
 				777597591540F15E00D45ADA /* main.m in Sources */,
+				777795F2193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */,
 				7775975A1540F15E00D45ADA /* BMLTAdvancedSearchViewController.m in Sources */,
 				7775975B1540F15E00D45ADA /* BMLTMapResultsViewController.m in Sources */,
 				7775975C1540F15E00D45ADA /* BMLT_Prefs.m in Sources */,
@@ -2713,6 +2746,7 @@
 			files = (
 				777AD66D1688C61700E064D0 /* BMLTAppDelegate.m in Sources */,
 				777AD66E1688C61700E064D0 /* main.m in Sources */,
+				777795F1193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */,
 				777AD6701688C61700E064D0 /* BMLTMapResultsViewController.m in Sources */,
 				777AD6711688C61700E064D0 /* BMLT_Prefs.m in Sources */,
 				777AD6731688C61700E064D0 /* Reachability.m in Sources */,
@@ -2761,6 +2795,7 @@
 			files = (
 				771D0C34150E88E5005A707A /* BMLTAppDelegate.m in Sources */,
 				771D0C35150E88E5005A707A /* main.m in Sources */,
+				777795F3193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */,
 				771D0C47150E892A005A707A /* BMLTAdvancedSearchViewController.m in Sources */,
 				771D0C7A150E893C005A707A /* BMLTMapResultsViewController.m in Sources */,
 				771D0C7D150E893C005A707A /* BMLT_Prefs.m in Sources */,
@@ -2809,6 +2844,7 @@
 			files = (
 				77AC716B15409E9F0060CA80 /* BMLTAppDelegate.m in Sources */,
 				77AC716C15409E9F0060CA80 /* main.m in Sources */,
+				777795F4193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */,
 				77AC716D15409E9F0060CA80 /* BMLTAdvancedSearchViewController.m in Sources */,
 				77AC716E15409E9F0060CA80 /* BMLTMapResultsViewController.m in Sources */,
 				77AC716F15409E9F0060CA80 /* BMLT_Prefs.m in Sources */,
@@ -2857,6 +2893,7 @@
 			files = (
 				77B5EABF1743EEF300F50281 /* BMLTAppDelegate.m in Sources */,
 				77B5EAC01743EEF300F50281 /* main.m in Sources */,
+				777795F6193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */,
 				77B5EAC11743EEF300F50281 /* BMLTAdvancedSearchViewController.m in Sources */,
 				77B5EAC21743EEF300F50281 /* BMLTMapResultsViewController.m in Sources */,
 				77B5EAC31743EEF300F50281 /* BMLT_Prefs.m in Sources */,
@@ -2905,6 +2942,7 @@
 			files = (
 				77E249BF16F563C900664FF9 /* BMLTAppDelegate.m in Sources */,
 				77E249C016F563C900664FF9 /* main.m in Sources */,
+				777795F5193A874A00A361CC /* BMLTSendEmailViewController.m in Sources */,
 				77E249C116F563C900664FF9 /* BMLTAdvancedSearchViewController.m in Sources */,
 				77E249C216F563C900664FF9 /* BMLTMapResultsViewController.m in Sources */,
 				77E249C316F563C900664FF9 /* BMLT_Prefs.m in Sources */,

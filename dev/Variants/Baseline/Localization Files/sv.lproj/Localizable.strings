@@ -196,3 +196,23 @@
 
 /* The label for the version display in the settings page */
 "SETTINGS-VERSION-LABEL" = "Version:";
+
+/* These are the choices for the Meeting Details popup sheet. */
+"DETAIL-ACTION-BUTTON-POPUP-TITLE"      = "Select Action:";
+"DETAIL-ACTION-BUTTON-POPUP-CANCEL"     = "Cancel";
+"DETAIL-ACTION-BUTTON-POPUP-CHOICE-1"   = "Send Comment";
+"DETAIL-ACTION-BUTTON-POPUP-CHOICE-2"   = "Print Page";
+
+/* These are the strings for the "Send A Comment" Screen */
+"SEND-COMMENT-SCREEN-TITLE"             = "Send An Email";
+"SEND-COMMENT-SCREEN-BLURB-FORMAT"      = "This email conerns the meeting named %@, which meets at %@ on %@, at %@.";
+"SEND-COMMENT-SCREEN-FROM-NAME-TITLE"   = "Your Name:";
+"SEND-COMMENT-SCREEN-FROM-EMAIL-TITLE"  = "Your Email Address";
+"SEND-COMMENT-SCREEN-KEEP-EMAIL-TITLE"  = "Save This Email for Future Comments.";
+"SEND-COMMENT-SCREEN-KEEP-EMAIL-EXPLAIN"    = "You can change or delete this email in the settings screen.";
+
+/* These are the strings for the preferences Screen. */
+"PREF-SCREEN-EXPLAIN"                   = "Saved Email for Comments.";
+"PREF-SCREEN-FROM-NAME-TITLE"           = "Your Name:";
+"PREF-SCREEN-FROM-EMAIL-TITLE"          = "Your Email Address";
+
