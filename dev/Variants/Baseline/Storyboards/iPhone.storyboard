@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" text="SEARCH-SPEC-DISABLED-TEXT" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" id="iqL-3E-3rT">
-                                <rect key="frame" x="13" y="219.00000132386478" width="295" height="148"/>
+                                <rect key="frame" x="13" y="219" width="295" height="148"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -449,6 +449,18 @@
                                     <action selector="updateUserLocationNow:" destination="Nxo-gu-wB5" eventType="touchUpInside" id="WVu-5o-tZk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RfC-il-5Us">
+                                <rect key="frame" x="8" y="340" width="304" height="33"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="PREF-SCREEN-FORGET-BUTTON-TITLE">
+                                    <color key="titleColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgetEmailHit:" destination="Nxo-gu-wB5" eventType="touchUpInside" id="qQH-9n-5YA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
@@ -464,6 +476,7 @@
                     <connections>
                         <outlet property="distanceSortLabel" destination="3Q4-Xa-pMg" id="H4W-qG-TW8"/>
                         <outlet property="distanceSortSwitch" destination="d1R-Bw-4lt" id="dSn-lg-Knl"/>
+                        <outlet property="forgetEmailButton" destination="RfC-il-5Us" id="Rov-XR-GGy"/>
                         <outlet property="lookUpLocationSwitch" destination="lwl-k3-B1U" id="BVv-Sg-Vnq"/>
                         <outlet property="lookupLocationLabel" destination="3UZ-z3-M67" id="tb5-JH-8De"/>
                         <outlet property="mapResultsLabel" destination="TCP-7G-etX" id="eJ4-mg-ibW"/>

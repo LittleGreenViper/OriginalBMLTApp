@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -241,10 +241,22 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="l5K-eQ-zKW" userLabel="Info View">
-                                <rect key="frame" x="0.0" y="213" width="768" height="762"/>
+                                <rect key="frame" x="0.0" y="226" width="768" height="749"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U3k-hh-5Gt">
+                                <rect key="frame" x="20" y="198" width="728" height="32"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <state key="normal" title="PREF-SCREEN-FORGET-BUTTON-TITLE">
+                                    <color key="titleColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgetEmailHit:" destination="cUO-18-5Fj" eventType="touchUpInside" id="ydZ-6P-rpI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
@@ -258,6 +270,7 @@
                         <outlet property="aboutView" destination="l5K-eQ-zKW" id="edE-9L-HWu"/>
                         <outlet property="distanceSortLabel" destination="7Jx-ch-1h1" id="546-Yo-abC"/>
                         <outlet property="distanceSortSwitch" destination="EPE-bp-hrv" id="sZM-3U-Cds"/>
+                        <outlet property="forgetEmailButton" destination="U3k-hh-5Gt" id="K1s-gn-7TO"/>
                         <outlet property="lookUpLocationSwitch" destination="zhj-Qq-iY4" id="qL6-j3-L01"/>
                         <outlet property="lookupLocationLabel" destination="NLr-Dc-0cP" id="xwt-PY-Kgb"/>
                         <outlet property="mapResultsLabel" destination="Rmn-0h-Q21" id="vau-UE-J7n"/>

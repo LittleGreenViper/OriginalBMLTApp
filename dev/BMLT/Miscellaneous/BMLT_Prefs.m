@@ -169,8 +169,6 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
  *****************************************************************/
 @implementation BMLT_Prefs
 
-@synthesize startWithMap, preferDistanceSort, lookupMyLocation, gracePeriod, startWithSearch, preferAdvancedSearch, searchTypePref, preferSearchResultsAsMap, preserveAppStateOnSuspend, keepUpdatingLocation, resultCount;
-
 /*****************************************************************/
 /**
  \brief This gets the SINGLETON instance, and creates one, if necessary.
@@ -316,6 +314,26 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
 
 /*****************************************************************/
 /**
+ \brief Get the name entered by the user for sending emails.
+ \returns The name.
+ *****************************************************************/
++ (NSString*)getEmailSenderName
+{
+    return [s_thePrefs emailSenderName];
+}
+
+/*****************************************************************/
+/**
+ \brief Get the email address entered by the user for sending emails.
+ \returns The address.
+ *****************************************************************/
++ (NSString*)getEmailSenderAddress
+{
+    return [s_thePrefs emailSenderAddress];
+}
+
+/*****************************************************************/
+/**
  \brief Save the changes into the prefs persistent storage.
  *****************************************************************/
 + (void)saveChanges
@@ -341,6 +359,27 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
 
 /*****************************************************************/
 /**
+ \brief Validate a given string as an email address (full RFC compliance).
+        Got this from here: https://github.com/benmcredmond/DHValidation
+ \returns YES, if the email address is valid.
+ *****************************************************************/
++ (BOOL)isValidEmailAddress:(NSString *)inEmailAddress  ///< The email address to validate.
+{
+    NSString *emailRegex =  @"(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}"
+                            @"~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\"
+                            @"x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-"
+                            @"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"
+                            @"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"
+                            @"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"
+                            @"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";
+    
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES[c] %@", emailRegex];
+    
+    return [emailTest evaluateWithObject:inEmailAddress];
+}
+
+/*****************************************************************/
+/**
  \brief Initializer from a coder.
  \returns self
  *****************************************************************/
@@ -358,7 +397,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             
             if ( [decoder containsValueForKey:@"startWithMap"] )
                 {
-                startWithMap = [decoder decodeBoolForKey:@"startWithMap"];
+                _startWithMap = [decoder decodeBoolForKey:@"startWithMap"];
                 }
             else
                 {
@@ -367,7 +406,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             
             if ( [decoder containsValueForKey:@"preferDistanceSort"] )
                 {
-                preferDistanceSort = [decoder decodeBoolForKey:@"preferDistanceSort"];
+                _preferDistanceSort = [decoder decodeBoolForKey:@"preferDistanceSort"];
                 }
             else
                 {
@@ -376,7 +415,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             
             if ( [decoder containsValueForKey:@"lookupMyLocation"] )
                 {
-                lookupMyLocation = [decoder decodeBoolForKey:@"lookupMyLocation"];
+                _lookupMyLocation = [decoder decodeBoolForKey:@"lookupMyLocation"];
                 }
             else
                 {
@@ -385,7 +424,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             
             if ( [decoder containsValueForKey:@"gracePeriod"] )
                 {
-                gracePeriod = [decoder decodeIntForKey:@"gracePeriod"];
+                _gracePeriod = [decoder decodeIntForKey:@"gracePeriod"];
                 }
             else
                 {
@@ -394,7 +433,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             
             if ( [decoder containsValueForKey:@"startWithSearch"] )
                 {
-                startWithSearch = [decoder decodeBoolForKey:@"startWithSearch"];
+                _startWithSearch = [decoder decodeBoolForKey:@"startWithSearch"];
                 }
             else
                 {
@@ -403,7 +442,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             
             if ( [decoder containsValueForKey:@"preferAdvancedSearch"] )
                 {
-                preferAdvancedSearch = [decoder decodeBoolForKey:@"preferAdvancedSearch"];
+                _preferAdvancedSearch = [decoder decodeBoolForKey:@"preferAdvancedSearch"];
                 }
             else
                 {
@@ -412,7 +451,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             
             if ( [decoder containsValueForKey:@"searchTypePref"] )
                 {
-                searchTypePref = [decoder decodeIntForKey:@"searchTypePref"];
+                _searchTypePref = [decoder decodeIntForKey:@"searchTypePref"];
                 }
             else
                 {
@@ -421,7 +460,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             
             if ( [decoder containsValueForKey:@"preferSearchResultsAsMap"] )
                 {
-                preferSearchResultsAsMap = [decoder decodeBoolForKey:@"preferSearchResultsAsMap"];
+                _preferSearchResultsAsMap = [decoder decodeBoolForKey:@"preferSearchResultsAsMap"];
                 }
             else
                 {
@@ -430,7 +469,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             
             if ( [decoder containsValueForKey:@"preserveAppStateOnSuspend"] )
                 {
-                preserveAppStateOnSuspend = [decoder decodeBoolForKey:@"preserveAppStateOnSuspend"];
+                _preserveAppStateOnSuspend = [decoder decodeBoolForKey:@"preserveAppStateOnSuspend"];
                 }
             else
                 {
@@ -439,7 +478,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             
             if ( [decoder containsValueForKey:@"preserveAppStateOnSuspend"] )
                 {
-                keepUpdatingLocation = [decoder decodeBoolForKey:@"keepUpdatingLocation"];
+                _keepUpdatingLocation = [decoder decodeBoolForKey:@"keepUpdatingLocation"];
                 }
             else
                 {
@@ -448,7 +487,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             
             if ( [decoder containsValueForKey:@"resultCount"] )
                 {
-                resultCount = [decoder decodeIntForKey:@"resultCount"];
+                _resultCount = [decoder decodeIntForKey:@"resultCount"];
                 }
             else
                 {
@@ -564,17 +603,16 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
 -(void)encodeWithCoder:(NSCoder *)encoder   ///< The encoder that will receive the stored state.
 {
     [encoder encodeObject:servers forKey:@"servers"];
-    [encoder encodeBool:startWithMap forKey:@"startWithMap"];
-    [encoder encodeBool:preferDistanceSort forKey:@"preferDistanceSort"];
-    [encoder encodeBool:lookupMyLocation forKey:@"lookupMyLocation"];
-    [encoder encodeInt:gracePeriod forKey:@"gracePeriod"];
-    [encoder encodeBool:startWithSearch forKey:@"startWithSearch"];
-    [encoder encodeBool:preferAdvancedSearch forKey:@"preferAdvancedSearch"];
-    [encoder encodeInt:searchTypePref forKey:@"searchTypePref"];
-    [encoder encodeBool:preferSearchResultsAsMap forKey:@"preferSearchResultsAsMap"];
-    [encoder encodeBool:preserveAppStateOnSuspend forKey:@"preserveAppStateOnSuspend"];
-    [encoder encodeBool:keepUpdatingLocation forKey:@"keepUpdatingLocation"];
-    [encoder encodeInt:resultCount forKey:@"resultCount"];
+    [encoder encodeBool:[self startWithMap] forKey:@"startWithMap"];
+    [encoder encodeBool:[self preferDistanceSort] forKey:@"preferDistanceSort"];
+    [encoder encodeBool:[self lookupMyLocation] forKey:@"lookupMyLocation"];
+    [encoder encodeInt:[self gracePeriod] forKey:@"gracePeriod"];
+    [encoder encodeBool:[self startWithSearch] forKey:@"startWithSearch"];
+    [encoder encodeBool:[self preferAdvancedSearch] forKey:@"preferAdvancedSearch"];
+    [encoder encodeInt:[self searchTypePref] forKey:@"searchTypePref"];
+    [encoder encodeBool:[self preferSearchResultsAsMap] forKey:@"preferSearchResultsAsMap"];
+    [encoder encodeBool:[self preserveAppStateOnSuspend] forKey:@"preserveAppStateOnSuspend"];
+    [encoder encodeBool:[self keepUpdatingLocation] forKey:@"keepUpdatingLocation"];
+    [encoder encodeInt:[self resultCount] forKey:@"resultCount"];
 }
-
 @end

@@ -33,7 +33,7 @@
 #endif
 
 static          BMLTAppDelegate *g_AppDelegate = nil;               ///< This holds the SINGLETON instance of the application delegate.
-static const    float           sTestEmailURLRequestTimeout = 1.0;  ///< The timeout (in seconds), of the contact test.
+static const    float           sTestEmailURLRequestTimeout = 1.5;  ///< The timeout (in seconds), of the contact test.
 #ifdef _TESTFLIGHT_
 static NSString *kTestFlightTeamToken = @"89521cfd695fa615cc412b7048699107_ODQ2NTYyMDEyLTA0LTI2IDEwOjQ0OjM5LjU2NjA4OQ"; ///< Used for the TesFlightApp.com utility.
 #endif

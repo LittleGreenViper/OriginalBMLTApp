@@ -89,6 +89,23 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
 {
     [super viewWillAppear:animated];
     
+    if ( [[BMLTAppDelegate getBMLTAppDelegate] hostHasEmailContactCapability] && [BMLT_Prefs isValidEmailAddress:[[BMLT_Prefs getBMLT_Prefs] emailSenderAddress]] )
+        {
+        [[self forgetEmailButton] setHidden:NO];
+        }
+    else
+        {
+        // We do this to avoid trashing someone's saved address if the server is temporarily down.
+        if ( [BMLT_Prefs isValidEmailAddress:[[BMLT_Prefs getBMLT_Prefs] emailSenderAddress]] )
+            {
+            [self forgetEmailHit:nil];
+            }
+        else
+            {
+            [[self forgetEmailButton] setHidden:YES];
+            }
+        }
+    
     if ( ![[[self navigationController] navigationBar] respondsToSelector:@selector(setBarTintColor:)] )
         {
         [[[self navigationItem] rightBarButtonItem] setTintColor:nil];
@@ -110,7 +127,7 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
     [retainStateSwitch setOn:[myPrefs preserveAppStateOnSuspend]];
     [mapResultsSwitch setOn:[myPrefs preferSearchResultsAsMap]];
     [distanceSortSwitch setOn:[myPrefs preferDistanceSort]];
-    
+
     if ( ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) && ([preferredSearchTypeControl numberOfSegments] > 2) )
         {
         [preferredSearchTypeControl removeSegmentAtIndex:1 animated:NO];
@@ -146,6 +163,7 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
     [numMeetingsLabel setText:NSLocalizedString([numMeetingsLabel text], nil)];
     [minLabel setText:NSLocalizedString([minLabel text], nil)];
     [maxLabel setText:NSLocalizedString([maxLabel text], nil)];
+    [[self forgetEmailButton] setTitle:NSLocalizedString(@"PREF-SCREEN-FORGET-BUTTON-TITLE", nil) forState:UIControlStateNormal];
     
     for ( NSUInteger i = 0; i < [preferredSearchTypeControl numberOfSegments]; i++ )
         {
@@ -180,9 +198,9 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
 /**
  \brief  Called when the user flicks the lookup on startup switch.
  *****************************************************************/
-- (IBAction)lookupLocationChanged:(id)sender    ///< The switch in question
+- (IBAction)lookupLocationChanged:(id)inSender    ///< The switch in question
 {
-    UISwitch  *myControl = (UISwitch *)sender;  // Get the sender as a switch
+    UISwitch  *myControl = (UISwitch *)inSender;  // Get the sender as a switch
     [[BMLT_Prefs getBMLT_Prefs] setLookupMyLocation:[myControl isOn]];
     [BMLT_Prefs saveChanges];
 }
@@ -191,9 +209,9 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
 /**
  \brief  Called when the user flicks the keep updating location switch.
  *****************************************************************/
-- (IBAction)keepUpdatingChanged:(id)sender  ///< The switch in question
+- (IBAction)keepUpdatingChanged:(id)inSender  ///< The switch in question
 {
-    UISwitch  *myControl = (UISwitch *)sender;  // Get the sender as a switch
+    UISwitch  *myControl = (UISwitch *)inSender;  // Get the sender as a switch
     [[BMLT_Prefs getBMLT_Prefs] setKeepUpdatingLocation:[myControl isOn]];
     [BMLT_Prefs saveChanges];
 }
@@ -202,9 +220,9 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
 /**
  \brief  Called when the user flicks the saved state switch.
  *****************************************************************/
-- (IBAction)retainStateChanged:(id)sender   ///< The switch in question
+- (IBAction)retainStateChanged:(id)inSender   ///< The switch in question
 {
-    UISwitch  *myControl = (UISwitch *)sender;  // Get the sender as a switch
+    UISwitch  *myControl = (UISwitch *)inSender;  // Get the sender as a switch
     [[BMLT_Prefs getBMLT_Prefs] setPreserveAppStateOnSuspend:[myControl isOn]];
     [BMLT_Prefs saveChanges];
 }
@@ -213,9 +231,9 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
 /**
  \brief  Called when the user flicks the return results as a map switch.
  *****************************************************************/
-- (IBAction)mapResultsChanged:(id)sender    ///< The switch in question
+- (IBAction)mapResultsChanged:(id)inSender    ///< The switch in question
 {
-    UISwitch  *myControl = (UISwitch *)sender;  // Get the sender as a switch
+    UISwitch  *myControl = (UISwitch *)inSender;  // Get the sender as a switch
     [[BMLT_Prefs getBMLT_Prefs] setPreferSearchResultsAsMap:[myControl isOn]];
     [BMLT_Prefs saveChanges];
 }
@@ -224,9 +242,9 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
 /**
  \brief  Called when the user flicks the prefer distance sort switch.
  *****************************************************************/
-- (IBAction)distanceSortChanged:(id)sender    ///< The switch in question
+- (IBAction)distanceSortChanged:(id)inSender    ///< The switch in question
 {
-    UISwitch  *myControl = (UISwitch *)sender;  // Get the sender as a switch
+    UISwitch  *myControl = (UISwitch *)inSender;  // Get the sender as a switch
     [[BMLT_Prefs getBMLT_Prefs] setPreferDistanceSort:[myControl isOn]];
     [BMLT_Prefs saveChanges];
 }
@@ -235,9 +253,9 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
 /**
  \brief  Called when the user selects a preffered search type.
  *****************************************************************/
-- (IBAction)preferredSearchChanged:(id)sender   ///< The search type segmented control
+- (IBAction)preferredSearchChanged:(id)inSender   ///< The search type segmented control
 {
-    UISegmentedControl  *myControl = (UISegmentedControl *)sender;  // Get the sender as a segmented control
+    UISegmentedControl  *myControl = (UISegmentedControl *)inSender;  // Get the sender as a segmented control
     [[BMLT_Prefs getBMLT_Prefs] setSearchTypePref:(int)[myControl selectedSegmentIndex]];
     [BMLT_Prefs saveChanges];
     
@@ -252,18 +270,30 @@ static int _LOG_MAX = 20;      /**< The number of meetings for the Max level of 
 /**
  \brief  Called when the user selects a new meeting count.
  *****************************************************************/
-- (IBAction)numMeetingsChanged:(id)sender   ///< The meeting count slider
+- (IBAction)numMeetingsChanged:(id)inSender   ///< The meeting count slider
 {
-    UISlider  *myControl = (UISlider *)sender;  // Get the sender as a slider control
+    UISlider  *myControl = (UISlider *)inSender;  // Get the sender as a slider control
     [[BMLT_Prefs getBMLT_Prefs] setResultCount:floorf(powf(10, [myControl value]))];
     [BMLT_Prefs saveChanges];
 }
 
 /*****************************************************************/
 /**
+ \brief  Called when the user wants to forget a saved email address.
+ *****************************************************************/
+- (IBAction)forgetEmailHit:(UIButton *)inSender
+{
+    [[BMLT_Prefs getBMLT_Prefs] setEmailSenderName:@""];
+    [[BMLT_Prefs getBMLT_Prefs] setEmailSenderAddress:@""];
+    [BMLT_Prefs saveChanges];
+    [[self forgetEmailButton] setHidden:YES];
+}
+
+/*****************************************************************/
+/**
  \brief  Called when the user wants to update their location now.
  *****************************************************************/
-- (IBAction)updateUserLocationNow:(id)sender    ///< The update Location button.
+- (IBAction)updateUserLocationNow:(id)inSender    ///< The update Location button.
 {
     [[BMLTAppDelegate getBMLTAppDelegate] lookupMyLocationWithAccuracy:kCLLocationAccuracyBest];
 }
