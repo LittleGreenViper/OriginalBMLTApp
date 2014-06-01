@@ -1,0 +1,215 @@
+/**
+    MAIN LOCALIZATION FILE
+
+    This file contains all the strings that are displayed in the BMLT app.
+
+    The app is designed to be entirely localizable, so no strings are included
+    in the main app. Instead, we use keys and the NSLocalizedString function to
+    develop the displayed strings. Whatever is written here, will be displayed
+    in the app.
+
+    It is important that this file be UTF-8 encoded. Xcode has a bug, where it keeps
+    saving these as UTF-16. If this happens, you will see a bunch of upside-down
+    question marks (¿) displayed, if viewed in Xcode. It will probably display fine
+    in other text editors.
+ 
+    You localize these strings by changing the string in the RIGHT side of the "=".
+ 
+    DO NOT CHANGE THE LEFT SIDE!
+ 
+    Only change the string on the right.
+
+    DO NOT CHANGE    CHANGE
+           |           |
+           |           |
+           V           V
+       "TAB-BAR-1" = "Map";
+
+    This is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    BMLT is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this code.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/***********************************************************/
+/* If there is an unkown error during the parse, this is displayed */
+"PARSER-UNKNOWN-ERROR" = "Erreur de Recherche Inconnu";
+
+/* Error Strings */
+"COMM-ERROR" = "Erreur de Recherche";
+"LOC-ERROR" = "Erreur de Localisation";
+"LOC-ERROR-DENIED" = "Les services de localisation sont désactivés pour l'App. Voulez-vous les activer ?";
+"PARSER-TIMEOUT-SEARCH" = " Le temps pour la recherche a duré trop longtemps, donc elle s'est arrêtée.";
+"SERVER-TIMEOUT-ERROR" = "La connexion au serveur a pris trop longtemps à s'établir. Elle s'est donc interrompue.";
+"ERROR-CANT-LOAD-DRIVER" = "L'application ne peut pas se connecter au serveur et elle ne pourra fonctionner correctement.";
+"OK-BUTTON" = "OK";
+"TOGGLE-MAP-LABEL-MAP" = "Carte";
+"TOGGLE-MAP-LABEL-SATELLITE" = "Satellite";
+
+/* Used in the Prefs window */
+"SETTINGS-URI-BLURB" = "Complete GPL Source disponible ici:";
+"SETTINGS-URI" = "https://github.com/MAGSHARE/BMLT-iOS-App";
+
+/* No Search Results Alert */
+"NO-SEARCH-RESULTS" = "Aucune réunion trouvée.";
+
+/* Too many results error. */
+"TOO-MANY-RESULTS-FORMAT" = "Il y a plus de %d réunions dans la réponse S'il vous plaît préciser votre recherche , et essayez à nouveau.";
+
+/* Clear Search Button Title */
+"CLEAR-SEARCH-BUTTON" = "Nouvelle";
+
+/* Sort Header Strings */
+"SEARCH-RESULTS-SORT-TIME" = "Trier par heure";
+"SEARCH-RESULTS-SORT-DISTANCE" = "Trier selon la Distance";
+
+/* Search Result Meeting Details Strings */
+"MEETING-DETAILS-FREQUENCY-FORMAT" = "Se réunit tous les %@, à %@.";
+
+/* Distance */
+"DISTANCE-MILE" = "Miles";
+"DISTANCE-KM" = "Km";
+
+/* Special strings for noon and midnight */
+"TIME-NOON" = "Midi";
+"TIME-MIDNIGHT" = "Minuit";
+
+/* The names of the tab bar items, and the views they produce. */
+"TAB-BAR-0" = "Rechercher";
+"TAB-BAR-1" = "Liste";
+"TAB-BAR-2" = "Carte";
+"TAB-BAR-3" = "Paramètres";
+
+/* These define the buttons and titles in the search spec navbar. */
+"SEARCH-SPEC-SIMPLE-TITLE" = "Simple";
+"SEARCH-SPEC-ADVANCED-TITLE" = "Avancée";
+
+/* Text for the various settings items */
+"SETTINGS-INITIAL-LOCATION" = "Me localiser au départ:";
+"SETTINGS-RETAIN-STATE" = "Réinitialiser au départ:";
+"SETTINGS-PREFER-MAP-RESULTS" = "Afficher carte géographique:";
+"SETTINGS-PREFER-DISTANCE-SORT" = "Trier résultats selon distance:";
+"SETTINGS-PREFERRED-SEARCH-TYPE" = "Type de recherche préférée:";
+"SETTINGS-NUM-MEETINGS" = "Nombre de réunions affichées:";
+"SETTINGS-MIN" = "Min";
+"SETTINGS-MAX" = "Max";
+
+/* Used for the header of the list, when displaying results from red map icons. */
+"MAP-LIST-HEADER" = "Réunions multiples";
+
+/* Initial size of the projection (in kilometers). */
+"INITIAL-PROJECTION" = "50";
+
+/* Format keys */
+"FORMAT-KEY-OPEN" = "O";
+"FORMAT-KEY-CLOSED" = "F";
+"FORMAT-KEY-WHEELCHAIR" = "Ch";
+
+/* The URL as a printf format, for getting directions via the Web. */
+"DIRECTIONS-URI-FORMAT" = "http://maps.google.com/maps?daddr=%f,%f";
+"DIRECTIONS-URI-FORMAT-ACCURATE" = "http://maps.google.com/maps?saddr=%f,%f&daddr=%f,%f";
+
+/* The title of the directions button */
+"DIRECTIONS-BUTTON-TITLE" = "Itinéraire";
+
+/* Advanced Search Specification Stuff */
+"SEARCH-SPEC-LABEL" = "Rechercher";
+"SEARCH-SPEC-MY-LOC" = "À proximité";
+"SEARCH-SPEC-MARKER-LOC" = "Près de la borne";
+"SEARCH-SPEC-ADDRESS" = "Près de l'adresse:";
+"ADVANCED-GO-BUTTON" = "TROUVER";
+
+/* The title for the "About" button and screen */
+"ABOUT-TITLE" = "Info";
+
+/* This tells the user why the app needs their location. */
+"LOCATION-PURPOSE" = "L'application a besoin de connaître votre emplacement, afin de vous dire où sont les réunions les plus proches.";
+
+/* Error message for geocode failure */
+"GEOCODE-FAILURE" = "L'application ne peut pas déterminer l'emplacement de l'adresse indiquée.";
+
+/* Error message for server failure */
+"ROOT-SERVER-FAILURE" = "L'application ne peut pas connecter au service de réunion. S'il vous plaît assurez-vous que votre connexion Internet fonctionne.";
+
+/* Error message for no weekdays selected */
+"SELECT-A-WEEKDAY" = "Vous devez sélectionner au moins un jour de la semaine pour que la recherche se compléte.";
+
+/* Quick Search Titles */
+"SEARCH-SPEC-NEARBY-TITLE" = "À proximité";
+"SEARCH-SPEC-LATER-TODAY-TITLE" = "À proximité plus tard aujourd'hui";
+"SEARCH-SPEC-TOMORROW-TITLE" = "À proximité demain";
+"SEARCH-SPEC-DISABLED-TEXT" = "Recherche désactivé. Services de localisation non disponibles ( Soit vous les avez désactivé ou ils sont sélectivement désactivé pour cette application ).";
+"SEARCH-SPEC-OVERALL-LABEL-TEXT" = "Trouver une réunion:";
+
+/* Selected Weekdays */
+"SEARCH-SPEC-SELECTED-WEEKDAYS" = "Jour de Semaine";
+"SEARCH-SPEC-SELECTED-WEEKDAYS-0" = "Toutes";
+"SEARCH-SPEC-SELECTED-WEEKDAYS-1" = "Semaine";
+"SEARCH-SPEC-SELECTED-WEEKDAYS-2" = "Plus tard aujourd'hui";
+"SEARCH-SPEC-SELECTED-WEEKDAYS-3" = "Demain";
+
+/* The default text for the address field */
+"DEFAULT-ADDRESS-STRING" = "Entrez code postal, emplacement, adresse";
+
+/* Day Names */
+"WEEKDAY-NAME-0" = "Dimanche";
+"WEEKDAY-NAME-1" = "Lundi";
+"WEEKDAY-NAME-2" = "Mardi";
+"WEEKDAY-NAME-3" = "Mercredi";
+"WEEKDAY-NAME-4" = "Jeudi";
+"WEEKDAY-NAME-5" = "Vendredi";
+"WEEKDAY-NAME-6" = "Samedi";
+
+"WEEKDAY-SHORT-NAME-0" = "Dim";
+"WEEKDAY-SHORT-NAME-1" = "Lun";
+"WEEKDAY-SHORT-NAME-2" = "Mar";
+"WEEKDAY-SHORT-NAME-3" = "Mer";
+"WEEKDAY-SHORT-NAME-4" = "Jeu";
+"WEEKDAY-SHORT-NAME-5" = "Ven";
+"WEEKDAY-SHORT-NAME-6" = "Sam";
+
+/* The Name of the Meeting Details Screen */
+"MEETING-DETAILS" = "Détails";
+
+/* The default title for the black marker */
+"BLACK-MARKER-TITLE" = "Votre Location. Faites glisser ce marqueur pour rechercher un autre endroit.";
+
+/* The user wants us to update their current location now. */
+"SETTINGS-UPDATE-LOCATION" = "Me relocaliser maintenant";
+
+/* Search Animation Screen Title */
+"SEARCH-ANIMATION-TITLE" = "Recherche...";
+
+/* Used for the printout. */
+"PRINT-TOWN-DATE-FORMAT-STRING" = " on %@, at %@";
+
+/* The label for the version display in the settings page */
+"SETTINGS-VERSION-LABEL" = "Version:";
+
+/* These are the choices for the Meeting Details popup sheet. */
+"DETAIL-ACTION-BUTTON-POPUP-TITLE"      = "Select Action:";
+"DETAIL-ACTION-BUTTON-POPUP-CANCEL"     = "Cancel";
+"DETAIL-ACTION-BUTTON-POPUP-CHOICE-1"   = "Send Comment";
+"DETAIL-ACTION-BUTTON-POPUP-CHOICE-2"   = "Print Page";
+
+/* These are the strings for the "Send A Comment" Screen */
+"SEND-COMMENT-SCREEN-TITLE"             = "Send A Comment";
+"SEND-COMMENT-SCREEN-FROM-NAME-TITLE"   = "Your Name:";
+"SEND-COMMENT-SCREEN-FROM-EMAIL-TITLE"  = "Your Email Address";
+"SEND-COMMENT-SCREEN-KEEP-EMAIL-TITLE"  = "Save This Email for Future Comments.";
+"SEND-COMMENT-SCREEN-KEEP-EMAIL-EXPLAIN"    = "You can change or delete this email in the settings screen.";
+"SEND-COMMENT-SCREEN-INVALID-EMAIL"     = "Invalid Email Address";
+"SEND-COMMENT-SCREEN-SEND-BUTTON"       = "Send Comment";
+"SEND-COMMENT-SCREEN-CANCEL-BUTTON"     = "Cancel";
+
+/* These are the strings for the preferences Screen. */
+"PREF-SCREEN-FORGET-BUTTON-TITLE"       = "Forget Saved Email Address";
+
