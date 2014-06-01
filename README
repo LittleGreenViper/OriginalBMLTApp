@@ -89,7 +89,8 @@ CHANGELIST
 * The black marker in meeting details screens was draggable. This is no longer the case.
 * Added French localization.
 * Added the ability to display a label over the simple search choices. This helps in some localization.
-* Added support for an optional directions button under the Details map.
+* Added support for an optional directions button under the Details map in iPhone.
+* Added the capability to send "comments" (emails, really), concerning specific meetings, if the server supports it.
 
 == Version 2.6
 * November 24, 2013

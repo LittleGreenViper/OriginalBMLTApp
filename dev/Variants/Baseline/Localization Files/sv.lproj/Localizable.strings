@@ -208,7 +208,7 @@
 "SEND-COMMENT-SCREEN-FROM-NAME-TITLE"   = "Name:";
 "SEND-COMMENT-SCREEN-FROM-EMAIL-TITLE"  = "Email:";
 "SEND-COMMENT-SCREEN-KEEP-EMAIL-TITLE"  = "Save This Email for Future Comments.";
-"SEND-COMMENT-SCREEN-KEEP-EMAIL-EXPLAIN"    = "You can change or delete this email in the settings screen.";
+"SEND-COMMENT-SCREEN-KEEP-EMAIL-NOTE"   = "You can delete this saved email in the settings screen.";
 "SEND-COMMENT-SCREEN-INVALID-EMAIL"     = "Invalid Email Address";
 "SEND-COMMENT-SCREEN-SEND-BUTTON"       = "Send Comment";
 "SEND-COMMENT-SCREEN-CANCEL-BUTTON"     = "Cancel";

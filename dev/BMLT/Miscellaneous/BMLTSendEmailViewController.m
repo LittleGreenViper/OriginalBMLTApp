@@ -76,6 +76,9 @@ static const    float           sSendEmailURLRequestTimeout = 3.0;  ///< The tim
     [[BMLT_Prefs getBMLT_Prefs] setEmailSenderName:[[self enterNameTextEntry] text]];
     [[BMLT_Prefs getBMLT_Prefs] setEmailSenderAddress:[[self enterEmailTextEntry] text]];
     [BMLT_Prefs saveChanges];
+    UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString ( @"SEND-COMMENT-SCREEN-KEEP-EMAIL-NOTE", nil) message:nil delegate:nil cancelButtonTitle:NSLocalizedString ( @"OK-BUTTON",nil ) otherButtonTitles:nil];
+    
+    [myAlert show];
     [self hideEmailEntrySection];
 }
 
@@ -147,7 +150,7 @@ static const    float           sSendEmailURLRequestTimeout = 3.0;  ///< The tim
                 {
                 const unsigned char *pdata = [pResponseData bytes];
                 
-                if ( 2 <= [pResponseData length] )
+                if ( [pResponseData length] && (2 >= [pResponseData length]) )
                     {
                     BOOL    neg = NO;
                     if ( '-' == *pdata )

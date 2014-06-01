@@ -979,7 +979,6 @@
 		775FDDF318DB128700B321AC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		775FDDF418DB128700B321AC /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		775FDE6518DB129C00B321AC /* NA Quebec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NA Quebec.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		775FDE6618DB129C00B321AC /* NA Sverige copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NA Sverige copy-Info.plist"; path = "/Users/cmarshall/Documents/Development/iOS/BMLT/dev/NA Sverige copy-Info.plist"; sourceTree = "<absolute>"; };
 		775FDE8B18DB15C000B321AC /* Quebec.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Quebec.gpx; path = "../../../spec/GPX Files/Quebec.gpx"; sourceTree = "<group>"; };
 		77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FormatCircleBlue@2x.png"; sourceTree = "<group>"; };
 		77603DC91541DC8300C4840F /* FormatCircleGreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FormatCircleGreen@2x.png"; sourceTree = "<group>"; };
@@ -1644,7 +1643,6 @@
 				77977D0C150E882B00485C8D /* Products */,
 				7700DE3C1541FDEF009A1DBB /* MainDocumentPage.h */,
 				77167D4F1517D21F006E50E8 /* LICENSE.txt */,
-				775FDE6618DB129C00B321AC /* NA Sverige copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
