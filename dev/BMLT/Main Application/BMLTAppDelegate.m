@@ -1257,8 +1257,9 @@ shouldSelectViewController:(UIViewController *)inViewController
 - (void)testForEmailAvailability
 {
     NSString    *serverURI = [NSString stringWithFormat:@"%@/client_interface/contact.php", [[BMLTVariantDefs rootServerURI] absoluteString]];
+    _hostHasEmailContactCapability = NO;    // We're pessimists.
     
-    testEmailURLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:serverURI] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:sTestEmailURLRequestTimeout];
+    testEmailURLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:serverURI] cachePolicy:NSURLRequestReloadRevalidatingCacheData timeoutInterval:sTestEmailURLRequestTimeout];
     
     if ( testEmailURLRequest )
         {

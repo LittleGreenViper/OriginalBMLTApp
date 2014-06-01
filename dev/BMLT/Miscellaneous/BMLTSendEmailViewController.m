@@ -11,6 +11,8 @@
 #import "BMLT_Meeting.h"
 #import "BMLT_Prefs.h"
 
+static const    float           sSendEmailURLRequestTimeout = 3.0;  ///< The timeout (in seconds), of the email send.
+
 /*****************************************************************/
 /**
  \class BMLTSendEmailViewController
@@ -85,8 +87,9 @@
 {
     if ( [BMLT_Prefs isValidEmailAddress:[self emailAddress]] )
         {
+        [[self enterMessageTextField] resignFirstResponder];
         [[self emailEntrySection] setHidden:YES];
-        CGRect  topFrame = [[self mainLabel] frame];
+        CGRect  topFrame = [[self buttonSection] frame];
         CGRect  bottomFrame = [[self enterMessageTextField] frame];
         CGFloat delta = bottomFrame.origin.y - (topFrame.origin.y + topFrame.size.height);
         bottomFrame.origin.y -= delta;
@@ -96,6 +99,109 @@
 
     [self validateUI];
 }
+
+/*****************************************************************/
+/**
+ \brief Actually sends the email to the server.
+ */
+- (BOOL)sendEmail
+{
+    BOOL        ret = NO;
+    NSString    *resultAlertString = NSLocalizedString ( @"SEND-COMMENT-SCREEN-RESULT-UH-OH", nil );
+    
+    // Have to have a valid email address and some text to send.
+    if ( [BMLT_Prefs isValidEmailAddress:[self emailAddress]] && (0 < [[[self enterMessageTextField] text] length]) )
+        {
+        NSString        *serverURI = [NSString stringWithFormat:@"%@/client_interface/contact.php", [[BMLTVariantDefs rootServerURI] absoluteString]];
+        serverURI = [serverURI stringByAppendingFormat:@"?meeting_id=%d&service_body_id=%d",
+                     [[self meetingObject] getMeetingID],
+                     [[self meetingObject] getServiceBodyID]
+                     ];
+        
+        NSString    *fromAddress = [self emailName];
+        
+        if ( 0 < [fromAddress length] )
+            {
+            fromAddress = [NSString stringWithFormat:@"\"%@\" <%@>", fromAddress, [self emailAddress]];
+            }
+        else
+            {
+            fromAddress = [self emailAddress];
+            }
+        
+        serverURI = [serverURI stringByAppendingFormat:@"&from_address=%@&message=%@", [BMLT_Prefs getURLEncodedString:fromAddress], [BMLT_Prefs getURLEncodedString:[[self enterMessageTextField] text]]];
+
+#ifdef DEBUG
+        NSLog ( @"Sending this email: %@", serverURI );
+#endif
+        
+        NSURLRequest    *emailURLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:serverURI] cachePolicy:NSURLRequestReloadRevalidatingCacheData timeoutInterval:sSendEmailURLRequestTimeout];
+        
+        if ( emailURLRequest )
+            {
+            NSURLResponse   *pResponse;
+            NSError         *pError;
+            NSData          *pResponseData = [NSURLConnection sendSynchronousRequest:emailURLRequest returningResponse:&pResponse error:&pError];
+            
+            if ( pResponseData && !pError )
+                {
+                const unsigned char *pdata = [pResponseData bytes];
+                
+                if ( 2 <= [pResponseData length] )
+                    {
+                    BOOL    neg = NO;
+                    if ( '-' == *pdata )
+                        {
+                        neg = YES;
+                        pdata++;
+                        }
+                    
+                    char value = *pdata - '0';
+                    
+                    if ( neg )
+                        {
+                        value = -value;
+                        }
+                    
+                    switch ( value )
+                        {
+                        case 1:
+                            resultAlertString = NSLocalizedString ( @"SEND-COMMENT-SCREEN-RESULT-OK", nil );
+                            ret = YES;
+                            break;
+                            
+                        case 0:
+                            resultAlertString = NSLocalizedString ( @"SEND-COMMENT-SCREEN-RESULT-NOPE", nil );
+                            break;
+                            
+                        case -1:
+                            resultAlertString = NSLocalizedString ( @"SEND-COMMENT-SCREEN-RESULT-NONE", nil );
+                            break;
+                        
+                        case -2:
+                            resultAlertString = NSLocalizedString ( @"SEND-COMMENT-SCREEN-RESULT-BAD-EMAIL", nil );
+                            break;
+                            
+                        case -3:
+                            resultAlertString = NSLocalizedString ( @"SEND-COMMENT-SCREEN-RESULT-VIKING", nil );
+                            break;
+                            
+                        default:
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    
+    UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:((YES == ret) ? resultAlertString : NSLocalizedString ( @"SEND-COMMENT-ERROR", nil)) message:(YES == ret) ? @"" : resultAlertString delegate:nil cancelButtonTitle:NSLocalizedString ( @"OK-BUTTON",nil ) otherButtonTitles:nil];
+    
+    [myAlert show];
+
+    return ret;
+}
+
+#pragma mark - IB Actions -
 
 /*****************************************************************/
 /**
@@ -123,6 +229,9 @@
 - (IBAction)emailSaveButtonHit:(UIButton *)inSender ///< The button that invoked this.
 {
     [self saveEmailInPrefs];
+    [[self enterNameTextEntry] resignFirstResponder];
+    [[self enterEmailTextEntry] resignFirstResponder];
+    [[self enterMessageTextField] resignFirstResponder];
     [self validateUI];
 }
 
@@ -132,6 +241,10 @@
  *****************************************************************/
 - (IBAction)sendButtonHit:(UIButton *)inSender  ///< The button that invoked this.
 {
+    [[self enterNameTextEntry] resignFirstResponder];
+    [[self enterEmailTextEntry] resignFirstResponder];
+    [[self enterMessageTextField] resignFirstResponder];
+    [self sendEmail];
     [[self myController] closeModal];
 }
 
@@ -141,6 +254,9 @@
  *****************************************************************/
 - (IBAction)cancelButtonHit:(UIButton *)inSender    ///< The button that invoked this.
 {
+    [[self enterNameTextEntry] resignFirstResponder];
+    [[self enterEmailTextEntry] resignFirstResponder];
+    [[self enterMessageTextField] resignFirstResponder];
     [[self myController] closeModal];
 }
 

@@ -202,13 +202,20 @@
 
 /* These are the strings for the "Send A Comment" Screen */
 "SEND-COMMENT-SCREEN-TITLE"             = "Send A Comment";
-"SEND-COMMENT-SCREEN-FROM-NAME-TITLE"   = "Your Name:";
-"SEND-COMMENT-SCREEN-FROM-EMAIL-TITLE"  = "Your Email Address";
+"SEND-COMMENT-SCREEN-FROM-NAME-TITLE"   = "Name:";
+"SEND-COMMENT-SCREEN-FROM-EMAIL-TITLE"  = "Email:";
 "SEND-COMMENT-SCREEN-KEEP-EMAIL-TITLE"  = "Save This Email for Future Comments.";
 "SEND-COMMENT-SCREEN-KEEP-EMAIL-EXPLAIN"    = "You can change or delete this email in the settings screen.";
 "SEND-COMMENT-SCREEN-INVALID-EMAIL"     = "Invalid Email Address";
 "SEND-COMMENT-SCREEN-SEND-BUTTON"       = "Send Comment";
 "SEND-COMMENT-SCREEN-CANCEL-BUTTON"     = "Cancel";
+"SEND-COMMENT-SCREEN-RESULT-OK"         = "The comment was sent successfully.";
+"SEND-COMMENT-ERROR"                    = "Error Sending Comment";
+"SEND-COMMENT-SCREEN-RESULT-NONE"       = "The comment was not sent, because the server has no contacts available to receive the comment.";
+"SEND-COMMENT-SCREEN-RESULT-BAD-EMAIL"  = "The comment was not sent, because the from address you specified is not correctly formatted.";
+"SEND-COMMENT-SCREEN-RESULT-UH-OH"      = "The comment was not sent, due to an unknown error.";
+"SEND-COMMENT-SCREEN-RESULT-NOPE"       = "The comment was not sent, because the server does not allow comments to be sent.";
+"SEND-COMMENT-SCREEN-RESULT-VIKING"     = "The comment was not sent, because the server thinks that it is spam.\nMaybe there are too many URLs in the message.";
 
 /* These are the strings for the preferences Screen. */
 "PREF-SCREEN-FORGET-BUTTON-TITLE"       = "Forget Saved Email Address";

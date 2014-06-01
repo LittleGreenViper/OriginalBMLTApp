@@ -380,6 +380,43 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
 
 /*****************************************************************/
 /**
+ \brief URL-encodes a string.
+        This was culled from here: http://stackoverflow.com/questions/8086584/objective-c-url-encoding
+ \returns a URL-encoded version of the given string.
+ *****************************************************************/
++ (NSString *)getURLEncodedString:(NSString*)inString   ///< The string to be encoded.
+{
+    NSMutableString *output = [NSMutableString string];
+    const char      *source = [inString UTF8String];
+    
+    int sourceLen = strlen ( source );
+    
+    for ( int i = 0; i < sourceLen; ++i )
+        {
+        const unsigned char thisChar = (const unsigned char)source[i];
+        if ( false && thisChar == ' ' )
+            {
+            [output appendString:@"+"];
+            }
+        // Check to see if this is a low-order UTF-8, or an extended one.
+        else if ( thisChar == '.' || thisChar == '-' || thisChar == '_' || thisChar == '~' ||
+                   (thisChar >= 'a' && thisChar <= 'z') ||
+                   (thisChar >= 'A' && thisChar <= 'Z') ||
+                   (thisChar >= '0' && thisChar <= '9') )
+            {
+            [output appendFormat:@"%c", thisChar];
+            }
+        else
+            {
+            [output appendFormat:@"%%%02X", thisChar];
+            }
+        }
+    
+    return output;
+}
+
+/*****************************************************************/
+/**
  \brief Initializer from a coder.
  \returns self
  *****************************************************************/
@@ -493,6 +530,24 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
                 {
                 [self setResultCount:10];
                 }
+            
+            if ( [decoder containsValueForKey:@"emailName"] )
+                {
+                _emailSenderName = [decoder decodeObjectForKey:@"emailName"];
+                }
+            else
+                {
+                [self setEmailSenderName:@""];
+                }
+            
+            if ( [decoder containsValueForKey:@"emailAddress"] )
+                {
+                _emailSenderAddress = [decoder decodeObjectForKey:@"emailAddress"];
+                }
+            else
+                {
+                [self setEmailSenderAddress:@""];
+                }
             }
         else
             {
@@ -507,6 +562,8 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             [self setPreserveAppStateOnSuspend:![self startWithSearch]];
             [self setKeepUpdatingLocation:NO];
             [self setResultCount:10];
+            [self setEmailSenderName:@""];
+            [self setEmailSenderAddress:@""];
             }
         }
     
@@ -614,5 +671,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
     [encoder encodeBool:[self preserveAppStateOnSuspend] forKey:@"preserveAppStateOnSuspend"];
     [encoder encodeBool:[self keepUpdatingLocation] forKey:@"keepUpdatingLocation"];
     [encoder encodeInt:[self resultCount] forKey:@"resultCount"];
+    [encoder encodeObject:[self emailSenderName] forKey:@"emailName"];
+    [encoder encodeObject:[self emailSenderAddress] forKey:@"emailAddress"];
 }
 @end

@@ -18,6 +18,7 @@
  *****************************************************************/
 @interface BMLTSendEmailViewController : UIViewController<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet    UIView                          *emailEntrySection;     ///< A view that contains all the email entry stuff. It can be hidden.
+@property (weak, nonatomic) IBOutlet    UIView                          *buttonSection;         ///< Contains the Send and Cancel Buttons.
 @property (weak, nonatomic) IBOutlet    UILabel                         *mainLabel;             ///< The label for the whole screen.
 @property (weak, nonatomic) IBOutlet    UILabel                         *nameEntryLabel;        ///< The label for the email name text entry.
 @property (weak, nonatomic) IBOutlet    UILabel                         *emailEntryLabel;       ///< The name for the email address text entry.
@@ -36,6 +37,7 @@
 - (void)validateUI;
 - (void)saveEmailInPrefs;
 - (void)hideEmailEntrySection;
+- (BOOL)sendEmail;
 - (IBAction)emailNameChanged:(UITextField *)inSender;
 - (IBAction)emailAddressChanged:(UITextField *)inSender;
 - (IBAction)emailSaveButtonHit:(UIButton *)inSender;

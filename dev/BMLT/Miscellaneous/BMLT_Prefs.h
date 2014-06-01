@@ -91,6 +91,7 @@ enum
 + (void)saveChanges;
 + (BOOL)locationServicesAvailable;
 + (BOOL)isValidEmailAddress:(NSString *)inEmailAddress;
++ (NSString *)getURLEncodedString:(NSString*)inString;
 
 - (NSInteger)addServerWithURI:(NSString *)inURI andName:(NSString *)inName andDescription:(NSString *)inDescription;
 - (BOOL)removeServerWithURI:(NSString *)inURI;
