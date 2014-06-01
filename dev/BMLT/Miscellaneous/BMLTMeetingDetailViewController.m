@@ -25,6 +25,7 @@
 #import "BMLT_Format.h"
 #import "BMLTAppDelegate.h"
 #import "BMLT_DetailsPrintPageRenderer.h"
+#import "BMLTSendEmailViewController.h"
 
 @interface BMLTMeetingDetailViewController ()
 @property (strong, atomic)  UIBarButtonItem *_toggleButton;
@@ -292,7 +293,11 @@ static const    NSInteger   sActionButtonIndex_PrintScreen  = 1;    ///< This is
  *****************************************************************/
 - (void)displayCommentScreen
 {
+#ifdef DEBUG
+    NSLog ( @"Send Comment Button Pressed." );
+#endif
     
+    [self presentViewController:[[BMLTSendEmailViewController alloc] initWithController:self andMeeting:[self myMeeting]] animated:YES completion:nil];
 }
 
 /*****************************************************************/
@@ -401,6 +406,7 @@ static const    NSInteger   sActionButtonIndex_PrintScreen  = 1;    ///< This is
         [self dismissViewControllerAnimated:YES completion:nil];
         }
     
+    myModalController = nil;
     actionPopover = nil;
     printModal = nil;
 }

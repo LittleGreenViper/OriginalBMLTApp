@@ -141,6 +141,16 @@
 
 /*****************************************************************/
 /**
+ \brief Get the BMLT root server Service body ID
+ \returns an integer, containing the Service body ID.
+ *****************************************************************/
+- (NSInteger)getServiceBodyID
+{
+    return service_body_id;
+}
+
+/*****************************************************************/
+/**
  \brief Get the start time, as an integer
  \returns an integer, containing the military start time.
  *****************************************************************/
@@ -595,13 +605,20 @@ foundCharacters:(NSString *)string      ///< The characters
                                         }
                                     else
                                         {
-                                        if ( [moreFields objectForKey:currentElement] )
+                                        if ( [currentElement isEqual:@"service_body_bigint"] )
                                             {
-                                            [moreFields setObject:[(NSString *)[moreFields objectForKey:currentElement] stringByAppendingString:string] forKey:currentElement];
+                                            service_body_id = [string intValue];
                                             }
                                         else
                                             {
-                                            [moreFields setObject:string forKey:currentElement];
+                                            if ( [moreFields objectForKey:currentElement] )
+                                                {
+                                                [moreFields setObject:[(NSString *)[moreFields objectForKey:currentElement] stringByAppendingString:string] forKey:currentElement];
+                                                }
+                                            else
+                                                {
+                                                [moreFields setObject:string forKey:currentElement];
+                                                }
                                             }
                                         }
                                     }

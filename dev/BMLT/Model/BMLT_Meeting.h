@@ -34,6 +34,7 @@
 {
     BMLT_Location           *location_object;   ///< The location of the meeting.
     NSInteger               meeting_id;         ///< The BMLT server ID for the meeting.
+    NSInteger               service_body_id;    ///< The BMLT server ID for the Service body.
     NSDate                  *startTime;         ///< The meeting start time.
     NSTimeInterval          duration;           ///< How long the meeting lasts.
     NSMutableArray          *formats;           ///< The format codes for the meeting.
@@ -60,6 +61,7 @@
 - (int)getWeekdayOrdinal;
 - (NSString *)getWeekday;
 - (NSInteger)getMeetingID;
+- (NSInteger)getServiceBodyID;
 - (int)getStartTimeOrdinal;
 - (NSDate *)getStartTime;
 - (NSTimeInterval)getDuration;

@@ -7,6 +7,8 @@
 //
 
 #import "BMLTSendEmailViewController.h"
+#import "BMLTMeetingDetailViewController.h"
+#import "BMLT_Meeting.h"
 
 @interface BMLTSendEmailViewController ()
 
@@ -14,25 +16,29 @@
 
 @implementation BMLTSendEmailViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithController:(BMLTMeetingDetailViewController*)inController andMeeting:(BMLT_Meeting*)inMeeting
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+    self = [super init];
+    
+    if ( self )
+        {
+        _myController = inController;
+        _meetingObject = inMeeting;
+        }
+    
     return self;
 }
 
-- (void)viewDidLoad
+- (IBAction)emailSaveButtonHit:(UIButton *)inSender
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)sendButtonHit:(UIButton *)inSender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)cancelButtonHit:(UIButton *)inSender
+{
+    [[self myController] closeModal];
+}
 @end
