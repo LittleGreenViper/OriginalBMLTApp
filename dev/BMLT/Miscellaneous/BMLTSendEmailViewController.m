@@ -116,9 +116,9 @@ static const    float           sSendEmailURLRequestTimeout = 3.0;  ///< The tim
     if ( [BMLT_Prefs isValidEmailAddress:[self emailAddress]] && (0 < [[[self enterMessageTextField] text] length]) )
         {
         NSString        *serverURI = [NSString stringWithFormat:@"%@/client_interface/contact.php", [[BMLTVariantDefs rootServerURI] absoluteString]];
-        serverURI = [serverURI stringByAppendingFormat:@"?meeting_id=%d&service_body_id=%d",
-                     [[self meetingObject] getMeetingID],
-                     [[self meetingObject] getServiceBodyID]
+        serverURI = [serverURI stringByAppendingFormat:@"?meeting_id=%ld&service_body_id=%ld",
+                     (long)[[self meetingObject] getMeetingID],
+                     (long)[[self meetingObject] getServiceBodyID]
                      ];
         
         NSString    *fromAddress = [self emailName];

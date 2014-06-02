@@ -389,7 +389,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
     NSMutableString *output = [NSMutableString string];
     const char      *source = [inString UTF8String];
     
-    int sourceLen = strlen ( source );
+    size_t sourceLen = strlen ( source );
     
     for ( int i = 0; i < sourceLen; ++i )
         {
