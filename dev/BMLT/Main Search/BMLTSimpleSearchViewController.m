@@ -94,6 +94,20 @@
  *****************************************************************/
 - (IBAction)whereAmIHit:(id)sender  ///< The object that called this.
 {
+    BMLTAppDelegate *myAppDelegate = [BMLTAppDelegate getBMLTAppDelegate];  // Get the app delegate SINGLETON
+    
+    [myAppDelegate clearAllSearchResultsNo];
+    
+#ifdef DEBUG
+    NSLog(@"BMLTSimpleSearchViewController findAllMeetingsNearMeLaterToday.");
+#endif
+    CLLocationCoordinate2D  location = CLLocationCoordinate2DMake(0.0, 0.0);
+    
+    if ( [self myMarker] ) // If we have a map view, then we'll take the location from there. If not, we use our current location, so we send a 0 location.
+        {
+        location = [[self myMarker] coordinate];
+        }
+    [myAppDelegate whereTheHellAmI:location];
 }
 
 /*****************************************************************/

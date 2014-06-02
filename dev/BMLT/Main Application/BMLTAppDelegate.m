@@ -32,8 +32,10 @@
     #import "TestFlight.h"
 #endif
 
-static          BMLTAppDelegate *g_AppDelegate = nil;               ///< This holds the SINGLETON instance of the application delegate.
-static const    float           sTestEmailURLRequestTimeout = 1.5;  ///< The timeout (in seconds), of the contact test.
+static          BMLTAppDelegate *g_AppDelegate = nil;                   ///< This holds the SINGLETON instance of the application delegate.
+static const    float           sTestEmailURLRequestTimeout = 1.5;      ///< The timeout (in seconds), of the contact test.
+static const    float           s90Minutes                  = 5400.0;   ///< 90 minutes' worth of seconds.
+static const    float           sHowManyMeters              = 100.0;    ///< This is the radius, in meters, for the "Where Am I Now?" search.
 #ifdef _TESTFLIGHT_
 static NSString *kTestFlightTeamToken = @"89521cfd695fa615cc412b7048699107_ODQ2NTYyMDEyLTA0LTI2IDEwOjQ0OjM5LjU2NjA4OQ"; ///< Used for the TesFlightApp.com utility.
 #endif
@@ -685,8 +687,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         [searchParams removeAllObjects];
         [searchParams setValuesForKeysWithDictionary:params];
         }
-
-    [searchParams setObject:[NSString stringWithFormat:@"%d", -[myPrefs resultCount]] forKey:@"geo_width"];
+    
+    // If we are not explicitly defining a radius, we use the default auto-radius
+    if ( ![searchParams valueForKey:@"geo_width"] && ![searchParams valueForKey:@"geo_width_km"] )
+        {
+        [searchParams setObject:[NSString stringWithFormat:@"%d", -[myPrefs resultCount]] forKey:@"geo_width"];
+        }
     
 #ifdef DEBUG
     NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams called. These are the parameters:");
@@ -730,6 +736,42 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe called.");
 #endif
     [self searchForMeetingsNearMe:inMyLocation withParams:nil];
+}
+
+/*****************************************************************/
+/**
+ \brief Looks for the meeting I'm at now.
+ *****************************************************************/
+- (void)whereTheHellAmI:(CLLocationCoordinate2D)inMyLocation
+{
+#ifdef DEBUG
+    NSLog(@"BMLTAppDelegate::whereTheHellAmI called.");
+#endif
+    NSDate              *startDate = [NSDate dateWithTimeIntervalSinceNow:-s90Minutes];
+    
+    NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:startDate];
+    NSInteger           wd = [weekdayComponents weekday];
+    
+    weekdayComponents = [gregorian components:(NSHourCalendarUnit) fromDate:startDate];
+    NSInteger           hr1 = [weekdayComponents hour];
+    weekdayComponents = [gregorian components:(NSMinuteCalendarUnit) fromDate:startDate];
+    NSInteger           mn1 = [weekdayComponents minute];
+    
+    startDate = [NSDate dateWithTimeIntervalSinceNow:s90Minutes];
+    weekdayComponents = [gregorian components:(NSHourCalendarUnit) fromDate:startDate];
+    NSInteger           hr2 = [weekdayComponents hour];
+    weekdayComponents = [gregorian components:(NSMinuteCalendarUnit) fromDate:startDate];
+    NSInteger           mn2 = [weekdayComponents minute];
+    
+    [searchParams setObject:[NSString stringWithFormat:@"%ld",(long)wd] forKey:@"weekdays"];
+    [searchParams setObject:[NSString stringWithFormat:@"%ld",(long)hr1] forKey:@"StartsAfterH"];
+    [searchParams setObject:[NSString stringWithFormat:@"%ld",(long)mn1] forKey:@"StartsAfterM"];
+    [searchParams setObject:[NSString stringWithFormat:@"%ld",(long)hr2] forKey:@"StartsBeforeH"];
+    [searchParams setObject:[NSString stringWithFormat:@"%ld",(long)mn2] forKey:@"StartsBeforeM"];
+    [searchParams setObject:[NSString stringWithFormat:@"%f", sHowManyMeters / 1000.0] forKey:@"geo_width_km"];
+    
+    [self searchForMeetingsNearMe:inMyLocation];
 }
 
 /*****************************************************************/

@@ -81,6 +81,7 @@ extern int kAddressLookupTimeoutPeriod_in_seconds;
 - (BMLT_Prefs *)getMyPrefs;                             ///< Return the prefs object for this app.
 - (void)searchForMeetingsNearMe:(CLLocationCoordinate2D)inMyLocation withParams:(NSDictionary *)params; ///< A lookup search with parameters.
 - (void)searchForMeetingsNearMe:(CLLocationCoordinate2D)inMyLocation;                        ///< Begins a lookup search, in which a location is found first, then all meetings near there are returned.
+- (void)whereTheHellAmI:(CLLocationCoordinate2D)inMyLocation;                                ///< Looks for the meeting I'm at now..
 - (void)searchForMeetingsNearMeLaterToday:(CLLocationCoordinate2D)inMyLocation;              ///< Same as above, but only meetings later today.
 - (void)searchForMeetingsNearMeTomorrow:(CLLocationCoordinate2D)inMyLocation;                ///< Same as above, but only meetings tomorrow.
 - (void)testForEmailAvailability;                       ///< Start a test for email availability.
