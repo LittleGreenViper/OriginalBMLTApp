@@ -698,7 +698,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams called. These are the parameters:");
     
     for(id key in searchParams)
+        {
         NSLog(@"key=\"%@\", value=\"%@\"", key, [searchParams objectForKey:key]);
+        }
 #endif
 
     [self startAnimations];
@@ -1102,13 +1104,13 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
             {
             [self setSearchMapMarkerLoc:[newLocation coordinate]];
             // Make sure that we have a setup that encourages a location-based meeting search (no current search, and a geo_width that will constrain the search).
-            if ( _findMeetings && [searchParams objectForKey:@"geo_width"] )
+            if ( _findMeetings && ([searchParams objectForKey:@"geo_width"] || [searchParams objectForKey:@"geo_width_km"]) )
                 {
                 // We give the new search our location.
                 [searchParams setObject:[NSString stringWithFormat:@"%f", newLocation.coordinate.longitude] forKey:@"long_val"];
                 [searchParams setObject:[NSString stringWithFormat:@"%f", newLocation.coordinate.latitude] forKey:@"lat_val"];
 #ifdef DEBUG
-                    NSLog(@"BMLTAppDelegate::didUpdateToLocation: Starting a new location-based search.");
+                NSLog(@"BMLTAppDelegate::didUpdateToLocation: Starting a new location-based search.");
 #endif
                 [self performSelectorOnMainThread:@selector(executeSearchWithParams:) withObject:searchParams waitUntilDone:YES];
                 [self performSelectorOnMainThread:@selector(setUpTabBarItems) withObject:nil waitUntilDone:NO];
