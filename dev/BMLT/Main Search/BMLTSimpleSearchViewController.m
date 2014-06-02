@@ -49,21 +49,22 @@
         [[[self navigationItem] rightBarButtonItem] setTintColor:nil];
         }
     
-    [overallDescriptionLabel setText:NSLocalizedString(@"SEARCH-SPEC-OVERALL-LABEL-TEXT", nil)];
-    [findMeetingsNearMeButton setTitle:NSLocalizedString([findMeetingsNearMeButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
-    [findMeetingsLaterTodayButton setTitle:NSLocalizedString([findMeetingsLaterTodayButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
-    [findMeetingsTomorrowButton setTitle:NSLocalizedString([findMeetingsTomorrowButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
-    [updateLocationButton setTitle:NSLocalizedString([updateLocationButton titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
-    [disabledTextLabel setText:NSLocalizedString([disabledTextLabel text], nil)];
-    [disabledTextLabel setAlpha:0.0];
+    [[self overallDescriptionLabel] setText:NSLocalizedString(@"SEARCH-SPEC-OVERALL-LABEL-TEXT", nil)];
+    [[self findMeetingsNearMeButton] setTitle:NSLocalizedString([[self findMeetingsNearMeButton] titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
+    [[self findMeetingsLaterTodayButton] setTitle:NSLocalizedString([[self findMeetingsLaterTodayButton] titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
+    [[self findMeetingsTomorrowButton] setTitle:NSLocalizedString([[self findMeetingsTomorrowButton] titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
+    [[self updateLocationButton] setTitle:NSLocalizedString([[self updateLocationButton] titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
+    [[self whereAmIButton] setTitle:NSLocalizedString([[self whereAmIButton] titleForState:UIControlStateNormal], nil) forState:UIControlStateNormal];
+    [[self disabledTextLabel] setText:NSLocalizedString([[self disabledTextLabel] text], nil)];
+    [[self disabledTextLabel] setAlpha:0.0];
     
     // If there's no way for us to search (We're on an iPhone or iPod Touch with no location services, and we have no map on those devices), then we can't use these buttons.
     if ( ![BMLTAppDelegate locationServicesAvailable] && ![self mapSearchView] )
         {
-        [findMeetingsNearMeButton setEnabled:NO];
-        [findMeetingsLaterTodayButton setEnabled:NO];
-        [findMeetingsTomorrowButton setEnabled:NO];
-        [disabledTextLabel setAlpha:1.0];
+        [[self findMeetingsNearMeButton] setEnabled:NO];
+        [[self findMeetingsLaterTodayButton] setEnabled:NO];
+        [[self findMeetingsTomorrowButton] setEnabled:NO];
+        [[self disabledTextLabel] setAlpha:1.0];
         }
     
     // If this is the iPhone, we always use the user's current location.
@@ -87,6 +88,14 @@
 }
 
 #pragma mark IB Actions
+/*****************************************************************/
+/**
+ \brief  Find out where we are.
+ *****************************************************************/
+- (IBAction)whereAmIHit:(id)sender  ///< The object that called this.
+{
+}
+
 /*****************************************************************/
 /**
  \brief  Do a simple meeting lookup.
