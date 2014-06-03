@@ -102,6 +102,36 @@ static int kSortHeaderHeight = 30;  ///< The height of the "Sort By" header for 
     return [[BMLT_ListPrintPageRenderer alloc] initWithMeetings:[self dataArray] andMapFormatter:nil];
 }
 
+/*****************************************************************/
+/**
+ \brief Open up a meeting, identified by ID.
+ *****************************************************************/
+- (void)selectMeeting:(NSInteger)inMeetingID    ///< The BMLT ID of the meeting.
+{
+    BMLT_Meeting    *meeting_object = nil;
+    
+    if ( inMeetingID )
+        {
+        for ( BMLT_Meeting *object in [self dataArray] )
+            {
+            if ( [object getMeetingID] == inMeetingID )
+                {
+                meeting_object = object;
+                break;
+                }
+            }
+        }
+    else
+        {
+        meeting_object = (BMLT_Meeting*)[[self dataArray] objectAtIndex:0];
+        }
+    
+    if ( meeting_object )
+        {
+        [self viewMeetingDetails:meeting_object];
+        }
+}
+
 #pragma mark - IBAction Functions -
 
 /*****************************************************************/

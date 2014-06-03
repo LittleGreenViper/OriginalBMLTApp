@@ -39,4 +39,5 @@
 @property (nonatomic) UISegmentedControl    *sortControl;
 
 - (IBAction)sortMeetings:(id)sender;                        ///< Sorts the meeting search results.
+- (void)selectMeeting:(NSInteger)inMeetingID;               ///< Open up a meeting, identified by ID.
 @end
