@@ -47,23 +47,15 @@ static const    float           sSendEmailURLRequestTimeout = 3.0;  ///< The tim
  *****************************************************************/
 - (void)validateUI
 {
-    [[self mainLabel] setText:NSLocalizedString ( @"SEND-COMMENT-SCREEN-TITLE", nil )];
-    [[self cancelButton] setTitle:NSLocalizedString ( @"SEND-COMMENT-SCREEN-CANCEL-BUTTON", nil ) forState:UIControlStateNormal];
-    [[self sendButton] setTitle:NSLocalizedString ( @"SEND-COMMENT-SCREEN-SEND-BUTTON", nil ) forState:UIControlStateNormal];
-    [[self nameEntryLabel] setText:NSLocalizedString ( @"SEND-COMMENT-SCREEN-FROM-NAME-TITLE", nil )];
-    [[self emailEntryLabel] setText:NSLocalizedString ( @"SEND-COMMENT-SCREEN-FROM-EMAIL-TITLE", nil )];
-    
     if ( [BMLT_Prefs isValidEmailAddress:[self emailAddress]] )
         {
         [[self sendButton] setEnabled:(0 < [[[self enterMessageTextField] text] length])];
-        [[self saveEmailButton] setEnabled:YES];
-        [[self saveEmailButton] setTitle:NSLocalizedString ( @"SEND-COMMENT-SCREEN-KEEP-EMAIL-TITLE", nil ) forState:UIControlStateNormal];
+        [[self saveEmailButton] setHidden:NO];
         }
     else
         {
         [[self sendButton] setEnabled:NO];
-        [[self saveEmailButton] setEnabled:NO];
-        [[self saveEmailButton] setTitle:NSLocalizedString ( @"SEND-COMMENT-SCREEN-INVALID-EMAIL", nil ) forState:UIControlStateNormal];
+        [[self saveEmailButton] setHidden:YES];
         }
 }
 
@@ -271,6 +263,13 @@ static const    float           sSendEmailURLRequestTimeout = 3.0;  ///< The tim
  */
 - (void)viewDidLoad
 {
+    [[self mainLabel] setText:NSLocalizedString ( @"SEND-COMMENT-SCREEN-TITLE", nil )];
+    [[self cancelButton] setTitle:NSLocalizedString ( @"SEND-COMMENT-SCREEN-CANCEL-BUTTON", nil ) forState:UIControlStateNormal];
+    [[self sendButton] setTitle:NSLocalizedString ( @"SEND-COMMENT-SCREEN-SEND-BUTTON", nil ) forState:UIControlStateNormal];
+    [[self nameEntryLabel] setText:NSLocalizedString ( @"SEND-COMMENT-SCREEN-FROM-NAME-TITLE", nil )];
+    [[self emailEntryLabel] setText:NSLocalizedString ( @"SEND-COMMENT-SCREEN-FROM-EMAIL-TITLE", nil )];
+    [[self saveEmailButton] setTitle:NSLocalizedString ( @"SEND-COMMENT-SCREEN-KEEP-EMAIL-TITLE", nil ) forState:UIControlStateNormal];
+    
     [super viewDidLoad];
     [self hideEmailEntrySection];
     [self validateUI];
