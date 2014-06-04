@@ -47,6 +47,7 @@ extern int kAddressLookupTimeoutPeriod_in_seconds;
     CLLocationAccuracy  previousAccuracy;   ///< This is used to track how well the core location is updating.
 }
 
+@property (atomic) BOOL                             whereAmISearchInProgress;   ///< Indicates that we are doing a "Where Am I?" search.
 @property (strong, atomic) CLLocation               *lastLocation;      ///< This will hold the last location for the user (as opposed to the search center). This is used for directions.
 @property (strong, nonatomic) UIWindow              *window;            ///< This is the main window object (SINGLETON)
 @property (strong, nonatomic) CLLocationManager     *locationManager;   ///< This will hold our location manager.

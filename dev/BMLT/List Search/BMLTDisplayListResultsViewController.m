@@ -328,7 +328,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath    ///< The index.
 - (NSIndexPath *)tableView:(UITableView *)tableView
   willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ( [indexPath section] > 0 )
+    if ( ([indexPath section] > 0) || (1 == [[self dataArray] count]) )
         {
         [self viewMeetingDetails:(BMLT_Meeting *)[[self dataArray] objectAtIndex:[indexPath row]]];
         }

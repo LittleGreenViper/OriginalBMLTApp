@@ -1102,6 +1102,7 @@
 		77BC71971512BFA1000BEFC0 /* A_BMLTSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = A_BMLTSearchResultsViewController.m; path = Miscellaneous/A_BMLTSearchResultsViewController.m; sourceTree = "<group>"; };
 		77BCBBDB152933D700CDBCF6 /* BMLT_Results_MapPointAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLT_Results_MapPointAnnotationView.h; sourceTree = "<group>"; };
 		77BCBBDC152933D700CDBCF6 /* BMLT_Results_MapPointAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLT_Results_MapPointAnnotationView.m; sourceTree = "<group>"; };
+		77BF912D193F2BB500BAC379 /* HuntingtonNY.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = HuntingtonNY.gpx; path = "../../../spec/GPX Files/HuntingtonNY.gpx"; sourceTree = "<group>"; };
 		77BF9D2617E335E8006E632D /* App-Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-76.png"; sourceTree = "<group>"; };
 		77BF9D2717E335E8006E632D /* App-Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-120.png"; sourceTree = "<group>"; };
 		77BF9D2C17E33672006E632D /* App-Icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon-152.png"; sourceTree = "<group>"; };
@@ -1804,6 +1805,7 @@
 			children = (
 				77ACED99168F3CAA00FC9192 /* BMLTVariantDefs.m */,
 				77666931168F3DCC00269112 /* IslipNY.gpx */,
+				77BF912D193F2BB500BAC379 /* HuntingtonNY.gpx */,
 				774EB4B1168F3B20006C663F /* images */,
 				77BBAEF215417694001F5BCC /* info.plist */,
 			);

@@ -73,7 +73,6 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
     BOOL                    deferredSearch;             ///< A semaphore that is set, in order to allow the animation to appear before the search starts.
     BOOL                    locationTried;              ///< This is used to ensure that we go 2 cycles with the location manager (Kludgy way to increase accuracy).
     NSURLRequest            *testEmailURLRequest;       ///< This is used to find out if the server supports email.
-    BOOL                    whereAmISearchInProgress;   ///< Indicates that we are doing a "Where Am I?" search.
 }
 
 - (void)transitionBetweenThisView:(UIView *)srcView andThisView:(UIView *)dstView direction:(int)dir;   ///< Do a nice transition between tab views.
@@ -408,13 +407,15 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
         [self setUpTabBarItems];
         
         UITabBarController  *tabController = (UITabBarController *)self.window.rootViewController;
-        [tabController setSelectedIndex:((!whereAmISearchInProgress && [myPrefs preferSearchResultsAsMap]) ? kMapResultsTabIndex : kListResultsTabIndex)];
+        [tabController setSelectedIndex:((![self whereAmISearchInProgress] && [myPrefs preferSearchResultsAsMap]) ? kMapResultsTabIndex : kListResultsTabIndex)];
         
-        [[listResultsViewController sortControl] setSelectedSegmentIndex:([[BMLT_Prefs getBMLT_Prefs] preferDistanceSort] ? 0 : 1)];
-        
-        if ( whereAmISearchInProgress && (1 == [[self searchResults] count]) )
+        if ( [self whereAmISearchInProgress] && (1 == [[self searchResults] count]) )
             {
             [listResultsViewController selectMeeting:0];
+            }
+        else
+            {
+            [[listResultsViewController sortControl] setSelectedSegmentIndex:([[BMLT_Prefs getBMLT_Prefs] preferDistanceSort] ? 0 : 1)];
             }
         }
     else
@@ -425,11 +426,11 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
         [self clearAllSearchResultsNo];
         [self sorryCharlie];
         }
+    
+    _whereAmISearchInProgress = NO;
 #ifdef DEBUG
     NSLog(@"BMLTAppDelegate::displaySearchResults end.");
 #endif
-    
-    whereAmISearchInProgress = NO;
 }
 
 /*****************************************************************/
@@ -440,7 +441,6 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
 {
     searchResults = nil;
     mySearch = nil;
-    whereAmISearchInProgress = NO;
 }
 
 /*****************************************************************/
@@ -493,7 +493,6 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
         searchParams = [[NSMutableDictionary alloc] init];
         mapType = MKMapTypeStandard;
         previousAccuracy = 0;
-        whereAmISearchInProgress = NO;
         }
     
     return self;
@@ -783,7 +782,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [searchParams setObject:[NSString stringWithFormat:@"%ld",(long)mn2] forKey:@"StartsBeforeM"];
     [searchParams setObject:[NSString stringWithFormat:@"%f", sHowManyMeters / 1000.0] forKey:@"geo_width_km"];
     
-    whereAmISearchInProgress = YES;
+    _whereAmISearchInProgress = YES;
     [self searchForMeetingsNearMe:inMyLocation];
 }
 
@@ -872,6 +871,9 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 - (void)clearAllSearchResults:(BOOL)inForce ///< YES, if we will force the search to switch.
 {
     [self simpleClearSearch];
+    _whereAmISearchInProgress = NO;
+    [locationManager stopUpdatingLocation];
+    previousAccuracy = 0;
     
     [mapResultsViewController closeModal];      ///< Make sure we close any open modals or popovers, first.
     [mapResultsViewController dismissListPopover];
@@ -1080,8 +1082,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
             break;
         }
     
-    whereAmISearchInProgress = NO;
-    previousAccuracy = 0;
+    [self simpleClearSearch];
+    _whereAmISearchInProgress = NO;
 }
 
 /*****************************************************************/
@@ -1344,7 +1346,8 @@ shouldSelectViewController:(UIViewController *)inViewController
 #ifdef DEBUG
     NSLog(@"BMLTAppDelegate::abortSearch called.");
 #endif
-    whereAmISearchInProgress = NO;
+    [self simpleClearSearch];
+    _whereAmISearchInProgress = NO;
 }
 
 /*****************************************************************/
@@ -1384,6 +1387,8 @@ shouldSelectViewController:(UIViewController *)inViewController
         [self performSelectorOnMainThread:@selector(clearAllSearchResultsNo) withObject:nil waitUntilDone:YES];
         UIAlertView *myAlert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"COMM-ERROR",nil) message:[inError localizedDescription] delegate:nil cancelButtonTitle:NSLocalizedString(@"OK-BUTTON",nil) otherButtonTitles:nil];
         [myAlert performSelectorOnMainThread:@selector(show) withObject:nil waitUntilDone:NO];
+        [self simpleClearSearch];
+        _whereAmISearchInProgress = NO;
         }
     else
         {
@@ -1393,7 +1398,6 @@ shouldSelectViewController:(UIViewController *)inViewController
         // Since it is possible we are in another thread, make sure that we call the UI routine in the main thread.
         [self performSelectorOnMainThread:@selector(displaySearchResults) withObject:nil waitUntilDone:YES];
         }
-    whereAmISearchInProgress = NO;
 }
 
 /*****************************************************************/
