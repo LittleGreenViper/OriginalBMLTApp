@@ -3578,8 +3578,8 @@
 		77977D39150E882B00485C8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Marshall (2D279UYGKU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3598,7 +3598,7 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B1B6576A-7C54-4FFD-85E8-87BBE79EA5B8";
+				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B1B6576A-7C54-4FFD-85E8-87BBE79EA5B8";
 				WRAPPER_EXTENSION = app;
 			};
