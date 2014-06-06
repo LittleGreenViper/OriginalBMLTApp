@@ -687,52 +687,60 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams called.");
 #endif
     
-    [self setLastSearchParams:params];
-    
-    // Remember that we have a pref for result count.
-    if ( params )
+    if ( [self hostActive] )
         {
-        [self clearAllSearchResults:NO];
-        [searchParams removeAllObjects];
-        [searchParams setValuesForKeysWithDictionary:params];
-        }
-    
-    // If we are not explicitly defining a radius, we use the default auto-radius
-    if ( ![searchParams valueForKey:@"geo_width"] && ![searchParams valueForKey:@"geo_width_km"] )
-        {
-        [searchParams setObject:[NSString stringWithFormat:@"%d", -[myPrefs resultCount]] forKey:@"geo_width"];
-        }
-    
+        [self setLastSearchParams:params];
+        
+        // Remember that we have a pref for result count.
+        if ( params )
+            {
+            [self clearAllSearchResults:NO];
+            [searchParams removeAllObjects];
+            [searchParams setValuesForKeysWithDictionary:params];
+            }
+        
+        // If we are not explicitly defining a radius, we use the default auto-radius
+        if ( ![searchParams valueForKey:@"geo_width"] && ![searchParams valueForKey:@"geo_width_km"] )
+            {
+            [searchParams setObject:[NSString stringWithFormat:@"%d", -[myPrefs resultCount]] forKey:@"geo_width"];
+            }
+        
 #ifdef DEBUG
-    NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams called. These are the parameters:");
-    
-    for(id key in searchParams)
-        {
-        NSLog(@"key=\"%@\", value=\"%@\"", key, [searchParams objectForKey:key]);
-        }
+        NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams called. These are the parameters:");
+        
+        for(id key in searchParams)
+            {
+            NSLog(@"key=\"%@\", value=\"%@\"", key, [searchParams objectForKey:key]);
+            }
 #endif
 
-    [self startAnimations];
-    if ( inMyLocation.longitude == 0 && inMyLocation.latitude == 0 )
-        {
-        _findMeetings = YES;   // This is a semaphore, that tells the app to do a search, once it has settled on a location.
+        [self startAnimations];
+        if ( inMyLocation.longitude == 0 && inMyLocation.latitude == 0 )
+            {
+            _findMeetings = YES;   // This is a semaphore, that tells the app to do a search, once it has settled on a location.
 #ifdef DEBUG
-        NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams Starting a new location-based search after a lookup.");
+            NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams Starting a new location-based search after a lookup.");
 #endif
-        locationTried = NO;
-        [locationManager startUpdatingLocation];
+            locationTried = NO;
+            [locationManager startUpdatingLocation];
+            }
+        else
+            {
+            [self setSearchMapMarkerLoc:inMyLocation];
+            _findMeetings = NO;   // Clear the semaphore.
+            // We give the new search our location.
+            [searchParams setObject:[NSString stringWithFormat:@"%f", inMyLocation.longitude] forKey:@"long_val"];
+            [searchParams setObject:[NSString stringWithFormat:@"%f", inMyLocation.latitude] forKey:@"lat_val"];
+#ifdef DEBUG
+            NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams Starting a new location-based search immediately.");
+#endif
+            [self executeSearchWithParams:searchParams];    // Start the search.
+            }
         }
     else
         {
-        [self setSearchMapMarkerLoc:inMyLocation];
-        _findMeetings = NO;   // Clear the semaphore.
-        // We give the new search our location.
-        [searchParams setObject:[NSString stringWithFormat:@"%f", inMyLocation.longitude] forKey:@"long_val"];
-        [searchParams setObject:[NSString stringWithFormat:@"%f", inMyLocation.latitude] forKey:@"lat_val"];
-#ifdef DEBUG
-        NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams Starting a new location-based search immediately.");
-#endif
-        [self executeSearchWithParams:searchParams];    // Start the search.
+        _amISick = NO;  // Make sure the alert is shown.
+        [self callInSick];  // Put up an alert, saying that we can't reach the server.
         }
 }
 

@@ -148,7 +148,7 @@
 "SEARCH-SPEC-TOMORROW-TITLE" = "À proximité demain";
 "SEARCH-SPEC-DISABLED-TEXT" = "Recherche désactivé. Services de localisation non disponibles ( Soit vous les avez désactivé ou ils sont sélectivement désactivé pour cette application ).";
 "SEARCH-SPEC-OVERALL-LABEL-TEXT" = "Trouver une réunion:";
-"SEARCH-SPEC-WHEREAMI" = "Where Am I Now?";
+"SEARCH-SPEC-WHEREAMI" = "Où suis-je maintenant?";
 
 /* Selected Weekdays */
 "SEARCH-SPEC-SELECTED-WEEKDAYS" = "Jour de Semaine";

@@ -33,6 +33,17 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this code.  If not, see <http://www.gnu.org/licenses/>.
 
+NOTE ON THE VERSION 2.7 PROJECT
+-------------------------------
+
+The chief difference is the addition of a "Where Am I Now?" button. If this is tapped, a search looks in the
+immediate vicinity and time (+-90 minutes) for a meeting.
+If it finds one, it immediately opens it. If it finds more than one, it shows a list response
+(even if the app is set to prefer map responses).
+This was done chiefly to afford the new "Send A Comment" feature.
+This is where the BMLT Root Server can be set up to support email contacts about particular meetings
+(must be server version 2.4.3, with the feature turned on, and email addresses available).
+
 NOTE ON THE VERSION 2.6 PROJECT
 -------------------------------
 
@@ -84,7 +95,7 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
-== Version 2.6.1
+== Version 2.7
 * TBD
 * The black marker in meeting details screens was draggable. This is no longer the case.
 * Added French localization.
@@ -92,6 +103,7 @@ CHANGELIST
 * Added support for an optional directions button under the Details map in iPhone.
 * Added the capability to send "comments" (emails, really), concerning specific meetings, if the server supports it.
 * Added a "Where Am I Now? capability to the simple search. This will be helpful for the new comment feature.
+* Made the handling of bad server connections a lot more robust.
 
 == Version 2.6
 * November 24, 2013
