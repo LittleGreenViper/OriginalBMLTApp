@@ -151,6 +151,114 @@
 		77238CF3183197A1000CA676 /* MGS_PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* MGS_PopupViewController.m */; };
 		77238CF4183197A1000CA676 /* MGS_PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* MGS_PopupViewController.m */; };
 		77238CF5183197A1000CA676 /* MGS_PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* MGS_PopupViewController.m */; };
+		772E73AC1946747A00031BCE /* BMLTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C32150E88E5005A707A /* BMLTAppDelegate.m */; };
+		772E73AD1946747A00031BCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C33150E88E5005A707A /* main.m */; };
+		772E73AE1946747A00031BCE /* BMLTSendEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 777795EF193A874A00A361CC /* BMLTSendEmailViewController.m */; };
+		772E73AF1946747A00031BCE /* BMLTAdvancedSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C3E150E892A005A707A /* BMLTAdvancedSearchViewController.m */; };
+		772E73B01946747A00031BCE /* BMLTMapResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C4F150E893C005A707A /* BMLTMapResultsViewController.m */; };
+		772E73B11946747A00031BCE /* BMLT_Prefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C55150E893C005A707A /* BMLT_Prefs.m */; };
+		772E73B21946747A00031BCE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C59150E893C005A707A /* Reachability.m */; };
+		772E73B31946747A00031BCE /* A_BMLT_ChildClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C5C150E893C005A707A /* A_BMLT_ChildClass.m */; };
+		772E73B41946747A00031BCE /* A_BMLT_Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C5E150E893C005A707A /* A_BMLT_Search.m */; };
+		772E73B51946747A00031BCE /* A_BMLT_ServiceBodyHierClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C60150E893C005A707A /* A_BMLT_ServiceBodyHierClass.m */; };
+		772E73B61946747A00031BCE /* BMLT_Driver.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C62150E893C005A707A /* BMLT_Driver.m */; };
+		772E73B71946747A00031BCE /* BMLT_Format.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C64150E893C005A707A /* BMLT_Format.m */; };
+		772E73B81946747A00031BCE /* BMLT_Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C66150E893C005A707A /* BMLT_Location.m */; };
+		772E73B91946747A00031BCE /* BMLT_Meeting.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C68150E893C005A707A /* BMLT_Meeting.m */; };
+		772E73BA1946747A00031BCE /* BMLT_Meeting_Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C6A150E893C005A707A /* BMLT_Meeting_Search.m */; };
+		772E73BB1946747A00031BCE /* BMLT_Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C6D150E893C005A707A /* BMLT_Parser.m */; };
+		772E73BC1946747A00031BCE /* BMLT_Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C6F150E893C005A707A /* BMLT_Server.m */; };
+		772E73BD1946747A00031BCE /* BMLT_ServiceBody.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C71150E893C005A707A /* BMLT_ServiceBody.m */; };
+		772E73BE1946747A00031BCE /* BMLTAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C75150E893C005A707A /* BMLTAboutViewController.m */; };
+		772E73BF1946747A00031BCE /* BMLTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C77150E893C005A707A /* BMLTSettingsViewController.m */; };
+		772E73C01946747A00031BCE /* MGS_PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776E9354183151EC0005B9AB /* MGS_PopupView.m */; };
+		772E73C11946747A00031BCE /* BMLTSimpleSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7711417115125CD100BCCE00 /* BMLTSimpleSearchViewController.m */; };
+		772E73C21946747A00031BCE /* A_BMLTSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BC71971512BFA1000BEFC0 /* A_BMLTSearchResultsViewController.m */; };
+		772E73C31946747A00031BCE /* A_BMLTSettingsBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CE3F081516252300C93BC6 /* A_BMLTSettingsBackgroundView.m */; };
+		772E73C41946747A00031BCE /* A_BMLTNavBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77D732A815178B38004C572D /* A_BMLTNavBarViewController.m */; };
+		772E73C51946747A00031BCE /* A_BMLTMainBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 777B520E15192409002EDC83 /* A_BMLTMainBackgroundView.m */; };
+		772E73C61946747A00031BCE /* MGS_PopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77238CEE183197A1000CA676 /* MGS_PopupViewController.m */; };
+		772E73C71946747A00031BCE /* BMLTDisplayListResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 776BAD961519F90A008C608C /* BMLTDisplayListResultsViewController.m */; };
+		772E73C81946747A00031BCE /* BMLTMeetingDisplayCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77640D40151A67BE00634143 /* BMLTMeetingDisplayCellView.m */; };
+		772E73C91946747A00031BCE /* BMLTFormatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77803C3D151C011D00A8ADC3 /* BMLTFormatDetailViewController.m */; };
+		772E73CA1946747A00031BCE /* BMLTMeetingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7799D299151FA633007FE822 /* BMLTMeetingDetailViewController.m */; };
+		772E73CB1946747A00031BCE /* A_BMLT_SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7707F3141525B44C00032CCA /* A_BMLT_SearchViewController.m */; };
+		772E73CC1946747A00031BCE /* BMLT_Results_MapPointAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BCBBDC152933D700CDBCF6 /* BMLT_Results_MapPointAnnotationView.m */; };
+		772E73CD1946747A00031BCE /* BMLTAnimationScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F6C3691531D1A90038784D /* BMLTAnimationScreenViewController.m */; };
+		772E73CE1946747A00031BCE /* BMLT_ListPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CFE115153CB874005FB181 /* BMLT_ListPrintPageRenderer.m */; };
+		772E73CF1946747A00031BCE /* A_BMLT_PrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A5600C153CF0520039CCDD /* A_BMLT_PrintPageRenderer.m */; };
+		772E73D01946747A00031BCE /* BMLT_DetailsPrintPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 776CAD8915404BBF001BD51D /* BMLT_DetailsPrintPageRenderer.m */; };
+		772E73D11946747A00031BCE /* BMLTBundleResourceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 771A40EC15408EA000EF34DF /* BMLTBundleResourceLabel.m */; };
+		772E73D21946747A00031BCE /* BMLTAboutBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DCF09C1545D4FE00979BF6 /* BMLTAboutBackgroundView.m */; };
+		772E73D41946747A00031BCE /* BMLT_AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 774EB4CF168F3B6B006C663F /* BMLT_AnimationView.m */; };
+		772E73D51946747A00031BCE /* MGS_Simple_Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E627DC1826BA5C00FBE093 /* MGS_Simple_Control.m */; };
+		772E73D71946747A00031BCE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7799D2A1151FACD4007FE822 /* MapKit.framework */; };
+		772E73D81946747A00031BCE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771D0C93150E89BC005A707A /* SystemConfiguration.framework */; };
+		772E73D91946747A00031BCE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771D0C91150E899B005A707A /* QuartzCore.framework */; };
+		772E73DA1946747A00031BCE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771D0C8F150E8986005A707A /* CoreLocation.framework */; };
+		772E73DB1946747A00031BCE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77977D0F150E882B00485C8D /* UIKit.framework */; };
+		772E73DC1946747A00031BCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77977D11150E882B00485C8D /* Foundation.framework */; };
+		772E73DD1946747A00031BCE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77977D13150E882B00485C8D /* CoreGraphics.framework */; };
+		772E73DE1946747A00031BCE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CBC1548874C00DBE9A1 /* libz.dylib */; };
+		772E73DF1946747A00031BCE /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77882CB61548872000DBE9A1 /* libTestFlight.a */; };
+		772E73E11946747A00031BCE /* FormatCircleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DC81541DC8300C4840F /* FormatCircleBlue@2x.png */; };
+		772E73E21946747A00031BCE /* FormatCircleGreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DC91541DC8300C4840F /* FormatCircleGreen@2x.png */; };
+		772E73E31946747A00031BCE /* FormatCircleRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DCA1541DC8300C4840F /* FormatCircleRed@2x.png */; };
+		772E73E41946747A00031BCE /* Frame08.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE991182C6E7700762604 /* Frame08.png */; };
+		772E73E51946747A00031BCE /* Frame09.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE992182C6E7700762604 /* Frame09.png */; };
+		772E73E61946747A00031BCE /* FormatCircleWC@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DCB1541DC8300C4840F /* FormatCircleWC@2x.png */; };
+		772E73E71946747A00031BCE /* FormatCircleYellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DCC1541DC8300C4840F /* FormatCircleYellow@2x.png */; };
+		772E73E91946747A00031BCE /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DCF1541DC8300C4840F /* list.png */; };
+		772E73EA1946747A00031BCE /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD01541DC8300C4840F /* list@2x.png */; };
+		772E73EB1946747A00031BCE /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5216F565CE00664FF9 /* iPhone.storyboard */; };
+		772E73EC1946747A00031BCE /* Frame03.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE98C182C6E7700762604 /* Frame03.png */; };
+		772E73ED1946747A00031BCE /* Frame04.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE98D182C6E7700762604 /* Frame04.png */; };
+		772E73EE1946747A00031BCE /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD31541DC8300C4840F /* map.png */; };
+		772E73EF1946747A00031BCE /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD41541DC8300C4840F /* map@2x.png */; };
+		772E73F01946747A00031BCE /* MapMarkerBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD51541DC8300C4840F /* MapMarkerBlack.png */; };
+		772E73F11946747A00031BCE /* MapMarkerBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD61541DC8300C4840F /* MapMarkerBlue.png */; };
+		772E73F21946747A00031BCE /* MapMarkerRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DD81541DC8300C4840F /* MapMarkerRed.png */; };
+		772E73F31946747A00031BCE /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE01541DC8300C4840F /* search.png */; };
+		772E73F41946747A00031BCE /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE11541DC8300C4840F /* search@2x.png */; };
+		772E73F51946747A00031BCE /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE21541DC8300C4840F /* settings.png */; };
+		772E73F61946747A00031BCE /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE31541DC8300C4840F /* settings@2x.png */; };
+		772E73F71946747A00031BCE /* Frame02.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE98B182C6E7700762604 /* Frame02.png */; };
+		772E73F81946747A00031BCE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE61541DC8300C4840F /* InfoPlist.strings */; };
+		772E73F91946747A00031BCE /* Frame10.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE993182C6E7700762604 /* Frame10.png */; };
+		772E73FB1946747A00031BCE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77603DE81541DC8300C4840F /* Localizable.strings */; };
+		772E73FC1946747A00031BCE /* shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 77D210E3168CAECB000D991A /* shadow.png */; };
+		772E73FD1946747A00031BCE /* MapMarkerBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335560168E278F001C0B08 /* MapMarkerBlack@2x.png */; };
+		772E73FF1946747A00031BCE /* Frame01.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE98A182C6E7700762604 /* Frame01.png */; };
+		772E74001946747A00031BCE /* MapMarkerBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335561168E278F001C0B08 /* MapMarkerBlue@2x.png */; };
+		772E74021946747A00031BCE /* MapMarkerRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335563168E278F001C0B08 /* MapMarkerRed@2x.png */; };
+		772E74041946747A00031BCE /* Frame07.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE990182C6E7700762604 /* Frame07.png */; };
+		772E74071946747A00031BCE /* Frame06.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE98F182C6E7700762604 /* Frame06.png */; };
+		772E740B1946747A00031BCE /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77E24A5116F565CE00664FF9 /* iPad.storyboard */; };
+		772E740E1946747A00031BCE /* Frame05.png in Resources */ = {isa = PBXBuildFile; fileRef = 77DCE98E182C6E7700762604 /* Frame05.png */; };
+		772E740F1946747A00031BCE /* MapMarkerGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 77731D3F182B00A000FFB0A2 /* MapMarkerGreen.png */; };
+		772E74131946747A00031BCE /* BMLTSendEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777795F0193A874A00A361CC /* BMLTSendEmailViewController.xib */; };
+		772E74151946747A00031BCE /* MapMarkerGreen@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 77731D40182B00A000FFB0A2 /* MapMarkerGreen@2X.png */; };
+		772E74191946747A00031BCE /* BMLTFormatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */; };
+		772E743C194674F500031BCE /* BMLTVariantDefs.m in Sources */ = {isa = PBXBuildFile; fileRef = 772E7424194674D600031BCE /* BMLTVariantDefs.m */; };
+		772E743D194674FE00031BCE /* Anim-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7426194674D600031BCE /* Anim-Back.png */; };
+		772E743E194674FE00031BCE /* Anim-Transparency.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7427194674D600031BCE /* Anim-Transparency.png */; };
+		772E743F194674FE00031BCE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7428194674D600031BCE /* Default-568h@2x.png */; };
+		772E7440194674FE00031BCE /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7429194674D600031BCE /* Default-Landscape@2x~ipad.png */; };
+		772E7441194674FE00031BCE /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E742A194674D600031BCE /* Default-Landscape~ipad.png */; };
+		772E7442194674FE00031BCE /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E742B194674D600031BCE /* Default-Portrait@2x~ipad.png */; };
+		772E7443194674FE00031BCE /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E742C194674D600031BCE /* Default-Portrait~ipad.png */; };
+		772E7444194674FE00031BCE /* Default-Tall-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E742D194674D600031BCE /* Default-Tall-Landscape@2x~ipad.png */; };
+		772E7445194674FE00031BCE /* Default-Tall-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E742E194674D600031BCE /* Default-Tall-Landscape~ipad.png */; };
+		772E7446194674FE00031BCE /* Default-Tall-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E742F194674D600031BCE /* Default-Tall-Portrait@2x~ipad.png */; };
+		772E7447194674FE00031BCE /* Default-Tall-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7430194674D600031BCE /* Default-Tall-Portrait~ipad.png */; };
+		772E7448194674FE00031BCE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7431194674D600031BCE /* Default.png */; };
+		772E7449194674FE00031BCE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7432194674D600031BCE /* Default@2x.png */; };
+		772E744A194674FE00031BCE /* icon-057.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7433194674D600031BCE /* icon-057.png */; };
+		772E744B194674FE00031BCE /* icon-072.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7434194674D600031BCE /* icon-072.png */; };
+		772E744C194674FE00031BCE /* icon-076.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7435194674D600031BCE /* icon-076.png */; };
+		772E744E194674FE00031BCE /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7437194674D600031BCE /* icon-120.png */; };
+		772E744F194674FE00031BCE /* icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7438194674D600031BCE /* icon-144.png */; };
+		772E7450194674FE00031BCE /* icon-152.png in Resources */ = {isa = PBXBuildFile; fileRef = 772E7439194674D600031BCE /* icon-152.png */; };
 		7731A7A1168E1DEC00ED4BE8 /* Anim-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7731A79F168E1DEC00ED4BE8 /* Anim-Back.png */; };
 		7731A7A2168E1DEC00ED4BE8 /* Anim-Transparency.png in Resources */ = {isa = PBXBuildFile; fileRef = 7731A7A0168E1DEC00ED4BE8 /* Anim-Transparency.png */; };
 		77335564168E278F001C0B08 /* MapMarkerBlack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77335560168E278F001C0B08 /* MapMarkerBlack@2x.png */; };
@@ -935,6 +1043,30 @@
 		771F13FB17E536F80053BC33 /* icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-152.png"; sourceTree = "<group>"; };
 		77238CED183197A1000CA676 /* MGS_PopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGS_PopupViewController.h; sourceTree = "<group>"; };
 		77238CEE183197A1000CA676 /* MGS_PopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGS_PopupViewController.m; sourceTree = "<group>"; };
+		772E741F1946747A00031BCE /* Ireland NA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ireland NA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		772E7424194674D600031BCE /* BMLTVariantDefs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
+		772E7426194674D600031BCE /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Back.png"; sourceTree = "<group>"; };
+		772E7427194674D600031BCE /* Anim-Transparency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Transparency.png"; sourceTree = "<group>"; };
+		772E7428194674D600031BCE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		772E7429194674D600031BCE /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		772E742A194674D600031BCE /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		772E742B194674D600031BCE /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		772E742C194674D600031BCE /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		772E742D194674D600031BCE /* Default-Tall-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Tall-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		772E742E194674D600031BCE /* Default-Tall-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Tall-Landscape~ipad.png"; sourceTree = "<group>"; };
+		772E742F194674D600031BCE /* Default-Tall-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Tall-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		772E7430194674D600031BCE /* Default-Tall-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Tall-Portrait~ipad.png"; sourceTree = "<group>"; };
+		772E7431194674D600031BCE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		772E7432194674D600031BCE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		772E7433194674D600031BCE /* icon-057.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-057.png"; sourceTree = "<group>"; };
+		772E7434194674D600031BCE /* icon-072.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-072.png"; sourceTree = "<group>"; };
+		772E7435194674D600031BCE /* icon-076.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-076.png"; sourceTree = "<group>"; };
+		772E7436194674D600031BCE /* icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-114.png"; sourceTree = "<group>"; };
+		772E7437194674D600031BCE /* icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-120.png"; sourceTree = "<group>"; };
+		772E7438194674D600031BCE /* icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-144.png"; sourceTree = "<group>"; };
+		772E7439194674D600031BCE /* icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-152.png"; sourceTree = "<group>"; };
+		772E743A194674D600031BCE /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		772E74511946772200031BCE /* Ireland.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Ireland.gpx; path = "../../../spec/GPX Files/Ireland.gpx"; sourceTree = "<group>"; };
 		7731A79F168E1DEC00ED4BE8 /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Back.png"; sourceTree = "<group>"; };
 		7731A7A0168E1DEC00ED4BE8 /* Anim-Transparency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Transparency.png"; sourceTree = "<group>"; };
 		77335560168E278F001C0B08 /* MapMarkerBlack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MapMarkerBlack@2x.png"; sourceTree = "<group>"; };
@@ -1176,6 +1308,22 @@
 				770BC404189F1CA100991DBD /* CoreGraphics.framework in Frameworks */,
 				770BC405189F1CA100991DBD /* libz.dylib in Frameworks */,
 				770BC406189F1CA100991DBD /* libTestFlight.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		772E73D61946747A00031BCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772E73D71946747A00031BCE /* MapKit.framework in Frameworks */,
+				772E73D81946747A00031BCE /* SystemConfiguration.framework in Frameworks */,
+				772E73D91946747A00031BCE /* QuartzCore.framework in Frameworks */,
+				772E73DA1946747A00031BCE /* CoreLocation.framework in Frameworks */,
+				772E73DB1946747A00031BCE /* UIKit.framework in Frameworks */,
+				772E73DC1946747A00031BCE /* Foundation.framework in Frameworks */,
+				772E73DD1946747A00031BCE /* CoreGraphics.framework in Frameworks */,
+				772E73DE1946747A00031BCE /* libz.dylib in Frameworks */,
+				772E73DF1946747A00031BCE /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1448,6 +1596,44 @@
 			path = "List Search";
 			sourceTree = "<group>";
 		};
+		772E7421194674D600031BCE /* BMLT-IE */ = {
+			isa = PBXGroup;
+			children = (
+				772E7424194674D600031BCE /* BMLTVariantDefs.m */,
+				772E7425194674D600031BCE /* images */,
+				772E743A194674D600031BCE /* info.plist */,
+				772E74511946772200031BCE /* Ireland.gpx */,
+			);
+			path = "BMLT-IE";
+			sourceTree = "<group>";
+		};
+		772E7425194674D600031BCE /* images */ = {
+			isa = PBXGroup;
+			children = (
+				772E7426194674D600031BCE /* Anim-Back.png */,
+				772E7427194674D600031BCE /* Anim-Transparency.png */,
+				772E7428194674D600031BCE /* Default-568h@2x.png */,
+				772E7429194674D600031BCE /* Default-Landscape@2x~ipad.png */,
+				772E742A194674D600031BCE /* Default-Landscape~ipad.png */,
+				772E742B194674D600031BCE /* Default-Portrait@2x~ipad.png */,
+				772E742C194674D600031BCE /* Default-Portrait~ipad.png */,
+				772E742D194674D600031BCE /* Default-Tall-Landscape@2x~ipad.png */,
+				772E742E194674D600031BCE /* Default-Tall-Landscape~ipad.png */,
+				772E742F194674D600031BCE /* Default-Tall-Portrait@2x~ipad.png */,
+				772E7430194674D600031BCE /* Default-Tall-Portrait~ipad.png */,
+				772E7431194674D600031BCE /* Default.png */,
+				772E7432194674D600031BCE /* Default@2x.png */,
+				772E7433194674D600031BCE /* icon-057.png */,
+				772E7434194674D600031BCE /* icon-072.png */,
+				772E7435194674D600031BCE /* icon-076.png */,
+				772E7436194674D600031BCE /* icon-114.png */,
+				772E7437194674D600031BCE /* icon-120.png */,
+				772E7438194674D600031BCE /* icon-144.png */,
+				772E7439194674D600031BCE /* icon-152.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		773E41DF168E9DD700CED8D5 /* images */ = {
 			isa = PBXGroup;
 			children = (
@@ -1659,6 +1845,7 @@
 				77DD00BE18180EF0003008FF /* SoCalDemo.app */,
 				770BC440189F1CA100991DBD /* San Diego NA Meetings.app */,
 				775FDE6518DB129C00B321AC /* NA Quebec.app */,
+				772E741F1946747A00031BCE /* Ireland NA.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1788,6 +1975,7 @@
 			isa = PBXGroup;
 			children = (
 				77603DA01541DC8300C4840F /* Baseline */,
+				772E7421194674D600031BCE /* BMLT-IE */,
 				77BBAEF3154176A4001F5BCC /* BMLT-MN */,
 				77BBAEF5154176A4001F5BCC /* BMLT-SV */,
 				77D90B961514C6A60059EF41 /* BMLT-NY */,
@@ -1920,6 +2108,23 @@
 			name = "San Diego NA Meetings";
 			productName = BMLT;
 			productReference = 770BC440189F1CA100991DBD /* San Diego NA Meetings.app */;
+			productType = "com.apple.product-type.application";
+		};
+		772E73AA1946747A00031BCE /* Ireland NA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 772E741B1946747A00031BCE /* Build configuration list for PBXNativeTarget "Ireland NA" */;
+			buildPhases = (
+				772E73AB1946747A00031BCE /* Sources */,
+				772E73D61946747A00031BCE /* Frameworks */,
+				772E73E01946747A00031BCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ireland NA";
+			productName = BMLT;
+			productReference = 772E741F1946747A00031BCE /* Ireland NA.app */;
 			productType = "com.apple.product-type.application";
 		};
 		775FDDF618DB129C00B321AC /* NA Quebec */ = {
@@ -2100,6 +2305,7 @@
 				77B5EABD1743EEF300F50281 /* Southern California NA Meetings */,
 				770BC3D2189F1CA100991DBD /* San Diego NA Meetings */,
 				775FDDF618DB129C00B321AC /* NA Quebec */,
+				772E73AA1946747A00031BCE /* Ireland NA */,
 			);
 		};
 /* End PBXProject section */
@@ -2162,6 +2368,70 @@
 				770BC436189F1CA100991DBD /* MapMarkerGreen@2X.png in Resources */,
 				770BC439189F1CA100991DBD /* Frame04.png in Resources */,
 				770BC43B189F1CA100991DBD /* BMLTFormatDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		772E73E01946747A00031BCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772E7441194674FE00031BCE /* Default-Landscape~ipad.png in Resources */,
+				772E743E194674FE00031BCE /* Anim-Transparency.png in Resources */,
+				772E73E11946747A00031BCE /* FormatCircleBlue@2x.png in Resources */,
+				772E7449194674FE00031BCE /* Default@2x.png in Resources */,
+				772E73E21946747A00031BCE /* FormatCircleGreen@2x.png in Resources */,
+				772E73E31946747A00031BCE /* FormatCircleRed@2x.png in Resources */,
+				772E73E41946747A00031BCE /* Frame08.png in Resources */,
+				772E73E51946747A00031BCE /* Frame09.png in Resources */,
+				772E73E61946747A00031BCE /* FormatCircleWC@2x.png in Resources */,
+				772E73E71946747A00031BCE /* FormatCircleYellow@2x.png in Resources */,
+				772E73E91946747A00031BCE /* list.png in Resources */,
+				772E73EA1946747A00031BCE /* list@2x.png in Resources */,
+				772E7443194674FE00031BCE /* Default-Portrait~ipad.png in Resources */,
+				772E73EB1946747A00031BCE /* iPhone.storyboard in Resources */,
+				772E73EC1946747A00031BCE /* Frame03.png in Resources */,
+				772E73ED1946747A00031BCE /* Frame04.png in Resources */,
+				772E73EE1946747A00031BCE /* map.png in Resources */,
+				772E73EF1946747A00031BCE /* map@2x.png in Resources */,
+				772E744B194674FE00031BCE /* icon-072.png in Resources */,
+				772E73F01946747A00031BCE /* MapMarkerBlack.png in Resources */,
+				772E73F11946747A00031BCE /* MapMarkerBlue.png in Resources */,
+				772E73F21946747A00031BCE /* MapMarkerRed.png in Resources */,
+				772E7447194674FE00031BCE /* Default-Tall-Portrait~ipad.png in Resources */,
+				772E73F31946747A00031BCE /* search.png in Resources */,
+				772E73F41946747A00031BCE /* search@2x.png in Resources */,
+				772E73F51946747A00031BCE /* settings.png in Resources */,
+				772E73F61946747A00031BCE /* settings@2x.png in Resources */,
+				772E744E194674FE00031BCE /* icon-120.png in Resources */,
+				772E744C194674FE00031BCE /* icon-076.png in Resources */,
+				772E7446194674FE00031BCE /* Default-Tall-Portrait@2x~ipad.png in Resources */,
+				772E7440194674FE00031BCE /* Default-Landscape@2x~ipad.png in Resources */,
+				772E73F71946747A00031BCE /* Frame02.png in Resources */,
+				772E73F81946747A00031BCE /* InfoPlist.strings in Resources */,
+				772E73F91946747A00031BCE /* Frame10.png in Resources */,
+				772E7442194674FE00031BCE /* Default-Portrait@2x~ipad.png in Resources */,
+				772E73FB1946747A00031BCE /* Localizable.strings in Resources */,
+				772E73FC1946747A00031BCE /* shadow.png in Resources */,
+				772E73FD1946747A00031BCE /* MapMarkerBlack@2x.png in Resources */,
+				772E7444194674FE00031BCE /* Default-Tall-Landscape@2x~ipad.png in Resources */,
+				772E743D194674FE00031BCE /* Anim-Back.png in Resources */,
+				772E7448194674FE00031BCE /* Default.png in Resources */,
+				772E73FF1946747A00031BCE /* Frame01.png in Resources */,
+				772E74001946747A00031BCE /* MapMarkerBlue@2x.png in Resources */,
+				772E743F194674FE00031BCE /* Default-568h@2x.png in Resources */,
+				772E74021946747A00031BCE /* MapMarkerRed@2x.png in Resources */,
+				772E744F194674FE00031BCE /* icon-144.png in Resources */,
+				772E74041946747A00031BCE /* Frame07.png in Resources */,
+				772E7450194674FE00031BCE /* icon-152.png in Resources */,
+				772E74071946747A00031BCE /* Frame06.png in Resources */,
+				772E740B1946747A00031BCE /* iPad.storyboard in Resources */,
+				772E740E1946747A00031BCE /* Frame05.png in Resources */,
+				772E740F1946747A00031BCE /* MapMarkerGreen.png in Resources */,
+				772E74131946747A00031BCE /* BMLTSendEmailViewController.xib in Resources */,
+				772E74151946747A00031BCE /* MapMarkerGreen@2X.png in Resources */,
+				772E744A194674FE00031BCE /* icon-057.png in Resources */,
+				772E7445194674FE00031BCE /* Default-Tall-Landscape~ipad.png in Resources */,
+				772E74191946747A00031BCE /* BMLTFormatDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2645,6 +2915,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		772E73AB1946747A00031BCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				772E73AC1946747A00031BCE /* BMLTAppDelegate.m in Sources */,
+				772E73AD1946747A00031BCE /* main.m in Sources */,
+				772E73AE1946747A00031BCE /* BMLTSendEmailViewController.m in Sources */,
+				772E73AF1946747A00031BCE /* BMLTAdvancedSearchViewController.m in Sources */,
+				772E73B01946747A00031BCE /* BMLTMapResultsViewController.m in Sources */,
+				772E73B11946747A00031BCE /* BMLT_Prefs.m in Sources */,
+				772E743C194674F500031BCE /* BMLTVariantDefs.m in Sources */,
+				772E73B21946747A00031BCE /* Reachability.m in Sources */,
+				772E73B31946747A00031BCE /* A_BMLT_ChildClass.m in Sources */,
+				772E73B41946747A00031BCE /* A_BMLT_Search.m in Sources */,
+				772E73B51946747A00031BCE /* A_BMLT_ServiceBodyHierClass.m in Sources */,
+				772E73B61946747A00031BCE /* BMLT_Driver.m in Sources */,
+				772E73B71946747A00031BCE /* BMLT_Format.m in Sources */,
+				772E73B81946747A00031BCE /* BMLT_Location.m in Sources */,
+				772E73B91946747A00031BCE /* BMLT_Meeting.m in Sources */,
+				772E73BA1946747A00031BCE /* BMLT_Meeting_Search.m in Sources */,
+				772E73BB1946747A00031BCE /* BMLT_Parser.m in Sources */,
+				772E73BC1946747A00031BCE /* BMLT_Server.m in Sources */,
+				772E73BD1946747A00031BCE /* BMLT_ServiceBody.m in Sources */,
+				772E73BE1946747A00031BCE /* BMLTAboutViewController.m in Sources */,
+				772E73BF1946747A00031BCE /* BMLTSettingsViewController.m in Sources */,
+				772E73C01946747A00031BCE /* MGS_PopupView.m in Sources */,
+				772E73C11946747A00031BCE /* BMLTSimpleSearchViewController.m in Sources */,
+				772E73C21946747A00031BCE /* A_BMLTSearchResultsViewController.m in Sources */,
+				772E73C31946747A00031BCE /* A_BMLTSettingsBackgroundView.m in Sources */,
+				772E73C41946747A00031BCE /* A_BMLTNavBarViewController.m in Sources */,
+				772E73C51946747A00031BCE /* A_BMLTMainBackgroundView.m in Sources */,
+				772E73C61946747A00031BCE /* MGS_PopupViewController.m in Sources */,
+				772E73C71946747A00031BCE /* BMLTDisplayListResultsViewController.m in Sources */,
+				772E73C81946747A00031BCE /* BMLTMeetingDisplayCellView.m in Sources */,
+				772E73C91946747A00031BCE /* BMLTFormatDetailViewController.m in Sources */,
+				772E73CA1946747A00031BCE /* BMLTMeetingDetailViewController.m in Sources */,
+				772E73CB1946747A00031BCE /* A_BMLT_SearchViewController.m in Sources */,
+				772E73CC1946747A00031BCE /* BMLT_Results_MapPointAnnotationView.m in Sources */,
+				772E73CD1946747A00031BCE /* BMLTAnimationScreenViewController.m in Sources */,
+				772E73CE1946747A00031BCE /* BMLT_ListPrintPageRenderer.m in Sources */,
+				772E73CF1946747A00031BCE /* A_BMLT_PrintPageRenderer.m in Sources */,
+				772E73D01946747A00031BCE /* BMLT_DetailsPrintPageRenderer.m in Sources */,
+				772E73D11946747A00031BCE /* BMLTBundleResourceLabel.m in Sources */,
+				772E73D21946747A00031BCE /* BMLTAboutBackgroundView.m in Sources */,
+				772E73D41946747A00031BCE /* BMLT_AnimationView.m in Sources */,
+				772E73D51946747A00031BCE /* MGS_Simple_Control.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		775FDDF718DB129C00B321AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3018,7 +3337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3040,8 +3359,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "San Diego NA Meetings";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3050,7 +3369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3079,7 +3398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3098,8 +3417,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "San Diego NA Meetings";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;
@@ -3148,7 +3467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3167,8 +3486,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;
@@ -3206,7 +3525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3225,8 +3544,98 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "NA Sverige";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
+				WRAPPER_EXTENSION = app;
+			};
+			name = TestFlight;
+		};
+		772E741C1946747A00031BCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COMPRESS_PNG_FILES = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_CONNECTION_PARSE_TRACE_=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				INFOPLIST_FILE = "$(SRCROOT)/Variants/BMLT-IE/info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = traditional;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BMLT\"",
+				);
+				PRODUCT_NAME = "Ireland NA";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		772E741D1946747A00031BCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COMPRESS_PNG_FILES = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				INFOPLIST_FILE = "$(SRCROOT)/Variants/BMLT-IE/info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = traditional;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BMLT\"",
+				);
+				PRODUCT_NAME = "Ireland NA";
+				PROVISIONING_PROFILE = "B1B6576A-7C54-4FFD-85E8-87BBE79EA5B8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B1B6576A-7C54-4FFD-85E8-87BBE79EA5B8";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		772E741E1946747A00031BCE /* TestFlight */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COMPRESS_PNG_FILES = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "_TESTFLIGHT_=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_STRICT_SELECTOR_MATCH = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
+				INFOPLIST_FILE = "$(SRCROOT)/Variants/BMLT-IE/info.plist";
+				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = traditional;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/BMLT\"",
+				);
+				PRODUCT_NAME = "Ireland NA";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;
@@ -3235,7 +3644,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3253,8 +3662,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "NA Quebec";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3263,7 +3672,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3291,7 +3700,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3310,8 +3719,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "NA Quebec";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;
@@ -3320,7 +3729,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3338,8 +3747,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "NA Sverige";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3348,7 +3757,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3376,7 +3785,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3398,8 +3807,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "AU NA Meetings";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3408,7 +3817,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3437,7 +3846,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3456,8 +3865,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "AU NA Meetings";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;
@@ -3550,7 +3959,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3572,8 +3981,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3581,7 +3990,7 @@
 		77977D39150E882B00485C8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Marshall (2D279UYGKU)";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3601,7 +4010,7 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B1B6576A-7C54-4FFD-85E8-87BBE79EA5B8";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B1B6576A-7C54-4FFD-85E8-87BBE79EA5B8";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3669,7 +4078,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3691,8 +4100,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "SoCal Meetings";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3701,7 +4110,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3730,7 +4139,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3749,8 +4158,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "SoCal Meetings";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;
@@ -3759,7 +4168,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3781,8 +4190,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "FL NA Meetings";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3791,7 +4200,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3820,7 +4229,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BMLT/BMLT-Prefix.pch";
@@ -3839,8 +4248,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "FL NA Meetings";
-				PROVISIONING_PROFILE = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B3F799D-153D-4D78-BBFE-D3DEE728581B";
+				PROVISIONING_PROFILE = "B6424378-7778-4123-B49C-02145D619E35";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B6424378-7778-4123-B49C-02145D619E35";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;
@@ -3854,6 +4263,16 @@
 				770BC43D189F1CA100991DBD /* Debug */,
 				770BC43E189F1CA100991DBD /* Release */,
 				770BC43F189F1CA100991DBD /* TestFlight */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		772E741B1946747A00031BCE /* Build configuration list for PBXNativeTarget "Ireland NA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				772E741C1946747A00031BCE /* Debug */,
+				772E741D1946747A00031BCE /* Release */,
+				772E741E1946747A00031BCE /* TestFlight */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
