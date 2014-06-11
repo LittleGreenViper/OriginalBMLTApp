@@ -95,14 +95,14 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
-== Version 2.7
-* TBD
+== Version 2.7b2
+* June 11, 2014
 * The black marker in meeting details screens was draggable. This is no longer the case.
 * Added French localization.
 * Added the ability to display a label over the simple search choices. This helps in some localization.
 * Added support for an optional directions button under the Details map in iPhone.
 * Added the capability to send "comments" (emails, really), concerning specific meetings, if the server supports it.
-* Added a "Where Am I Now? capability to the simple search. This will be helpful for the new comment feature.
+* Added a "Where Am I Now?" capability to the simple search. This will be helpful for the new comment feature.
 * Made the handling of bad server connections a lot more robust.
 * Added Ireland variant.
 * The Advanced keyboard now puts itself away on finishing editing.

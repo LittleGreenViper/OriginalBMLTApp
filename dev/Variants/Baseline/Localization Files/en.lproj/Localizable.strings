@@ -60,6 +60,7 @@
 
 /* No Search Results Alert */
 "NO-SEARCH-RESULTS" = "The search Found No Meetings.";
+"NO-SEARCH-RESULTS-WHEREAMI" = "It does not look like you are at a meeting.";
 
 /* Too many results error. */
 "TOO-MANY-RESULTS-FORMAT" = "There are more than %d meetings in the response. Please narrow your search, and try again.";
@@ -216,7 +217,7 @@
 "SEND-COMMENT-SCREEN-RESULT-BAD-EMAIL"  = "The comment was not sent, because the from address you specified is not correctly formatted.";
 "SEND-COMMENT-SCREEN-RESULT-UH-OH"      = "The comment was not sent, due to an unknown error.";
 "SEND-COMMENT-SCREEN-RESULT-NOPE"       = "The comment was not sent, because the server does not allow comments to be sent.";
-"SEND-COMMENT-SCREEN-RESULT-VIKING"     = "The comment was not sent, because the server thinks that it is spam.\nMaybe there are too many URLs in the message.";
+"SEND-COMMENT-SCREEN-RESULT-VIKING"     = "The comment was not sent, because the server thinks that it is spam.";
 
 /* These are the strings for the preferences Screen. */
 "PREF-SCREEN-FORGET-BUTTON-TITLE"       = "Forget Saved Email Address";

@@ -60,6 +60,7 @@
 
 /* No Search Results Alert */
 "NO-SEARCH-RESULTS" = "Aucune réunion trouvée.";
+"NO-SEARCH-RESULTS-WHEREAMI" = "It does not look like you are at a meeting.";
 
 /* Too many results error. */
 "TOO-MANY-RESULTS-FORMAT" = "Il y a plus de %d réunions dans la réponse S'il vous plaît préciser votre recherche , et essayez à nouveau.";
