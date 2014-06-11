@@ -246,11 +246,42 @@ static const    NSInteger   sActionButtonIndex_PrintScreen  = 1;    ///< This is
  *****************************************************************/
 - (void)setMeetingLocationText
 {
-    NSString    *townAndState = [NSString stringWithFormat:@"%@, %@", (([_myMeeting getValueFromField:@"location_city_subsection"]) ? (NSString *)[_myMeeting getValueFromField:@"location_city_subsection"] : (NSString *)[_myMeeting getValueFromField:@"location_municipality"]), (NSString *)[_myMeeting getValueFromField:@"location_province"]];
-    NSString    *meetingLocationString = [NSString stringWithFormat:@"%@%@", (([_myMeeting getValueFromField:@"location_text"]) ? [NSString stringWithFormat:@"%@, ", (NSString *)[_myMeeting getValueFromField:@"location_text"]] : @""), [_myMeeting getValueFromField:@"location_street"]];
+    NSString    *townAndState = nil;
     
-    NSString    *theAddress = [NSString stringWithFormat:@"%@, %@", meetingLocationString, townAndState];
+    if ( [_myMeeting getValueFromField:@"location_city_subsection"] || [_myMeeting getValueFromField:@"location_municipality"] )
+        {
+        townAndState = ([_myMeeting getValueFromField:@"location_city_subsection"]) ? (NSString *)[_myMeeting getValueFromField:@"location_city_subsection"] : (NSString *)[_myMeeting getValueFromField:@"location_municipality"];
+        }
+    
+    if ([_myMeeting getValueFromField:@"location_province"])
+        {
+        townAndState = (nil != townAndState) ? [townAndState stringByAppendingFormat:@", %@", (NSString *)[_myMeeting getValueFromField:@"location_province"]] : (NSString *)[_myMeeting getValueFromField:@"location_province"];
+        }
+    
+    NSString    *meetingLocationString = nil;
+    
+    if ( [_myMeeting getValueFromField:@"location_text"] || [_myMeeting getValueFromField:@"location_street"] )
+        {
+        meetingLocationString = [NSString stringWithFormat:@"%@%@", (([_myMeeting getValueFromField:@"location_text"]) ? [NSString stringWithFormat:@"%@, ", (NSString *)[_myMeeting getValueFromField:@"location_text"]] : @""), [_myMeeting getValueFromField:@"location_street"]];
+        }
+    
+    NSString    *theAddress = @"";
+    
+    if ( meetingLocationString && townAndState )
+        {
+        theAddress = [NSString stringWithFormat:@"%@, %@", meetingLocationString, townAndState];
+        }
+    else if ( meetingLocationString )
+        {
+        theAddress = meetingLocationString;
+        }
+    else if ( townAndState )
+        {
+        theAddress = townAndState;
+        }
+    
     [addressButton setTitle:theAddress forState:UIControlStateNormal];
+    
     [[addressButton titleLabel] setFont:[UIFont systemFontOfSize:Detail_Meeting_AddressFontSize]];
 }
 

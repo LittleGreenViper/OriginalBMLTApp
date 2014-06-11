@@ -104,6 +104,8 @@ CHANGELIST
 * Added the capability to send "comments" (emails, really), concerning specific meetings, if the server supports it.
 * Added a "Where Am I Now? capability to the simple search. This will be helpful for the new comment feature.
 * Made the handling of bad server connections a lot more robust.
+* Added Ireland variant.
+* The Advanced keyboard now puts itself away on finishing editing.
 
 == Version 2.6
 * November 24, 2013

@@ -536,6 +536,8 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     if ( [[self goButton] isEnabled] || ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) )
         {
         [self geocodeLocationFromAddressString:[textField text]];
+        [textField resignFirstResponder];
+        return YES;
         }
     else
         {
