@@ -1043,7 +1043,7 @@
 		771F13FB17E536F80053BC33 /* icon-152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-152.png"; sourceTree = "<group>"; };
 		77238CED183197A1000CA676 /* MGS_PopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGS_PopupViewController.h; sourceTree = "<group>"; };
 		77238CEE183197A1000CA676 /* MGS_PopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGS_PopupViewController.m; sourceTree = "<group>"; };
-		772E741F1946747A00031BCE /* Ireland NA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ireland NA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		772E741F1946747A00031BCE /* NA Ireland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NA Ireland.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		772E7424194674D600031BCE /* BMLTVariantDefs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		772E7426194674D600031BCE /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Back.png"; sourceTree = "<group>"; };
 		772E7427194674D600031BCE /* Anim-Transparency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Transparency.png"; sourceTree = "<group>"; };
@@ -1849,7 +1849,7 @@
 				77DD00BE18180EF0003008FF /* SoCalDemo.app */,
 				770BC440189F1CA100991DBD /* San Diego NA Meetings.app */,
 				775FDE6518DB129C00B321AC /* NA Quebec.app */,
-				772E741F1946747A00031BCE /* Ireland NA.app */,
+				772E741F1946747A00031BCE /* NA Ireland.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2114,9 +2114,9 @@
 			productReference = 770BC440189F1CA100991DBD /* San Diego NA Meetings.app */;
 			productType = "com.apple.product-type.application";
 		};
-		772E73AA1946747A00031BCE /* Ireland NA */ = {
+		772E73AA1946747A00031BCE /* NA Ireland */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 772E741B1946747A00031BCE /* Build configuration list for PBXNativeTarget "Ireland NA" */;
+			buildConfigurationList = 772E741B1946747A00031BCE /* Build configuration list for PBXNativeTarget "NA Ireland" */;
 			buildPhases = (
 				772E73AB1946747A00031BCE /* Sources */,
 				772E73D61946747A00031BCE /* Frameworks */,
@@ -2126,9 +2126,9 @@
 			);
 			dependencies = (
 			);
-			name = "Ireland NA";
+			name = "NA Ireland";
 			productName = BMLT;
-			productReference = 772E741F1946747A00031BCE /* Ireland NA.app */;
+			productReference = 772E741F1946747A00031BCE /* NA Ireland.app */;
 			productType = "com.apple.product-type.application";
 		};
 		775FDDF618DB129C00B321AC /* NA Quebec */ = {
@@ -2283,7 +2283,7 @@
 				77B5EABD1743EEF300F50281 /* Southern California NA Meetings */,
 				770BC3D2189F1CA100991DBD /* San Diego NA Meetings */,
 				775FDDF618DB129C00B321AC /* NA Quebec */,
-				772E73AA1946747A00031BCE /* Ireland NA */,
+				772E73AA1946747A00031BCE /* NA Ireland */,
 			);
 		};
 /* End PBXProject section */
@@ -3553,7 +3553,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/BMLT\"",
 				);
-				PRODUCT_NAME = "Ireland NA";
+				PRODUCT_NAME = "NA Ireland";
 				PROVISIONING_PROFILE = "D70A56C9-CEC0-4114-85C0-B0E8E7A01428";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D70A56C9-CEC0-4114-85C0-B0E8E7A01428";
 				WRAPPER_EXTENSION = app;
@@ -3582,7 +3582,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/BMLT\"",
 				);
-				PRODUCT_NAME = "Ireland NA";
+				PRODUCT_NAME = "NA Ireland";
 				PROVISIONING_PROFILE = "B1B6576A-7C54-4FFD-85E8-87BBE79EA5B8";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B1B6576A-7C54-4FFD-85E8-87BBE79EA5B8";
 				WRAPPER_EXTENSION = app;
@@ -3611,7 +3611,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/BMLT\"",
 				);
-				PRODUCT_NAME = "Ireland NA";
+				PRODUCT_NAME = "NA Ireland";
 				PROVISIONING_PROFILE = "D70A56C9-CEC0-4114-85C0-B0E8E7A01428";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D70A56C9-CEC0-4114-85C0-B0E8E7A01428";
 				WRAPPER_EXTENSION = app;
@@ -4245,7 +4245,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		772E741B1946747A00031BCE /* Build configuration list for PBXNativeTarget "Ireland NA" */ = {
+		772E741B1946747A00031BCE /* Build configuration list for PBXNativeTarget "NA Ireland" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				772E741C1946747A00031BCE /* Debug */,
