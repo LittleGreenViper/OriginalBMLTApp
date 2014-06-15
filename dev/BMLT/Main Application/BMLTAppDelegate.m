@@ -33,14 +33,12 @@
 #endif
 
 static          BMLTAppDelegate *g_AppDelegate = nil;                   ///< This holds the SINGLETON instance of the application delegate.
-static const    float           sTestEmailURLRequestTimeout = 1.5;      ///< The timeout (in seconds), of the contact test.
+static const    float           sTestEmailURLRequestTimeout = 2.0;      ///< The timeout (in seconds), of the contact test.
 static const    float           s90Minutes                  = 5400.0;   ///< 90 minutes' worth of seconds.
 static const    float           sHowManyMeters              = 100.0;    ///< This is the radius, in meters, for the "Where Am I Now?" search.
 #ifdef _TESTFLIGHT_
 static NSString *kTestFlightTeamToken = @"89521cfd695fa615cc412b7048699107_ODQ2NTYyMDEyLTA0LTI2IDEwOjQ0OjM5LjU2NjA4OQ"; ///< Used for the TesFlightApp.com utility.
 #endif
-
-int kAddressLookupTimeoutPeriod_in_seconds = 10;
 
 enum    ///< These are the tab indexes in the array.
 {
@@ -71,7 +69,6 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
     BOOL                    _visitingRelatives;         ///< If true, then we will retain the app state, despite the flag that says we shouldn't.
     BMLT_Meeting_Search     *mySearch;                  ///< The current meeting search in progress.
     BOOL                    deferredSearch;             ///< A semaphore that is set, in order to allow the animation to appear before the search starts.
-    BOOL                    locationTried;              ///< This is used to ensure that we go 2 cycles with the location manager (Kludgy way to increase accuracy).
     NSURLRequest            *testEmailURLRequest;       ///< This is used to find out if the server supports email.
 }
 
@@ -460,15 +457,6 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
     [self setSearchMapRegion:region];
     [self setSearchMapMarkerLoc:center];
     
-    if ( [myPrefs lookupMyLocation] )
-        {
-#ifdef DEBUG
-        NSLog(@"BMLTAppDelegate::setDefaultMapRegion We will update our location.");
-#endif
-        locationTried = NO;
-        [locationManager startUpdatingLocation];
-        }
-    
     [(A_BMLT_SearchViewController *)searchNavController setUpMap];
 }
 
@@ -576,6 +564,14 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [self startNetworkMonitor];
     [self setDefaultMapRegion];
     
+    if ( [myPrefs lookupMyLocation] )
+        {
+#ifdef DEBUG
+        NSLog(@"BMLTAppDelegate::setDefaultMapRegion We will update our location.");
+#endif
+        [locationManager startUpdatingLocation];
+        }
+    
     return YES;
 }
 
@@ -591,6 +587,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     NSLog(@"BMLTAppDelegate::applicationWillResignActive called.");
 #endif
     _amISick = NO;  // Make sure the user is informed of network outages when they come back.
+    [locationManager stopUpdatingLocation]; // Stop updating for now.
 }
 
 /*****************************************************************/
@@ -623,6 +620,14 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
             }
         
         [self setDefaultMapRegion];
+        
+        if ( [myPrefs lookupMyLocation] )
+            {
+#ifdef DEBUG
+            NSLog(@"BMLTAppDelegate::setDefaultMapRegion We will update our location.");
+#endif
+            [locationManager startUpdatingLocation];
+            }
         }
     else
         {
@@ -721,7 +726,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 #ifdef DEBUG
             NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams Starting a new location-based search after a lookup.");
 #endif
-            locationTried = NO;
             [locationManager startUpdatingLocation];
             }
         else
@@ -990,11 +994,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         This will force the map to update, and will set the main
         location to the found location.
  *****************************************************************/
-- (void)lookupMyLocationWithAccuracy:(int)accuracy    ///< If YES, then ten-meter accuracy will be specified.
+- (void)lookupMyLocationWithAccuracy:(CLLocationAccuracy)accuracy    ///< The desired accuracy
 {
     previousAccuracy = 0;
     [locationManager stopUpdatingLocation]; // Just in case we are currently looking...
-    locationTried = NO;
     // If we need to get a bit fuzzier, we will.
     [locationManager setDesiredAccuracy:accuracy];
     [locationManager startUpdatingLocation];
@@ -1105,6 +1108,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 #ifdef DEBUG
     NSLog(@"BMLTAppDelegate::didUpdateLocations:%@", locations);
 #endif
+    assert ( manager == locationManager );
+    
     CLLocation  *newLocation = [locations lastObject];
     
     // NSTimeInterval is a double that contains seconds
@@ -1113,10 +1118,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     // this is in meters
     const CLLocationAccuracy accuracy = [newLocation horizontalAccuracy];
     
-    // if this is less than a minute old and the accuracy is less than 100 meters, it's OK for us
-    if ( (interval > -60) && ((accuracy < 100) || (previousAccuracy <= accuracy)) ) // Or if the location isn't getting any better
+    // if this is less than half a minute old, or if the location isn't getting any better, it's OK for us
+    if ( (interval > -30) || (previousAccuracy <= accuracy) )
         {
-        [manager stopUpdatingLocation];
+        [locationManager stopUpdatingLocation]; // Make double sure.
     
 #ifdef DEBUG
         NSLog(@"BMLTAppDelegate::didUpdateToLocation I'm at (%f, %f), the horizontal accuracy is %f.", newLocation.coordinate.longitude, newLocation.coordinate.latitude, newLocation.horizontalAccuracy);
@@ -1142,7 +1147,6 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
             NSLog(@"BMLTAppDelegate::didUpdateToLocation Setting the marker location to (%f, %f).", newLocation.coordinate.longitude, newLocation.coordinate.latitude);
             NSLog(@"BMLTAppDelegate::didUpdateToLocation Second time around. Stopping the update.");
 #endif
-            [locationManager stopUpdatingLocation]; // Stop updating for now.
             [activeSearchController performSelectorOnMainThread:@selector(updateMap) withObject:nil waitUntilDone:NO];
             
             [self setLastLocation:newLocation]; // Record for posterity
@@ -1151,7 +1155,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         else    // Something's wrong. We cannot be at exactly 0,0. Try again.
             {
             NSLog(@"BMLTAppDelegate::didUpdateToLocation Location Error: (%@)", newLocation);
-            [manager startUpdatingLocation];
+            [locationManager startUpdatingLocation];
             }
 #endif
         }

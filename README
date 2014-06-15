@@ -95,6 +95,10 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
+== Version 2.7b4
+* June 15, 2014
+* Work to make the location more accurate.
+
 == Version 2.7b2
 * June 11, 2014
 * The black marker in meeting details screens was draggable. This is no longer the case.
