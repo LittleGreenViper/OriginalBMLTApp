@@ -60,7 +60,7 @@
 
 /* No Search Results Alert */
 "NO-SEARCH-RESULTS" = "Inga möten funna.";
-"NO-SEARCH-RESULTS-WHEREAMI" = "It does not look like you are at a meeting.";
+"NO-SEARCH-RESULTS-WHEREAMI" = "Du verkar inte vara vid något möte.";
 
 /* Too many results error. */
 "TOO-MANY-RESULTS-FORMAT" = "Det blev fler än %d möten som svar. gör din sökning mer specifik och försök igen";
@@ -149,7 +149,7 @@
 "SEARCH-SPEC-TOMORROW-TITLE" = "hitta närliggande möten imorgon";
 "SEARCH-SPEC-DISABLED-TEXT" = "Dessa sökningar är inaktiverade, För översättningen är ej tillgänglig (Antingen har du stängt av dem, eller så är dom spcifikt avstängda för denna app.).";
 "SEARCH-SPEC-OVERALL-LABEL-TEXT" = "";
-"SEARCH-SPEC-WHEREAMI" = "Där är jag nu?";
+"SEARCH-SPEC-WHEREAMI" = "Vilket möte är jag vid nu?";
 
 /* Selected Weekdays */
 "SEARCH-SPEC-SELECTED-WEEKDAYS" = "Sök på veckodag";
@@ -206,22 +206,24 @@
 "DETAIL-ACTION-BUTTON-POPUP-CHOICE-2"   = "Print Page";
 
 /* These are the strings for the "Send A Comment" Screen */
-"SEND-COMMENT-SCREEN-TITLE"             = "Send A Comment";
-"SEND-COMMENT-SCREEN-FROM-NAME-TITLE"   = "Name:";
-"SEND-COMMENT-SCREEN-FROM-EMAIL-TITLE"  = "Email:";
-"SEND-COMMENT-SCREEN-KEEP-EMAIL-TITLE"  = "Save This Email for Future Comments.";
-"SEND-COMMENT-SCREEN-KEEP-EMAIL-NOTE"   = "You can delete this saved email in the settings screen.";
-"SEND-COMMENT-SCREEN-INVALID-EMAIL"     = "Invalid Email Address";
-"SEND-COMMENT-SCREEN-SEND-BUTTON"       = "Send Comment";
-"SEND-COMMENT-SCREEN-CANCEL-BUTTON"     = "Cancel";
-"SEND-COMMENT-SCREEN-RESULT-OK"         = "The comment was sent successfully.";
-"SEND-COMMENT-ERROR"                    = "Error Sending Comment";
-"SEND-COMMENT-SCREEN-RESULT-NONE"       = "The comment was not sent, because the server has no contacts available to receive the comment.";
-"SEND-COMMENT-SCREEN-RESULT-BAD-EMAIL"  = "The comment was not sent, because the from address you specified is not correctly formatted.";
-"SEND-COMMENT-SCREEN-RESULT-UH-OH"      = "The comment was not sent, due to an unknown error.";
-"SEND-COMMENT-SCREEN-RESULT-NOPE"       = "The comment was not sent, because the server does not allow comments to be sent.";
-"SEND-COMMENT-SCREEN-RESULT-VIKING"     = "The comment was not sent, because the server thinks that it is spam.\nMaybe there are too many URLs in the message.";
+"SEND-COMMENT-SCREEN-TITLE"             = "Skicka en kommentar";
+"SEND-COMMENT-SCREEN-FROM-NAME-TITLE"   = "Namn:";  
+"SEND-COMMENT-SCREEN-FROM-EMAIL-TITLE"  = "E-post:";  
+"SEND-COMMENT-SCREEN-KEEP-EMAIL-TITLE"  = "Spara denna e-post för framtida kommentarer.";  
+"SEND-COMMENT-SCREEN-KEEP-EMAIL-NOTE"   = "Du kan radera detta sparade e-post i inställningar.";  
+"SEND-COMMENT-SCREEN-INVALID-EMAIL"     = "Ogiltig e-postadress";  
+"SEND-COMMENT-SCREEN-SEND-BUTTON"       = "Skicka kommentar";  
+"SEND-COMMENT-SCREEN-CANCEL-BUTTON"     = "Avbryt";
+
+"SEND-COMMENT-SCREEN-RESULT-OK"         = "Kommentaren har skickats.";  
+"SEND-COMMENT-ERROR"                    = "Ett fel inträffade när kommentaren skulle skickas";  
+"SEND-COMMENT-SCREEN-RESULT-NONE"       = "KOmmentaren skickades inte eftersom server inte har någon kontakt tillgänglig att skicka kommentaren till. ";  
+"SEND-COMMENT-SCREEN-RESULT-BAD-EMAIL"  = "Kommentaren skickades inte eftersom e-postadressen du fyllde I har ett felaktigt format."; 
+"SEND-COMMENT-SCREEN-RESULT-UH-OH"      = "Kommentaren skickades inte på grund av ett okänt fel.";  
+"SEND-COMMENT-SCREEN-RESULT-NOPE"       = "Kommentaren skickades inte eftersom servern inte tillåter kommentarer.";  
+"SEND-COMMENT-SCREEN-RESULT-VIKING"     = "Kommentaren skickades inte eftersom servern identifierade den som spam.";  
 
 /* These are the strings for the preferences Screen. */
-"PREF-SCREEN-FORGET-BUTTON-TITLE"       = "Forget Saved Email Address";
+"PREF-SCREEN-FORGET-BUTTON-TITLE"       = "Glöm sparad e-postadress"; 
+
 
