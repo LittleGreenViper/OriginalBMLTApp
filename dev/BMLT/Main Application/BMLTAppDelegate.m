@@ -33,11 +33,12 @@
 #endif
 
 static          BMLTAppDelegate *g_AppDelegate = nil;                   ///< This holds the SINGLETON instance of the application delegate.
-static const    float           sTestEmailURLRequestTimeout = 2.0;      ///< The timeout (in seconds), of the contact test.
+static const    float           sTestEmailURLRequestTimeout = 1.5;      ///< The timeout (in seconds), of the contact test.
 static const    float           s90Minutes                  = 5400.0;   ///< 90 minutes' worth of seconds.
 static const    float           sHowManyMeters              = 100.0;    ///< This is the radius, in meters, for the "Where Am I Now?" search.
-#ifdef _TESTFLIGHT_
-static NSString *kTestFlightTeamToken = @"89521cfd695fa615cc412b7048699107_ODQ2NTYyMDEyLTA0LTI2IDEwOjQ0OjM5LjU2NjA4OQ"; ///< Used for the TesFlightApp.com utility.
+
+#ifdef _TESTFLIGHT_ /* Used for the TesFlightApp.com utility. */
+static NSString *kTestFlightTeamToken = @"89521cfd695fa615cc412b7048699107_ODQ2NTYyMDEyLTA0LTI2IDEwOjQ0OjM5LjU2NjA4OQ"; 
 #endif
 
 enum    ///< These are the tab indexes in the array.
@@ -641,6 +642,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     NSLog(@"BMLTAppDelegate::applicationWillEnterForeground We will start the network monitor update..");
 #endif
     [self startNetworkMonitor];
+    [self testForEmailAvailability];
 }
 
 #pragma mark - Custom Instance Methods -
@@ -1326,25 +1328,32 @@ shouldSelectViewController:(UIViewController *)inViewController
  *****************************************************************/
 - (void)testForEmailAvailability
 {
-    NSString    *serverURI = [NSString stringWithFormat:@"%@/client_interface/contact.php", [[BMLTVariantDefs rootServerURI] absoluteString]];
-    _hostHasEmailContactCapability = NO;    // We're pessimists.
-    
-    testEmailURLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:serverURI] cachePolicy:NSURLRequestReloadRevalidatingCacheData timeoutInterval:sTestEmailURLRequestTimeout];
-    
-    if ( testEmailURLRequest )
+    if ( [self hostActive] )    // Have to have a server connection.
         {
-        NSURLResponse   *pResponse;
-        NSError         *pError;
-        NSData          *pResponseData = [NSURLConnection sendSynchronousRequest:testEmailURLRequest returningResponse:&pResponse error:&pError];
+        NSString    *serverURI = [NSString stringWithFormat:@"%@/client_interface/contact.php", [[BMLTVariantDefs rootServerURI] absoluteString]];
+        _hostHasEmailContactCapability = NO;    // We're pessimists.
         
-        // Immediate failure if the server crapped out.
-        if ( pResponseData && !pError )
+        testEmailURLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:serverURI] cachePolicy:NSURLRequestReloadRevalidatingCacheData timeoutInterval:sTestEmailURLRequestTimeout];
+        
+        if ( testEmailURLRequest )
             {
-            // See if we can send email.
-            const unsigned char *pdata = [pResponseData bytes];
-            unsigned char       value = *pdata;
-            _hostHasEmailContactCapability = (1 == [pResponseData length]) && ((unsigned char)'1' == value); // We specifically look for a '1' character. Nothing else.
+            NSURLResponse   *pResponse;
+            NSError         *pError;
+            NSData          *pResponseData = [NSURLConnection sendSynchronousRequest:testEmailURLRequest returningResponse:&pResponse error:&pError];
+            
+            // Immediate failure if the server crapped out.
+            if ( pResponseData && !pError )
+                {
+                // See if we can send email.
+                const unsigned char *pdata = [pResponseData bytes];
+                unsigned char       value = *pdata;
+                _hostHasEmailContactCapability = (1 == [pResponseData length]) && ((unsigned char)'1' == value); // We specifically look for a '1' character. Nothing else.
+                }
             }
+        }
+    else
+        {
+        _hostHasEmailContactCapability = NO;
         }
 }
 
@@ -1375,6 +1384,12 @@ shouldSelectViewController:(UIViewController *)inViewController
     NSLog(@"BMLTAppDelegate::executeSearchWithParams: called.");
 #endif
     [locationManager stopUpdatingLocation];
+    
+    if ( ![self hostHasEmailContactCapability] )    // No need to re-test if we already know we can send comments.
+        {
+        [self testForEmailAvailability];
+        }
+    
     [self simpleClearSearch];
     mySearch = [[BMLT_Meeting_Search alloc] initWithCriteria:inSearchParams andName:nil andDescription:nil];
     deferredSearch = YES;
