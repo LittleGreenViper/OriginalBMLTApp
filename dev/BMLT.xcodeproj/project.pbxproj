@@ -2275,6 +2275,11 @@
 				CLASSPREFIX = BMLT;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = MAGSHARE;
+				TargetAttributes = {
+					777597561540F15E00D45ADA = {
+						DevelopmentTeam = P53V4JS928;
+					};
+				};
 			};
 			buildConfigurationList = 77977D05150E882B00485C8D /* Build configuration list for PBXProject "BMLT" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -3520,7 +3525,7 @@
 		7723B82E1561840500A2BC84 /* TestFlight */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3540,8 +3545,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "NA Sverige";
-				PROVISIONING_PROFILE = "D70A56C9-CEC0-4114-85C0-B0E8E7A01428";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D70A56C9-CEC0-4114-85C0-B0E8E7A01428";
+				PROVISIONING_PROFILE = "79536316-09B0-4544-8677-9EF950316465";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "79536316-09B0-4544-8677-9EF950316465";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;
@@ -3724,7 +3729,7 @@
 		777597CC1540F15E00D45ADA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3743,8 +3748,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "NA Sverige";
-				PROVISIONING_PROFILE = "D70A56C9-CEC0-4114-85C0-B0E8E7A01428";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D70A56C9-CEC0-4114-85C0-B0E8E7A01428";
+				PROVISIONING_PROFILE = "79536316-09B0-4544-8677-9EF950316465";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "79536316-09B0-4544-8677-9EF950316465";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3752,7 +3757,7 @@
 		777597CD1540F15E00D45ADA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Little Green Viper Software Development LLC (P53V4JS928)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -3771,8 +3776,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "NA Sverige";
-				PROVISIONING_PROFILE = "B1B6576A-7C54-4FFD-85E8-87BBE79EA5B8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B1B6576A-7C54-4FFD-85E8-87BBE79EA5B8";
+				PROVISIONING_PROFILE = "73665D7D-5203-4C86-9D6D-0E8C1CF51DAF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "73665D7D-5203-4C86-9D6D-0E8C1CF51DAF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -4073,7 +4078,7 @@
 		77B5EB371743EEF300F50281 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4096,8 +4101,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "SoCal Meetings";
-				PROVISIONING_PROFILE = "D70A56C9-CEC0-4114-85C0-B0E8E7A01428";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D70A56C9-CEC0-4114-85C0-B0E8E7A01428";
+				PROVISIONING_PROFILE = "79536316-09B0-4544-8677-9EF950316465";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "79536316-09B0-4544-8677-9EF950316465";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -4105,7 +4110,7 @@
 		77B5EB381743EEF300F50281 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Little Green Viper Software Development LLC (P53V4JS928)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4125,8 +4130,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "SoCal Meetings";
-				PROVISIONING_PROFILE = "B1B6576A-7C54-4FFD-85E8-87BBE79EA5B8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B1B6576A-7C54-4FFD-85E8-87BBE79EA5B8";
+				PROVISIONING_PROFILE = "73665D7D-5203-4C86-9D6D-0E8C1CF51DAF";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "73665D7D-5203-4C86-9D6D-0E8C1CF51DAF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -4134,7 +4139,7 @@
 		77B5EB391743EEF300F50281 /* TestFlight */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4154,8 +4159,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = "SoCal Meetings";
-				PROVISIONING_PROFILE = "D70A56C9-CEC0-4114-85C0-B0E8E7A01428";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D70A56C9-CEC0-4114-85C0-B0E8E7A01428";
+				PROVISIONING_PROFILE = "79536316-09B0-4544-8677-9EF950316465";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "79536316-09B0-4544-8677-9EF950316465";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;
