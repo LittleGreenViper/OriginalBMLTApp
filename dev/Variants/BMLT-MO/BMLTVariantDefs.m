@@ -84,7 +84,7 @@
 /*****************************************************************/
 + (UIColor *)windowBackgroundColor
 {
-    return [UIColor colorWithRed:0.1098039216 green:0.1019607843 blue:0.7490196078 alpha:1.0];
+    return [UIColor colorWithHexRed:0x90 green:0x50 blue:0];
 }
 
 /*****************************************************************/
@@ -156,7 +156,7 @@
 /*****************************************************************/
 + (UIColor *)getSortEvenColor
 {
-    return [UIColor colorWithRed:0.8 green:0.9 blue:1.0 alpha:1.0];
+    return [UIColor colorWithRed:1.0 green:0.8 blue:0.5 alpha:1.0];
 }
 
 /*****************************************************************/
