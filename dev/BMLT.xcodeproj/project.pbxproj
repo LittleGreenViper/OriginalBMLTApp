@@ -4758,7 +4758,7 @@
 		77A93A3419969ACA0020A785 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Marshall (2D279UYGKU)";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4790,7 +4790,7 @@
 		77A93A3519969ACA0020A785 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Little Green Viper Software Development LLC (P53V4JS928)";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4810,8 +4810,8 @@
 					"\"$(SRCROOT)/BMLT\"",
 				);
 				PRODUCT_NAME = TXOKLA;
-				PROVISIONING_PROFILE = "DB604969-5D1A-43CD-A3D2-335462461FEB";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DB604969-5D1A-43CD-A3D2-335462461FEB";
+				PROVISIONING_PROFILE = "86E62A75-2B05-4A5F-8266-9B9E4694D193";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "86E62A75-2B05-4A5F-8266-9B9E4694D193";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -4819,7 +4819,7 @@
 		77A93A3619969ACA0020A785 /* TestFlight */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Chris Marshall (2D279UYGKU)";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
