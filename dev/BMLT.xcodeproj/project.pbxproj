@@ -1449,7 +1449,7 @@
 		77A5600B153CF0520039CCDD /* A_BMLT_PrintPageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A_BMLT_PrintPageRenderer.h; sourceTree = "<group>"; };
 		77A5600C153CF0520039CCDD /* A_BMLT_PrintPageRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A_BMLT_PrintPageRenderer.m; sourceTree = "<group>"; };
 		77A5600E153CF44E0039CCDD /* BMLTCloseModalProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BMLTCloseModalProtocol.h; path = Miscellaneous/BMLTCloseModalProtocol.h; sourceTree = "<group>"; };
-		77A93A3719969ACA0020A785 /* TXOKLA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TXOKLA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77A93A3719969ACA0020A785 /* OKLATX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OKLATX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A93A3A19969B0E0020A785 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		77A93A3C19969B0E0020A785 /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Back.png"; sourceTree = "<group>"; };
 		77A93A3D19969B0E0020A785 /* Anim-Transparency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Transparency.png"; sourceTree = "<group>"; };
@@ -2203,7 +2203,7 @@
 				775FDE6518DB129C00B321AC /* NA Quebec.app */,
 				772E741F1946747A00031BCE /* NA Ireland.app */,
 				77497DF119720F4E009A0CF9 /* Show Me NA.app */,
-				77A93A3719969ACA0020A785 /* TXOKLA.app */,
+				77A93A3719969ACA0020A785 /* OKLATX.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2370,8 +2370,8 @@
 		77D90B951514C6A60059EF41 /* Variants */ = {
 			isa = PBXGroup;
 			children = (
-				77A93A3919969B0E0020A785 /* BMLT-TXOKLA */,
 				77603DA01541DC8300C4840F /* Baseline */,
+				77A93A3919969B0E0020A785 /* BMLT-TXOKLA */,
 				772E7421194674D600031BCE /* BMLT-IE */,
 				77BBAEF3154176A4001F5BCC /* BMLT-MN */,
 				77BBAEF5154176A4001F5BCC /* BMLT-SV */,
@@ -2610,9 +2610,9 @@
 			productReference = 77977D0B150E882B00485C8D /* NY NA Meetings.app */;
 			productType = "com.apple.product-type.application";
 		};
-		77A939C219969ACA0020A785 /* TXOKLA */ = {
+		77A939C219969ACA0020A785 /* OKLATX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 77A93A3319969ACA0020A785 /* Build configuration list for PBXNativeTarget "TXOKLA" */;
+			buildConfigurationList = 77A93A3319969ACA0020A785 /* Build configuration list for PBXNativeTarget "OKLATX" */;
 			buildPhases = (
 				77A939C319969ACA0020A785 /* Sources */,
 				77A939EE19969ACA0020A785 /* Frameworks */,
@@ -2622,9 +2622,9 @@
 			);
 			dependencies = (
 			);
-			name = TXOKLA;
+			name = OKLATX;
 			productName = BMLT;
-			productReference = 77A93A3719969ACA0020A785 /* TXOKLA.app */;
+			productReference = 77A93A3719969ACA0020A785 /* OKLATX.app */;
 			productType = "com.apple.product-type.application";
 		};
 		77AC716915409E9F0060CA80 /* MNNA */ = {
@@ -2724,7 +2724,7 @@
 				775FDDF618DB129C00B321AC /* NA Quebec */,
 				772E73AA1946747A00031BCE /* NA Ireland */,
 				77497D7C19720F4E009A0CF9 /* Show Me NA */,
-				77A939C219969ACA0020A785 /* TXOKLA */,
+				77A939C219969ACA0020A785 /* OKLATX */,
 			);
 		};
 /* End PBXProject section */
@@ -4780,7 +4780,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/BMLT\"",
 				);
-				PRODUCT_NAME = TXOKLA;
+				PRODUCT_NAME = OKLATX;
 				PROVISIONING_PROFILE = "86E62A75-2B05-4A5F-8266-9B9E4694D193";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "86E62A75-2B05-4A5F-8266-9B9E4694D193";
 				WRAPPER_EXTENSION = app;
@@ -4809,9 +4809,9 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/BMLT\"",
 				);
-				PRODUCT_NAME = TXOKLA;
-				PROVISIONING_PROFILE = "86E62A75-2B05-4A5F-8266-9B9E4694D193";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "86E62A75-2B05-4A5F-8266-9B9E4694D193";
+				PRODUCT_NAME = OKLATX;
+				PROVISIONING_PROFILE = "DB604969-5D1A-43CD-A3D2-335462461FEB";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DB604969-5D1A-43CD-A3D2-335462461FEB";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -4838,7 +4838,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/BMLT\"",
 				);
-				PRODUCT_NAME = TXOKLA;
+				PRODUCT_NAME = OKLATX;
 				PROVISIONING_PROFILE = "86E62A75-2B05-4A5F-8266-9B9E4694D193";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "86E62A75-2B05-4A5F-8266-9B9E4694D193";
 				WRAPPER_EXTENSION = app;
@@ -5166,7 +5166,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		77A93A3319969ACA0020A785 /* Build configuration list for PBXNativeTarget "TXOKLA" */ = {
+		77A93A3319969ACA0020A785 /* Build configuration list for PBXNativeTarget "OKLATX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				77A93A3419969ACA0020A785 /* Debug */,
