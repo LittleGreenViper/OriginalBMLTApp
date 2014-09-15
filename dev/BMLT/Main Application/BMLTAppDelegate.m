@@ -479,6 +479,12 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
         locationManager = [[CLLocationManager alloc] init];
         [locationManager setDistanceFilter:kCLDistanceFilterNone];
         [locationManager setDelegate:self];
+        
+        if ( [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] )
+            {
+            [locationManager requestWhenInUseAuthorization];
+            }
+        
         searchParams = [[NSMutableDictionary alloc] init];
         mapType = MKMapTypeStandard;
         previousAccuracy = 0;
@@ -570,6 +576,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 #ifdef DEBUG
         NSLog(@"BMLTAppDelegate::setDefaultMapRegion We will update our location.");
 #endif
+        
+        if ( [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] )
+            {
+            [locationManager requestWhenInUseAuthorization];
+            }
+
         [locationManager startUpdatingLocation];
         }
     
@@ -627,6 +639,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 #ifdef DEBUG
             NSLog(@"BMLTAppDelegate::setDefaultMapRegion We will update our location.");
 #endif
+            
+            if ( [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] )
+                {
+                [locationManager requestWhenInUseAuthorization];
+                }
+
             [locationManager startUpdatingLocation];
             }
         }
@@ -728,6 +746,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 #ifdef DEBUG
             NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams Starting a new location-based search after a lookup.");
 #endif
+            
+            if ( [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] )
+                {
+                [locationManager requestWhenInUseAuthorization];
+                }
+
             [locationManager startUpdatingLocation];
             }
         else
@@ -1002,6 +1026,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     [locationManager stopUpdatingLocation]; // Just in case we are currently looking...
     // If we need to get a bit fuzzier, we will.
     [locationManager setDesiredAccuracy:accuracy];
+    
+    if ( [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] )
+        {
+        [locationManager requestWhenInUseAuthorization];
+        }
+
     [locationManager startUpdatingLocation];
 }
 
@@ -1157,6 +1187,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         else    // Something's wrong. We cannot be at exactly 0,0. Try again.
             {
             NSLog(@"BMLTAppDelegate::didUpdateToLocation Location Error: (%@)", newLocation);
+            
+            if ( [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] )
+                {
+                [locationManager requestWhenInUseAuthorization];
+                }
+
             [locationManager startUpdatingLocation];
             }
 #endif
