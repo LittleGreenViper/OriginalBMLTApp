@@ -402,6 +402,7 @@ CHANGELIST
 
 MAJOR VERSION UPGRADE
 ---------------------
+---------------------
 
 *Version 1.3.2*
 
