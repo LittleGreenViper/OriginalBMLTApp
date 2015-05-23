@@ -353,17 +353,20 @@ CHANGELIST
 * Added a basic, simple "steampunk" theme for the baseline. This involves creation of a number of graphical assets. This theme is designed to keep the file size down.
 * Make sure that the address lookup doesn't happen when switching away from Advanced while the keyboard is open.
 
-= Version 2.0d6
+*Version 2.0d6*
+
 * April 22, 2012
 * Added a "Directions" button to the navbar on iPad.
 * The meeting details kept appearing with leftover map stuff. I now establish the same view, each time.
 * Moved the "find me" button for the advanced search out of the weekday collective, so it will stay in its corner, properly.
 
-= Version 2.0d5
+*Version 2.0d5*
+
 * April 22, 2012
 * Added the ability to tap in the search map to change the location of the marker (iPad only).
 
-= Version 2.0d4
+*Version 2.0d4*
+
 * April 22, 2012
 * Fixed a bug, where the settings title was wrong in the iPhone.
 * Now set the search animation title at instantiation time, so it will be displayed.
@@ -373,62 +376,74 @@ CHANGELIST
 * The default pref for results is map, for iPad (since the map featured so prominently in the search).
 * All annotations highlight, now. Not just the red ones.
 
-= Version 2.0d3
+*Version 2.0d3*
+
 * April 21, 2012
 * Now hide the "find me" button for iPad if Location Services are unavailable.
 * Fixed a bug, in which the search animation screen could get mixed up with the search screens.
 
-= Version 2.0d2
+*Version 2.0d2*
+
 * April 21, 2012
 * Now disable the simple searches and the advanced search "Near Me" if location services are disabled. This is for the iPhone only. The iPad can still use the map marker.
 
-= Version 2.0d1
+*Version 2.0d1*
+
 * April 21, 2012
 * Changed the way in which the annotation numbers are assigned, which improves the stability of those numbers. i.e. You will get the same numbers, over and over, for the same searches. The previous method would often yield different numbers, each time.
 * Rearranged some of the localized strings, so they are now in the info.plist file. This makes it more practical to produce different variants.
 * Stopped the text entry from registering an error if it is blank, in advanced search. This caused annoyance in the iPhone app.
 * Made the animation load happen programmatically, as opposed to via storyboard.
 
-= Version 2.0d0
+*Version 2.0d0*
+
 * April 19, 2012
 * Major rewrite. This will be an entrirely new app. The model code, and some of the various supporting code will be used, but the app framework will be very different.
 
 =========================================================== MAJOR VERSION UPGRADE ===========================================================
 
 *Version 1.3.2*
+
 * TBD
 * Made the search in progress animation a bit more modeless, as occasional "hiccups" seem to occur when an iPad is rotated.
 
 *Version 1.3.1*
+
 * February 29, 2012
 * Now make sure that no new search is made at all if the "Start With Search" is OFF. The app retains its previous state.
 * There was a bug, in which starting with no search on startup, resulted in a disabled intro screen.
 
 *Version 1.3*
+
 * February 27, 2012
 * Fixed a very small temporary memory leak that was caused by some overly complex code. In reality, it wasn't a memory leak, but played one on TV.
 * The error handler for the network issue was too "sticky." I had to change the way the driver was initialized, so using the app subsequent to a failure would "pick it up" again.
 * Changed the way that the app checks the network connectivity and does its startup. It's much more asynchronous now.
 
 *Version 1.2.1*
+
 * February 17, 2012
 * Added an error handler for being unable to find the server.
 * Added a version for Georgia that is not meant for release. It is an internal testing-only version.
 
 *Version 1.2*
+
 * February 8, 2012
 * Added a version for Minnesota that carries their branding, and is released through their account.
 
 *Version 1.1.2*
+
 * November 23, 2011
 * Turned on the option to parse the comments field for phone numbers.
 * Changed the "MD" variant to "MDC," and re-released it.
 
 *Version 1.1.1*
+
 * November 19, 2011
 * Changes the app icon to bring the app in line with Apple App Store Policy (Each variant of the app now has a slightly different icon).
 
 *Version 1.1*
+
 * November 11, 2011
 * Made it so that the quick search will be disabled if an initial location lookup is not done, but it will dynamically re-enable if a subsequent manual lookup is done.
 * Added preferences for starting in a search, and for preferring an advanced search as the first choice (iPhone/iPod Touch only).
@@ -446,6 +461,7 @@ CHANGELIST
 * Fixed a couple of places where "(null)" could be displayed for strings.
 
 *Version 1.0.1*
+
 * October 27, 2011
 * Simplified the parser calls in the BMLT_Server class.
 * Starting up the app will put you at the search page for whichever search you select (list or map).
@@ -453,23 +469,28 @@ CHANGELIST
 * This is the version that includes the BMLT-UK project.
 
 *Version 1.0*
+
 * October 17, 2011
 * Oh, what the heck. Go for the gusto. I'll submit the following to the App. Store: BMLT-FL, BMLT-MN, BMLT-NY and BMLT-TXOX.
 
 *Version 1.0RC0*
+
 * October 17, 2011
 * The green check image had a slight flaw (surrounding band the wrong color). It has been fixed.
 
 *Version 1.0b2*
+
 * October 16, 2011
 * Reduced the file size slightly, by removing some unused images.
 * Made the formats in the meeting detail view a bit bigger, so they will be easier for chubby fingers.
 
 *Version 1.0b1*
+
 * October 15, 2011
 * If there is only 1 result in the list, the time/distance sort will not be shown.
 
 *Version 1.0b0*
+
 * October 14, 2011
 * The localization for the settings items wasn't being done. That is now fixed.
 * Added the ability to dynamically update the location from the settings dialog, including adding a new button.
@@ -478,14 +499,17 @@ CHANGELIST
 * Made it easier to add new variants.
 
 *Version 1.0a3*
+
 * October 13, 2011
 * Disable the swipes in the List and Map screens when there are search results present.
 * in some cases, there may be no distance in the returned meetings. I now hide the distance sort and the invalid distance, if that happens.
 * There was a bug in the Prefs screen, where touching the text for Prefer Distance Sort changed both it, and the one above. That has been fixed.
 
 *Version 1.0a1*
+
 * October 12, 2011
 * Removed the dimming of the Prefer Distance Sort switch if Core Location services are unavailable, or if the Find My Location is off. It did not make sense.
 
 *Version 1.0a0*
+
 * October 11, 2011
