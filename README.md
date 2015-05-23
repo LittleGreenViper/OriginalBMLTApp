@@ -97,26 +97,32 @@ The new app will read the prefs from the original, but this is really meant to b
 
 CHANGELIST
 ----------
-== Version 2.7.4
+
+= Version 2.7.4 =
+
 * TBD
 * Now disable dragging the black marker in iPhone. Even the 6Plus doesn't really make enough room to make the feature useful, and there's a minor bug that would need to be fixed. Not worth it.
 * Fixed some deprecated calls that prevented an Xcode 6 compile.
 * Made this document a markdown (.md) file, for better display on BitBucket.
 * Raised minimum OS Support Level to 7.0.
 
-== Version 2.7.3
+= Version 2.7.3 =
+
 * September 1, 2014
 * Added temporary variant for the Multi-Zonal Service Symposium
 
-== Version 2.7
+= Version 2.7 =
+
 * June 18, 2014
 * Release of the final 2.7 version for NY, San Diego and Ireland
 
-== Version 2.7b4
+= Version 2.7b4 =
+
 * June 15, 2014
 * Work to make the location more accurate.
 
-== Version 2.7b2
+= Version 2.7b2 =
+
 * June 11, 2014
 * The black marker in meeting details screens was draggable. This is no longer the case.
 * Added French localization.
@@ -128,30 +134,35 @@ CHANGELIST
 * Added Ireland variant.
 * The Advanced keyboard now puts itself away on finishing editing.
 
-== Version 2.6
+= Version 2.6 =
+
 * November 24, 2013
 * No changes from the last beta. This is the official release.
 
-== Version 2.6b1
+= Version 2.6b1 =
+
 * November 24, 2013
 * Fixed a cosmetic issue, where the advanced text field was cut off by the keyboard in 3.5 inch screens.
 * Couple of minor cosmetic tweaks in the Advanced Search screen.
 * Minor tweak to the "busy animation" screen.
 * The initially-selected weekday for going into the "weekdays" mode of the advanced screen was not selecting the proper day for weeks starting on non-Sunday days. This is fixed.
 
-== Version 2.6b0
+= Version 2.6b0 =
+
 * November 23, 2013
 * Fixed an issue with the cancel button during the animation screen. It is now a regular button, labeled "CANCEL."
 * Made the font in the black marker popup a bit bigger.
 
-== Version 2.6a3
+= Version 2.6a3 =
+
 * November 23, 2013
 * Added some "breathing room" around the new popup window for the black marker in the map results screen.
 * Changed the color theme to a colored top and bottom bar (in iOS7), and darker backgrounds, because of the visibility issues introduced by iOS 7 buttons.
 * Added a new Swedish translation for the black marker popup.
 * Made the settings selection between simple and advanced preferred search type a bit more useful. Selecting advanced now gives nothing but the advanced, and simple gives simple, but with the ability to navigate to advanced.
 
-== Version 2.6a1
+= Version 2.6a1 =
+
 * November 16, 2013
 * Changed the app to use a different type of checkbox. This one works better with iOS7, and reduces the size of the app.
 * Several cosmetic changes to make the app work better with iOS7. No more fancy buttons. Makes the app smaller, too.
@@ -163,113 +174,139 @@ CHANGELIST
 * Added the ability to do a new map search on iPads (and iPhones) by dragging the black marker to new places on the Map Search Results screen. You can't have "1-tap" in Map Search Results because that interferes with tapping on the result markers.
 * Made the dragging marker more usable.
 
-== Version 2.5.7
+= Version 2.5.7 =
+
 * September 12, 2013
 * SoCal NA Release
 
-== Version 2.5.3
+= Version 2.5.3 =
+
 * September 12, 2013
 * NY NA Meetings iOS 7 Edition Release
 * Added some spacing for the "Satellite View/Map View" button, as it jams up against the other nav buttons in iOS 7.
 
-== Version 2.5.2
+= Version 2.5.2 =
+
 * September 6, 2013
 * SV NA Release
 
-== Version 2.5.1
+= Version 2.5.1 =
+
 * June 25, 2013
 * AU NA Meetings Release
 * Replaced the original Google geocoder with the built-in one (Should have done that ages ago). This affects the Advanced Search window.
 * Fixed an old bug, in which pressing the "GO" button in the Advanced Search screen on an iPad ignored entered text (unless "Return" had been previously hit).
 
-== Version 2.5.4
+= Version 2.5.4 =
+
 * January 10, 2013
 * MNNA Release.
 
-== Version 2.5
+= Version 2.5 =
+
 * December 28, 2012
 * This includes a complete replacement of the original skeuomorphic UX with newer, "cleaner" UX.
 * Rearranged the UX a bit, so that it is more obvious where we can switch between map and satellite view.
 * Made handling of location errors a bit more robust.
 
-== Version 2.0.5
+= Version 2.0.5 =
+
 * December 17, 2012
 * MNNA release
 
-== Version 2.0.4
+= Version 2.0.4 =
+
 * October 17, 2012
 * Fixes a cosmetic bug introduced by iOS 6 maps (the center marker in the search map on iPads wasn't displaying correctly).
 
-== Version 2.0.3
+= Version 2.0.3 =
+
 * October 9, 2012
 * MNNA release
 
-== Version 2.0.2
+= Version 2.0.2 =
+
 * October 9, 2012
 * Updated to fully support the iPhone 5
 
-== Version 2.0.1
+= Version 2.0.1 =
+
 * May 13, 2012
 * App Store release for the MNNA app.
 
-== Version 2.0
+= Version 2.0 =
+
 * May 6, 2012
 * Official App Store release. No changes from b13, except for this note and the version number.
 
-== Version 2.0b13
+= Version 2.0b13 =
+
 * Cinco De Mayo
 * Addressed a usability issue. The "brass" checkboxes are hard to see, as far as contrast between off (blank button) and "on" (green check). I addressed this by making "off" a red "X".
 
-== Version 2.0b12
+= Version 2.0b12 =
+
 * May 4, 2011
 * Fixed a bug, in which the GO button in the advanced search would not respond, when entered for a second time (iPhone).
 
-== Version 2.0b11
+= Version 2.0b11 =
+
 * May 4, 2011
 * Usability issue. When Any Day is selected in Advanced, every day should display a green check, not a red X.
 
-== Version 2.0b10
+= Version 2.0b10 =
+
 * May 2, 2012
 * This fixes a small, annoying bug, in which switching away from an open single meeting details page, then coming back, would reset the map. This would wipe out satellite views and/or zooms.
 
-== Version 2.0b9
+= Version 2.0b9 =
+
 * May 2, 2012
 * Fixed a bug, in which the sort header in the list results was sometimes out of kilter with the list. This could be demonstrated by selecting "Sort Search Results By List" in the prefs, doing a search, displaying as a list, then clicking on "Sort By Time." Then clear the search results, and do another search. The new search would be sorted by distance, but the header would say it is sorted by time.
 
-== Version 2.0b8
+= Version 2.0b8 =
+
 * May 2, 2012
 * Refactored the search results array a bit, so that there is never more than the one central object.
 * Fixed a bug, in which the "sort by distance" pref was being ignored first time through.
 
-== Version 2.0b7
+= Version 2.0b7 =
+
 * May 1, 2012
 * Fixed a bug, in which zero-length durations were being shown as time-same time. Fixed by removing the duration completely. It is up to each meeting to make sure their duration is recorded properly.
 
-== Version 2.0b6
+= Version 2.0b6 =
+
 * May 1, 2012
 * Had to retract the submission to the App Store, because I found a late bug that will require fairly substantial testing. The bug was that selecting "Weekdays" in the search, and then selecting multiple weekdays, then going to "Tomorrow," or "Later Today," the previously selected days would be included in the search. This requires pretty thorough testing of the app, so the release is being delayed.
 
-== Version 2.0b5
+= Version 2.0b5 =
+
 * April 30, 2012
 * Fixed a bug, in which leaving a meetings detail opened in Map of List, then going to the other view, and opening meeting details, left the meeting details NavBar open on the previous view.
 
-== Version 2.0b4
+= Version 2.0b4 =
+
 * April 30, 2012
 * Make sure that the print popover goes away when the screen is changed on the iPad (It was sticking around afte a window is dismissed using the Navigation Bar, as it is not really a true popover).
 
-== Version 2.0b3
+= Version 2.0b3 =
+
 * April 29, 2012
 * The behavior of the app between invocations was incorrect, and inconsistent with the user settings. This change touches a fair bit of code, and requires a lot of testing. It may delay the release by a day or two.
 
-== Version 2.0b2
+= Version 2.0b2 =
+
 * April 28, 2012
 * Fixed a small bug that prevented the settings tab from being reset on the iPhone, when restarting the app.
 
-== Version 2.0b1
+= Version 2.0b1 =
+
 * April 28, 2012
 * Resized the iPhone meeting details comment text item to allow more text to be shown.
 
-== Version 2.0b0
+= Version 2.0b0 =
+
 * April 27, 2012
 * Tweaked the shadow images in the iPad version to look a bit more "3D."
 * This release will be made entirely through TestFlight.
@@ -281,7 +318,8 @@ CHANGELIST
 * Added a bit of code to shove the formats over to the left a bit if they crowd the distance (mostly on iPhones).
 * Removed one of the reachability callbacks, as it's not necessary (host is all we need), and it caused one of the high cyclo counts, and also showed "false positive" messages when the network was, indeed, reachable.
 
-== Version 2.0a3
+= Version 2.0a3 =
+
 * April 26, 2012
 * Fixed a nasty stealth bug that only showed up when in connection trace debug.
 * The duration wasn't being parsed correctly. It is now being parsed properly.
@@ -289,14 +327,16 @@ CHANGELIST
 * Fixed a nasty bug, where selecting "Later Today," then another choice in Advanced, results in a truncated search.
 * Added code for the testflightapp.com framework. Beta will use that.
 
-== Version 2.0a2
+= Version 2.0a2 =
+
 * April 25, 2012
 * Fixed a couple of extremely minor cosmetic issues with displayed images and text.
 * Now make the location update come in twice before setting the marker. Seems to be a scoche more accurate.
 * Reduced the size of the map in the iPad Simple view, so we no longer have the problem of the map zoom changing every time we switch from simple to advanced and back again.
 * Performed some optimization on the piggy splash screens, which brings the app down to a more reasonable 4MB.
 
-== Version 2.0a1
+= Version 2.0a1 =
+
 * April 24, 2012
 * Made the lower shadow bar (on iPads) smaller.
 * Refactored the map results view a bit to make it more robust.
@@ -305,7 +345,8 @@ CHANGELIST
 * Fixed a bug, in which alerts displayed during startup interfered with the search and location.
 * Tweaked the Doxygen output slightly, so this file is included in the main page.
 
-== Version 2.0a0
+= Version 2.0a0 =
+
 * April 23, 2012
 * Toned down the colors of the red and blue indicators in the list view to better match the color of the annotations they represent.
 * Added the app icons.
