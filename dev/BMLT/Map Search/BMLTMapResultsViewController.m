@@ -350,7 +350,10 @@ static int  BMLTPopupViewFontSize                       = 13;   ///< The popup f
                 NSLog(@"BMLTMapResultsViewController mapMeetingAnnotations -This meeting gets its own annotation.");
 #endif
                 NSArray *meetingsAr = [[NSArray alloc] initWithObjects:meeting, nil];  
-                annotation = [[BMLT_Results_MapPointAnnotation alloc] initWithCoordinate:[meeting getMeetingLocationCoords].coordinate andMeetings:meetingsAr andIndex:0];
+                annotation = [[BMLT_Results_MapPointAnnotation alloc] initWithCoordinate:[meeting getMeetingLocationCoords].coordinate
+                                                                             andMeetings:meetingsAr
+                                                                                andIndex:0
+                              ];
                 [annotation setDisplayIndex:displayIndex++];
                 [points addObject:annotation];
                 }
@@ -384,7 +387,10 @@ static int  BMLTPopupViewFontSize                       = 13;   ///< The popup f
         }
 #endif
     // This is the black marker.
-    BMLT_Results_MapPointAnnotation *annotation = [[BMLT_Results_MapPointAnnotation alloc] initWithCoordinate:[[BMLTAppDelegate getBMLTAppDelegate] searchMapMarkerLoc] andMeetings:nil andIndex:0];
+    BMLT_Results_MapPointAnnotation *annotation = [[BMLT_Results_MapPointAnnotation alloc] initWithCoordinate:[[BMLTAppDelegate getBMLTAppDelegate] searchMapMarkerLoc]
+                                                                                                  andMeetings:nil
+                                                                                                     andIndex:0
+                                                   ];
     
     if ( annotation )
         {
@@ -431,8 +437,10 @@ static int  BMLTPopupViewFontSize                       = 13;   ///< The popup f
 {
     [self closeMarkerPopup];
     [[BMLTAppDelegate getBMLTAppDelegate] clearAllSearchResults:YES];
-    [[BMLTAppDelegate getBMLTAppDelegate] setSearchMapMarkerLoc:[[self myMarker] coordinate]];
-    [[BMLTAppDelegate getBMLTAppDelegate] searchForMeetingsNearMe:inCoordinate withParams:[[BMLTAppDelegate getBMLTAppDelegate] lastSearchParams]];
+    [[BMLTAppDelegate getBMLTAppDelegate] setSearchMapMarkerLoc:inCoordinate];
+    [[BMLTAppDelegate getBMLTAppDelegate] searchForMeetingsNearMe:inCoordinate
+                                                       withParams:[[BMLTAppDelegate getBMLTAppDelegate] lastSearchParams]
+     ];
 }
 
 /*****************************************************************/
@@ -445,9 +453,8 @@ static int  BMLTPopupViewFontSize                       = 13;   ///< The popup f
                  inView:(UIView *)inContext ///< The context for the display.
 {
     [self closeMarkerPopup];
-    UIStoryboard    *st = [self storyboard];
     
-    UIViewController    *newController = [st instantiateViewControllerWithIdentifier:@"list-view-results"];
+    UIViewController    *newController = [[self storyboard] instantiateViewControllerWithIdentifier:@"list-view-results"];
     
     // These lists are always sorted by time.
     [(BMLTDisplayListResultsViewController *)newController setDataArrayFromData:[BMLTAppDelegate sortMeetingListByWeekdayAndTime:inList]];
@@ -470,7 +477,8 @@ static int  BMLTPopupViewFontSize                       = 13;   ///< The popup f
         [listPopover presentPopoverFromRect:selectRect
                                        inView:inContext
                      permittedArrowDirections:UIPopoverArrowDirectionAny
-                                     animated:YES];
+                                     animated:YES
+         ];
         }
     else
         {
@@ -507,7 +515,9 @@ static int  BMLTPopupViewFontSize                       = 13;   ///< The popup f
 - (UIPrintPageRenderer *)getMyPageRenderer
 {
     [self closeMarkerPopup];
-    return [[BMLT_ListPrintPageRenderer alloc] initWithMeetings:[self dataArray] andMapFormatter:[[self view] viewPrintFormatter]];
+    return [[BMLT_ListPrintPageRenderer alloc] initWithMeetings:[self dataArray]
+                                                andMapFormatter:[[self view] viewPrintFormatter]
+            ];
 }
 
 #pragma mark - UIPopoverControllerDelegate Functions -

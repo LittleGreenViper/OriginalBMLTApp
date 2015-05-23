@@ -90,7 +90,7 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
             CGContextSetRGBFillColor ( UIGraphicsGetCurrentContext(), 1, 1, 1, 1 );
             }
         
-        rect.size.width -= (kRegularAnnotationOffsetRight * 2);
+        rect.size.width -= ((kRegularAnnotationOffsetRight * 2) + 4);
         rect.origin.y += kRegularAnnotationOffsetTop;
             
         NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
@@ -102,7 +102,6 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
         [attributes setObject:paragraphStyle forKey:NSParagraphStyleAttributeName];
         [attributes setObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
         
-        rect.size.width -= 4;
         [indexString drawInRect:rect withAttributes:attributes];
         }
 }
@@ -136,7 +135,7 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
     if ( self )
         {
         [self setBackgroundColor:[UIColor clearColor]];
-        [self setDraggable:YES];
+        [self setDraggable:[[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad];
         [self setSelected:YES animated:NO];
         NSArray     *pFiles = @[@"Frame01.png", @"Frame02.png", @"Frame03.png", @"Frame04.png", @"Frame05.png", @"Frame06.png", @"Frame07.png", @"Frame08.png", @"Frame09.png", @"Frame10.png"];
         

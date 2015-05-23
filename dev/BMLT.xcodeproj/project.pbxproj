@@ -997,7 +997,7 @@
 		770C318316FB20A400C2A976 /* TampaFL.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = TampaFL.gpx; path = "../../../spec/GPX Files/TampaFL.gpx"; sourceTree = "<group>"; };
 		7711417015125CD100BCCE00 /* BMLTSimpleSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTSimpleSearchViewController.h; sourceTree = "<group>"; };
 		7711417115125CD100BCCE00 /* BMLTSimpleSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTSimpleSearchViewController.m; sourceTree = "<group>"; };
-		77167D4E1517D205006E50E8 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = ../README; sourceTree = "<group>"; };
+		77167D4E1517D205006E50E8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		77167D4F1517D21F006E50E8 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = ../LICENSE.txt; sourceTree = "<group>"; };
 		771A40EB15408EA000EF34DF /* BMLTBundleResourceLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMLTBundleResourceLabel.h; sourceTree = "<group>"; };
 		771A40EC15408EA000EF34DF /* BMLTBundleResourceLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTBundleResourceLabel.m; sourceTree = "<group>"; };
@@ -1938,7 +1938,7 @@
 		77977D00150E882B00485C8D = {
 			isa = PBXGroup;
 			children = (
-				77167D4E1517D205006E50E8 /* README */,
+				77167D4E1517D205006E50E8 /* README.md */,
 				77977D15150E882B00485C8D /* BMLT */,
 				77D90B951514C6A60059EF41 /* Variants */,
 				77977D0E150E882B00485C8D /* Frameworks */,
