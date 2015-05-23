@@ -39,7 +39,7 @@ static int kSortHeaderHeight = 30;  ///< The height of the "Sort By" header for 
  *****************************************************************/
 - (void)setTheSortControl:(UISegmentedControl *)inControl   ///< The control to use as the sort header.
 {
-    [inControl setSegmentedControlStyle:UISegmentedControlStyleBar];
+//    [inControl setSegmentedControlStyle:UISegmentedControlStyleBar];
     [inControl setFrame:[self bounds]];
     [inControl setSelectedSegmentIndex:[BMLT_Prefs getPreferDistanceSort] ? 0 : 1];
     [inControl setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
@@ -89,7 +89,7 @@ static int kSortHeaderHeight = 30;  ///< The height of the "Sort By" header for 
     
     float   height = kSortHeaderHeight + (List_Meeting_Display_CellHeight * [dataArray count]);
     
-    [self setContentSizeForViewInPopover:CGSizeMake([[self view] bounds].size.width, height)];    // Make sure our popover isn't too big.
+    [self setPreferredContentSize:CGSizeMake([[self view] bounds].size.width, height)];    // Make sure our popover isn't too big.
 }
 
 /*****************************************************************/

@@ -92,7 +92,16 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
         
         rect.size.width -= (kRegularAnnotationOffsetRight * 2);
         rect.origin.y += kRegularAnnotationOffsetTop;
-        [indexString drawInRect:rect withFont:[UIFont boldSystemFontOfSize:16] lineBreakMode:NSLineBreakByClipping alignment:NSTextAlignmentCenter];
+            
+        NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        [paragraphStyle setAlignment:NSTextAlignmentCenter];
+       
+        [attributes setObject:paragraphStyle forKey:NSParagraphStyleAttributeName];
+        [attributes setObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+            
+        [indexString drawInRect:rect withAttributes:attributes];
         }
 }
 

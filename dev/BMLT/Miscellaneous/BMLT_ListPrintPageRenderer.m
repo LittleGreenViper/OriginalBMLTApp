@@ -159,16 +159,16 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
         annotRect.origin.y += kDisplayAnnotationOffsetTop;
         annotRect.size.height -= kDisplayAnnotationOffsetTop;
         
-        [annotationMatch drawInRect:annotRect withFont:currentFont lineBreakMode:NSLineBreakByClipping alignment:NSTextAlignmentCenter];
+        [annotationMatch drawInRect:annotRect withAttributes:[[currentFont fontDescriptor] fontAttributes]];
         CGContextSetRGBFillColor ( UIGraphicsGetCurrentContext(), 0, 0, 0, 1 );
         
         inRect.origin.x += kAnnotationArea + kLeftPadding;
         inRect.size.width -= (kAnnotationArea + kLeftPadding);
         }
     
-    [[inMeeting getBMLTName] drawInRect:inRect withFont:currentFont lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentLeft];
+    [[inMeeting getBMLTName] drawInRect:inRect withAttributes:[[currentFont fontDescriptor] fontAttributes]];
     
-    float   lineHeight = [[inMeeting getBMLTName] sizeWithFont:currentFont].height + kDisplayGap;
+    float   lineHeight = [[inMeeting getBMLTName] sizeWithAttributes:[[currentFont fontDescriptor] fontAttributes]].height + kDisplayGap;
     inRect.origin.y += lineHeight;      // Adjust the next line top...
     inRect.size.height -= lineHeight;   // ...and the size
     
@@ -246,8 +246,8 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
     
     displayString = [displayString stringByAppendingFormat:NSLocalizedString(@"PRINT-TOWN-DATE-FORMAT-STRING", nil), [inMeeting getWeekday], timeString];
     
-    float   lineHeight = [displayString sizeWithFont:currentFont].height;
-    [displayString drawInRect:inRect withFont:currentFont lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentLeft];
+    float   lineHeight = [displayString sizeWithAttributes:[[currentFont fontDescriptor] fontAttributes]].height;
+    [displayString drawInRect:inRect withAttributes:[[currentFont fontDescriptor] fontAttributes]];
     
     return ceil ( lineHeight );
 }
@@ -268,8 +268,8 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
         displayString =  @"";
         }
     
-    float   lineHeight = [displayString sizeWithFont:currentFont].height;
-    [displayString drawInRect:inRect withFont:currentFont lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentLeft];
+    float   lineHeight = [displayString sizeWithAttributes:[[currentFont fontDescriptor] fontAttributes]].height;
+    [displayString drawInRect:inRect withAttributes:[[currentFont fontDescriptor] fontAttributes]];
 
     return ceil ( lineHeight );
 }
@@ -291,8 +291,8 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
         displayString = [displayString stringByAppendingFormat:([displayString length] ? @", %@" : @"%@"), [format getBMLTName]];
         }
     
-    float   lineHeight = [displayString sizeWithFont:currentFont].height;
-    [displayString drawInRect:inRect withFont:currentFont lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentLeft];
+    float   lineHeight = [displayString sizeWithAttributes:[[currentFont fontDescriptor] fontAttributes]].height;
+    [displayString drawInRect:inRect withAttributes:[[currentFont fontDescriptor] fontAttributes]];
     
     return ceil ( lineHeight );
 }
@@ -309,8 +309,8 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
         UIFont      *currentFont = [UIFont italicSystemFontOfSize:kFontSizeOfComments];    // We will use this variable to hold whatever font we're working with.
         NSString    *displayString = (NSString *)[inMeeting getValueFromField:@"comments"];
                 
-        float   lineHeight = [displayString sizeWithFont:currentFont].height;
-        [displayString drawInRect:inRect withFont:currentFont lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentLeft];
+        float   lineHeight = [displayString sizeWithAttributes:[[currentFont fontDescriptor] fontAttributes]].height;
+        [displayString drawInRect:inRect withAttributes:[[currentFont fontDescriptor] fontAttributes]];
         
         return ceil ( lineHeight );
         }

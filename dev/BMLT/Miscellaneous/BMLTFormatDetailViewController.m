@@ -45,7 +45,7 @@
         
         myBounds.size.height = lowestFrame.origin.y + lowestFrame.size.height + 8;
         
-        [self setContentSizeForViewInPopover:myBounds.size];    // Make sure our popover isn't too big.
+        [self setPreferredContentSize:myBounds.size];    // Make sure our popover isn't too big.
         }
     
     return self;

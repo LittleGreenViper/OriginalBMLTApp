@@ -77,9 +77,9 @@ static float    kHeaderHeight   = 100.0;
     inRect.origin.x += kLeftPadding;
     inRect.size.width -= kLeftPadding + kRightPadding;
     
-    [[myMeeting getBMLTName] drawInRect:inRect withFont:currentFont lineBreakMode:NSLineBreakByCharWrapping alignment:NSTextAlignmentLeft];
+    [[myMeeting getBMLTName] drawInRect:inRect withAttributes:[[currentFont fontDescriptor] fontAttributes]];
     
-    float   lineHeight = [[myMeeting getBMLTName] sizeWithFont:currentFont].height + kDisplayGap;
+    float   lineHeight = [[myMeeting getBMLTName] sizeWithAttributes:[[currentFont fontDescriptor] fontAttributes]].height + kDisplayGap;
     inRect.origin.y += lineHeight;      // Adjust the next line top...
     inRect.size.height -= lineHeight;   // ...and the size
     
