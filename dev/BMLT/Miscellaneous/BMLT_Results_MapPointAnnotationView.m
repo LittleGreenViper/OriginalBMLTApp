@@ -98,9 +98,11 @@ int kRegularAnnotationOffsetRight       = 5;  /**< This is how many pixels to sh
         NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
         [paragraphStyle setAlignment:NSTextAlignmentCenter];
        
+        [attributes setObject:[UIFont boldSystemFontOfSize:16] forKey:NSFontAttributeName];
         [attributes setObject:paragraphStyle forKey:NSParagraphStyleAttributeName];
         [attributes setObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
-            
+        
+        rect.size.width -= 4;
         [indexString drawInRect:rect withAttributes:attributes];
         }
 }
