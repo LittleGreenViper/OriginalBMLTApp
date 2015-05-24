@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller - TAB-BAR-1-->
+        <!--TAB-BAR-1-->
         <scene sceneID="4wJ-FN-bgN">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Jap-Bq-Kl8" sceneMemberID="viewController">
@@ -24,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-131" y="639"/>
         </scene>
-        <!--Simple Search View Controller - SEARCH-SPEC-SIMPLE-TITLE-->
+        <!--SEARCH-SPEC-SIMPLE-TITLE-->
         <scene sceneID="K5P-ON-gUp">
             <objects>
                 <viewController storyboardIdentifier="simple-search" id="1ej-mT-cW2" customClass="BMLTSimpleSearchViewController" sceneMemberID="viewController">
@@ -132,7 +133,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="left" text="SEARCH-SPEC-DISABLED-TEXT" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="10" id="iqL-3E-3rT">
-                                <rect key="frame" x="13" y="219" width="295" height="148"/>
+                                <rect key="frame" x="13" y="219.00000064437452" width="295" height="148"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -164,7 +165,7 @@
             </objects>
             <point key="canvasLocation" x="285" y="64"/>
         </scene>
-        <!--Navigation Controller - TAB-BAR-0-->
+        <!--TAB-BAR-0-->
         <scene sceneID="exh-q4-Hr0">
             <objects>
                 <navigationController definesPresentationContext="YES" modalTransitionStyle="flipHorizontal" id="H43-2F-faT" sceneMemberID="viewController">
@@ -185,7 +186,7 @@
             </objects>
             <point key="canvasLocation" x="-131" y="64"/>
         </scene>
-        <!--Navigation Controller - TAB-BAR-2-->
+        <!--TAB-BAR-2-->
         <scene sceneID="NOj-fv-fOv">
             <objects>
                 <navigationController definesPresentationContext="YES" id="1KN-7l-hqT" sceneMemberID="viewController">
@@ -205,7 +206,7 @@
             </objects>
             <point key="canvasLocation" x="-131" y="1287"/>
         </scene>
-        <!--Map Results View Controller - Map Search-->
+        <!--Map Search-->
         <scene sceneID="13">
             <objects>
                 <viewController title="Map Search" id="3" customClass="BMLTMapResultsViewController" sceneMemberID="viewController">
@@ -234,7 +235,7 @@
             </objects>
             <point key="canvasLocation" x="285" y="1287"/>
         </scene>
-        <!--Navigation Controller - TAB-BAR-3-->
+        <!--TAB-BAR-3-->
         <scene sceneID="T8R-Nn-gKQ">
             <objects>
                 <navigationController definesPresentationContext="YES" id="GM8-GN-pfE" sceneMemberID="viewController">
@@ -256,7 +257,7 @@
             </objects>
             <point key="canvasLocation" x="-131" y="1887"/>
         </scene>
-        <!--About View Controller - ABOUT-TITLE-->
+        <!--ABOUT-TITLE-->
         <scene sceneID="Utw-MF-7y3">
             <objects>
                 <viewController id="fFZ-gF-vrb" customClass="BMLTAboutViewController" sceneMemberID="viewController">
@@ -327,7 +328,7 @@
             </objects>
             <point key="canvasLocation" x="695" y="1887"/>
         </scene>
-        <!--Settings View Controller - TAB-BAR-3-->
+        <!--TAB-BAR-3-->
         <scene sceneID="Fn8-Gm-HYe">
             <objects>
                 <viewController id="Nxo-gu-wB5" customClass="BMLTSettingsViewController" sceneMemberID="viewController">
@@ -528,7 +529,7 @@
             </objects>
             <point key="canvasLocation" x="285" y="1887"/>
         </scene>
-        <!--Advanced Search View Controller - SEARCH-SPEC-ADVANCED-TITLE-->
+        <!--SEARCH-SPEC-ADVANCED-TITLE-->
         <scene sceneID="jkN-2c-hcG">
             <objects>
                 <viewController storyboardIdentifier="advanced-search" id="eMe-9F-zBx" customClass="BMLTAdvancedSearchViewController" sceneMemberID="viewController">
@@ -938,7 +939,7 @@
             </objects>
             <point key="canvasLocation" x="728" y="64"/>
         </scene>
-        <!--Tab Bar Controller - BMLT-->
+        <!--BMLT-->
         <scene sceneID="15">
             <objects>
                 <tabBarController title="BMLT" modalTransitionStyle="flipHorizontal" id="4" sceneMemberID="viewController">
@@ -964,7 +965,7 @@
             </objects>
             <point key="canvasLocation" x="-675" y="64"/>
         </scene>
-        <!--Display List Results View Controller - TAB-BAR-1-->
+        <!--TAB-BAR-1-->
         <scene sceneID="sy2-IB-cUl">
             <objects>
                 <viewController storyboardIdentifier="list-view-results" id="toC-1w-pMV" customClass="BMLTDisplayListResultsViewController" sceneMemberID="viewController">
@@ -1001,17 +1002,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="z8D-a3-WKj" userLabel="Formats">
-                                <rect key="frame" x="0.0" y="25" width="320" height="32"/>
+                                <rect key="frame" x="0.0" y="29" width="320" height="32"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MEETING-NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Upj-Yw-RfN">
-                                <rect key="frame" x="7" y="-9" width="320" height="39"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" text="MEETING-DETAILS-FREQUENCY-FORMAT" textAlignment="center" id="KYi-wM-itk" userLabel="Frequency">
                                 <rect key="frame" x="0.0" y="52" width="320" height="31"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -1058,6 +1052,13 @@
                                     <outlet property="delegate" destination="njF-E5-VED" id="Q2Y-2O-hg3"/>
                                 </connections>
                             </mapView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MEETING-NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Upj-Yw-RfN">
+                                <rect key="frame" x="0.0" y="-3" width="320" height="39"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-BoldOblique" family="Helvetica" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
@@ -1076,7 +1077,7 @@
             </objects>
             <point key="canvasLocation" x="728" y="972"/>
         </scene>
-        <!--Animation Screen View Controller - Animation View Controller-->
+        <!--Animation View Controller-->
         <scene sceneID="F4a-A6-TVU">
             <objects>
                 <viewController storyboardIdentifier="animation-screen" title="Animation View Controller" id="bJU-BV-QkD" customClass="BMLTAnimationScreenViewController" sceneMemberID="viewController">
@@ -1126,10 +1127,10 @@
         <image name="search.png" width="26" height="26"/>
         <image name="settings.png" width="26" height="26"/>
     </resources>
-    <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="0.00038747176139999998" green="1" blue="0.1734762235" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -9,7 +9,7 @@
 	<key>BMLTLeadText</key>
 	<string>Find NA Meetings In Australia</string>
 	<key>BMLTRootServerURI</key>
-	<string>http://www.na.org.au/bmlt</string>
+	<string>http://na.org.au/main_server/</string>
 	<key>BMLTServerHomeLat</key>
 	<string>-25.349146</string>
 	<key>BMLTServerHomeLong</key>
