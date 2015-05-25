@@ -129,8 +129,8 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
  *****************************************************************/
 + (BOOL)locationServicesAvailable
 {
-    return [CLLocationManager locationServicesEnabled] != NO
-            && [CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied;
+    return ([CLLocationManager locationServicesEnabled] != NO)
+            && ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusDenied);
 }
 
 /*****************************************************************/
@@ -480,7 +480,7 @@ enum    ///< These enums reflect values set by the storyboard, and govern the tr
         [locationManager setDistanceFilter:kCLDistanceFilterNone];
         [locationManager setDelegate:self];
         
-        if ( [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] )
+        if ( [locationManager respondsToSelector:@selector ( requestWhenInUseAuthorization )] )
             {
             [locationManager requestWhenInUseAuthorization];
             }
@@ -577,7 +577,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         NSLog(@"BMLTAppDelegate::setDefaultMapRegion We will update our location.");
 #endif
         
-        if ( [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] )
+        if ( [locationManager respondsToSelector:@selector ( requestWhenInUseAuthorization )] )
             {
             [locationManager requestWhenInUseAuthorization];
             }
@@ -640,7 +640,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
             NSLog(@"BMLTAppDelegate::setDefaultMapRegion We will update our location.");
 #endif
             
-            if ( [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] )
+            if ( [locationManager respondsToSelector:@selector ( requestWhenInUseAuthorization )] )
                 {
                 [locationManager requestWhenInUseAuthorization];
                 }
@@ -747,7 +747,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
             NSLog(@"BMLTAppDelegate::searchForMeetingsNearMe withParams Starting a new location-based search after a lookup.");
 #endif
             
-            if ( [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] )
+            if ( [locationManager respondsToSelector:@selector ( requestWhenInUseAuthorization )] )
                 {
                 [locationManager requestWhenInUseAuthorization];
                 }
@@ -1027,7 +1027,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     // If we need to get a bit fuzzier, we will.
     [locationManager setDesiredAccuracy:accuracy];
     
-    if ( [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] )
+    if ( [locationManager respondsToSelector:@selector ( requestWhenInUseAuthorization )] )
         {
         [locationManager requestWhenInUseAuthorization];
         }
@@ -1188,7 +1188,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
             {
             NSLog(@"BMLTAppDelegate::didUpdateToLocation Location Error: (%@)", newLocation);
             
-            if ( [locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)] )
+            if ( [locationManager respondsToSelector:@selector ( requestWhenInUseAuthorization )] )
                 {
                 [locationManager requestWhenInUseAuthorization];
                 }
