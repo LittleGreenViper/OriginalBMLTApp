@@ -83,28 +83,28 @@ static const    NSInteger   sActionButtonIndex_PrintScreen  = 1;    ///< This is
     
     [self setMeetingFrequencyText];
     
-    CGRect  description_frame = [frequencyTextView frame];
     CGRect  address_frame = [addressButton frame];
-    CGPoint top_of_map = CGPointMake ( description_frame.origin.x, description_frame.origin.y + description_frame.size.height);
+    CGRect  map_frame = CGRectZero;
+    map_frame.size.width = [self.view bounds].size.width;
     
     if ( [_myMeeting getBMLTDescription] )
         {
         [commentsTextView setHidden:NO];
         [self setMeetingCommentsText];
         CGRect  comments_frame = [commentsTextView frame];
-        top_of_map = CGPointMake ( comments_frame.origin.x, comments_frame.origin.y + comments_frame.size.height);
+        map_frame.origin.y = comments_frame.origin.y + comments_frame.size.height;
         }
     else
         {
         [commentsTextView setHidden:YES];
+        CGRect  frequency_frame = [frequencyTextView frame];
+        map_frame.origin.y = frequency_frame.origin.y + frequency_frame.size.height;
         }
 
-    CGRect  map_frame = [[self meetingMapView] frame];
-    map_frame.origin.y = top_of_map.y + description_frame.size.height;
     map_frame.size.height = address_frame.origin.y - map_frame.origin.y;
     [[self meetingMapView] setFrame:map_frame];
     
-    if ( [self directionsButton] )  // However, some variants may have an additional button on the bottom.
+    if ( [self directionsButton] )  // Some variants may have an additional button for directions.
         {
         [[self directionsButton] setTitle:NSLocalizedString(@"DIRECTIONS-BUTTON-TITLE",nil) forState:UIControlStateNormal];
         }

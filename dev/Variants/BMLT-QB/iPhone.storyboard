@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E17e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller - TAB-BAR-1-->
+        <!--TAB-BAR-1-->
         <scene sceneID="4wJ-FN-bgN">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Jap-Bq-Kl8" sceneMemberID="viewController">
@@ -25,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-131" y="639"/>
         </scene>
-        <!--Simple Search View Controller - SEARCH-SPEC-SIMPLE-TITLE-->
+        <!--SEARCH-SPEC-SIMPLE-TITLE-->
         <scene sceneID="K5P-ON-gUp">
             <objects>
                 <viewController storyboardIdentifier="simple-search" id="1ej-mT-cW2" customClass="BMLTSimpleSearchViewController" sceneMemberID="viewController">
@@ -158,7 +157,7 @@
             </objects>
             <point key="canvasLocation" x="285" y="64"/>
         </scene>
-        <!--Navigation Controller - TAB-BAR-0-->
+        <!--TAB-BAR-0-->
         <scene sceneID="exh-q4-Hr0">
             <objects>
                 <navigationController definesPresentationContext="YES" modalTransitionStyle="flipHorizontal" id="H43-2F-faT" sceneMemberID="viewController">
@@ -179,7 +178,7 @@
             </objects>
             <point key="canvasLocation" x="-131" y="64"/>
         </scene>
-        <!--Navigation Controller - TAB-BAR-2-->
+        <!--TAB-BAR-2-->
         <scene sceneID="NOj-fv-fOv">
             <objects>
                 <navigationController definesPresentationContext="YES" id="1KN-7l-hqT" sceneMemberID="viewController">
@@ -199,7 +198,7 @@
             </objects>
             <point key="canvasLocation" x="-131" y="1287"/>
         </scene>
-        <!--Map Results View Controller - Map Search-->
+        <!--Map Search-->
         <scene sceneID="13">
             <objects>
                 <viewController title="Map Search" id="3" customClass="BMLTMapResultsViewController" sceneMemberID="viewController">
@@ -228,7 +227,7 @@
             </objects>
             <point key="canvasLocation" x="285" y="1287"/>
         </scene>
-        <!--Navigation Controller - TAB-BAR-3-->
+        <!--TAB-BAR-3-->
         <scene sceneID="T8R-Nn-gKQ">
             <objects>
                 <navigationController definesPresentationContext="YES" id="GM8-GN-pfE" sceneMemberID="viewController">
@@ -250,7 +249,7 @@
             </objects>
             <point key="canvasLocation" x="-131" y="1887"/>
         </scene>
-        <!--About View Controller - ABOUT-TITLE-->
+        <!--ABOUT-TITLE-->
         <scene sceneID="Utw-MF-7y3">
             <objects>
                 <viewController id="fFZ-gF-vrb" customClass="BMLTAboutViewController" sceneMemberID="viewController">
@@ -321,7 +320,7 @@
             </objects>
             <point key="canvasLocation" x="695" y="1887"/>
         </scene>
-        <!--Settings View Controller - TAB-BAR-3-->
+        <!--TAB-BAR-3-->
         <scene sceneID="Fn8-Gm-HYe">
             <objects>
                 <viewController id="Nxo-gu-wB5" customClass="BMLTSettingsViewController" sceneMemberID="viewController">
@@ -507,7 +506,7 @@
             </objects>
             <point key="canvasLocation" x="285" y="1887"/>
         </scene>
-        <!--Advanced Search View Controller - SEARCH-SPEC-ADVANCED-TITLE-->
+        <!--SEARCH-SPEC-ADVANCED-TITLE-->
         <scene sceneID="jkN-2c-hcG">
             <objects>
                 <viewController storyboardIdentifier="advanced-search" id="eMe-9F-zBx" customClass="BMLTAdvancedSearchViewController" sceneMemberID="viewController">
@@ -912,7 +911,7 @@
             </objects>
             <point key="canvasLocation" x="728" y="64"/>
         </scene>
-        <!--Tab Bar Controller - BMLT-->
+        <!--BMLT-->
         <scene sceneID="15">
             <objects>
                 <tabBarController title="BMLT" modalTransitionStyle="flipHorizontal" id="4" sceneMemberID="viewController">
@@ -938,7 +937,7 @@
             </objects>
             <point key="canvasLocation" x="-675" y="64"/>
         </scene>
-        <!--Display List Results View Controller - TAB-BAR-1-->
+        <!--TAB-BAR-1-->
         <scene sceneID="sy2-IB-cUl">
             <objects>
                 <viewController storyboardIdentifier="list-view-results" id="toC-1w-pMV" customClass="BMLTDisplayListResultsViewController" sceneMemberID="viewController">
@@ -975,7 +974,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" id="z8D-a3-WKj" userLabel="Formats">
                                 <rect key="frame" x="0.0" y="25" width="320" height="32"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MEETING-NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Upj-Yw-RfN">
@@ -1061,7 +1060,7 @@
             </objects>
             <point key="canvasLocation" x="728" y="972"/>
         </scene>
-        <!--Animation Screen View Controller - Animation View Controller-->
+        <!--Animation View Controller-->
         <scene sceneID="F4a-A6-TVU">
             <objects>
                 <viewController storyboardIdentifier="animation-screen" title="Animation View Controller" id="bJU-BV-QkD" customClass="BMLTAnimationScreenViewController" sceneMemberID="viewController">

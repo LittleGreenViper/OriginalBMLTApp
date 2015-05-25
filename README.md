@@ -107,6 +107,7 @@ CHANGELIST
 * Fixed a couple of issues with the placement of the text items on the individual meeting display page.
 * Changed the Root URI of the NA Australia variant.
 * Raised minimum OS Support Level to 7.0.
+* Fixed the display of the meeting details so that the map is displayed as large as possible.
 
 *Version 2.7.3*
 
