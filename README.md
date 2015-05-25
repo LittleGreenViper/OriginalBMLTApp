@@ -100,7 +100,7 @@ CHANGELIST
 
 *Version 2.7.4*
 
-* May 24, 2015
+* May 26, 2015
 * Now disable dragging the black marker in iPhone. Even the 6 Plus doesn't really make enough room to make the feature useful, and there's a minor bug that would need to be fixed. Not worth it.
 * Fixed some deprecated calls that prevented an Xcode 6 compile.
 * Made this document a markdown (.md) file, for better display on BitBucket.
