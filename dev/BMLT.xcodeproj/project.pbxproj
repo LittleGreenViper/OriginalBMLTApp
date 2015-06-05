@@ -494,6 +494,9 @@
 		774B100A168B6C7400E4BBF5 /* BMLTAdvancedSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771D0C3E150E892A005A707A /* BMLTAdvancedSearchViewController.m */; };
 		774EB4D1168F3B6B006C663F /* BMLT_AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 774EB4CF168F3B6B006C663F /* BMLT_AnimationView.m */; };
 		774EB4D2168F3B6B006C663F /* BMLT_AnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 774EB4CF168F3B6B006C663F /* BMLT_AnimationView.m */; };
+		7753DFE51B21B29D00E21EBE /* NA-HI-SplashBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 7753DFE31B21B29D00E21EBE /* NA-HI-SplashBack.png */; };
+		7753DFE61B21B29D00E21EBE /* NA-HI-SplashFront.png in Resources */ = {isa = PBXBuildFile; fileRef = 7753DFE41B21B29D00E21EBE /* NA-HI-SplashFront.png */; };
+		7753DFE81B21B2CC00E21EBE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7753DFE71B21B2CC00E21EBE /* Launch Screen.xib */; };
 		77596760177BD34600F77C06 /* BMLTFormatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */; };
 		77596761177BD34600F77C06 /* BMLTFormatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */; };
 		77596762177BD34600F77C06 /* BMLTFormatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */; };
@@ -1198,13 +1201,12 @@
 		7747835A194DFD0E0045AA2D /* BMLTFormatDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMLTFormatDetailViewController.xib; sourceTree = "<group>"; };
 		7747835B194DFD0E0045AA2D /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		7747835C194DFD0E0045AA2D /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
-		7747DCE21B20606E00327975 /* NA HI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NA HI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7747DCE21B20606E00327975 /* NA Hawaii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NA Hawaii.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7747DCE41B20608A00327975 /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = info.plist; path = "BMLT-HI/info.plist"; sourceTree = "<group>"; };
 		7747DCE71B2060D200327975 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMLTVariantDefs.m; path = "BMLT-HI/BMLTVariantDefs.m"; sourceTree = "<group>"; };
 		7747DCED1B20612C00327975 /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Anim-Back.png"; path = "BMLT-HI/images/Anim-Back.png"; sourceTree = "<group>"; };
 		7747DCEE1B20612C00327975 /* Anim-Transparency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Anim-Transparency.png"; path = "BMLT-HI/images/Anim-Transparency.png"; sourceTree = "<group>"; };
 		7747DD151B20618000327975 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = images.xcassets; path = "BMLT-HI/images.xcassets"; sourceTree = "<group>"; };
-		7747DD171B2064D700327975 /* Oahu.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = Oahu.gpx; path = "../../spec/GPX Files/Oahu.gpx"; sourceTree = "<group>"; };
 		77497DF119720F4E009A0CF9 /* Show Me NA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Show Me NA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77497DF519721066009A0CF9 /* BMLTVariantDefs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		77497DF719721066009A0CF9 /* Anim-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anim-Back.png"; sourceTree = "<group>"; };
@@ -1230,6 +1232,9 @@
 		77497E0B19721066009A0CF9 /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		77497E241972123E009A0CF9 /* StLouisMO.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = StLouisMO.gpx; path = "../../../spec/GPX Files/StLouisMO.gpx"; sourceTree = "<group>"; };
 		774EB4CF168F3B6B006C663F /* BMLT_AnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMLT_AnimationView.m; sourceTree = "<group>"; };
+		7753DFE31B21B29D00E21EBE /* NA-HI-SplashBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NA-HI-SplashBack.png"; path = "BMLT-HI/images/NA-HI-SplashBack.png"; sourceTree = "<group>"; };
+		7753DFE41B21B29D00E21EBE /* NA-HI-SplashFront.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "NA-HI-SplashFront.png"; path = "BMLT-HI/images/NA-HI-SplashFront.png"; sourceTree = "<group>"; };
+		7753DFE71B21B2CC00E21EBE /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "BMLT-HI/Launch Screen.xib"; sourceTree = "<group>"; };
 		7759675F177BD34600F77C06 /* BMLTFormatDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMLTFormatDetailViewController.xib; sourceTree = "<group>"; };
 		775FDDE118DB128700B321AC /* BMLTVariantDefs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BMLTVariantDefs.m; sourceTree = "<group>"; };
 		775FDDE318DB128700B321AC /* AboutLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutLogo.png; sourceTree = "<group>"; };
@@ -1857,8 +1862,8 @@
 				7747DCEC1B20611000327975 /* images */,
 				7747DCE71B2060D200327975 /* BMLTVariantDefs.m */,
 				7747DCE41B20608A00327975 /* info.plist */,
-				7747DD171B2064D700327975 /* Oahu.gpx */,
 				7747DD151B20618000327975 /* images.xcassets */,
+				7753DFE71B21B2CC00E21EBE /* Launch Screen.xib */,
 			);
 			name = "BMLT-HI";
 			sourceTree = "<group>";
@@ -1866,6 +1871,8 @@
 		7747DCEC1B20611000327975 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7753DFE31B21B29D00E21EBE /* NA-HI-SplashBack.png */,
+				7753DFE41B21B29D00E21EBE /* NA-HI-SplashFront.png */,
 				7747DCED1B20612C00327975 /* Anim-Back.png */,
 				7747DCEE1B20612C00327975 /* Anim-Transparency.png */,
 			);
@@ -2098,7 +2105,7 @@
 				772E741F1946747A00031BCE /* NA Ireland.app */,
 				77497DF119720F4E009A0CF9 /* Show Me NA.app */,
 				77A93A3719969ACA0020A785 /* OKLATX.app */,
-				7747DCE21B20606E00327975 /* NA HI.app */,
+				7747DCE21B20606E00327975 /* NA Hawaii.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2421,9 +2428,9 @@
 			productReference = 772E741F1946747A00031BCE /* NA Ireland.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7747DC6D1B20606E00327975 /* NA HI */ = {
+		7747DC6D1B20606E00327975 /* NA Hawaii */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7747DCDE1B20606E00327975 /* Build configuration list for PBXNativeTarget "NA HI" */;
+			buildConfigurationList = 7747DCDE1B20606E00327975 /* Build configuration list for PBXNativeTarget "NA Hawaii" */;
 			buildPhases = (
 				7747DC6E1B20606E00327975 /* Sources */,
 				7747DC991B20606E00327975 /* Frameworks */,
@@ -2433,9 +2440,9 @@
 			);
 			dependencies = (
 			);
-			name = "NA HI";
+			name = "NA Hawaii";
 			productName = BMLT;
-			productReference = 7747DCE21B20606E00327975 /* NA HI.app */;
+			productReference = 7747DCE21B20606E00327975 /* NA Hawaii.app */;
 			productType = "com.apple.product-type.application";
 		};
 		77497D7C19720F4E009A0CF9 /* Show Me NA */ = {
@@ -2617,7 +2624,7 @@
 				772E73AA1946747A00031BCE /* NA Ireland */,
 				77497D7C19720F4E009A0CF9 /* Show Me NA */,
 				77A939C219969ACA0020A785 /* OKLATX */,
-				7747DC6D1B20606E00327975 /* NA HI */,
+				7747DC6D1B20606E00327975 /* NA Hawaii */,
 			);
 		};
 /* End PBXProject section */
@@ -2753,10 +2760,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7753DFE61B21B29D00E21EBE /* NA-HI-SplashFront.png in Resources */,
 				7747DCA41B20606E00327975 /* FormatCircleBlue@2x.png in Resources */,
 				7747DCA51B20606E00327975 /* FormatCircleGreen@2x.png in Resources */,
 				7747DCA61B20606E00327975 /* FormatCircleRed@2x.png in Resources */,
 				7747DCA71B20606E00327975 /* Frame08.png in Resources */,
+				7753DFE81B21B2CC00E21EBE /* Launch Screen.xib in Resources */,
 				7747DCA81B20606E00327975 /* Frame09.png in Resources */,
 				7747DCA91B20606E00327975 /* FormatCircleWC@2x.png in Resources */,
 				7747DCAA1B20606E00327975 /* FormatCircleYellow@2x.png in Resources */,
@@ -2784,6 +2793,7 @@
 				7747DCC21B20606E00327975 /* Frame01.png in Resources */,
 				7747DCC31B20606E00327975 /* MapMarkerBlue@2x.png in Resources */,
 				7747DCC51B20606E00327975 /* MapMarkerRed@2x.png in Resources */,
+				7753DFE51B21B29D00E21EBE /* NA-HI-SplashBack.png in Resources */,
 				7747DD161B20618000327975 /* images.xcassets in Resources */,
 				7747DCC71B20606E00327975 /* Frame07.png in Resources */,
 				7747DCCA1B20606E00327975 /* Frame06.png in Resources */,
@@ -4093,7 +4103,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/BMLT\"",
 				);
-				PRODUCT_NAME = "NA HI";
+				PRODUCT_NAME = "NA Hawaii";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -4124,7 +4134,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/BMLT\"",
 				);
-				PRODUCT_NAME = "NA HI";
+				PRODUCT_NAME = "NA Hawaii";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -4155,7 +4165,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/BMLT\"",
 				);
-				PRODUCT_NAME = "NA HI";
+				PRODUCT_NAME = "NA Hawaii";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -4810,7 +4820,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7747DCDE1B20606E00327975 /* Build configuration list for PBXNativeTarget "NA HI" */ = {
+		7747DCDE1B20606E00327975 /* Build configuration list for PBXNativeTarget "NA Hawaii" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7747DCDF1B20606E00327975 /* Debug */,
