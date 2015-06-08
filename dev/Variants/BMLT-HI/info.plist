@@ -5,7 +5,7 @@
 	<key>BMLTDistanceUnits</key>
 	<string>MI</string>
 	<key>BMLTInitialProjectionSizeInKM</key>
-	<integer>300</integer>
+	<integer>25</integer>
 	<key>BMLTLeadText</key>
 	<string>Find NA Meetings In Hawaii</string>
 	<key>BMLTRootServerURI</key>
@@ -39,7 +39,7 @@
 	<key>CFBundleSignature</key>
 	<string>LGVP</string>
 	<key>CFBundleVersion</key>
-	<string>2001</string>
+	<string>3000</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
