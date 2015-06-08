@@ -98,6 +98,11 @@ The new app will read the prefs from the original, but this is really meant to b
 CHANGELIST
 ----------
 
+*Version 2.7.5*
+
+* June 8, 2015
+* Added the NA Hawaii version.
+
 *Version 2.7.4*
 
 * May 26, 2015
