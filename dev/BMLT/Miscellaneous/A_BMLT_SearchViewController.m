@@ -106,7 +106,7 @@
         
         if ( ![self _toggleButton] )
             {
-            [self set_toggleButton:[[UIBarButtonItem alloc] initWithTitle:label style:UIBarButtonItemStyleBordered target:self action:@selector(toggleMapView:)]];
+            [self set_toggleButton:[[UIBarButtonItem alloc] initWithTitle:label style:UIBarButtonItemStylePlain target:self action:@selector(toggleMapView:)]];
         
             UIBarButtonItem *flexibleSpace1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
             

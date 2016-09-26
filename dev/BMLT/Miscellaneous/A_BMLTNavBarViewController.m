@@ -44,7 +44,7 @@
  *****************************************************************/
 - (void)addClearSearchButton
 {
-    UIBarButtonItem     *clearButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"CLEAR-SEARCH-BUTTON", nil) style:UIBarButtonItemStyleBordered target:[BMLTAppDelegate getBMLTAppDelegate] action:@selector(clearAllSearchResultsYes)];
+    UIBarButtonItem     *clearButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"CLEAR-SEARCH-BUTTON", nil) style:UIBarButtonItemStylePlain target:[BMLTAppDelegate getBMLTAppDelegate] action:@selector(clearAllSearchResultsYes)];
     
     UINavigationItem    *navItem = [self navigationItem];
     

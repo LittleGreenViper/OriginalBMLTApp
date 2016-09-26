@@ -141,7 +141,7 @@ static const    NSInteger   sActionButtonIndex_PrintScreen  = 1;    ///< This is
     
         if ( ![self _toggleButton] )
             {
-            [self set_toggleButton:[[UIBarButtonItem alloc] initWithTitle:label style:UIBarButtonItemStyleBordered target:self action:@selector(toggleMapView:)]];
+            [self set_toggleButton:[[UIBarButtonItem alloc] initWithTitle:label style:UIBarButtonItemStylePlain target:self action:@selector(toggleMapView:)]];
             }
         else
             {
@@ -215,7 +215,7 @@ static const    NSInteger   sActionButtonIndex_PrintScreen  = 1;    ///< This is
 {
     NSDate              *startTime = [_myMeeting getStartTime];
     NSString            *time = [NSDateFormatter localizedStringFromDate:startTime dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
-    NSDateComponents    *dateComp = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:startTime];
+    NSDateComponents    *dateComp = [[[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian] components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:startTime];
     
     if ( [dateComp hour] >= 23 && [dateComp minute] > 45 )
         {

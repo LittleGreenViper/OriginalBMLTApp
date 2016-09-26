@@ -217,9 +217,9 @@ forViewPrintFormatter:(UIViewPrintFormatter *)formatter
         NSDate      *timeDate = [myMeeting getStartTime];
         NSString    *timeString = [NSDateFormatter localizedStringFromDate:timeDate dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
         NSCalendar  *gregorian = [[NSCalendar alloc]
-                                 initWithCalendarIdentifier:NSGregorianCalendar];
+                                 initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
         
-        NSDateComponents    *dateComp = [gregorian components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:timeDate];
+        NSDateComponents    *dateComp = [gregorian components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:timeDate];
         
         NSTimeInterval  duration = [myMeeting getDuration];
 
@@ -241,7 +241,7 @@ forViewPrintFormatter:(UIViewPrintFormatter *)formatter
             
             timeDate = [timeDate dateByAddingTimeInterval:duration];
             NSString    *timeString2 = [NSDateFormatter localizedStringFromDate:timeDate dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
-            dateComp = [gregorian components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:timeDate];
+            dateComp = [gregorian components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:timeDate];
             
             if ( [dateComp hour] >= 23 && [dateComp minute] > 45 )
                 {

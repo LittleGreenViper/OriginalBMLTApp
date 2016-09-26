@@ -550,7 +550,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
         if ( [[tabController tabBar] respondsToSelector:@selector(setBarTintColor:)] )
             {
             [[tabController tabBar] setBarTintColor:myBGColor];
-            [[tabController tabBar] setSelectedImageTintColor:[BMLTVariantDefs barItemTintColor]];
+            [[tabController tabBar] setTintColor:[BMLTVariantDefs barItemTintColor]];
             }
         else
             {
@@ -798,19 +798,19 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 #endif
     NSDate              *startDate = [NSDate dateWithTimeIntervalSinceNow:-s90Minutes];
     
-    NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:startDate];
+    NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents    *weekdayComponents = [gregorian components:(NSCalendarUnitWeekday) fromDate:startDate];
     NSInteger           wd = [weekdayComponents weekday];
     
-    weekdayComponents = [gregorian components:(NSHourCalendarUnit) fromDate:startDate];
+    weekdayComponents = [gregorian components:(NSCalendarUnitHour) fromDate:startDate];
     NSInteger           hr1 = [weekdayComponents hour];
-    weekdayComponents = [gregorian components:(NSMinuteCalendarUnit) fromDate:startDate];
+    weekdayComponents = [gregorian components:(NSCalendarUnitMinute) fromDate:startDate];
     NSInteger           mn1 = [weekdayComponents minute];
     
     startDate = [NSDate dateWithTimeIntervalSinceNow:s90Minutes];
-    weekdayComponents = [gregorian components:(NSHourCalendarUnit) fromDate:startDate];
+    weekdayComponents = [gregorian components:(NSCalendarUnitHour) fromDate:startDate];
     NSInteger           hr2 = [weekdayComponents hour];
-    weekdayComponents = [gregorian components:(NSMinuteCalendarUnit) fromDate:startDate];
+    weekdayComponents = [gregorian components:(NSCalendarUnitMinute) fromDate:startDate];
     NSInteger           mn2 = [weekdayComponents minute];
     
     [searchParams setObject:[NSString stringWithFormat:@"%ld",(long)wd] forKey:@"weekdays"];
@@ -834,12 +834,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     NSLog(@"BMLTAppDelegate::searchForMeetingsNearMeLaterToday called.");
 #endif
     NSDate              *date = [BMLTAppDelegate getLocalDateWithGracePeriod:YES];
-    NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:date];
+    NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents    *weekdayComponents = [gregorian components:(NSCalendarUnitWeekday) fromDate:date];
     NSInteger           wd = [weekdayComponents weekday];
-    weekdayComponents = [gregorian components:(NSHourCalendarUnit) fromDate:date];
+    weekdayComponents = [gregorian components:(NSCalendarUnitHour) fromDate:date];
     NSInteger           hr = [weekdayComponents hour];
-    weekdayComponents = [gregorian components:(NSMinuteCalendarUnit) fromDate:date];
+    weekdayComponents = [gregorian components:(NSCalendarUnitMinute) fromDate:date];
     NSInteger           mn = [weekdayComponents minute];
     
     [searchParams setObject:[NSString stringWithFormat:@"%ld",(long)wd] forKey:@"weekdays"];
@@ -858,8 +858,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 #ifdef DEBUG
     NSLog(@"BMLTAppDelegate::searchForMeetingsNearMeTomorrow called.");
 #endif
-    NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:[BMLTAppDelegate getLocalDateWithGracePeriod:NO]];
+    NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents    *weekdayComponents = [gregorian components:(NSCalendarUnitWeekday) fromDate:[BMLTAppDelegate getLocalDateWithGracePeriod:NO]];
     NSInteger           wd = [weekdayComponents weekday] + 1;
     
     if ( wd > 7 )

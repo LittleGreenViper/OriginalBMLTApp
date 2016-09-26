@@ -171,8 +171,8 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
     
     NSMutableArray      *pTags = [[NSMutableArray alloc] init];
     NSDate              *date = [BMLTAppDelegate getLocalDateWithGracePeriod:YES];
-    NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:date];
+    NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents    *weekdayComponents = [gregorian components:(NSCalendarUnitWeekday) fromDate:date];
     int                 wd = (int)[weekdayComponents weekday];
     int                 position_1 = (int)[BMLTVariantDefs weekStartDay];
 
@@ -331,8 +331,8 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
             [[self disabledWeekdaysCheckBoxes] setHidden:NO];
             NSMutableArray      *pTags = [[NSMutableArray alloc] init];
             NSDate              *date = [BMLTAppDelegate getLocalDateWithGracePeriod:YES];
-            NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-            NSDateComponents    *weekdayComponents = [gregorian components:(NSWeekdayCalendarUnit) fromDate:date];
+            NSCalendar          *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+            NSDateComponents    *weekdayComponents = [gregorian components:(NSCalendarUnitWeekday) fromDate:date];
                 
             int wd = (int)[weekdayComponents weekday];
             
@@ -347,9 +347,9 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
                 }
             else
                 {
-                weekdayComponents = [gregorian components:(NSHourCalendarUnit) fromDate:date];
+                weekdayComponents = [gregorian components:(NSCalendarUnitHour) fromDate:date];
                 NSInteger           hr = [weekdayComponents hour];
-                weekdayComponents = [gregorian components:(NSMinuteCalendarUnit) fromDate:date];
+                weekdayComponents = [gregorian components:(NSCalendarUnitMinute) fromDate:date];
                 NSInteger           mn = [weekdayComponents minute];
                     
                 [myParams setObject:[NSString stringWithFormat:@"%ld",(long)hr] forKey:@"StartsAfterH"];

@@ -42,16 +42,6 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
 
 /*****************************************************************/
 /**
- \brief     Initialize an instance of BMLT_ServerPref
- \returns   self
- *****************************************************************/
-- (id)init
-{
-    return [self initWithCoder:nil];
-}
-
-/*****************************************************************/
-/**
  \brief     Initialize an instance of BMLT_ServerPref with some initial data.
             The URI is saved as a string.
  \returns   self
@@ -191,7 +181,7 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
 #ifdef DEBUG
                 NSLog(@"BMLT_Prefs getBMLT_Prefs Unarchiving didn't work. Allocating anew");
 #endif
-                s_thePrefs = [[BMLT_Prefs alloc] initWithCoder:nil];
+                s_thePrefs = [[BMLT_Prefs alloc] init];
                 NSString    *serverName = NSLocalizedString(@"INITIAL-SERVER-NAME", nil);
                 NSString    *serverDescription = NSLocalizedString(@"INITIAL-SERVER-DESCRIPTION", nil);
                 NSString    *serverURI = [[BMLTVariantDefs rootServerURI] absoluteString];

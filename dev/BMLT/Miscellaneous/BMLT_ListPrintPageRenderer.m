@@ -228,11 +228,11 @@ int         kRightPadding               = 4;    ///< The number of pixels in fro
     
     NSDate      *startTime = [inMeeting getStartTime];
     NSString    *timeString = [NSDateFormatter localizedStringFromDate:startTime dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
-    NSCalendar  *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar  *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     
     if ( gregorian )
         {
-        NSDateComponents    *dateComp = [gregorian components:(NSHourCalendarUnit | NSMinuteCalendarUnit) fromDate:startTime];
+        NSDateComponents    *dateComp = [gregorian components:(NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:startTime];
         
         if ( [dateComp hour] >= 23 && [dateComp minute] > 45 )
             {
