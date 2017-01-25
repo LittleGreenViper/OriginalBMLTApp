@@ -452,9 +452,6 @@ static BOOL searchAfterLookup = NO;     ///< Used for the iPhone to make sure a 
         {
         CLLocationCoordinate2D centerLoc = [BMLTVariantDefs mapDefaultCenter];  // We center on the app's specified starting location
         
-        // Create a bias region.
-//        CLRegion *region = [[CLRegion alloc] initCircularRegionWithCenter:centerLoc radius:1.0 identifier:@"Default App Location"];
-        
         CLGeocoder  *myGeocoder = [[CLGeocoder alloc] init];    // We temporarily create a geocoder for this.
         
         [myGeocoder geocodeAddressString:inLocationString
