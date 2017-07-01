@@ -410,6 +410,35 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
  \brief Initializer from a coder.
  \returns self
  *****************************************************************/
+-(id)init
+{
+    self = [super init];
+    
+    if ( self )
+    {
+        [self setStartWithMap:([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)];  // iPad defaults to map search.
+        [self setPreferDistanceSort:NO];
+        [self setLookupMyLocation:YES];
+        [self setGracePeriod:BMLT_Pref_Default_Value_Grace_Period];
+        [self setStartWithSearch:YES];
+        [self setPreferAdvancedSearch:NO];
+        [self setSearchTypePref:([self preferAdvancedSearch] ? _PREFER_ADVANCED_SEARCH : _PREFER_SIMPLE_SEARCH)];
+        [self setPreferSearchResultsAsMap:[self startWithMap]];
+        [self setPreserveAppStateOnSuspend:![self startWithSearch]];
+        [self setKeepUpdatingLocation:NO];
+        [self setResultCount:10];
+        [self setEmailSenderName:@""];
+        [self setEmailSenderAddress:@""];
+    }
+    
+    return self;
+}
+
+/*****************************************************************/
+/**
+ \brief Initializer from a coder.
+ \returns self
+ *****************************************************************/
 -(id)initWithCoder:(NSCoder *)decoder   ///< The decoder with the stored state.
 {
     self = [super init];
@@ -515,6 +544,10 @@ static int BMLT_Pref_Default_Value_Grace_Period = 15;   ///< The default grace p
             if ( [decoder containsValueForKey:@"resultCount"] )
                 {
                 _resultCount = [decoder decodeIntForKey:@"resultCount"];
+                if ( 0 == _resultCount )
+                    {
+                    [self setResultCount:10];
+                    }
                 }
             else
                 {

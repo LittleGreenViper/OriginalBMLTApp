@@ -9,7 +9,7 @@
 	<key>BMLTLeadText</key>
 	<string>Find NA Meetings In New Jersey</string>
 	<key>BMLTRootServerURI</key>
-	<string>https://www.narcoticsanonymousnj.org/main_server/</string>
+	<string>https://www.narcoticsanonymousnj.org/main_server</string>
 	<key>BMLTServerHomeLat</key>
 	<string>40.495003732305</string>
 	<key>BMLTServerHomeLong</key>

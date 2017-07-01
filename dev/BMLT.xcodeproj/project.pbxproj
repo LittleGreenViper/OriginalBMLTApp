@@ -1132,7 +1132,6 @@
 		770997E71F073FA90012C047 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		770997E81F073FA90012C047 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7709984C1F073FBE0012C047 /* NA New Jersey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NA New Jersey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7709984D1F073FBE0012C047 /* NY NA Meetings copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NY NA Meetings copy-Info.plist"; path = "/Users/cmarshall/Documents/Development/iOS/BMLT/dev/NY NA Meetings copy-Info.plist"; sourceTree = "<absolute>"; };
 		770998521F0740730012C047 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		770998541F07409C0012C047 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Variants/BMLT-NY/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		770BC440189F1CA100991DBD /* San Diego NA Meetings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "San Diego NA Meetings.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2120,7 +2119,6 @@
 				77B395EB1F07C54500BD610A /* GPX Files */,
 				7700DE3C1541FDEF009A1DBB /* MainDocumentPage.h */,
 				77167D4F1517D21F006E50E8 /* LICENSE.txt */,
-				7709984D1F073FBE0012C047 /* NY NA Meetings copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
