@@ -5,11 +5,11 @@
   xmlns="http://www.topografix.com/GPX/1/0"
   xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd">
 <time>2012-04-22T17:32:54Z</time>
-<bounds minlat="40.788925" minlon="-73.097663" maxlat="40.788925" maxlon="-73.097663"/>
-<wpt lat="40.788925" lon="-73.097663">
+<bounds minlat="40.3483304" minlon="-74.7398824" maxlat="40.3483304" maxlon="-74.7398824"/>
+<wpt lat="40.3483304" lon="-74.7398824">
   <ele>0.000000</ele>
-  <name>Islip, NY</name>
-  <cmt>Islip, NY</cmt>
-  <desc>Islip, NY</desc>
+  <name>Princeton, NJ</name>
+  <cmt>Princeton, NJ</cmt>
+  <desc>Princeton, NJ</desc>
 </wpt>
 </gpx>
