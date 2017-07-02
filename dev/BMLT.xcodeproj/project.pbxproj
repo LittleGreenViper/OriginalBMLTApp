@@ -2649,6 +2649,7 @@
 				TargetAttributes = {
 					770997E91F073FBE0012C047 = {
 						DevelopmentTeam = P53V4JS928;
+						ProvisioningStyle = Manual;
 					};
 					770BC3D2189F1CA100991DBD = {
 						DevelopmentTeam = P53V4JS928;
@@ -3938,8 +3939,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.magshare.NJNAMeetings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "354f6bd9-1370-4353-b116-53beb8d76daf";
+				PROVISIONING_PROFILE_SPECIFIER = "Development Wildcard";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3971,8 +3972,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.magshare.NJNAMeetings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "9e5c9951-7567-4c6d-aab0-ef034c001c02";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: *";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -3983,7 +3984,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COMPRESS_PNG_FILES = NO;
 				DEVELOPMENT_TEAM = P53V4JS928;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4004,8 +4005,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.magshare.NJNAMeetings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "9e5c9951-7567-4c6d-aab0-ef034c001c02";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: *";
 				WRAPPER_EXTENSION = app;
 			};
 			name = TestFlight;
