@@ -21,6 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient" translatesAutoresizingMaskIntoConstraints="NO" id="cNV-d3-q0w">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NJSplash" translatesAutoresizingMaskIntoConstraints="NO" id="NHe-SJ-qFa">
                                 <rect key="frame" x="59.5" y="205" width="256" height="256"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -33,6 +36,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NHe-SJ-qFa" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="459-yQ-93p"/>
+                            <constraint firstItem="cNV-d3-q0w" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="LGL-ZU-2Gn"/>
+                            <constraint firstItem="cNV-d3-q0w" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="W5F-fZ-Cnx"/>
+                            <constraint firstAttribute="trailing" secondItem="cNV-d3-q0w" secondAttribute="trailing" id="eJ2-ea-ozx"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="cNV-d3-q0w" secondAttribute="bottom" id="mKD-u7-iJF"/>
                             <constraint firstItem="NHe-SJ-qFa" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ys2-8k-893"/>
                         </constraints>
                     </view>
@@ -43,6 +50,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Gradient" width="1" height="1"/>
         <image name="NJSplash" width="1024" height="1024"/>
     </resources>
 </document>

@@ -2696,6 +2696,7 @@
 			targets = (
 				77977D0A150E882B00485C8D /* NY NA Meetings */,
 				777AD66B1688C61700E064D0 /* AU NA Meetings */,
+				770997E91F073FBE0012C047 /* NA New Jersey */,
 				777597561540F15E00D45ADA /* NA Sverige */,
 				77B5EABD1743EEF300F50281 /* Southern California NA Meetings */,
 				770BC3D2189F1CA100991DBD /* San Diego NA Meetings */,
@@ -2704,7 +2705,6 @@
 				77A939C219969ACA0020A785 /* OKLATX */,
 				7747DC6D1B20606E00327975 /* NA Hawaii */,
 				77AC716915409E9F0060CA80 /* MNNA */,
-				770997E91F073FBE0012C047 /* NA New Jersey */,
 			);
 		};
 /* End PBXProject section */

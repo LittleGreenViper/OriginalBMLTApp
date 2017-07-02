@@ -98,7 +98,7 @@ The new app will read the prefs from the original, but this is really meant to b
 CHANGELIST
 ----------
 
-***Version 2.7.5* ** *- TBD*
+***Version 2.7.6* ** *- TBD*
 
 * Updated all targets to Xcode 8/iOS 8+ compatible.
 
