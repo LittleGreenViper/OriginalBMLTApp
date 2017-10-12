@@ -1222,7 +1222,8 @@ shouldSelectViewController:(UIViewController *)inViewController
     
     if ( dir )  // Don't bother if there's no change.
         {
-        [self transitionBetweenThisView:[[inTabBarController selectedViewController] view] andThisView:[inViewController view] direction:dir];
+            // I have no idea why I needed to switch to dot-notation here...
+        [self transitionBetweenThisView:[inTabBarController selectedViewController].view andThisView:inViewController.view direction:dir];
         [inTabBarController setSelectedIndex:newIndex];
         }
     
